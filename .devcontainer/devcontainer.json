@@ -1,0 +1,28 @@
+{
+  /* spell-checker: disable */
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+		"esbenp.prettier-vscode",
+		"streetsidesoftware.code-spell-checker",
+		"streetsidesoftware.code-spell-checker-norwegian-bokmal",
+		"usernamehw.errorlens",
+		"spencerwmiles.vscode-task-buttons",
+		"raymondcamden.htmlescape-vscode-extension",
+		"deque-systems.vscode-axe-linter",
+		"aaron-bond.better-comments",
+		"formulahendry.auto-rename-tag",
+		"anteprimorac.html-end-tag-labels",
+		"bierner.github-markdown-preview",
+		"seatonjiang.gitmoji-vscode",
+		"vunguyentuan.vscode-css-variables",
+		"jock.svg",
+		"stkb.rewrap"
+	]
+    }
+  },
+  "postCreateCommand": "npm i -g browser-sync"
+  // Decided to use tasks instead, easier to understand. Kept postStartCommand for later.
+  //"postStartCommand": "nohup bash -c \"browser-sync start --server '.' --files '*.html, *.css, *.js' --port 3000 --no-ui --no-open &\" > server.log"
+}

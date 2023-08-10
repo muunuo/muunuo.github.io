@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300...800&display=swap");
+
+:root {
+  /* 
+
+  Hei på deg 😊
+
+  Her har jeg bare laget mine egne farger. Designerne ville vi skulle bruke grønt og gull, men jeg liker best rosa, så da brukte jeg det istedenfor.
+  
+  NB! Husk at vi ikke bruker disse fargene direkte i CSS-en vår, 
+  da blir det vanskelig å lage egne tema som f.eks. dark mode.
+  
+  Bodil
+  
+  */
+
+  --mulberry: #b74268;
+  --mulberry-dark: #702940;
+  --fair-pink: #fff0ee;
+  --amethyst: #b564cc;
+  --deep-blush: #e05cad;
+  --white: #ffffff;
+  --mine-shaft: #333333;
+
+  /* 
+    Når jeg tenker meg om kan være noen som synes det ble litt mye rosa 🤔 
+    Her er de fargene vi egentlig skulle bruke.
+
+    Bodil
+   */
+
+  --cello: #224960;
+  --cello-dark: #152d3c;
+  --ottoman: #ecf9ec;
+  --pirate-gold: #a87000;
+  --venice: #045e8d;
+
+  /* 
+
+    Huff, nå angrer jeg meg litt. Kanskje vi skulle brukt de opprinnelige fargene likevel.
+    Kunne du vært en engel og byttet ut alle verdiene for meg?
+
+    Bytt ut alle referansene under med følgende:
+
+    mulberry med cello
+    mulberry-dark med cello-dark
+    fair-pink med ottoman    
+    amethyst med pirate-gold
+    deep-blush med venice
+
+    Når det gjelder bakgrunns-bildet, så må du erstatte farge-verdiene i
+    `assets/background.svg`, den har sin egen interne CSS.
+
+    Bodil
+
+    PS! Hvis du er skikkelig rampete kan du lage din egen farge-palett med
+    favoritt-fargene dine, bare ikke si at det var jeg som sa det 😉
+
+    Jeg bruker forøvrig https://chir.ag/projects/name-that-color/ til å finne
+    navnet på farger, hvis jeg finner en farge-verdi jeg synes ser fin ut.
+
+  */
+
+  --bakgrunnsfarge: var(--fair-pink);
+  --bakgrunnsfarge-alt: var(--white);
+  --hoved-farge: var(--mulberry);
+  --hoved-farge-alt: var(--mulberry-dark);
+  --tittel-farge: var(--deep-blush);
+  --tittel-farge-alt: var(--amethyst);
+  --tekst-farge: var(--mine-shaft);
+  --tekst-farge-alt: var(--white);
+
+  /*
+    Typografi her. Laget noen varianter med skriftgrader. 
+  */
+
+  --font-family: "Open Sans", sans-serif;
+
+  --font-size-xxl: 50px;
+  --font-size-xl: 39px;
+  --font-size-large: 21px;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+
+  --border-radius: 4px;
+
+  /* Komponent tokens */
+
+  --button-font-size: var(--font-size-small);
+  --button-line-height: calc(var(--font-size-small) + 2px);
+  --button-border-radius: var(--border-radius);
+  --button-padding: 10px 16px;
+  --button-color: var(--tekst-farge-alt);
+  --button-primary-bg-color: var(--hoved-farge);
+  --button-primary-hover-bg-color: var(--hoved-farge-alt);
+}

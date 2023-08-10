@@ -1,0 +1,66 @@
+<svg id="background-image" xmlns="http://www.w3.org/2000/svg">
+  <title>Tenk bakgrunn</title>
+  <style>
+
+    <!--
+
+      Her fant jeg ut noe kult. Hvis du kopierer inn fargeverdiene fra
+      tokens.css filen og legger til 33 helt til slutt så blir fargen
+      gjennomsiktig 😎
+
+      33 er hexadecimal-verdien til 20, så det betyr at det er bare 20% av
+      fargen som er synlig. Funker veldig bra til sånne krusseduller og sånt som
+      bare ligger i bakgrunnen.
+
+      Bodil
+
+    -->
+
+    .wave-1 {
+      fill: #b564cc33;
+    }
+
+    .wave-2 {
+      fill: #e05cad33;
+    }
+
+    .blob {
+      fill: #b564cc33;
+    }
+  </style>
+
+  <symbol id="wave" viewBox="0 0 340 104">
+    <path d="M26.0283 103.318L0.688293 91.2679C17.5183 55.8279 39.8383 42.7279 55.6183 37.9679C74.4683 32.2979 94.8883 35.2379 113.078 46.2479C122.098 51.7079 134.818 58.8279 140.908 57.5579C146.538 56.4179 154.068 45.4479 159.208 37.3279C163.848 30.0079 181.308 5.78788 211.158 1.51788C224.748 -0.422122 245.738 1.51788 268.578 21.6679C275.188 27.4979 284.708 34.1379 292.618 32.6679C302.508 30.8179 309.858 16.7179 313.398 9.93788C314.248 8.20788 315.188 6.53788 316.198 4.90788L339.588 20.4179L339.648 20.3279C339.418 20.7179 338.768 21.9479 338.248 22.9479C333.098 32.8179 321.048 55.9479 297.728 60.2879C295.248 60.7579 292.748 60.9879 290.228 60.9879C277.238 60.9879 263.758 54.8679 250.018 42.7279C238.098 32.1979 226.368 27.7079 215.098 29.3179C200.788 31.3579 188.798 43.0079 182.878 52.3579C176.808 61.9279 171.938 68.3679 167.068 73.2379C160.658 79.6579 153.958 83.5179 146.588 85.0479C131.948 88.0879 117.358 81.6479 98.5583 70.2979C87.0783 63.3379 75.0183 61.4679 63.6983 64.8379C48.8583 69.3279 35.8283 82.6279 26.0183 103.318H26.0283Z" />
+  </symbol>
+
+  <symbol id="blob" viewBox="0 0 287 258">
+    <path d="M276.097 58.0704C263.827 36.8004 246.407 20.3304 224.997 8.35038C209.607 -0.259618 193.358 -1.96962 176.568 4.17038C169.978 6.59038 163.458 9.19038 156.958 11.8304C142.638 17.6504 128.117 22.5504 112.417 22.8904C105.407 23.0404 98.3875 23.4104 91.3875 24.0104C55.8175 27.0604 27.4675 41.9304 12.1075 75.6204C9.52748 81.2204 7.3675 86.9704 5.6275 92.8804C3.8775 98.7904 2.55749 104.79 1.67749 110.89C0.78749 116.99 0.347473 123.12 0.347473 129.28C0.347473 135.44 0.777471 141.57 1.65747 147.67C4.40747 167.38 11.3375 185.59 24.9075 200.33C47.1775 224.49 74.7675 239.54 106.867 246.45C126.777 250.74 146.947 251.88 167.217 252.03C175.597 252.09 183.777 252.62 191.847 255.7C200.987 259.19 209.898 257.48 217.938 251.7C225.088 246.57 230.417 239.84 235.367 232.67C244.517 219.39 250.597 204.75 255.347 189.42C260.717 172.13 265.867 154.73 274.217 138.54C277.057 133.01 280.077 127.55 281.867 121.49C288.847 99.5404 287.647 78.0804 276.107 58.0604L276.097 58.0704Z" />
+  </symbol>
+
+  <svg viewBox="100 -100 800 258" preserveAspectRatio="xMinYMax meet" overflow="visible">
+    <svg viewBox="0 0 287 258" preserveAspectRatio="xMinYMax meet" overflow="visible">
+      <use href="#blob" class="blob" />
+    </svg>
+  </svg>
+
+  <svg viewBox="-100 100 800 258" preserveAspectRatio="xMaxYMin meet" overflow="visible">
+    <svg viewBox="0 0 287 258" preserveAspectRatio="xMaxYMin meet" overflow="visible">
+      <use href="#blob" class="blob" />
+    </svg>
+  </svg>
+
+  <svg viewBox="100 -30 800 100" preserveAspectRatio="xMinYMin meet" overflow="visible">
+    <svg viewBox="0 0 340 100" preserveAspectRatio="xMinYMin meet" overflow="visible">
+      <use href="#wave" class="wave-1" />
+      <use href="#wave" class="wave-2" y="60" />
+    </svg>
+  </svg>
+
+  <svg viewBox="0 80 800 100" preserveAspectRatio="xMaxYMax meet" overflow="visible">
+    <svg viewBox="-220 0 340 100" preserveAspectRatio="xMaxYMax meet" overflow="visible">
+      <use href="#wave" class="wave-1" />
+      <use href="#wave" class="wave-2" y="60" />
+    </svg>
+  </svg>
+
+</svg>

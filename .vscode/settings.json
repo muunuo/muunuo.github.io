@@ -1,0 +1,57 @@
+{
+  "git.autofetch": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "errorLens.gutterIconsEnabled": true,
+  "cSpell.language": "nb,en",
+  "VsCodeTaskButtons.tasks": [
+    {
+      "label": "$(server-process) Start dev server",
+      "task": "start server",
+      "tooltip": "🤖 Starter browser-sync og lytter etter endringer"
+    },
+    {
+      "label": "$(server-process) Stopp dev server",
+      "task": "stop server",
+      "tooltip": "🛑 Stopper browser-sync"
+    }
+  ],
+  "emmet.variables": {
+    "lang": "no"
+  },
+  "emmet.extensionsPath": ["./.emmet"],
+  "cSpell.words": [
+    "branchen",
+    "Codespaces",
+    "dritlei",
+    "Equinor",
+    "eventen",
+    "forhåndsvise",
+    "frontpage",
+    "Javascriptet",
+    "Kodevisning",
+    "noen",
+    "repoet",
+    "skjermlesere",
+    "stilarket",
+    "stylesheet",
+    "temaet",
+    "topbar",
+    "Tudldu",
+    "webp",
+    "webside",
+    "websiden",
+    "workshoppen"
+  ],
+  "explorer.sortOrder": "type",
+  "workbench.colorCustomizations": {
+    "htmlEndTagLabels.labelColor": "#cdcdcd"
+  },
+  "htmlEndTagLabels.labelPrefix": "//",
+  "editor.wordWrap": "on",
+  "rewrap.autoWrap.enabled": true
+}

@@ -1,0 +1,204 @@
+/* 
+
+  Hei på deg 😊 
+
+  Får nesten litt dårlig samvittighet av å tenke på at når du leser dette ligger jeg og slasker meg på stranden i syden, men jeg orket bare ikke mer regn ☔️
+
+  Under her ser du at jeg har lagt noen design tokens i en egen fil som heter tokens.css, der er det noe smårusk som må fikses. Hvis du holder nede Cmd på en mac, eller ctrl på en PC eller Chromebook, så kan du klikke på filnavnet så åpner den seg. Helt genialt!
+
+  Bodil
+  
+*/
+
+@import "tokens.css";
+
+html {
+  font-family: var(--font-family);
+  color: var(--tekst-farge);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+:where(a:any-link) {
+  color: var(--hoved-farge);
+}
+
+:where(a:hover) {
+  color: var(--hoved-farge-alt);
+}
+
+/* Basic side-oppsett start */
+
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.main {
+  background-color: var(--bakgrunnsfarge);
+  background-image: url("./assets/background.svg");
+  background-size: auto;
+}
+
+.main-centered {
+  background-color: var(--bakgrunnsfarge);
+  background-image: url("./assets/background.svg");
+  background-size: auto;
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Basic side-oppsett slutt */
+
+/* Top-bar start */
+
+.top-bar {
+  background-color: var(--surface-default);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #dcdcdc;
+  min-height: 64px;
+  position: sticky;
+  top: 0;
+}
+
+.top-bar-logo {
+  height: auto;
+  height: 24px;
+  color: var(--hoved-farge);
+  width: 90px;
+}
+
+.top-bar-text {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--mine-shaft);
+}
+
+/* Top-bar slutt */
+
+/* Button start */
+
+.button-primary {
+  /* 
+    Her bare slang jeg inn en rosa-farge, best å bytte den ut med en CSS token sånn at den følger temaet. Jeg laget en som heter `--button-primary-bg-color` du kan bruke.
+  */
+  background-color: pink;
+  color: var(--button-color);
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-primary:hover {
+  background-color: var(--button-primary-hover-bg-color);
+}
+
+/* Button slutt */
+
+/* Card start */
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 400px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 24px;
+  display: grid;
+  grid-gap: 16px;
+}
+
+.card-title {
+  margin: 0;
+}
+
+.card-text {
+  margin: 0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+/* Card slutt */
+
+/* Component visning start */
+
+.heading-xl {
+  font-size: var(--font-size-xl);
+  color: var(--tittel-farge-alt);
+}
+
+.heading-large {
+  font-size: var(--font-size-large);
+  color: var(--tittel-farge-alt);
+}
+
+.preview {
+  border: 1px solid hsla(203, 50%, 30%, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--bakgrunnsfarge);
+}
+
+.preview-component {
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.preview-code {
+  color: white;
+  background: black;
+  padding: 10px 20px;
+}
+
+/* Component visning slutt */
+
+/* Forsiden start */
+
+.frontpage-heading {
+  color: var(--tittel-farge);
+  font-size: var(--font-size-xxl);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.frontpage-text {
+  font-size: var(--font-size-large);
+}
+
+/* Forsiden slutt */
