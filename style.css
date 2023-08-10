@@ -102,7 +102,7 @@ button {
   /* 
     Her bare slang jeg inn en rosa-farge, best å bytte den ut med en CSS token sånn at den følger temaet. Jeg laget en som heter `--button-primary-bg-color` du kan bruke.
   */
-  background-color: pink;
+  background-color: var(--button-primary-bg-color);
   color: var(--button-color);
   font-size: var(--button-font-size);
   line-height: var(--button-line-height);

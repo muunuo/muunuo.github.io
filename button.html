@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="no">
+<!--
+  Dette er en HTML kommentar.
+  Kommentarer er ikke synlig i nettleseren. Vi kan ha kommentarer i Javascript og CSS-filer også, men de ser litt annerledes ut.
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    Dette er head-seksjonen – den inneholder informasjon til nettleseren, som f.eks. tittelen som vises i en fane eller et bokmerke, men som ikke vises direkte på siden.
+    Husk å endre tittelen så det ikke står «Document» når du er ferdig.
+  -->
+  <title>Button
+  </title>
+  <!--
+    Dette er stilarket til websiden, det er der vi bestemmer hvordan designet skal se ut.
+  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    Body-seksjonen inneholder alt det du kan se i nettleser-vinduet.
+    Hvert element er definert ved bruk av tagger, som f.eks. <div></div>.
+    Attributter som f.eks. class="button-primary" gjør at vi kan bestemme hvordan et element skal se ut med CSS.
+  -->
+  <div class="page">
+    <div class="top-bar">
+      <a href="./" class="button-primary">◀︎ Tilbake</a>
+      <svg class="top-bar-logo">
+        <use href="assets/tenk-logo.svg#logo"></use>
+      </svg>
+      <p class="top-bar-text">Tech Camp 2023</p>
+    </div>
+    <main class="main">
+      <div class="content">
+        <h1 class="heading-xl">Button</h1>
+        <p class="description"></p> Dette er en button komponent
+        <h2 class="heading-large">Button primary</h2>
+        <div class="preview">
+          <div class="preview-component">
+
+            <button class="button-primary"> Klikk meg!</button>
+          </div>
+          <div class="preview-code">
+            <pre><code></code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!--
+    Dette er Javascriptet til websiden.
+  -->
+  <script src="script.js"></script>
+</body>
+</html>
