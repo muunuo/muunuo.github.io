@@ -24,74 +24,78 @@ html, body {
     padding: 1rem;
 }
 
-main {
-    
-}
-
+/* tittel */
 .header { /* header */
     background: linear-gradient(270deg, #deb3d1, #944d80);
     color: rgb(255, 255, 255);
-    text-align: center;
-
-    /* Bruker flexbox for å plassere bildet/logoen og teksten i midten av headeren */
 }
 
-#logo{
+.header{
+    /* logo/text i midten */
+    align-items: center;
+    justify-content: center;
     display: flex;
-    justify-content:right; 
-    align-items:right;
 }
 
-#title{ 
+li{
+    list-style: none;
+}
+/* tittel */
+
+
+/* meny */
+#A{ 
+    background-color: #deb3d1;
+}
+
+#M{
+    background-color: #d27cb8;
+
+}
+
+#K{
+    background-color: #8f6289;
+}
+
+
+nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    }
+
+nav li{
+    margin: 1rem;
 }
 
-li {
-    list-style: none;
+nav li a{
+        text-decoration: none;
+        color:white;
+        padding:1.5rem;
+        display: block;
 }
 
-.menu{ /* menu */
-    
-    background-color:#c919b8;
+/* Endrar bakgrunnsfargen på menyen når ein tek muspeikar over. */
+nav li a:hover{
+    background-color:#491542;
 }
+/* meny */
+
 
 .footer{
     background-color: #d27cb8;
 }
 
 
-.flyt {
+.flyt{
     float: left;
 }
 
-.flyte {
+.flyte{
     float: right;
 }
 
-nav {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: row;
-}
-
-nav li {
-    margin: 1rem;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color:white;
-    padding:1.5rem;
-    display: block;
-}
-
-/* Endrar bakgrunnsfargen på menyen når ein tek muspeikar over. */
-nav ul li a:hover{
-    background-color:#491542;
-}
 
 
 
