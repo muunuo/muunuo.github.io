@@ -44,18 +44,10 @@ li{
 
 
 /* meny */
-#A{ 
+#A, #M, #O, #F, #K{ 
     background-color: #deb3d1;
 }
 
-#M{
-    background-color: #d27cb8;
-
-}
-
-#K{
-    background-color: #8f6289;
-}
 
 
 nav{
