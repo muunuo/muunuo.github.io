@@ -1,0 +1,155 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header { grid-area: header; }
+.menu { grid-area: meny; }
+.main { grid-area: main; }
+.copy{ grid-area: copy; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'copy copy copy copy copy'
+        'header header header header header'
+        'meny meny meny meny meny'
+        'main main main main main';
+}
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    padding: 1rem;
+}
+
+/* tittel */
+.header { 
+    font-size: 1.5rem;
+    background: linear-gradient(270deg, #deb3d1, #944d80);
+    color: rgb(255, 255, 255);
+
+    background-image: url("../bilder/sydney1920.jpg");
+    background-size: cover;
+    background-position: center;
+    /* background-size: contain; */
+}
+
+.header{ /* få logo/text i midten */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+li{
+    /* gjøre at li ikke gir dott */
+    list-style: none;
+}
+/* tittel */
+
+
+/* meny */
+#A, #M, #O, #F, #K{ 
+    /* farge på ' */
+    background-color: #deb3d1;
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    }
+
+nav li{
+    margin: 1rem;
+}
+
+nav li a{
+        text-decoration: none;
+        color:white;
+        padding:1.5rem;
+        display: block;
+}
+
+/* Endrar bakgrunnsfargen på menyen når ein tek muspeikar over. */
+nav li a:hover{
+    background-color:#491542;
+}
+
+/* main */
+
+.main{
+    font-size: 1rem;
+}
+
+.flyt{ 
+    justify-content: end;
+}
+/* fotter */
+.footer{
+    background-color: #d27cb8;
+}
+
+
+.flyt{
+    float: left;
+}
+
+.flyte{
+    float: right;
+}
+
+
+
+
+/* For mobil, eller portrerttmodus, med låg oppløysing */
+@media screen and (max-width: 800px) {
+    /* Når skjermstørrelsen blir  */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            'header'
+            'meny'
+            'main'
+            'footer';
+    }
+
+    /* 
+        Endrer menyen sitt design for mobil.
+        Menyelementene ligg ikkje lenger under kvarandre
+        (frå column til row). I tillegg så midtstiller
+        eg elementa i menyen.
+    */
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Når skjermen er liten, så vil biletet i main ta heile bredda. */
+    .flyt {
+        float: none;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .flyt {
+        float: none;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Skriftstørrelsen i header blir mindre på mobil. */
+    #tittel {
+        font-size: 1rem;
+    }
+}
