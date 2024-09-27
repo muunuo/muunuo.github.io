@@ -1,0 +1,23 @@
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.boks /* lager boksen*/{
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 20px;  /* standar for den enheten */
+    background-color: aliceblue;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(222, 141, 168);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
