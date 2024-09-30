@@ -23,10 +23,18 @@ html, body {
     padding: 1rem;
 }
 
+.copy{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+    color: #082233;
+    background-color: #4b80a4;
+}
+
 /* tittel */
 .header { 
     font-size: 1.5rem;
-    background: linear-gradient(270deg, #deb3d1, #944d80);
     color: rgb(255, 255, 255);
 
     background-image: url("../bilder/sydney1920.jpg");
@@ -45,13 +53,14 @@ li{
     /* gjøre at li ikke gir dott */
     list-style: none;
 }
+
 /* tittel */
 
 
 /* meny */
 #A, #M, #O, #F, #K{ 
     /* farge på ' */
-    background-color: #deb3d1;
+    background-color: #4b80a4;
 }
 
 
@@ -85,9 +94,6 @@ nav li a:hover{
     font-size: 1rem;
 }
 
-.flyt{ 
-    justify-content: end;
-}
 /* fotter */
 .footer{
     background-color: #d27cb8;
