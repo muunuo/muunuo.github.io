@@ -3,58 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Australia</title>
+    <title>Abby's Life Blog</title>
+<!-- css -->
     <link rel="stylesheet" href="felles.css">
-    <link rel="stylesheet" href="meg.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="mobil.css">
+        <link rel="stylesheet" href="index.css">
+<!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<!-- font -->
 </head>
-<body>
-    <div class="copy">
-        <h3><b>Abby's Life</b></h3>
-    </div>
+<body class="gowun-batang-regular"> <!-- gowun-beta... er for å få den fonten, plaseres her fordi alt skal ha den fonten -->
 
-    <div class="grid-container">
+    <div class="grid-container"> <!-- setter alt under i griden fant i css felles -->
 
-        <div class="header">
-                <h1>Australia</h1>
+<!-- copy -->
+        <div class="copy">
+            <h3><b>Australia</b></h3> 
         </div>
 
+<!-- header -->
+        <div class="header">
+            <h1 class="ausi" >Australia</h1>
+        </div>
+
+<!-- menu -->
         <div class="menu">
-            <nav>
+            <nav> <!-- linke til andre sidene på nettsiden -->
                     <li id="K"><a href="source.html">Sources</a></li>
-                    <li id="M"><a href="">Vidio</a></li>
+                    <li id="M"><a href="vidio.html">Video</a></li>
                     <li id="A"><a href="blog.html">Blogs</a></li>
-                    <li id="F"><a href="index.html">Sosials</a></li>
+                    <li id="F"><a href="error101.html">Sosials</a></li>
             </nav>
         </div>
 
+<!-- main -->
         <div class="main">
-            <h3>Hi guys!</h3>
-                <object class="flyte" data="" type=""><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16247.313563082062!2d153.01678734584178!3d-27.475572810432727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915bf1ea45e86f%3A0xe670fce36c416c0e!2sSouth%20Bank%20Parklands!5e1!3m2!1sno!2sno!4v1727683625165!5m2!1sno!2sno" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe></object>
+            <h2>Brisbane</h2>
+<!-- maps -->
+            <figure class="flyte"> <!-- figure skal brukes med bilder(og annet), lar deg ta bildetext under (sourse text) -->
+                <!-- iframe er blokert, object sniker seg rundt det -->
+                <object class="flyte" data="" type=""><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16247.313563082062!2d153.01678734584178!3d-27.475572810432727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915bf1ea45e86f%3A0xe670fce36c416c0e!2sSouth%20Bank%20Parklands!5e1!3m2!1sno!2sno!4v1727683625165!5m2!1sno!2sno" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                    alt="Google maps map of the South Bank earea in Brisbane, with the South Bank parklands marked"> <!-- beskrivelse jeg satt inn selv -->
+                </iframe> </object>
+                <figcaption><em>Google maps</em></figcaption> <!-- em får teksten til å lene seg til høyre -->
+            </figure>
+<!-- tekst -->
             <p>
-                This is Abby, from Abby's life, I just got back from my trip to Brisbane, Australia. (Thank you so, so, so mutch to fake makeup for sponsering my first week in Australia, whice I will be 
-                talking more about in a later blog, so keep your eyes out for that) Anyway, after the first week I ended up staying longer, something you would know if you followed my insta (@afakename). 
-                I promised I would tell you more about what I did, and what I recommend you doing on your trip to Bristband. 
-                
-                As some of you know, me and Jack are trying to save mony to buy a house, so we did try to not spend to mutch mony on the trip.    
+                Hi, Guys! This is Abby, from Abby's life. I just got back from my trip to Brisbane, Australia, (thank you so, so, so mutch to fakeup for sponsering my first week in Australia, whice I will be talking 
+                more about in a later blog, so keep your eyes out for that). Anyway, after the first week I ended up staying longer, something you would know if you followed my insta (@afakename). I promised I would 
+                tell you more about what I did, and what I recommend you do on your trip to Bristband. We are still saving to buy a house, so we tried to be a bit frugal on this trip.             
             </p>
             <h3>Where to stay?</h3>
             <p>
-                First off, where should you stay? Well, I really recomand you stay in the South bank earea, why? First off, it’s right in the middle of the city, and secend they have loads to do there. 
-                Thired, there is lots of cheap, or even free stuff to do there as well! Not going to say where we stayed for privecy reasons, but you can just google hotells Brisbane and you will get a bunch og options. 
+                First off, where should you stay? Well, I really recomand you stay in the South bank earea, why? First off, it’s right in the middle of the city, and secend they have loads to do there. We stayed 
+                at the Brisbane Skytower, it’s definitely not the cheapest hotel nearby, but it was so worth it for the view. Pluss, the buss to the South Banks took only 15 minutts and cost just 1-2$. 
             </p>
+<!-- bilde -->
+            <figure class="flyt"> <!-- figure og flyt er viktig. Flyt fordi det er flyt og Figure fordi da kan du endre margins og annet-->
+                <img src="../bilder/flower.jpg" alt="A picture of the bougavillie lined path, a walkway lined with magenta flowers, on a sunny day" width="400px">
+                <figcaption><em>n</em></figcaption>
+            </figure>
+<!-- tekst -->
             <h3>Day One</h3>
-            <p> 
+            <p > 
                 So, first day of the trip me and Jack went to the Queensland Museum, the perfect place for a history buff, or even if you just like to learn about new tings. Its right on the south bank, and has lots of exibits that 
                 are constently changing. Jack loved the dinosaurs and wildlife exibits, while i really liked the  guided tours of Say Our Names, where you get to hear personal insights and storys from the south sea ilanders. 
                 You ready to hear the best part? It’s Free! :D We would never find something like that in the US! Just don't make our mistake, we didnt cheak the website beforehand and lost out on a few things you had to prebook :(
-                
+            </p>
+<!-- bilde -->
+            <figure class="flyte"> <!-- figure sin css er i felles -->
+                <img class="flyte" src="/bilder/Dinosor.jpg" width="380px" " alt="A picture inside the dinosaur exibit in the Queensland museum of a dinosaur skelloton">
+                <figcaption><em>Own Work</em></figcaption>
+            </figure>
+<!-- tekst -->
+            <p>
                 After the museum we ended up walking overt the South Bank Parklands, a must visit for, well, everyone. Theres just so mutch to do there. When we where there we went to the Brisbane sign for pictures and the view. 
                 After we walked over to faris whele lokated just nearby, it had beautifull views just like the hole park did.
                 We took a beautifull and romantic walk along the bougavillie lined path going through the park, a wonderfull way to walk between the different tings in the park.  
-                We then meet up with Jack’s sister and went shopping, ending the day at a local resturant. 
+                We then meet up with Jack’s sister, Lilly, and went shopping, ending the day at a local resturant. 
             </p>
-            <img class="flyt" src="../bilder/flower.jpg" alt=" bilde av et pariserhjul og en vegg med rosa blomster på en solfylt dag i australia" height="500rem">
+            
             <h3>Day 2</h3>
             <p>
                 On the second day it was crazy hot, so we ended up spending the hole day at the Streets Beach over at the South Bank parklands, it was over 30 degrees for most of the day, so even the smal walk from the hotell to 
@@ -74,8 +105,7 @@
                 Make sure you leav you'r thought on this all down bellow. 
                 Lots of Love to all of you and have a awsome week &lt;3
             </p>
-        </div>  
-
+        </div>
     </div>
 </body>
 </html>

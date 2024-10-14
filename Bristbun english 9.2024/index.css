@@ -1,0 +1,24 @@
+.header{
+    /* bakrunsbilde på tittelen australia */
+    background-image: url("../bilder/sydney1920.jpg");
+    background-size: cover;
+    background-position: center;
+    /* background-size: contain; = måte å endre størelse på et bakrunnsbilde*/
+}
+
+.ausi{/* får en solid farget bakrunn bak australia */
+    background-color: #4b80a4;
+    border: 1rem solid #4b80a4;
+    border-radius: 1rem;
+}
+
+/* alt med tittel over */
+#A, #M, #F, #K{ /* farge på meny (skrives sånn for å få induviduelle bokser)*/
+    background-color: #4b80a4;
+    border-radius: 0.5rem; /* runder av hjørnene på boksene */
+}
+
+.copy{ /* abby's life helt oppe */
+    color: #082233;
+    background-color: #4b80a4;
+}

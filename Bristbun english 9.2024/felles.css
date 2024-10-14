@@ -1,161 +1,122 @@
-html, body {
-    margin: 0;
-    padding: 0;
+/* Grid container koden ligger i css grid */
+
+/* font */
+.gowun-batang-regular { 
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.gowun-batang-bold {
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-.header { grid-area: header; }
-.menu { grid-area: meny; }
-.main { grid-area: main; }
-.copy{ grid-area: copy; }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        'copy copy copy copy copy'
-        'header header header header header'
-        'meny meny meny meny meny'
-        'main main main main main';
+/* flex */
+.flex{
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
-.grid-container > div { /* Alle barna til div-containeren av typen div */
-    padding: 1rem;
+
+/* flyt */
+.flyt{ /* flyter ting til venstre */
+    float: left;
+    display: block;
+    max-width: 400px;
+}
+.flyte{ /* flyter ting til høyre */
+    float: right;
+    display: block;
+    max-width: 400px;
 }
 
-.copy{
+/* figure */
+figure { /* source texst under bilde */
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    unicode-bidi: isolate;
+}
+
+
+/* copy under */
+.copy{ /* abby's life helt oppe */
     justify-content: center;
     align-items: center;
     display: flex;
     
     color: #082233;
-    background-color: #4b80a4;
+    background-color: #678570;
 }
 
-/* tittel */
-.header { 
+
+
+/*tittel under*/
+.header { /* fikse headeren */
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
 
-    background-image: url("../bilder/sydney1920.jpg");
+/* bakrunsbilde på tittelen australia */
+    background-image: url("../bilder/mainpic.jpg");
     background-size: cover;
     background-position: center;
-    /* background-size: contain; */
+    /* background-size: contain; = måte å endre størelse på et bakrunnsbilde*/
 }
 
-.header{ /* få logo/text i midten */
+.header{ /* få text i midten */
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
-li{
-    /* gjøre at li ikke gir dott */
+
+.ausi{/* får en solid farget bakrunn bak australia */
+    background-color: #678570;
+    border: 1rem solid #678570;
+    border-radius: 1rem;
+}
+
+/* alt med tittel over */
+#A, #M, #F, #K{ /* farge på meny (skrives sånn for å få induviduelle bokser)*/
+    background-color: #678570;
+    border-radius: 0.5rem; /* runder av hjørnene på boksene */
+}
+
+/* alt med meny under */
+li{/* gjøre at li ikke gir liste dotter */
     list-style: none;
 }
 
-/* tittel */
-
-
-/* meny */
-#A, #M, #O, #F, #K{ 
-    /* farge på ' */
-    background-color: #4b80a4;
-}
-
-
-
-nav{
+nav{ /* sentrere meny */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row; /* meny ligger bortover ikke ned */
     }
 
-nav li{
+nav li{/* mellomrom mellom meny brikkene */
     margin: 1rem;
 }
 
-nav li a{
+nav li a{ /* endre farge på text i meny */
         text-decoration: none;
         color:white;
         padding:1.5rem;
-        display: block;
+        display: block;/* gjør at der en en blokk rundt og ikke bare farge rett bak ordene */
 }
 
-/* Endrar bakgrunnsfargen på menyen når ein tek muspeikar over. */
+/* Endrar bakgrunnsfargen på menyen når man har muspeikar over. */
 nav li a:hover{
-    background-color:#491542;
+    background-color:#154949;
+    border-radius: 0.5rem;
 }
+/* alt med meny over*/
 
-/* main */
-
+/* alt med main under*/
 .main{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
-
-/* fotter */
-.footer{
-    background-color: #d27cb8;
-}
-
-
-.flyt{
-    float: left;
-}
-
-.flyte{
-    float: right;
-}
-
-
-
-
-/* For mobil, eller portrerttmodus, med låg oppløysing */
-@media screen and (max-width: 800px) {
-    /* Når skjermstørrelsen blir  */
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-            'header'
-            'meny'
-            'main'
-            'footer';
-    }
-
-    /* 
-        Endrer menyen sitt design for mobil.
-        Menyelementene ligg ikkje lenger under kvarandre
-        (frå column til row). I tillegg så midtstiller
-        eg elementa i menyen.
-    */
-    nav ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    /* Når skjermen er liten, så vil biletet i main ta heile bredda. */
-    .flyt {
-        float: none;
-        display: block;
-        max-width: 100%;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .flyt {
-        float: none;
-        display: block;
-        max-width: 100%;
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Skriftstørrelsen i header blir mindre på mobil. */
-    #tittel {
-        font-size: 1rem;
-    }
-}
+/* alt med main over */

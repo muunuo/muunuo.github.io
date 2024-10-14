@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header { grid-area: header; }
+.menu { grid-area: meny; }
+.main { grid-area: main; }
+.copy{ grid-area: copy; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'copy copy copy copy copy'
+        'header header header header header'
+        'meny meny meny meny meny'
+        'main main main main main';
+}
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    padding: 1rem;
+}

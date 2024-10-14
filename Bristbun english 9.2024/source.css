@@ -1,0 +1,9 @@
+.p {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+div li p a :hover{
+    color: rgb(255, 0, 0);
+}
