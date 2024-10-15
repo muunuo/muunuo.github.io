@@ -60,7 +60,7 @@ figure { /* source texst under bilde */
     color: rgb(255, 255, 255);
 
 /* bakrunsbilde på tittelen australia */
-    background-image: url("../bilder/mainpic.jpg");
+    background-image: url("../bilder/Brisban/mainpic.jpg");
     background-size: cover;
     background-position: center;
     /* background-size: contain; = måte å endre størelse på et bakrunnsbilde*/
@@ -80,7 +80,7 @@ figure { /* source texst under bilde */
 }
 
 /* alt med tittel over */
-#A, #M, #F, #K{ /* farge på meny (skrives sånn for å få induviduelle bokser)*/
+#S, #V, #B, #K{ /* farge på meny (skrives sånn for å få induviduelle bokser)*/
     background-color: #678570;
     border-radius: 0.5rem; /* runder av hjørnene på boksene */
 }
