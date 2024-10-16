@@ -19,11 +19,6 @@
         (frå column til row). I tillegg så midtstiller
         eg elementa i menyen.
     */
-    /* nav li{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    } */
 
     .re-order .row {
         display: flex;
