@@ -13,9 +13,6 @@
             'main';
     }
 
-    img, object iframe{
-        width: 500px;
-    }
     /* 
         Endrer menyen sitt design for mobil.
         Menyelementene ligg ikkje lenger under kvarandre
@@ -34,21 +31,21 @@
         justify-content: center;
     }
     /* Når skjermen er liten, så vil biletet i main ta heile bredda. */
-    /* .flyt {
+    .flyt {
         float: none;
         display: block;
         max-width: 100%;
         width: 100%;
         justify-content: center;
-    } */
+    }
 
-    /* .flyte {
+    .flyte {
         float: none;
         display: block;
         max-width: 100%;
         width: 100%;
         justify-content: center;
-    } */
+    }
 
     /* Skriftstørrelsen i header blir mindre på mobil. */
     #tittel {
