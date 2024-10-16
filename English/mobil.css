@@ -43,6 +43,22 @@
         order: 5;
     }
 
+    .re-order .row .sixth{
+        order: 6;
+    }
+
+    .re-order .row .seventh{
+        order: 7;
+    }
+
+    .re-order .row .eighth{
+        order: 8;
+    }
+
+    .re-order .row .ninth{
+        order: 9;
+    }
+
 
 
     h2{
