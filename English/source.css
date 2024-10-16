@@ -1,12 +1,12 @@
-a{
+a{ /* linkene til kildene */
     color: rgb(78, 137, 102);
     text-decoration: none;
 }
 
-p a:hover{
+p a:hover{ /* linkene til kildene */
     color: rgb(4, 27, 8);
 }
 
-#K{
+#K{ /* mørkere farge på taben man er på */
     background-color:#154949;
 }

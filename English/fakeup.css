@@ -1,5 +1,5 @@
 .header{
-    /* bakrunsbilde på tittelen australia */
+    /* bakrunsbilde på tittelen  */
     background-image: url("../bilder/Brisban/makeup\ big.jpg");
     background-size: cover;
     background-position: center;
@@ -27,10 +27,10 @@ img{
     padding-right: 15px;
 }
 
-#B{
+#B{ /* mørkere farge på taben man er på */
     background-color: #482d65;
 }
 
-#B,#S,#V,#K:hover{
+#B,#S,#V,#K:hover{ /* endre farge når du er over */
     background-color:#482d65;
 }

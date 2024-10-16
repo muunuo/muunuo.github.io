@@ -1,44 +1,16 @@
-/* html, body {
-    margin: 0;
-    padding: 0;
-}
-
-.header { grid-area: header; }
-.menu { grid-area: meny; }
-.main1 { grid-area: main1; }
-.main2 {grid-area: main2;}
-.main3 {grid-area: main3;}
-.copy{ grid-area: copy; }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        'copy copy copy copy copy copy'
-        'header header header header header header'
-        'meny meny meny meny meny meny'
-        'tittel tittel tittel tittel tittel tittel'
-        'main1 main1 main2 main2 main3 main3';
-}
-
-.grid-container > div { 
-    padding: 1rem;
-} */
-
-#B{
+#B{ /* mørkere farge på taben man er på */
     background-color:#154949;
 }
 
 
-.tittel{ 
+.tittel{ /* tittel i midten */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-.b{
+.b{/* få link til å ikke se ut som link */
     text-decoration: none;
     color:  #000000;
 }

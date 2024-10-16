@@ -13,13 +13,8 @@
             'main';
     }
 
-    /* 
-        Endrer menyen sitt design for mobil.
-        Menyelementene ligg ikkje lenger under kvarandre
-        (frå column til row). I tillegg så midtstiller
-        eg elementa i menyen.
-    */
-
+/* alt under er for å sette ting riktig ann før jeg gjorde at ting ikke var soomet inn så ille , beholder det fordi det tok en time så.*/
+/* 
     .re-order .row {
         display: flex;
         display: -ms-flex;
@@ -57,7 +52,7 @@
 
     .re-order .row .ninth{
         order: 9;
-    }
+    } */
 
 
 

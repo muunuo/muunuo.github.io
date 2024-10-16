@@ -3,12 +3,13 @@ html, body {
     padding: 0;
 }
 
+/* grid elementene */
 .header { grid-area: header; }
 .menu { grid-area: meny; }
 .main { grid-area: main; }
 .copy{ grid-area: copy; }
 
-.grid-container {
+.grid-container { /* setter opp en grid */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto 1fr auto;

@@ -1,7 +1,7 @@
-#V{
+#V{ /* mørkere farge på taben man er på */
     background-color:#154949;
 }
 
-iframe{
+iframe{  /* så vidioen ikke er helt oppi teksten  */
     padding-right: 10px;
 }

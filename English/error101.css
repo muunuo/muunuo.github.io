@@ -1,5 +1,5 @@
 .header{
-    /* bakrunsbilde på tittelen australia */
+    /* bakrunsbilde på tittelen */
     background-image: url("../bilder/Brisban/Italia.jpg");
     background-size: cover;
     background-position: center;
@@ -27,6 +27,6 @@ img{
     padding-right: 15px;
 }
 
-#B{
+#B{ /* mørkere farge på taben man er på */
     background-color: #264c2e;
 }
