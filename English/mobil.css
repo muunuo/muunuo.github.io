@@ -39,6 +39,10 @@
         order: 4;
     }
 
+    .re-order .row .fifth{
+        order: 5;
+    }
+
 
 
     h2{
