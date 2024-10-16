@@ -1,11 +1,20 @@
 .p {
+    /* sentrerer kildene */
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-div li p a :hover{
-    color: rgb(255, 0, 0);
+
+
+
+a{
+    color: rgb(78, 137, 102);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(8, 47, 14);
 }
 
 #K{
