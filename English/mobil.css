@@ -13,6 +13,9 @@
             'main';
     }
 
+    img, object iframe{
+        width: 500px;
+    }
     /* 
         Endrer menyen sitt design for mobil.
         Menyelementene ligg ikkje lenger under kvarandre
