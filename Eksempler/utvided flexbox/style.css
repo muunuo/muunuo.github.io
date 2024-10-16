@@ -42,17 +42,17 @@ li {
 } */
 
 .main {
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  justify-content: center;
 } 
 /* <-- brukte dette for å få bilde og tekst med hverandre */
 
-/* img {
+img {
   display: flex;
   justify-content: center;
   padding-left: 10px;
   padding-top: 10px;
-} */
+}
 
 .flyt {
   float: left;

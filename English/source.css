@@ -1,20 +1,10 @@
-.p {
-    /* sentrerer kildene */
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-
-
-
 a{
     color: rgb(78, 137, 102);
     text-decoration: none;
 }
 
-a:hover{
-    color: rgb(8, 47, 14);
+p a:hover{
+    color: rgb(4, 27, 8);
 }
 
 #K{
