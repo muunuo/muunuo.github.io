@@ -19,7 +19,7 @@
         (frå column til row). I tillegg så midtstiller
         eg elementa i menyen.
     */
-    nav ul{
+    nav li{
         display: flex;
         flex-direction: row;
         justify-content: center;

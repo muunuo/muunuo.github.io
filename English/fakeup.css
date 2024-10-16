@@ -1,26 +1,26 @@
 .header{
     /* bakrunsbilde på tittelen australia */
-    background-image: url("../bilder/Brisban/Canyon.jpeg");
+    background-image: url("../bilder/Brisban/makeup\ big.jpg");
     background-size: cover;
     background-position: center;
     /* background-size: contain; = måte å endre størelse på et bakrunnsbilde*/
 }
 
 .ausi{/* får en solid farget bakrunn bak australia */
-    background-color: #78513b;
-    border: 1rem solid #78513b;
+    background-color: #613f85;
+    border: 1rem solid #613f85;
     border-radius: 1rem;
 }
 
 /* alt med tittel over */
 #S, #V, #K{ /* farge på meny (skrives sånn for å få induviduelle bokser)*/
-    background-color: #78513b;
+    background-color: #613f85;
     border-radius: 0.5rem; /* runder av hjørnene på boksene */
 }
 
 .copy{ /* abby's life helt oppe */
-    color: #302419;
-    background-color: #78513b;
+    color: #482d65;
+    background-color: #613f85;
 }
 
 img{
@@ -28,5 +28,9 @@ img{
 }
 
 #B{
-    background-color: #4c3826;
+    background-color: #482d65;
+}
+
+#B,#S,#V,#K:hover{
+    background-color:#482d65;
 }
