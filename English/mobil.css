@@ -25,6 +25,20 @@
         justify-content: center;
     } */
 
+    .re-order .row {
+        display: flex;
+        display: -ms-flex;
+        flex-direction: column;
+    }
+    .re-order .row .first {
+        order: 2;
+    }
+    .re-order .row .second {
+        order: 1;
+    }
+
+
+
     h2{
         display: flex;
         flex-direction: row;
@@ -55,3 +69,4 @@
         font-size: 1rem;
     }
 }
+
