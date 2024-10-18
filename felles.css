@@ -6,23 +6,33 @@ html, body {
 .header { grid-area: header; }
 .menu { grid-area: meny; }
 .main { grid-area: main; }
-.copy{ grid-area: copy; }
+.ko { grid-area: ko; }
+.footer { grid-area: footer;}
+.side { grid-area: side;}
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'copy copy copy copy copy'
+        'ko ko ko ko ko'
         'header header header header header'
         'meny meny meny meny meny'
-        'main main main main main';
+        'main main main main main'
+        'footer footer fotter fotter fotter';
+        
 }
 
 .grid-container > div { /* Alle barna til div-containeren av typen div */
     font-size: 1.5rem;
     padding: 1rem;
 }
+
+/* .ko{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 /* tittel */
 .header { /* header */
