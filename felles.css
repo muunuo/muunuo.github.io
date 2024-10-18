@@ -6,8 +6,7 @@ html, body {
 .header { grid-area: header; }
 .menu { grid-area: meny; }
 .main { grid-area: main; }
-.ko { grid-area: ko; }
-.footer { grid-area: footer;}
+.foter { grid-area: foter;}
 .side { grid-area: side;}
 
 .grid-container {
@@ -15,50 +14,49 @@ html, body {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'ko ko ko ko ko'
         'header header header header header'
         'meny meny meny meny meny'
         'main main main main main'
-        'footer footer fotter fotter fotter';
+        'foter foter foter foter foter';
         
 }
 
 .grid-container > div { /* Alle barna til div-containeren av typen div */
     font-size: 1.5rem;
-    padding: 1rem;
 }
 
-/* .ko{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+
+.flyt{
+    float: left;
+}
+
+.flyte{
+    float: right;
+}
+
 
 /* tittel */
-.header { /* header */
-    background: linear-gradient(270deg, #deb3d1, #944d80);
+.header { 
+    background-color: #eecae3;
     color: rgb(255, 255, 255);
-}
+    margin: 0;
+    padding: 0;
+    height: 5rem;
 
-.header{
-    /* logo/text i midten */
-    align-items: center;
-    justify-content: center;
-    display: flex;
+        /* logo/text i midten */
+        align-items: center;
+        justify-content: center;
+        display: flex;
 }
-
-li{
-    list-style: none;
-}
-/* tittel */
 
 
 /* meny */
-#A, #M, #O, #F, #K{ 
-    background-color: #deb3d1;
+#A, #M, #O, #K{ 
+    background-color: #c192bd;
+    border-radius: 1rem;
+    
+    height: 2rem;
 }
-
-
 
 nav{
     display: flex;
@@ -81,22 +79,34 @@ nav li a{
 /* Endrar bakgrunnsfargen på menyen når ein tek muspeikar over. */
 nav li a:hover{
     background-color:#491542;
-}
-/* meny */
-
-
-.footer{
-    background-color: #d27cb8;
+    border-radius: 0.5rem;
 }
 
-
-.flyt{
-    float: left;
+li{
+    list-style: none;
 }
 
-.flyte{
-    float: right;
+.menu{
+    background-color: #eecae3;
+    height: 5rem;
 }
+
+.main{
+    border-left: solid 10rem #eecae3;
+    border-right: solid 10rem #eecae3;
+    padding-left: 1rem;
+}
+
+.foter{
+    background-color: #eecae3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tittel */
+
 
 
 

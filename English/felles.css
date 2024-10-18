@@ -80,6 +80,7 @@ figure { /* source texst under bilde */
 }
 
 /* alt med tittel over */
+
 #S, #V, #B, #K{ /* farge på meny (skrives sånn for å få induviduelle bokser)*/
     background-color: #678570;
     border-radius: 0.5rem; /* runder av hjørnene på boksene */
