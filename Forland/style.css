@@ -1,0 +1,61 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#top { grid-area: top; }
+#meny { grid-area: meny; }
+#sosials { grid-area: sosials;}
+#main { grid-area: main; }
+#bygg { grid-area: bygg; }
+#hage { grid-area: hage; }
+#annet { grid-area: annet; }
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'top top top top top top top top top top'
+        'meny   main main main main main main main main   sosials'
+        'meny   bygg bygg bygg bygg bygg bygg bygg bygg   sosials'
+        'meny   hage hage hage hage hage hage hage hage   sosials'
+        'meny   annet annet annet annet annet annet annet annet   sosials';
+}
+
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    font-size: 1.5rem;
+}
+
+.flytL {
+    float: left;
+}
+
+.flytR {
+    float: right;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* body ul{
+    list-style: none;
+} */
+
+
+
+#meny a.boks,
+#sosials a.boks {
+    top: 0;
+    position: sticky;
+    padding-top: 5rem;
+    background-color: aquamarine;
+}
