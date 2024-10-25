@@ -4,15 +4,21 @@
     /* Når skjermstørrelsen blir  */
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
-            'copy'
-            'header'
+            'top'
             'meny'
-            'main';
+            'main'
+            'sosials'
+            'bygg'
+            'hage'
+            'annet';
     }
-    
+
+    .meny{
+        
+    }
     h2{
         display: flex;
         flex-direction: row;
