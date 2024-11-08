@@ -1,0 +1,21 @@
+#stein:hover{
+    border:solid pink 1rem;
+}
+#saks:hover{
+    border:solid pink 1rem;
+}
+#papir:hover{
+    border:solid pink 1rem;
+}
+.SSP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* #stein{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
