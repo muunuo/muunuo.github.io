@@ -136,3 +136,10 @@ function dataenSittValg(){ // her velger dataen stein saks papir
 
 }
 
+let img_reser = document.getElementById ("reset");
+img_reser.addEventListener("click", reser);
+
+// if ("click", reser) 
+function myFunction(){
+    document.getElementById("SSPKode").reset();
+}
