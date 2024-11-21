@@ -34,10 +34,12 @@ html, body {
     float: right;
 }
 
-
+body{
+background-color: #eecae3;
+}
 /* tittel */
 .header { 
-    background-color: #eecae3;
+
     color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
@@ -87,18 +89,19 @@ li{
 }
 
 .menu{
-    background-color: #eecae3;
+
     height: 5rem;
 }
 
 .main{
-    border-left: solid 10rem #eecae3;
-    border-right: solid 10rem #eecae3;
+background-color: rgb(255, 240, 251);
+padding: 1rem;
+border: solid 7rem #eecae3;
     padding-left: 1rem;
 }
 
 .foter{
-    background-color: #eecae3;
+
 
     display: flex;
     justify-content: center;

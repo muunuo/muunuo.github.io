@@ -59,7 +59,7 @@ function velgPapir() {
 
     brukerValg="papir";
 
-    img_stein.style.display = "none";
+    img_stein.style.display = "none"; //none er for å gjømme bilde 
     img_saks.style.display = "none";
 
     dataenSittValg();
@@ -77,9 +77,8 @@ function dataenSittValg(){ // her velger dataen stein saks papir
         img_stein2.style.display = "block";
     }
     if (dataValg == 2) { // vi sier at hvis det tilfeldige tallet er to, så valgte dataen stein.
-        // alert("jeg valgte saks");
-        console.log ("jeg valgte 2");
-        img_saks2.style.display = "block";
+        console.log ("jeg valgte 2"); //vi sier i konsollen hva data valgte
+        img_saks2.style.display = "block"; //
     }
     if (dataValg == 3) {
         // alert("jeg valgte papir");
@@ -90,7 +89,7 @@ function dataenSittValg(){ // her velger dataen stein saks papir
     console.log("Brukeren valgte: " + brukerValg);
 
     if (brukerValg == "stein" && dataValg == 1) {
-        uavgjordt.style.display = "block";
+        uavgjordt.style.display = "block"; // block viser element
         return;
     }
 
@@ -136,10 +135,34 @@ function dataenSittValg(){ // her velger dataen stein saks papir
 
 }
 
-let img_reser = document.getElementById ("reset");
-img_reser.addEventListener("click", reser);
 
-// if ("click", reser) 
-function myFunction(){
-    document.getElementById("SSPKode").reset();
+
+let startny = document.getElementById("startny");
+
+startny.addEventListener('click', begynnenytt);
+
+function begynnenytt() {
+    img_stein.style.display = "block"; //får bildene spilleren kan velge mellom til å vise seg igjen
+    img_saks.style.display = "block";
+    img_papir.style.display = "block";
+
+    uavgjordt.style.display = "none";
+    tap.style.display = "none";
+    vant.style.display = "none";
+
+    img_stein2.style.display = "none";
+    img_saks2.style.display = "none";
+    img_papir2.style.display = "none";
+
 }
+
+// let img_reser = document.getElementById ("reset");
+// img_reser.addEventListener("click", reser);
+
+// // if ("click", reser) 
+// if (myFunction) {
+//     document.getElementById("SSPKode").reset
+// }
+// // function myFunction(){
+// //     document.getElementById("SSPKode").reset();
+// // }
