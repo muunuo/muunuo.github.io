@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#top { grid-area: top; }
+#klokke { grid-area: klokke;}
+#navnVelger { grid-area: nv; }
+#meny { grid-area: meny; }
+#quiz { grid-area: quiz;}
+#giInfo { grid-area: gi; }
+#bygg { grid-area: bygg; }
+#hage { grid-area: hage; }
+#annet { grid-area: annet; }
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'top top top top top top top klokke klokke klokke'
+        'meny   nv nv nv nv nv nv nv nv nv'
+        'meny   quiz quiz quiz quiz quiz quiz quiz quiz quiz'
+        'meny   gi gi gi gi gi gi gi gi gi';
+}
+
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    font-size: 1.5rem;
+}
+
+.flytL {
+    float: left;
+}
+
+.flytR {
+    float: right;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

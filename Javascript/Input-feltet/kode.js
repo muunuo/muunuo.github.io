@@ -9,7 +9,7 @@ knappSend.addEventListener ("click", sendInn) //det de svarte sendes inn til meg
 function sendInn(){
     console.log("knappen ble trykket") //så du vet du gjorde det riktig 
 
-    let brukernavn = htmlBrukernavn.value; // verdien er brukernsvn, passord og fargen 
+    let brukernavn = htmlBrukernavn.value; // verdien (value) er brukernavn, passord og fargen 
     let passord = htmlPassord.value;
     let farge = htmlFarge.value;
 
