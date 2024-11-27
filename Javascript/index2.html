@@ -4,28 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Javascript</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="farge.css">
+    <link rel="stylesheet" href="/Javascript/cssJavascriptside/style.css">
+    <link rel="stylesheet" href="/Javascript/cssJavascriptside/farge.css">
+    <link rel="stylesheet" href="/Javascript/cssJavascriptside/mobil.css">
+    <script src="JsJavascriptside/klokke.js" defer></script>
+    <script src="JsJavascriptside/inputfelt.js" defer></script>
 </head>
 <body>
-    <div id="top">
-        <p>toppen</p>
-    </div>
-    <div id="klokke">
-        <p>klokken</p>
-    </div>
+    <div class="grid-container">
+        <div id="top">
+            <p>toppen</p>
+        </div>
+        <div id="klokke">
+            <p id="klokken">
+            </p>
+        </div>
+
+        <div id="meny">
+            <nav> <!-- linke til andre sidene -->
+                    <li id="K"><a href="https://muunuo.github.io/koding.html">Home</a></li>
+                    <li id="V"><a href="https://muunuo.github.io/Javascript/index2.html">Video</a></li>
+
+            </nav>
+        </div>
 
 
-    <div id="navnVelger">
-        <p>navnvelger</p>
-    </div>
+        <div id="nv">
+            <p>navnvelger</p>
+            <input id="brukerenSittNavn" type="brukernavn">
+            <button id="knapp"> Svar
+            </button>
+            <p></p>
+        </div>
 
-    <div id="quiz">
-        <p>quiz</p>
-    </div>
+        <div id="quiz">
+            <p>quiz</p>
+        </div>
 
-    <div id="giInfo">
-        <p>giinfo</p>
+        <div id="gi">
+            <p>giinfo</p>
+        </div>
     </div>
 
 </body>

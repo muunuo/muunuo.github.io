@@ -5,13 +5,12 @@ html, body {
 
 #top { grid-area: top; }
 #klokke { grid-area: klokke;}
-#navnVelger { grid-area: nv; }
+#nv { grid-area: nv; }
 #meny { grid-area: meny; }
 #quiz { grid-area: quiz;}
-#giInfo { grid-area: gi; }
-#bygg { grid-area: bygg; }
-#hage { grid-area: hage; }
-#annet { grid-area: annet; }
+#gi { grid-area: gi; }
+#mellom { grid-area: mellom; }
+
 
 
 
@@ -20,9 +19,8 @@ html, body {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'top top top top top top top klokke klokke klokke'
-        'meny   nv nv nv nv nv nv nv nv nv'
-        'meny   quiz quiz quiz quiz quiz quiz quiz quiz quiz'
+        'top top top top top top top top    klokke klokke'
+        'meny   nv nv nv nv     mellom      quiz quiz quiz quiz'
         'meny   gi gi gi gi gi gi gi gi gi';
 }
 
