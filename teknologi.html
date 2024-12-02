@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="felles.css">
+    <link rel="stylesheet" href="teknologi.css">
 </head>
 <body>
     <div class="grid-container">
@@ -18,16 +19,72 @@
             </nav>
         </div>
         <div class="main">
-            <img src="/bilder/Teknologiforståelse/Backbone.HEIC" alt="ryggbeinet men en forklaring av ISP på siden. Forklaringen: ISP, Internett Service Provider...">
-            <img src="/bilder/Teknologiforståelse/Comprimering.HEIC" alt="">
-            <img src="/bilder/Teknologiforståelse/henteSiden.heic" alt="">
-            <img src="/bilder/Teknologiforståelse/kompinenter.heic" alt="">
-            <img src="/bilder/Teknologiforståelse/militær.heic" alt="">
-            <img src="/bilder/Teknologiforståelse/pakke:direkte.heic" alt="">
-            <img src="/bilder/Teknologiforståelse/post.heic" alt="">
-            <img src="/bilder/Teknologiforståelse/ruter.HEIC" alt="">
-            <img src="/bilder/Teknologiforståelse/stander.heic" alt="">
-            <img src="/bilder/Teknologiforståelse/timeline.HEIC" alt="">
+            <p>Dette er min forståelse av disse konseptene, ikke bruk dette som en fasit, bruk det som et grunnlag til å videre utvikle din egen forståelse, og som et grunnlag til å vite hva
+                dere kan fortsette å øve på. Dere kan fint rette på det jeg har skrevet om det er noen åpenbare feil, men være høffelig om dette. 
+            </p>
+            <img class="flyt" width="200px" src="/bilder/Teknologiforståelse/Backbone.jpeg" alt="ryggbeinet men en forklaring av ISP på siden. Forklaringen: ISP, Internett Service Provider...">
+            <p class="tjukkskrift">ISP: Internett Service Provider</p>
+            <p>
+                En ISP, som navnet delevis forklarer, er en internettlevrandør, altså noen som gir privatpersoner eller organsiasjoner tilgang til internettet. 
+                Grunnen for at ISP er refferert til som "backbonet" eller ryggbeinet til internettet er fordi ISP, og Organisasjoner (som Google, NRK, Universitet) og Skytjenester/ "Utleigarer" 
+                (som Google Cloud, Microsoft Azura) sine servere brukes til å overføre "pakker" fra en data til en annen (forklart mer under) og hjelper dataen din å finne frem til 
+                alle de forskjellige nettsidene som finnes på nettet (også forklart mer under). 
+            </p>
+            <img id="pakkeDirekte" width="200px" src="/bilder/Teknologiforståelse/pakke:direkte.jpeg" alt="">
+            <p class="tjukkskrift">pakkesvitsjing</p>
+            <p>
+                Som nevnt over bruker vi servere som ISP, Organisagjoner og Skytjenester til å overføre "pakker", men hva er en "pakke"? Vel, når du skal sende en fil fra et sted til et
+                annet, så deles filen opp til mindre deler som kalles for pakker, disse sendes fra din data via ISP og andre servere til dataen du ønsket å sende de til. Hvor mange pakker
+                det deles opp i kan variere basert på filstørelsen, og de transporteres ofte via forskjellige ruter/servere. Vi gjør dette fordi det hjelper å øke farten filen kan overføres.
+                Som du ser på tegningen kan flere pakker overføres på en gang med denne metoden, i motsettning til linjevisitjing som var brukt før i tiden. Dette er når det går linjer fra sted til sted
+                slik eldre telefoner ofte hadde. Problemet med dette var at når en linje var i bruk så var det ikke noe/noen andre som kunne bruke denne, og dette ville ofte føre til trafikk, med pakkevisitj
+                ungår vi denne trafikken med å både sende mindre pakker som tar mindre tid på hvert stopp, og med å ha mange linjer de kan gå via, og mange veier på hver linje, som sett på tegningen. 
+            </p>
+            <img class="flyte" width="200px" src="/bilder/Teknologiforståelse/Comprimering.jpeg" alt="">
+            <p class="tjukkskrift">Comprimering</p>
+            <p>
+                Comprimering er som en mappe, den holder filer, men navnet på mappen sier ingenting på hva type filer den holder. Da må du inn å se på selve filene.
+            </p>
+            <p>
+                <3
+            </p>
+
+            <img id="hentSide" width="200px" src="/bilder/Teknologiforståelse/henteSiden.jpeg" alt="">
+            <p class="tjukkskrift">Hente Nettsider</p>
+            <p>
+                Når dataen din skal hente en side må den gå gjennom en del steg.
+                1. Du klikker på siden du vil inn på
+                2. Dataen din sender ut en forespørsel til en server (via WWW som vi dekker mer seinere)
+                3. Serveren spør Databaseserveren (den med de faktiske innholdet) om infoen den trenger for å åpne siden
+                4. Database serveren sider ifra om det er noe annet innhold på andre servere som trengs ppå siden
+                5. Serveren henter dette inholdet i tilleg (eks, eksterne liker, vidioer, bilder osv.)
+                6. Hele blir sendt tilbake til din pc og du blir gitt tilgang til siden.
+            </p>
+            <p>Alt dette skjer så fort at det er skjeldent man legger serlig merke til det.</p>
+            <img id="kompinenter" width="290px" src="/bilder/Teknologiforståelse/kompinenter.jpeg" alt="">
+            <p class="tjukkskrift">Kompinenter</p>
+            <p>Kompinen er de forskjellige delene som bygger opp en data.</p>
+            <p>Jeg finner det er smart å tenke på de forskjellige kompinentene av en datamaskin som deler på korppen din, CPU er hjernen, GPU er synet, Hardisk er langtidshukomelse
+                osv. Det er ofte vanskeligt å huske hva nyaktig et hovedkort gjør, men hvis jeg sier til deg at det er som blodårene dine, så har du nok en ide på 
+                at det overfører ting mellom de andre kompinentene.
+            </p>
+            <img class="flyte" width="400px" src="/bilder/Teknologiforståelse/militær.jpeg" alt="">
+            <p>Her er en tegneserier som veldig kort forklarer hvorfor militærer ville ha en måte å desentralisere informasjonsoppbevaringen deres (Hvorfor de ikke ville ha all den viktige infoen på 
+                kun et sted.)</p>
+
+            <img class="post" width="200px" src="/bilder/Teknologiforståelse/post.jpeg" alt="">
+            <p>
+                Du vil besøke en nettside, du har navnet, kansje https://muunuo.github.io/index.html, men du trenger også adressen, IP-adressen (internett protical adressen, fungerer det samme som en husadresse)
+                Du bruker WWW (world wide web) til å be om å besøke den nettsiden, WWW spør et postkontor (en server) om de vet adressen, de postkontoret spør kansje et annet postkontor (en server spør en annen)
+                TCP (transmission Controll Protecol) eller postbilen til å transportere IP-adressen til nettsiden tilbake til deg etter den er funnet. 
+            </p>
+            <p>Det kan veldig godt være at det ikke ga noen mening, og det er lov, finn noe som fungerer for deg, tenk at du skal kunne forklare det til en person som aldri har hørt om noe i nærheten av dette å gjøre</p>
+            <p class="tjukkskrift">Ruter</p>
+            <p>
+                Du vil sende en melding, den sendes i binærkode til en wierless ruter, så sendes den til en ruter, som da bruker fiberkabler til å sende meldingen over lange distanser. 
+            </p>
+            <img class="flyte" width="200px" src="/bilder/Teknologiforståelse/ruter.jpeg" alt="">
+            <img class="stander" width="200px" src="/bilder/Teknologiforståelse/stander.jpeg" alt="">
         </div>
     </div>
 </body>

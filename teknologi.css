@@ -1,0 +1,40 @@
+
+
+#pakkeDirekte{
+    float: right;
+
+    transform: rotate(270deg);
+    padding-left:10rem ;
+}
+
+.tjukkskrift{
+    font-weight: bold;
+}
+
+#hentSide{
+    float: left;
+
+    padding-left: 10rem;
+    transform: rotate(270deg);
+}
+
+#kompinenter{
+    float: left;
+
+    padding-left: 10rem;
+    transform: rotate(270deg);
+}
+
+#stander{
+    float: left;
+
+    padding-left: 10rem;
+    transform: rotate(270deg);
+}
+
+#post{
+    float: left;
+
+    padding-left: 10rem;
+    transform: rotate(270deg);
+}
