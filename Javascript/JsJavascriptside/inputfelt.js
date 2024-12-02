@@ -4,9 +4,9 @@ let knapp = document.getElementById("knapp")
 knapp.addEventListener("click", sendInnBrukernavn)
 
 function sendInnBrukernavn (){
-    console.log("knapp trykkes")
     let brukernavn = brukerenSittNavn.value
 
     console.log(brukernavn);
     
 }
+
