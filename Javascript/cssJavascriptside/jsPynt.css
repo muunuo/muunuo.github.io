@@ -1,0 +1,11 @@
+#top{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#profil{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
