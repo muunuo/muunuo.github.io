@@ -11,15 +11,35 @@
     <script src="JsJavascriptside/klokke.js" defer></script>
     <script src="JsJavascriptside/inputfelt.js" defer></script>
     <script src="JsJavascriptside/profil.js" defer></script>
+    <script src="JsJavascriptside/spørsmål.js" defer></script>
 </head>
 <body>
+            <!-- sett opp bilde 1 og bilde 2 som knapp -->
+
+    
     <div class="grid-container">
+
+
+        <div>
+            <p id="hei">hei</p> <!-- si hei "bruker sitt navn" -->
+            <p id="sierBrukerNavn"></p>
+        </div>
+
+
         <div id="top">
             <h2>Javascript</h2>
         </div>
+
+        <div id="profilbilde">
+            <img id="profilbilde1" src="/bilder/logo/logo3.png" alt="" width="75px">
+            <img id="profilbilde2" src="/bilder/logo/forlandLogo.png" alt="" width="50px">
+        </div>
+
+
         <div id="klokke">
             <p id="klokken"></p>
         </div>
+
 
         <div id="meny">
             <nav> <!-- linke til andre sidene -->
@@ -28,35 +48,28 @@
             </nav>
         </div>
 
-        <div id="profil">
-            <div class="heiBruker">
-                <p id="hei">hei</p>
-                <p id="sierBrukerNavn"></p>
-            </div>
-
-            <div class="profilbilde">
-                <!-- sett opp bilde 1 og bilde 2 som knapp -->
-                <img src="/bilder/logo/logo3.png" alt="" width="75px">
-            </div>
-            <div class="valg">
-                <img src="" alt="">
-            </div>
-        </div>
 
         <div id="nv">
-            <input id="brukerenSittNavn" type="brukernavn">
-            <button id="knapp"> Svar</button> <!-- knappen for å sende inn svaret -->
+            <input id="brukerenSittNavn" type="brukernavn"> <!-- bruker skriver inn brukernavn her -->
+            <button id="knapp"> Svar</button> <!-- knappen for å sende inn svare om brukernavn -->
         </div>
+
 
         <div id="quiz">
-            <p>quiz</p>
-
+            <!-- sett opp noen spørsmål og en måte å svare/sende inn svar -->
+            <p id="spørsmål1">Er CSS eller HTML oftast brukt til å pynte en nettside? <input type="svarSpørsmål1"></p>
+            <p id="spørsmål2">I følge Jo Bjørnar er rem eller px bedre å bruke til å justere størelsen på et bilde? <input type="svarSpørsmål2"></p>
+            <button id="sendInnAlleSvar">Send Inn Svar Her</button>
         </div>
+
 
         <div id="gi">
             <p>giinfo</p>
         </div>
+
+
     </div>
+
 
 </body>
 </html>

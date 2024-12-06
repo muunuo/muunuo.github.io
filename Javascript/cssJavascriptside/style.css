@@ -10,7 +10,7 @@ html, body {
 #quiz { grid-area: quiz;}
 #gi { grid-area: gi; }
 #mellom { grid-area: mellom; }
-#profil { grid-area: profil; }
+#profilbilde { grid-area: profilbilde; }
 
 
 
@@ -20,7 +20,7 @@ html, body {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'profil   top top top top top top top    klokke klokke'
+        'profilbilde   top top top top top top top    klokke klokke'
         'meny   nv nv nv nv     mellom      quiz quiz quiz quiz'
         'meny   gi gi gi gi gi gi gi gi gi';
 }

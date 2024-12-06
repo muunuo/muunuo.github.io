@@ -6,9 +6,9 @@ let navn = document.getElementById("sierBrukerNavn");
 siHei.style.display = "none"; //ordet hei er gjømt når programet åpnes
 
 trykkKnapp.addEventListener("click", sendInnBrukernavn); //"click" er innebyggd, 
-//gjør at når knapp trykkes blir navnet gitt variabelen sendInnBrukernavn
+//sier at når knappen trykkes skal den gjøre sendInnBrukernavn under.
 function sendInnBrukernavn (){ //når send in brukernavn blir aktivert skal dette skje
-    let brukernavn = brukerenSittNavn.value; //
+    let brukernavn = brukerenSittNavn.value; //lagrer brukernavnet som ble skrvet inn i feltet
 
     console.log(brukernavn); //sier brukernavn i konsollen
 
