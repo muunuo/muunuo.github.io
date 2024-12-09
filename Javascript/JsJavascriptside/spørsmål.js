@@ -4,11 +4,10 @@ let svarSpørsmål1 = document.getElementById("brukerSittSvarSpørsmål1"); // g
 let sendInn = document.getElementById("sendInnAlleSvar"); // husk forskjellige navn på id og variabel
 let svarSpørsmål2 = document.getElementById("brukerSittSvarSpørsmål2");
 
+
 //la data vite hva rett svar er 
-
-let spørsmålx= document.querySelector("spørsmål")
-
-svarx =["CSS","px"]
+svar1 ="CSS"
+svar2 ="px"
 
 //lage svar knapp
 sendInn.addEventListener("click", sendInnSvar); //"click" er innebyggd,
@@ -20,24 +19,30 @@ function sendInnSvar (){ //når send in brukernavn blir aktivert skal dette skje
     console.log(svarSpørsmål1); //sier brukernavn i konsollen
     console.log(svarSpørsmål2)
 
-//få mulighet til å svarknappen til å forsvinne etter man trykker svar
-    sendInn.style.display = "none"
+//få svarknappen til å forsvinne etter man trykker svar
+    sendInn.style.display="none"
 
-    //gjømme boksene man skriver i å skrive svaret bruker ga med <p>
+    document.getElementById("brukerSittSvarSpørsmål1").disabled= true;
+    document.getElementById("brukerSittSvarSpørsmål2").disabled= true;
 
-    //la bruker vite hva rett svar er 
-    for (let x = 0; x < spørsmålx.length; x++) {
-        let svar = console.log (spørsmålx)[x];
-        if (svar == svarx[x]) {
-            console.log("rett")
-        } else {
-            console.log("feil")
-        }
-            
-        }
-        
+
+    if (svarSpørsmål1==svar1) {
+        console.log("1rett")
+    } else {
+        console.log("1feil")
     }
 
+    if (svarSpørsmål2==svar2) {
+        console.log("2rett")
+    } else {
+        console.log("2feil")
+    }
+
+}
+
+// //setter opp så input kan fjernes og svar vises 
+//gjømme boksene man skriver i å skrive svaret bruker ga med <p>
+//la bruker vite hva rett svar er 
 //data sier om bruker svarte rett eller feil
 
 //Ha en poengsum
