@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="/Javascript/cssJavascriptside/farge.css">
     <link rel="stylesheet" href="/Javascript/cssJavascriptside/mobil.css">
     <link rel="stylesheet" href="cssJavascriptside/jsPynt.css">
+    <link rel="stylesheet" href="/Javascript/cssJavascriptside/tekstPynt.css">
     <script src="JsJavascriptside/klokke.js" defer></script>
     <script src="JsJavascriptside/inputfelt.js" defer></script>
     <script src="JsJavascriptside/profil.js" defer></script>
     <script src="JsJavascriptside/spørsmål.js" defer></script>
+    <script src="JsJavascriptside/poeng.js" defer></script>
 </head>
 <body>
             <!-- sett opp bilde 1 og bilde 2 som knapp -->
@@ -59,11 +61,11 @@
             <!-- sett opp noen spørsmål og en måte å svare/sende inn svar -->
             <p>Er CSS eller HTML oftast brukt til å pynte en nettside?</p>
             <input id="brukerSittSvarSpørsmål1" type="svarSpørsmål1">
-            <p class="litenText">CSS</p>
+            <p id="rettSvar1">Riktig svar: CSS</p>
 
             <p>Er rem eller px bedre å bruke til å justere størelsen på et bilde?</p>
             <input id="brukerSittSvarSpørsmål2" type="svarSpørsmål2">
-            <p></p>
+            <p id="rettSvar2">Riktig svar: px</p>
 
             <button id="sendInnAlleSvar">Send Inn Svar Her</button>
         </div>
