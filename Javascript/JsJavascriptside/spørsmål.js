@@ -5,6 +5,7 @@ let svarSpørsmål2 = document.getElementById("brukerSittSvarSpørsmål2");
 let rett1 = document.getElementById("SierRettSvar1"); //hvis bruker svarer feil blir rett svar gitt
 let rett2 =document.getElementById("SierRettSvar2"); //hvis bruker svarer feil blir rett svar gitt
 
+let poengsum = 0 
 //vise hva rette svaret er
 SierRettSvar1.style.display="none"; //gjømmer rett svar frem til de trengs
 SierRettSvar2.style.display="none"; //gjømmer rett svar frem til de trengs
@@ -34,6 +35,7 @@ function sendInnSvar (){ //når send in brukernavn blir aktivert skal dette skje
 //la bruker vite hva rett svar er 
     if (svarSpørsmål1==svar1) {
         console.log("1rett");
+        poengsum=poengsum+1
     } else {
         console.log("1feil");
         SierRettSvar1.style.display="block";
@@ -41,16 +43,28 @@ function sendInnSvar (){ //når send in brukernavn blir aktivert skal dette skje
 
     if (svarSpørsmål2==svar2) {
         console.log("2rett");
+        poengsum=poengsum+1
     } else {
         console.log("2feil");
         SierRettSvar2.style.display="block";
     }
 
+    console.log(poengsum)
+    document.getElementById("poengsum").innerHTML =poengsum;
 }
+
+
+
+
+
+document.getElementById("poengsum").innerHTML =poengsum; 
+
+    
 
 // //setter opp så input kan fjernes og svar vises 
 
 //data sier om bruker svarte rett eller feil
 
 //Ha en poengsum
+
 
