@@ -1,7 +1,51 @@
-.oppåHverandre{
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#hylleOgKlær { grid-area: hylleOgKlær; }
+#romOgKropp { grid-area: romOgKropp;}
+
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp '
+        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp';
+}
+
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    font-size: 1.5rem;
+}
+
+
+#hylle{
     position: absolute;
 }
 
+#eksempelKlær{
+    position: relative;
+}
+
+#rom{
+    position: absolute;
+    float: left;
+}
+
 #kropp{
-    position: sticky;
+    position: relative;
+}
+
+#kjole{
+    position: relative;
 }
