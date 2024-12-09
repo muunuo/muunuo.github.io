@@ -1,2 +1,23 @@
 
+#farge1{
+    border: solid 1rem paleturquoise;
+    background-color: paleturquoise;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+}
 
+#farge2{
+    border: solid 1rem palegreen;
+    background-color: palegreen;
+}
+
+#farge3{
+    border: solid 1rem palegoldenrod;
+    background-color: palegoldenrod;
+}
+
+#farge4{
+    border: solid 1rem palevioletred;
+    background-color: palevioletred;
+}
