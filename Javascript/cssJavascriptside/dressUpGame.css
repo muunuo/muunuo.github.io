@@ -12,6 +12,81 @@ html, body {
 
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'hylleOgKlær hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp '
+        'hylleOgKlær hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp';
+}
+
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    font-size: 1.5rem;
+}
+
+#hylle{
+    position: fixed;
+}
+
+/* ting i hyllen */
+#litenRosaKjole{
+    position: relative;
+}
+
+#litenAntrekk{
+    position: relative;
+}
+
+#rom{
+    position: fixed;
+}
+
+#kropp{
+    position: relative;
+    top: 50px;
+    left: 200px;
+}
+
+#rosaKjole{
+    position: relative;
+
+}
+
+#antrekk{
+    position: relative;
+    right: 125px;
+    bottom: 100px;
+}
+
+#nakenKler{
+    position: relative;
+    left: 220px;
+    bottom: 400px;
+} 
+
+
+/* 
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#hylleOgKlær { grid-area: hylleOgKlær; }
+#romOgKropp { grid-area: romOgKropp;}
+
+
+
+
+
+.grid-container {
+    display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
@@ -20,18 +95,20 @@ html, body {
         'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
         'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
         'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
+        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
         'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp';
 }
 
 
-.grid-container > div { /* Alle barna til div-containeren av typen div */
+.grid-container > div { 
     font-size: 1.5rem;
 }
 
 
 #hylle{
     position: absolute;
-    z-index: 0; /* z-index er for at hyllen skal være bakerst, lavt tall bak, høyt tall fremme */
+    z-index: 0;
 }
 
 #litenRosaKjole{
@@ -40,13 +117,6 @@ html, body {
     top: 70px;
     left: 130px;
 }
-
-/* #litenGrønKjole{
-    
-    position: absolute;
-    z-index: 2;
-    top: 10px;
-} */
 
 #litenAntrekk{
     position: absolute;
@@ -76,8 +146,9 @@ html, body {
     bottom: 100px;
 }
 
-#nakenKlær{
+#nakenKler{
     position: relative;
     left: 220px;
     bottom: 400px;
-}
+    z-index: 0; z-index er for at hyllen skal være bakerst, lavt tall bak, høyt tall fremme 
+} */

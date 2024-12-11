@@ -1,7 +1,7 @@
 let KnappVelgAntrekk1 = document.getElementById("litenRosaKjole");
 let KnappVelgAntrekk2 = document.getElementById("litenAntrekk");
 
-let bildeAntrekkNaken = document.getElementById("nakenKlær");
+let bildeAntrekkNaken = document.getElementById("nakenKler");
 let antrekk1 = document.getElementById("rosaKjole");
 let antrekk2 = document.getElementById("antrekk");
 
@@ -11,7 +11,6 @@ let antrekk1TogF =false;
 let antrekk2TogF =false;
 
 
-
 //1. Lag en knapp
 KnappVelgAntrekk1.addEventListener("click", velgAntrekk1);
 KnappVelgAntrekk2.addEventListener("click", velgAntrekk2);
@@ -19,9 +18,9 @@ KnappVelgAntrekk2.addEventListener("click", velgAntrekk2);
 
 function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usant.
     if (antrekk1TogF==false) { //om antrekket er av
-        antrekk1.style.display="none" //skal det ikke vises
+        antrekk1.style.display="none"; //skal det ikke vises
         } else { //men hvis det ikke er av (altså på)
-            antrekk1.style.display="block" //skal det vises
+            antrekk1.style.display="block"; //skal det vises
         }
 
         if (antrekk2TogF==false) { 
@@ -46,15 +45,8 @@ console.log("Rosa ble trykket")
 }
 
 function velgAntrekk2() {
-    console.log("annet ble trykket")
-        //løp funksjonen så ting faktisk skjer.
-        if (antrekk2TogF==false) {//3. Når trykket blir den til på
-            antrekk2TogF=true 
-        } else {//4.når trykket igjen blir den på
-            antrekk2TogF=false
-        }
-        TogF() //functionen blir kjørt
-    }
+    console.log("knapp2")
+}
 
 
 
