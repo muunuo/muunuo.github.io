@@ -31,10 +31,27 @@ html, body {
 
 #hylle{
     position: absolute;
+    z-index: 0;
 }
 
-#eksempelKlær{
-    position: relative;
+#litenRødKjole{
+    position: absolute;
+    z-index: 1;
+    top: 70px;
+    left: 130px;
+}
+
+/* #litenGrønKjole{
+    
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+} */
+
+#litenAntrekk{
+    position: absolute;
+    left: 130px;
+    top: 310px;
 }
 
 #rom{
@@ -44,8 +61,18 @@ html, body {
 
 #kropp{
     position: relative;
+    top: 50px;
+    left: 200px;
 }
 
-#kjole{
+#rosaKjole{
     position: relative;
+    left: 30px;
+    bottom: 60px;
+}
+
+#antrekk{
+    position: relative;
+    right: 125px;
+    bottom: 100px;
 }
