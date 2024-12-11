@@ -31,10 +31,10 @@ html, body {
 
 #hylle{
     position: absolute;
-    z-index: 0;
+    z-index: 0; /* z-index er for at hyllen skal være bakerst, lavt tall bak, høyt tall fremme */
 }
 
-#litenRødKjole{
+#litenRosaKjole{
     position: absolute;
     z-index: 1;
     top: 70px;
@@ -67,12 +67,17 @@ html, body {
 
 #rosaKjole{
     position: relative;
-    left: 30px;
-    bottom: 60px;
+
 }
 
 #antrekk{
     position: relative;
     right: 125px;
     bottom: 100px;
+}
+
+#nakenKlær{
+    position: relative;
+    left: 220px;
+    bottom: 400px;
 }
