@@ -53,6 +53,13 @@ console.log("Rosa ble trykket")
 
 function velgAntrekk2() {
     console.log("knapp2")
+
+    if (antrekk2TogF==false) {
+        antrekk2TogF=true
+    } else {
+        antrekk2TogF=false
+    }
+    TogF()
 }
 
 
