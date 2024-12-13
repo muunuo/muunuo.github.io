@@ -28,6 +28,12 @@ function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usa
             } else {
                 antrekk2.style.display="block" 
             }
+
+            // if (antrekk0TogF==false) { 
+            //     antrekk0.style.display="none"
+            //     } else {
+            //         antrekk0.style.display="block" 
+            //     }
 }
 
 TogF() //function TogF blir kjørt her 
@@ -37,7 +43,8 @@ function velgAntrekk1() {
 console.log("Rosa ble trykket")
     //løp funksjonen så ting faktisk skjer.
     if (antrekk1TogF==false) {//3. Når trykket blir den til på
-        antrekk1TogF=true 
+        antrekk1TogF=true
+        
     } else {//4.når trykket igjen blir den på
         antrekk1TogF=false
     }
@@ -55,9 +62,3 @@ function velgAntrekk2() {
 //1,2. gjør samme som over for nr2
 //1,3. hvis nr 1 er på, og nr2 trykkes, slås 1 av og 2 på.
 
-
-
-function velgAntrekk2() {
-
-
-}

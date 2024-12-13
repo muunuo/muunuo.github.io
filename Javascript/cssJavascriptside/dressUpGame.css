@@ -30,6 +30,10 @@ html, body {
     font-size: 1.5rem;
 }
 
+body{
+    background-color: #937281;
+}
+
 #hylle{
     position: fixed;
 }
