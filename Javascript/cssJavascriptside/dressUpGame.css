@@ -5,24 +5,23 @@ html, body {
 
 #hylleOgKlær { grid-area: hylleOgKlær; }
 #romOgKropp { grid-area: romOgKropp;}
-
-
-
+#hylleOgHar { grid-area: hylleOgHar; }
 
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    position: relative; /* prøver noe jeg fant på nett for å få bildene oppå hverandre */
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'hylleOgKlær hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp '
-        'hylleOgKlær hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp';
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar';
 }
 
 
@@ -30,12 +29,46 @@ html, body {
     font-size: 1.5rem;
 }
 
+/* påminnelse til selv: container kan ikke ha position absolut, da blir container veldig liten */
 body{
     background-color: #937281;
 }
 
-#hylle{
-    position: fixed;
+
+#romOgKropp{
+    grid-column: 4 / -1 ;
+    position: absolute;
+}
+
+#hylle1{
+    position: absolute;
+
+}
+#hylle2{
+    position: relative;
+    bottom: 10rem ;
+    left: 3rem;
+}
+
+#kropp{
+    position: relative;
+    right: 25rem;
+    bottom: 2rem;
+}
+
+#dokkeHar1, #dokkeHar2{
+    position: absolute;
+    z-index: 1;
+    }
+
+#rosaKjole{
+    position: absolute;
+    bottom: 15rem;
+}
+
+#antrekk{
+    position: absolute;
+    bottom: 15rem;
 }
 
 /* ting i hyllen */
@@ -47,33 +80,22 @@ body{
     position: relative;
 }
 
-#rom{
-    position: fixed;
-}
-
-#kropp{
+#knappHar1{
     position: relative;
-    top: 50px;
-    left: 200px;
+    z-index: 1;
 }
 
-#rosaKjole{
+#knappHar2{
     position: relative;
+    z-index: 1;
 
 }
 
-#antrekk{
-    position: relative;
-    right: 125px;
-    bottom: 100px;
-}
-
-#nakenKler{
+/* #nakenKler{
     position: relative;
     left: 220px;
     bottom: 400px;
-} 
-
+}  */
 
 /* 
 
