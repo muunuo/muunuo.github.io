@@ -1,4 +1,9 @@
-//sett opp variabler
+
+//NB!!! denne er ikke i bruk, begold kun for å se hva du gjorde feil 
+//(du brukte true false på bilder i stede for variablene sutte opp som true og false)
+
+
+
 let KnappVelgAntrekk1 = document.getElementById("litenRosaKjole");
 let KnappVelgAntrekk2 = document.getElementById("litenAntrekk");
 
