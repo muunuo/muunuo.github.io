@@ -96,6 +96,11 @@ body{
 
 }
 
+#leverInnSvar{
+    position: relative;
+    top: 40rem;
+}
+
 /* #nakenKler{
     position: relative;
     left: 220px;

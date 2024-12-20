@@ -11,16 +11,39 @@ let godR = document.getElementById("godReaksjon"); //1. sett opp lyder (liker hu
 let middelsR = document.getElementById("middelsReaksjon");
 let dårligR = document.getElementById("dårligReaksjon");
 
+
+let skole = document.getElementById("skoleHendelse")
+let jobb = document.getElementById("jobbHendelse")
+let fest = document.getElementById("festHendelse")
+
+let poeng = 0
+
 let har1TogF = false;//Alle begynner som av (false)
 let har2TogF = false;
 let har3TogF = false; 
 //sette opp variabler
+skole = 1
+jobb = 2
+fest = 3
+
+
+skoleHendelse.style.display="none";
+jobbHendelse.style.display="none";
+festHendelse.style.display="none";
+
 
 
 KnappVelgHar1.addEventListener("click", velgHar1); //sette opp bilder til knapper
 KnappVelgHar2.addEventListener("click", velgHar2);
 KnappVelgHar3.addEventListener("click", velgHar3);
 
+let hendelseValgt = Math.floor(Math.random() *3+1);
+
+function hendelse() {
+    let hendelseValgt = Math.floor(Math.random() *3+1);
+    console.log(hendelseValgt);
+    
+}
 
 
 function HTogF() { //hva skjer når det er sant/usant
@@ -30,6 +53,9 @@ function HTogF() { //hva skjer når det er sant/usant
         } else { //men hvis det ikke er på-
             har1.style.display = "block"; //-skal bilde vises og-
             godR.play(); //2. lyd spilles av når hår velges 
+            if (hendelseValgt==1) {
+                poeng=+1
+            }
             //enkel løsning: legg til hva lyd som spilkles her
         }
 
@@ -37,12 +63,18 @@ function HTogF() { //hva skjer når det er sant/usant
             har2.style.display = "none";
             } else {
                 har2.style.display = "block";
+                if (hendelseValgt==1) {
+                    poeng=+2
+                }
             }
 
             if (har3TogF==false) { //fungerer likt som de over
                 har3.style.display = "none";
                 } else {
                     har3.style.display = "block";
+                    if (hendelseValgt==1) {
+                        poeng=+0
+                    }
                 }
 }
 
@@ -87,58 +119,45 @@ function velgHar3() {//samme som over
     }
     HTogF()//husk denne!!!!, ellers skjer det ingenting
 }
-
-let skole = document.getElementById("skoleHendelse")
-let jobb = document.getElementById("jobbHendelse")
-let fest = document.getElementById("festHendelse")
-
-skole = 1
-jobb = 2
-fest = 3
-
-skoleHendelse.style.display="none";
-jobbHendelse.style.display="none";
-festHendelse.style.display="none";
+hendelse()
 
 
-// function hendelse() {
-//     let a = Math.floor(Math.random() *3+1);
-//     console.log(a);
-    
-//     if () {
-        
-//     } else {
-        
-//     }
+
+let leverSvar = document.getElementById("leverInnSvar")
+
+
+leverSvar.addEventListener("click", leverSvarKnapp); 
+
+function leverSvarKnapp() {
+    console.log(poeng)
+}
+
+
+
+// //for å unngå å få poeng hver gang noe trykkes, og kun når det ferdige antrekket er valgt
+// function leverSvarKnapp() {
+// //denne inni function over eller for seg selv?
+// if (hendelseValgt==1) {
+//     //hvis bilde 1 vises får du x poeng
+//     //hvordan vite hva bilde som vises?
+//     //use true/false!
+
+// }
 // }
 
 
-// hendelse()
+
+
+//if hendelse 1 skjer er hår en=1poeng, hår2=2 poeng osv.?
 
 //vis kun en heldelse når runden starter 
 
 //3. Hvert hår gir poeng (basert på lyd)
 //4. Mengden poeng du har vises 
 //4. Klær gir poeng
-//5. poeng summeres 
-//6. poeng per kategori og sammensatt vises?
+//4,1. Poeng blir kun gitt når antrekk "leverses"
+//4,2. Du kan ikke få flere poeng med å tryke flere ganger på samme ting
+//4,3. få hvert hår til å være en viss poengs
+//6. poeng per kategori og sammensatt visesum i en viss situasjon
 //7. Bruker blir gitt en anleding person skal kle seg til
 //8. sett opp så anledning tifleigvis bestemmes fr 2-3 mulige
-
-
-
-// enkel quiz
-// let listeSpørsmål=["Going to work","Going to a party","relaxing at home"]
-// let listeSvar=[]
-// //x er en variabel, samme som i. Den endrer seg så har ikke et bestemt navn.
-// // spmNr er spørsmålnummer
-// for(let x = 0; x< listeSpørsmål.length; x++){
-//     let svar = listeSpørsmål[x];
-//     console.log("Spørsmål: " + listeSpørsmål[x]);
-//     if (svar == listeSvar[x]) {
-//         console.log ("Det er riktig, bra jobbet!");
-//     } else {
-//         console.log ("Det er feil!")
-//         console.log("Riktig Svar: " + listeSvar[x]);
-//     }
-// }
