@@ -28,30 +28,25 @@ let har3TogF = false;
 let skoleKler = true;//Alle begynner som av (false)
 let jobbKler = false;
 let festKler = false; 
+let begynnNy = false;
 
-//sette opp variabler
-// skole = 1
-// jobb = 2
-// fest = 3
+kler()
 
-// skoleHendelse.style.display="none";
-jobbHendelse.style.display="none";
-festHendelse.style.display="none";
-restartSpill.style.display="none";
+//NB! redundent kode: true false gjør samme ting.
+// //skole er eneste so begynner som syneligt
+// jobbHendelse.style.display="none"; //må bruke id navnet for å velge display
+// festHendelse.style.display="none";
+// restartSpill.style.display="none";
 
 
 KnappVelgHar1.addEventListener("click", velgHar1); //sette opp bilder til knapper
 KnappVelgHar2.addEventListener("click", velgHar2);
 KnappVelgHar3.addEventListener("click", velgHar3);
-leverSvar.addEventListener("click", leverSvarKnapp); 
+leverSvar.addEventListener("click", leverSvarKnapp); //2,2. Sett opp så knappen bytter fra hendelse 1 til 2 og 2 til 3
 // restart.addEventListener("click", begynnNy); 
-// let hendelseValgt = Math.floor(Math.random() *3+1);
 
-// function hendelse() {
-//     let hendelseValgt = Math.floor(Math.random() *3+1);
-//     console.log(hendelseValgt);
-    
-// }
+
+
 // function begynnNy() {
 //     //når trykket starter spillet på nytt
 // }
@@ -74,22 +69,34 @@ function kler() {
     } else {
         festHendelse.style.display="block";
     }
+    if (begynnNy==false) {
+        restartSpill.style.display="none"
+    } else {
+        restartSpill.style.display="block"
+    }
 }
 
-function leverSvarKnapp() {
+function leverSvarKnapp() { //må ikke runnes, runner når trykket
     console.log(poeng)
     if (skoleKler==true) {
         skoleKler=false
         jobbKler=true
-        console.log("jobb")
+        console.log("skoletiljobb")
     } else if(jobbKler==true) {
         jobbKler=false
         festKler=true
-        console.log("fest")
+        console.log("jobbtilfest")
     } else if(festKler==true){
         festKler=false
-        leverInnSvar.style.display="none"
-        restartSpill.style.display="block"
+        begynnNy = true
+        // leverInnSvar.style.display="none"
+        // restartSpill.style.display="block"
+        console.log("festtilferidg")
+    }
+    else if(begynnNy==true){
+        begynnNy=false
+        skoleKler=true
+        poeng = 0
         console.log("ferdig")
     }
     HTogF()
@@ -206,8 +213,18 @@ function velgHar3() {//samme som over
 // }
 // }
 
+// let hendelseValgt = Math.floor(Math.random() *3+1);
 
+// function hendelse() {
+//     let hendelseValgt = Math.floor(Math.random() *3+1);
+//     console.log(hendelseValgt);
+    
+// }
 
+//sette opp variabler
+// skole = 1
+// jobb = 2
+// fest = 3
 
 //if hendelse 1 skjer er hår en=1poeng, hår2=2 poeng osv.?
 
@@ -224,5 +241,5 @@ function velgHar3() {//samme som over
 //1,8. sett opp så anledning tifleigvis bestemmes fr 2-3 mulige
 
 //2,1. Fjern tilfeldigheten med hendelsne
-//2,2. Sett opp så knappen bytter fra hendelse 1 til 2 og 2 til 3
+
 //2,3. kan no bruke hendelsenavn i stede for tall.
