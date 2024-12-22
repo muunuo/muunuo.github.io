@@ -7,44 +7,95 @@ let har1 = document.getElementById("dokkeHar1");
 let har2 = document.getElementById("dokkeHar2");
 let har3 = document.getElementById("dokkeHar3");
 
-let godR = document.getElementById("godReaksjon"); //1. sett opp lyder (liker hun eller liker hun ikke håret)
+let godR = document.getElementById("godReaksjon"); //1,1. sett opp lyder (liker hun eller liker hun ikke håret)
 let middelsR = document.getElementById("middelsReaksjon");
 let dårligR = document.getElementById("dårligReaksjon");
 
 
-let skole = document.getElementById("skoleHendelse")
-let jobb = document.getElementById("jobbHendelse")
-let fest = document.getElementById("festHendelse")
+let skole = document.getElementById("skoleHendelse");//variabler for hendelsene
+let jobb = document.getElementById("jobbHendelse");
+let fest = document.getElementById("festHendelse");
 
-let poeng = 0
+let leverSvar = document.getElementById("leverInnSvar");
+let restart = document.getElementById("restartSpill");
+
+let poeng = 0 //poeng starter på 0
 
 let har1TogF = false;//Alle begynner som av (false)
 let har2TogF = false;
 let har3TogF = false; 
+
+let skoleKler = true;//Alle begynner som av (false)
+let jobbKler = false;
+let festKler = false; 
+
 //sette opp variabler
-skole = 1
-jobb = 2
-fest = 3
+// skole = 1
+// jobb = 2
+// fest = 3
 
-
-skoleHendelse.style.display="none";
+// skoleHendelse.style.display="none";
 jobbHendelse.style.display="none";
 festHendelse.style.display="none";
-
+restartSpill.style.display="none";
 
 
 KnappVelgHar1.addEventListener("click", velgHar1); //sette opp bilder til knapper
 KnappVelgHar2.addEventListener("click", velgHar2);
 KnappVelgHar3.addEventListener("click", velgHar3);
+leverSvar.addEventListener("click", leverSvarKnapp); 
+// restart.addEventListener("click", begynnNy); 
+// let hendelseValgt = Math.floor(Math.random() *3+1);
 
-let hendelseValgt = Math.floor(Math.random() *3+1);
-
-function hendelse() {
-    let hendelseValgt = Math.floor(Math.random() *3+1);
-    console.log(hendelseValgt);
+// function hendelse() {
+//     let hendelseValgt = Math.floor(Math.random() *3+1);
+//     console.log(hendelseValgt);
     
+// }
+// function begynnNy() {
+//     //når trykket starter spillet på nytt
+// }
+
+function kler() {
+    if (skoleKler==false) {
+        skoleHendelse.style.display="none";
+    } else {
+        skoleHendelse.style.display="block";
+    }
+
+    if (jobbKler==false) {
+        jobbHendelse.style.display="none";
+    } else {
+        jobbHendelse.style.display="block";
+    }
+
+    if (festKler==false) {
+        festHendelse.style.display="none";
+    } else {
+        festHendelse.style.display="block";
+    }
 }
 
+function leverSvarKnapp() {
+    console.log(poeng)
+    if (skoleKler==true) {
+        skoleKler=false
+        jobbKler=true
+        console.log("jobb")
+    } else if(jobbKler==true) {
+        jobbKler=false
+        festKler=true
+        console.log("fest")
+    } else if(festKler==true){
+        festKler=false
+        leverInnSvar.style.display="none"
+        restartSpill.style.display="block"
+        console.log("ferdig")
+    }
+    HTogF()
+    kler()
+
+}
 
 function HTogF() { //hva skjer når det er sant/usant
     if (har1TogF==false) { //når antrekket er av-
@@ -52,9 +103,15 @@ function HTogF() { //hva skjer når det er sant/usant
         godR.pause(); //lyd skal ikke spilles
         } else { //men hvis det ikke er på-
             har1.style.display = "block"; //-skal bilde vises og-
-            godR.play(); //2. lyd spilles av når hår velges 
-            if (hendelseValgt==1) {
-                poeng=+1
+            godR.play(); //1,2. lyd spilles av når hår velges 
+            if (skoleKler==true) {
+                poeng=+1 //fungerer, men må no fikse se hendelse endres osv.
+            }
+            if (jobbKler==true) {
+                poeng=+2
+            }
+            if (festKler==true) {
+                poeng=+0
             }
             //enkel løsning: legg til hva lyd som spilkles her
         }
@@ -63,8 +120,14 @@ function HTogF() { //hva skjer når det er sant/usant
             har2.style.display = "none";
             } else {
                 har2.style.display = "block";
-                if (hendelseValgt==1) {
-                    poeng=+2
+                if (skoleKler==true) {
+                    poeng=+2 //fungerer, men må no fikse se hendelse endres osv.
+                }
+                if (jobbKler==true) {
+                    poeng=+0
+                }
+                if (festKler==true) {
+                    poeng=+1
                 }
             }
 
@@ -72,8 +135,14 @@ function HTogF() { //hva skjer når det er sant/usant
                 har3.style.display = "none";
                 } else {
                     har3.style.display = "block";
-                    if (hendelseValgt==1) {
-                        poeng=+0
+                    if (skoleKler==true) {
+                        poeng=+0 //fungerer, men må no fikse se hendelse endres osv.
+                    }
+                    if (jobbKler==true) {
+                        poeng=+1
+                    }
+                    if (festKler==true) {
+                        poeng=+2
                     }
                 }
 }
@@ -119,18 +188,10 @@ function velgHar3() {//samme som over
     }
     HTogF()//husk denne!!!!, ellers skjer det ingenting
 }
-hendelse()
+// hendelse()
 
 
 
-let leverSvar = document.getElementById("leverInnSvar")
-
-
-leverSvar.addEventListener("click", leverSvarKnapp); 
-
-function leverSvarKnapp() {
-    console.log(poeng)
-}
 
 
 
@@ -152,12 +213,16 @@ function leverSvarKnapp() {
 
 //vis kun en heldelse når runden starter 
 
-//3. Hvert hår gir poeng (basert på lyd)
-//4. Mengden poeng du har vises 
-//4. Klær gir poeng
-//4,1. Poeng blir kun gitt når antrekk "leverses"
-//4,2. Du kan ikke få flere poeng med å tryke flere ganger på samme ting
-//4,3. få hvert hår til å være en viss poengs
-//6. poeng per kategori og sammensatt visesum i en viss situasjon
-//7. Bruker blir gitt en anleding person skal kle seg til
-//8. sett opp så anledning tifleigvis bestemmes fr 2-3 mulige
+//1,3. Hvert hår gir poeng (basert på lyd)
+//1,4. Mengden poeng du har vises 
+//1,4. Klær gir poeng
+//1,4,1. Poeng blir kun gitt når antrekk "leverses"
+//1,4,2. Du kan ikke få flere poeng med å tryke flere ganger på samme ting
+//1,4,3. få hvert hår til å være en viss poengs
+//1,6. poeng per kategori og sammensatt visesum i en viss situasjon
+//1,7. Bruker blir gitt en anleding person skal kle seg til
+//1,8. sett opp så anledning tifleigvis bestemmes fr 2-3 mulige
+
+//2,1. Fjern tilfeldigheten med hendelsne
+//2,2. Sett opp så knappen bytter fra hendelse 1 til 2 og 2 til 3
+//2,3. kan no bruke hendelsenavn i stede for tall.

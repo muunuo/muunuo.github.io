@@ -101,6 +101,11 @@ body{
     top: 40rem;
 }
 
+#skoleHendelse, #jobbHendelse, #festHendelse{
+    top: 40rem;
+}
+
+
 /* #nakenKler{
     position: relative;
     left: 220px;
