@@ -84,21 +84,39 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         if (har1TogF==true) {
             poeng=poeng+1
         } else if (har2TogF==true) {
-            poeng=poeng+2
+            poeng=poeng+2 //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        } else if (har3TogF==true){
+            poeng=poeng+0
         }
 
+        console.log(poeng)
 
     } else if(jobbKler==true) {
         jobbKler=false
         festKler=true
-
+        if (har1TogF==true) {
+            poeng=poeng+2
+        } else if (har2TogF==true) {
+            poeng=poeng+0 //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        } else if (har3TogF==true){
+            poeng=poeng+1
+        }
+        
+        console.log(poeng)
 
     } else if(festKler==true){
         festKler=false
         begynnNy = true
+        if (har1TogF==true) {
+            poeng=poeng+0
+        } else if (har2TogF==true) {
+            poeng=poeng+1//med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        } else if (har3TogF==true){
+            poeng=poeng+2
+        }
         // leverInnSvar.style.display="none"
         // restartSpill.style.display="block"
-
+        console.log(poeng)
 
     }
     // else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
@@ -133,13 +151,13 @@ function HTogF() { //hva skjer når det er sant/usant
             } else {
                 har2.style.display = "block";
 
-                if (skoleKler==true) {
-                    poeng=poeng+2 //fungerer, men må no fikse se hendelse endres osv.
-                } else if (jobbKler==true) {
-                    poeng=poeng+0
-                } else if (festKler==true) {
-                    poeng=poeng+1
-                }
+                // if (skoleKler==true) {
+                //     poeng=poeng+2 //fungerer, men må no fikse se hendelse endres osv.
+                // } else if (jobbKler==true) {
+                //     poeng=poeng+0
+                // } else if (festKler==true) {
+                //     poeng=poeng+1
+                // }
             }
 
             if (har3TogF==false) { //fungerer likt som de over
@@ -147,13 +165,13 @@ function HTogF() { //hva skjer når det er sant/usant
                 } else {
                     har3.style.display = "block";
 
-                    if (skoleKler==true) {
-                        poeng=poeng+0 //fungerer, men må no fikse se hendelse endres osv.
-                    } else if (jobbKler==true) {
-                        poeng=poeng+1
-                    } else if (festKler==true) {
-                        poeng=poeng+2
-                    }
+                    // if (skoleKler==true) {
+                    //     poeng=poeng+0 //fungerer, men må no fikse se hendelse endres osv.
+                    // } else if (jobbKler==true) {
+                    //     poeng=poeng+1
+                    // } else if (festKler==true) {
+                    //     poeng=poeng+2
+                    // }
                 }
 }
 
