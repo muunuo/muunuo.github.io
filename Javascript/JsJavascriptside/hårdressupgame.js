@@ -30,7 +30,8 @@ let jobb = document.getElementById("jobbHendelse");
 let fest = document.getElementById("festHendelse");
 
 let leverSvar = document.getElementById("leverInnSvar");
-let restart = document.getElementById("restartSpill");
+
+let brukerPoeng = document.getElementById("brukerSerPoeng");
 
 let poeng = 0; //poeng starter på 0
 //variabler poeng <--
@@ -49,6 +50,7 @@ let festKler = false;
 let begynnNy = false;
 //true/false <--
 
+document.getElementById("brukerSerPoeng").innerHTML =poeng; //sier til bruker hva poeng de har.
 
 kler()//refererer til hva hendelse man kler seg for
 

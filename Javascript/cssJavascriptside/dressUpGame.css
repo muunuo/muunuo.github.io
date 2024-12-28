@@ -96,7 +96,7 @@ body{
 
 }
 
-#leverInnSvar{
+#leverInnSvar,#brukerSerPoeng{
     position: relative;
     top: 40rem;
 }

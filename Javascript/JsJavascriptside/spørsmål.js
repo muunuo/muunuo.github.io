@@ -50,14 +50,14 @@ function sendInnSvar (){ //når send in brukernavn blir aktivert skal dette skje
     }
 
     console.log(poengsum)
-    document.getElementById("poengsum").innerHTML =poengsum;
+    document.getElementById("poengsum").innerHTML =poengsum; //sier til bruker hva poeng de har.
 }
 
 
 
 
 
-document.getElementById("poengsum").innerHTML =poengsum; 
+document.getElementById("poengsum").innerHTML =poengsum; //sier til bruker hva poeng de har.
 
     
 
