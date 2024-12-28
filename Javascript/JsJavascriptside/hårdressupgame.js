@@ -45,7 +45,7 @@ KnappVelgHar3.addEventListener("click", velgHar3);
 leverSvar.addEventListener("click", leverSvarKnapp); //2,2. Sett opp så knappen bytter fra hendelse 1 til 2 og 2 til 3
 // restart.addEventListener("click", begynnNy); 
 
-
+//problem: poeng må kun bli gitt når svar leveres. Kode som gir poeng må være inni kode som sier om klær er sann eller ikke. 
 
 // function begynnNy() {
 //     //når trykket starter spillet på nytt
@@ -69,36 +69,42 @@ function kler() {
     } else {
         festHendelse.style.display="block";
     }
-    if (begynnNy==false) {
-        restartSpill.style.display="none"
-    } else {
-        restartSpill.style.display="block"
-    }
+    // if (begynnNy==false) {
+
+    // } else {
+    //     poeng = 0
+    // }
 }
 
 function leverSvarKnapp() { //må ikke runnes, runner når trykket
-    console.log(poeng)
-    if (skoleKler==true) {
+
+    if (skoleKler==true) { //hvis bruker er på skolehendelse byttes det til jobb hendelse
         skoleKler=false
         jobbKler=true
-        console.log("skoletiljobb")
+        if (har1TogF==true) {
+            poeng=poeng+1
+        } else if (har2TogF==true) {
+            poeng=poeng+2
+        }
+
+
     } else if(jobbKler==true) {
         jobbKler=false
         festKler=true
-        console.log("jobbtilfest")
+
+
     } else if(festKler==true){
         festKler=false
         begynnNy = true
         // leverInnSvar.style.display="none"
         // restartSpill.style.display="block"
-        console.log("festtilferidg")
+
+
     }
-    else if(begynnNy==true){
-        begynnNy=false
-        skoleKler=true
-        poeng = 0
-        console.log("ferdig")
-    }
+    // else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
+    //     begynnNy=false
+    //     skoleKler=true
+    // }
     HTogF()
     kler()
 
@@ -111,15 +117,14 @@ function HTogF() { //hva skjer når det er sant/usant
         } else { //men hvis det ikke er på-
             har1.style.display = "block"; //-skal bilde vises og-
             godR.play(); //1,2. lyd spilles av når hår velges 
-            if (skoleKler==true) {
-                poeng=+1 //fungerer, men må no fikse se hendelse endres osv.
-            }
-            if (jobbKler==true) {
-                poeng=+2
-            }
-            if (festKler==true) {
-                poeng=+0
-            }
+
+            // if (skoleKler==true) {
+            //     poeng=poeng+1 //fungerer, men må no fikse se hendelse endres osv.
+            // } else if (jobbKler==true) {
+            //     poeng=poeng+2
+            // } else if (festKler==true) {
+            //     poeng=poeng+0
+            // }
             //enkel løsning: legg til hva lyd som spilkles her
         }
 
@@ -127,14 +132,13 @@ function HTogF() { //hva skjer når det er sant/usant
             har2.style.display = "none";
             } else {
                 har2.style.display = "block";
+
                 if (skoleKler==true) {
-                    poeng=+2 //fungerer, men må no fikse se hendelse endres osv.
-                }
-                if (jobbKler==true) {
-                    poeng=+0
-                }
-                if (festKler==true) {
-                    poeng=+1
+                    poeng=poeng+2 //fungerer, men må no fikse se hendelse endres osv.
+                } else if (jobbKler==true) {
+                    poeng=poeng+0
+                } else if (festKler==true) {
+                    poeng=poeng+1
                 }
             }
 
@@ -142,14 +146,13 @@ function HTogF() { //hva skjer når det er sant/usant
                 har3.style.display = "none";
                 } else {
                     har3.style.display = "block";
+
                     if (skoleKler==true) {
-                        poeng=+0 //fungerer, men må no fikse se hendelse endres osv.
-                    }
-                    if (jobbKler==true) {
-                        poeng=+1
-                    }
-                    if (festKler==true) {
-                        poeng=+2
+                        poeng=poeng+0 //fungerer, men må no fikse se hendelse endres osv.
+                    } else if (jobbKler==true) {
+                        poeng=poeng+1
+                    } else if (festKler==true) {
+                        poeng=poeng+2
                     }
                 }
 }
