@@ -99,6 +99,12 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
             poeng=poeng+0
         }
 
+        if (antrekk1TogF==true) { 
+            poeng=poeng+1
+        } else if (antrekk2TogF==true) {
+            poeng=poeng+2 
+        }
+
         console.log(poeng)//hver gang man spiller en runde kan man se poeng i console log.
 
     } else if(jobbKler==true) {
@@ -130,6 +136,9 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
     //     begynnNy=false //skal brukes for å vise poeng på slutten.
     //     skoleKler=true
     // }
+
+
+    document.getElementById("brukerSerPoeng").innerHTML =poeng; //no øker poeng hver gang bruker leverer svar
     HTogF();
     kler();
 }
