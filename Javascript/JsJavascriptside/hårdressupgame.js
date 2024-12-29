@@ -28,6 +28,7 @@ let dårligR = document.getElementById("dårligReaksjon");
 let skole = document.getElementById("skoleHendelse");//variabler for hendelsene
 let jobb = document.getElementById("jobbHendelse");
 let fest = document.getElementById("festHendelse");
+let ferdig = document.getElementById("brukerErFerdig");
 
 let leverSvar = document.getElementById("leverInnSvar");
 
@@ -44,10 +45,11 @@ let har1TogF = false;//Alle begynner som av (false)
 let har2TogF = false;
 let har3TogF = false; 
 
-let skoleKler = true;//Alle begynner som av (false)
-let jobbKler = false;
-let festKler = false; 
-let begynnNy = false;
+let skoleKler = true;//Alle begynner som av (false), denner er koblet til skole
+let jobbKler = false;//koblett til jobb
+let festKler = false; //koblet til fest
+let begynnNy = false;//koblett til ferdig
+
 //true/false <--
 
 document.getElementById("brukerSerPoeng").innerHTML =poeng; //sier til bruker hva poeng de har.
@@ -84,6 +86,12 @@ function kler() { //hva hendelse man kler dukken til
     } else {
         festHendelse.style.display="block";
     }
+
+    if (begynnNy==false){
+        brukerErFerdig.style.display="none"
+    } else{
+        brukerErFerdig.style.display="block"
+    }
 }
 
 function leverSvarKnapp() { //må ikke runnes, runner når trykket
@@ -104,7 +112,6 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         } else if (antrekk2TogF==true) {
             poeng=poeng+2 
         }
-
         console.log(poeng)//hver gang man spiller en runde kan man se poeng i console log.
 
     } else if(jobbKler==true) {
@@ -123,7 +130,6 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         } else if (antrekk2TogF==true) {
             poeng=poeng+1
         }
-        
         console.log(poeng);
 
     } else if(festKler==true){
@@ -142,14 +148,11 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         } else if (antrekk2TogF==true) {
             poeng=poeng+2 
         }
-        
         console.log(poeng);
+    } else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
+        begynnNy=false //skal brukes for å vise poeng på slutten.
+        skoleKler=true
     }
-    // else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
-    //     begynnNy=false //skal brukes for å vise poeng på slutten.
-    //     skoleKler=true
-    // }
-
 
     document.getElementById("brukerSerPoeng").innerHTML =poeng; //no øker poeng hver gang bruker leverer svar
     HTogF();
