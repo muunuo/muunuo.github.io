@@ -117,6 +117,12 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         } else if (har3TogF==true){
             poeng=poeng+1;
         }
+
+        if (antrekk1TogF==true) { 
+            poeng=poeng+2
+        } else if (antrekk2TogF==true) {
+            poeng=poeng+1
+        }
         
         console.log(poeng);
 
@@ -130,6 +136,13 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         } else if (har3TogF==true){
             poeng=poeng+2;
         }
+
+        if (antrekk1TogF==true) { 
+            poeng=poeng+1
+        } else if (antrekk2TogF==true) {
+            poeng=poeng+2 
+        }
+        
         console.log(poeng);
     }
     // else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
