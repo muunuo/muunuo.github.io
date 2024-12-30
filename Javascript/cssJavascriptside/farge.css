@@ -1,4 +1,4 @@
-#top{
+/* #top{
     background-color: gold;
 }
 
@@ -6,13 +6,6 @@
     background-color: greenyellow;
 }
 
-#nv{
-    background-color: aqua;
-}
-
-#quiz{
-    background-color: gray;
-}
 
 #gi{
     background-color: palegreen;
@@ -25,3 +18,12 @@
 #profil{
     background-color: blue;
 }
+
+
+body{
+    background-color: #f5cac3;
+}
+
+#quiz{
+    background-color: #F7EDE2;
+} */

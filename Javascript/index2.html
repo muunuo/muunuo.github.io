@@ -14,6 +14,7 @@
     <script src="JsJavascriptside/profil.js" defer></script>
     <script src="JsJavascriptside/spørsmål.js" defer></script>
     <script src="JsJavascriptside/poeng.js" defer></script>
+    <script src="JsJavascriptside/endreFarge.js" defer></script>
 </head>
 <body>
             <!-- sett opp bilde 1 og bilde 2 som knapp -->
@@ -40,24 +41,23 @@
 
         <div id="klokke">
             <p id="klokken"></p>
+            <input id="brukerenSittNavn" type="brukernavn"> <!-- bruker skriver inn brukernavn her -->
+            <button id="knapp"> Svar</button> <!-- knappen for å sende inn svare om brukernavn -->
         </div>
 
 
         <div id="meny">
             <nav> <!-- linke til andre sidene -->
                     <li id="K"><a href= "../koding.html">Home</a></li>
-                    <li id="V"><a href="index.html">Video</a></li>
+                    <li id="dressup"><a href="/Javascript/dressUpGame.html">dressup Game</a></li>
             </nav>
         </div>
 
 
-        <div id="nv">
-            <input id="brukerenSittNavn" type="brukernavn"> <!-- bruker skriver inn brukernavn her -->
-            <button id="knapp"> Svar</button> <!-- knappen for å sende inn svare om brukernavn -->
-        </div>
 
 
         <div id="quiz">
+            <h3>Quiz</h3>
             <!-- sett opp noen spørsmål og en måte å svare/sende inn svar -->
             <p>Er CSS eller HTML oftast brukt til å pynte en nettside?</p>
             <input id="brukerSittSvarSpørsmål1" type="svarSpørsmål1">
@@ -74,9 +74,9 @@
         </div>
 
 
-        <div id="gi">
+        <!-- <div id="gi">
             <p>giinfo</p>
-        </div>
+        </div> -->
 
         <div id="endreFarge">
             <!-- sett opp fire farge valg (se CSS) -->

@@ -24,3 +24,7 @@ padding-left: 1rem;
 }
 /* plaser bilde 1 og 2 over hverandre og sørg for det er samme størelse */
 
+
+#top{
+    border-bottom: solid 0.2rem gray;
+}
