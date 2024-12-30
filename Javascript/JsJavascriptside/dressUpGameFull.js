@@ -2,12 +2,12 @@
 //variabler antrekk -->
 let KnappVelgAntrekk1 = document.getElementById("litenRosaKjole"); 
 let KnappVelgAntrekk2 = document.getElementById("litenAntrekk");
+let KnappVelgAntrekk3 = document.getElementById("knappFestKler");
 
 
 let antrekk1 = document.getElementById("rosaKjole");
 let antrekk2 = document.getElementById("antrekk");
 let antrekk3 = document.getElementById("festKler");
-
 //variabler antrekk <--
 
 //variabler hår -->
@@ -58,8 +58,9 @@ document.getElementById("brukerSerPoeng").innerHTML =poeng; //sier til bruker hv
 hendelse()//refererer til hva hendelse man kler seg for
 
 //knapper-->
-KnappVelgAntrekk1.addEventListener("click", velgAntrekk1);//1. Lag en knapp
+KnappVelgAntrekk1.addEventListener("click", velgAntrekk1);;//1. Lag en knapp
 KnappVelgAntrekk2.addEventListener("click", velgAntrekk2);
+KnappVelgAntrekk3.addEventListener("click", velgAntrekk3);
 
 KnappVelgHar1.addEventListener("click", velgHar1); //sette opp bilder til knapper
 KnappVelgHar2.addEventListener("click", velgHar2);
@@ -169,11 +170,17 @@ function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usa
             
         }
 
-        if (antrekk2TogF==false) { 
-            antrekk2.style.display="none";
-            } else {
-                antrekk2.style.display="block";
-            }
+    if (antrekk2TogF==false) { 
+        antrekk2.style.display="none";
+        } else {
+            antrekk2.style.display="block";
+        }
+
+    if (antrekk3TogF==false) { 
+        antrekk3.style.display="none";
+        } else {
+            antrekk3.style.display="block";
+        }
 
 }
 
@@ -248,11 +255,12 @@ TogF()//function TogF blir kjørt her
 
 
 function velgAntrekk1() {
-
+console.log("antrekk1")
     //løp funksjonen så ting faktisk skjer.
     if (antrekk1TogF==false) {//3. Når trykket blir den til på
         antrekk1TogF=true;
         antrekk2TogF=false;
+        antrekk3TogF=false;
         
     } else {//4.når trykket igjen blir den til av
         antrekk1TogF=false;
@@ -261,12 +269,26 @@ TogF();
 }
 
 function velgAntrekk2() {
-
+    console.log("antrekk2")
     if (antrekk2TogF==false) {
         antrekk2TogF=true;
         antrekk1TogF=false;
+        antrekk3TogF=false;
     } else {
         antrekk2TogF=false;
+        
+    }
+    TogF();//husk denne!!!!, ellers skjer det ingenting
+}
+
+function velgAntrekk3() {
+    console.log("antrekk3")
+    if (antrekk3TogF==false) {
+        antrekk3TogF=true;
+        antrekk1TogF=false;
+        antrekk2TogF=false;
+    } else {
+        antrekk3TogF=false;
         
     }
     TogF();//husk denne!!!!, ellers skjer det ingenting

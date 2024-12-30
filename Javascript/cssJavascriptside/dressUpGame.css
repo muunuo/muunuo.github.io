@@ -48,15 +48,18 @@ body{
 #rom{
     position: absolute;/* da ligger dokken oppå */
     right: 20rem;
+    pointer-events: none; 
 }
 #hylle1{ /* venstre (L) hylle */
     position: absolute; /* absulut fordi orginal posisjon er fint, og da klan jeg ligge ting i forhold til den. */
+    pointer-events: none; 
 
 }
 #hylle2{/* høyre (R) hylle */
     position: absolute; /* hår (i hyller) blir posisjoner i fohopld til den */
     float: right;
     right: 15.5rem;
+    pointer-events: none; 
 }
 
 #kropp{
@@ -103,7 +106,7 @@ body{
     top: 8rem;
 }
 
-#knappAntrekk3{
+#knappFestKler{
     position: relative;
     top: 10rem;
     transform: rotate(90deg);
@@ -124,9 +127,6 @@ body{
     top: 8rem;
 }
 
-#leverInnSvar{
-    float: left;
-}
 
 
 
