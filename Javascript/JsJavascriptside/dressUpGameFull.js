@@ -68,6 +68,59 @@ KnappVelgHar3.addEventListener("click", velgHar3);
 leverSvar.addEventListener("click", leverSvarKnapp); //2,2. Sett opp så knappen bytter fra hendelse 1 til 2 og 2 til 3
 //knapper <--
 
+// NB!! ChatGPD ga meg denne koden. Min orginale kode for poengsystemet ligger lengre nede
+const poengTabell = {
+    skole: { // Poeng for skolehendelsen
+        har1: 2,
+        har2: 1,
+        har3: 0,
+        antrekk1: 2,
+        antrekk2: 0,
+        antrekk3: 1,
+
+    },
+    jobb: { // Poeng for jobbhendelsen
+        har1: 0,
+        har2: 2,
+        har3: 0,
+        antrekk1: 1,
+        antrekk2: 2,
+        antrekk3: 0,
+
+    },
+    fest: { // Poeng for festhendelsen
+        har1: 1,
+        har2: 1,
+        har3: 2,
+        antrekk1: 0,
+        antrekk2: 0,
+        antrekk3: 2,
+
+    }
+};
+
+function beregnPoeng(hendelse) {
+    // Finn hvilket hår som er valgt
+    const valgtHår = har1TogF ? "har1" : har2TogF ? "har2" : har3TogF ? "har3" : null;
+
+    // Finn hvilket antrekk som er valgt
+    const valgtAntrekk = antrekk1TogF ? "antrekk1" : antrekk2TogF ? "antrekk2" : antrekk3TogF ? "antrekk3" : null;
+
+    if (!valgtHår || !valgtAntrekk) {
+        console.log("Ingen hår eller antrekk er valgt.");
+        return; // Hvis ingen valg er gjort, avbryt beregning
+    }
+
+    // Legg til poeng for valgt hår og antrekk
+    poeng += poengTabell[hendelse][valgtHår] || 0;
+    poeng += poengTabell[hendelse][valgtAntrekk] || 0;
+
+    console.log(`Poeng for ${hendelse}: ${poeng}`);
+    document.getElementById("brukerSerPoeng").innerHTML = poeng; // Oppdater visningen
+}
+
+// herfra er det igjen min egen kode
+
 
 //function-->
 function hendelse() { //hva hendelse man kler dukken til
@@ -96,61 +149,65 @@ function hendelse() { //hva hendelse man kler dukken til
     }
 }
 
+
 function leverSvarKnapp() { //må ikke runnes, runner når trykket
 console.log("hei")
     if (skolehendelse==true) { //hvis bruker er på skolehendelse byttes det til jobb hendelse
+        beregnPoeng("skole");
         skolehendelse=false
         jobbhendelse=true
-        if (har1TogF==true) { //hvis hendelse skole skjer, og du velger hår en får du x mengde poeng
-            poeng=poeng+2
-        } else if (har2TogF==true) {
-            poeng=poeng+1 //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
-        } else if (har3TogF==true){
-            poeng=poeng+0
-        }
+        // if (har1TogF==true) { //hvis hendelse skole skjer, og du velger hår en får du x mengde poeng
+        //     poeng=poeng+2
+        // } else if (har2TogF==true) {
+        //     poeng=poeng+1 //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        // } else if (har3TogF==true){
+        //     poeng=poeng+0
+        // }
 
-        if (antrekk1TogF==true) { 
-            poeng=poeng+1
-        } else if (antrekk2TogF==true) {
-            poeng=poeng+2 
-        }
-        console.log(poeng)//hver gang man spiller en runde kan man se poeng i console log.
+        // if (antrekk1TogF==true) { 
+        //     poeng=poeng+1
+        // } else if (antrekk2TogF==true) {
+        //     poeng=poeng+2 
+        // }
+        // console.log(poeng)//hver gang man spiller en runde kan man se poeng i console log.
 
     } else if(jobbhendelse==true) {
+        beregnPoeng("jobb");
         jobbhendelse=false;
         festhendelse=true;
-        if (har1TogF==true) {
-            poeng=poeng+1;
-        } else if (har2TogF==true) {
-            poeng=poeng+2; //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
-        } else if (har3TogF==true){
-            poeng=poeng+0;
-        }
+        // if (har1TogF==true) {
+        //     poeng=poeng+1;
+        // } else if (har2TogF==true) {
+        //     poeng=poeng+2; //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        // } else if (har3TogF==true){
+        //     poeng=poeng+0;
+        // }
 
-        if (antrekk1TogF==true) { 
-            poeng=poeng+2
-        } else if (antrekk2TogF==true) {
-            poeng=poeng+1
-        }
-        console.log(poeng);
+        // if (antrekk1TogF==true) { 
+        //     poeng=poeng+2
+        // } else if (antrekk2TogF==true) {
+        //     poeng=poeng+1
+        // }
+        // console.log(poeng);
 
     } else if(festhendelse==true){
+        beregnPoeng("fest");
         festhendelse=false;
         begynnNy = true;
-        if (har1TogF==true) {
-            poeng=poeng+1;
-        } else if (har2TogF==true) {
-            poeng=poeng+0;//med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
-        } else if (har3TogF==true){
-            poeng=poeng+2;
-        }
+        // if (har1TogF==true) {
+        //     poeng=poeng+1;
+        // } else if (har2TogF==true) {
+        //     poeng=poeng+0;//med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        // } else if (har3TogF==true){
+        //     poeng=poeng+2;
+        // }
 
-        if (antrekk1TogF==true) { 
-            poeng=poeng+1
-        } else if (antrekk2TogF==true) {
-            poeng=poeng+2 
-        }
-        console.log(poeng);
+        // if (antrekk1TogF==true) { 
+        //     poeng=poeng+1
+        // } else if (antrekk2TogF==true) {
+        //     poeng=poeng+2 
+        // }
+        // console.log(poeng);
     } else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
         begynnNy=false //skal brukes for å vise poeng på slutten.
         skolehendelse=true
