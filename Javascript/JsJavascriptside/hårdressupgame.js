@@ -3,10 +3,10 @@
 let KnappVelgAntrekk1 = document.getElementById("litenRosaKjole"); 
 let KnappVelgAntrekk2 = document.getElementById("litenAntrekk");
 
-let antrekk0 = document.getElementById("nakenKler");
+
 let antrekk1 = document.getElementById("rosaKjole");
 let antrekk2 = document.getElementById("antrekk");
-
+let antrekk3 = document.getElementById("festKler");
 
 //variabler antrekk <--
 
@@ -40,21 +40,22 @@ let poeng = 0; //poeng starter på 0
 //true/false-->
 let antrekk1TogF=false; //2. Det begynner som av
 let antrekk2TogF=false;
+let antrekk3TogF=false;
 
 let har1TogF = false;//Alle begynner som av (false)
 let har2TogF = false;
 let har3TogF = false; 
 
-let skoleKler = true;//Alle begynner som av (false), denner er koblet til skole
-let jobbKler = false;//koblett til jobb
-let festKler = false; //koblet til fest
+let skolehendelse = true;//Alle begynner som av (false), denner er koblet til skole
+let jobbhendelse = false;//koblett til jobb
+let festhendelse = false; //koblet til fest
 let begynnNy = false;//koblett til ferdig
 
 //true/false <--
 
 document.getElementById("brukerSerPoeng").innerHTML =poeng; //sier til bruker hva poeng de har.
 
-kler()//refererer til hva hendelse man kler seg for
+hendelse()//refererer til hva hendelse man kler seg for
 
 //knapper-->
 KnappVelgAntrekk1.addEventListener("click", velgAntrekk1);//1. Lag en knapp
@@ -68,20 +69,20 @@ leverSvar.addEventListener("click", leverSvarKnapp); //2,2. Sett opp så knappen
 
 
 //function-->
-function kler() { //hva hendelse man kler dukken til
-    if (skoleKler==false) { //hendelse blir fortalt til bruker
+function hendelse() { //hva hendelse man kler dukken til
+    if (skolehendelse==false) { //hendelse blir fortalt til bruker
         skoleHendelse.style.display="none";
     } else {
         skoleHendelse.style.display="block";
     }
 
-    if (jobbKler==false) {
+    if (jobbhendelse==false) {
         jobbHendelse.style.display="none";
     } else {
         jobbHendelse.style.display="block";
     }
 
-    if (festKler==false) {
+    if (festhendelse==false) {
         festHendelse.style.display="none";
     } else {
         festHendelse.style.display="block";
@@ -95,14 +96,14 @@ function kler() { //hva hendelse man kler dukken til
 }
 
 function leverSvarKnapp() { //må ikke runnes, runner når trykket
-
-    if (skoleKler==true) { //hvis bruker er på skolehendelse byttes det til jobb hendelse
-        skoleKler=false
-        jobbKler=true
+console.log("hei")
+    if (skolehendelse==true) { //hvis bruker er på skolehendelse byttes det til jobb hendelse
+        skolehendelse=false
+        jobbhendelse=true
         if (har1TogF==true) { //hvis hendelse skole skjer, og du velger hår en får du x mengde poeng
-            poeng=poeng+1
+            poeng=poeng+2
         } else if (har2TogF==true) {
-            poeng=poeng+2 //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+            poeng=poeng+1 //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
         } else if (har3TogF==true){
             poeng=poeng+0
         }
@@ -114,15 +115,15 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         }
         console.log(poeng)//hver gang man spiller en runde kan man se poeng i console log.
 
-    } else if(jobbKler==true) {
-        jobbKler=false;
-        festKler=true;
+    } else if(jobbhendelse==true) {
+        jobbhendelse=false;
+        festhendelse=true;
         if (har1TogF==true) {
-            poeng=poeng+2;
-        } else if (har2TogF==true) {
-            poeng=poeng+0; //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
-        } else if (har3TogF==true){
             poeng=poeng+1;
+        } else if (har2TogF==true) {
+            poeng=poeng+2; //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        } else if (har3TogF==true){
+            poeng=poeng+0;
         }
 
         if (antrekk1TogF==true) { 
@@ -132,13 +133,13 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         }
         console.log(poeng);
 
-    } else if(festKler==true){
-        festKler=false;
+    } else if(festhendelse==true){
+        festhendelse=false;
         begynnNy = true;
         if (har1TogF==true) {
-            poeng=poeng+0;
+            poeng=poeng+1;
         } else if (har2TogF==true) {
-            poeng=poeng+1;//med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+            poeng=poeng+0;//med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
         } else if (har3TogF==true){
             poeng=poeng+2;
         }
@@ -151,13 +152,31 @@ function leverSvarKnapp() { //må ikke runnes, runner når trykket
         console.log(poeng);
     } else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
         begynnNy=false //skal brukes for å vise poeng på slutten.
-        skoleKler=true
+        skolehendelse=true
     }
 
     document.getElementById("brukerSerPoeng").innerHTML =poeng; //no øker poeng hver gang bruker leverer svar
     HTogF();
-    kler();
+    hendelse();
 }
+
+function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usant.
+
+    if (antrekk1TogF==false) { //om antrekket er av
+        antrekk1.style.display="none"; //skal det ikke vises
+        } else { //men hvis det ikke er av (altså på)
+            antrekk1.style.display="block"; //skal det vises
+            
+        }
+
+        if (antrekk2TogF==false) { 
+            antrekk2.style.display="none";
+            } else {
+                antrekk2.style.display="block";
+            }
+
+}
+
 
 function HTogF() { //hva skjer når det er sant/usant
     if (har1TogF==false) { //når antrekket er av-
@@ -224,27 +243,12 @@ function velgHar3() {//samme som over
 }
 
 //antrekk-->
-function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usant.
-
-    if (antrekk1TogF==false) { //om antrekket er av
-        antrekk1.style.display="none"; //skal det ikke vises
-        } else { //men hvis det ikke er av (altså på)
-            antrekk1.style.display="block"; //skal det vises
-            
-        }
-
-        if (antrekk2TogF==false) { 
-            antrekk2.style.display="none";
-            } else {
-                antrekk2.style.display="block";
-            }
-
-}
 
 TogF()//function TogF blir kjørt her 
 
 
 function velgAntrekk1() {
+
     //løp funksjonen så ting faktisk skjer.
     if (antrekk1TogF==false) {//3. Når trykket blir den til på
         antrekk1TogF=true;

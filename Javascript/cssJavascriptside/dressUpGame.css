@@ -6,6 +6,11 @@ html, body {
 #hylleOgKlær { grid-area: hylleOgKlær; }
 #romOgKropp { grid-area: romOgKropp;}
 #hylleOgHar { grid-area: hylleOgHar; }
+#oppdrag {grid-area: oppdrag;}
+#poeng {grid-area: poeng;}
+#tom {grid-area: tom;}
+#tom2 {grid-area: tom2;}
+#forklaring {grid-area: forklaring;}
 
 
 .grid-container {
@@ -14,14 +19,15 @@ html, body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar'
-        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar hylleOgHar';
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar    forklaring forklaring'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar    forklaring forklaring'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar    forklaring forklaring'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar    forklaring forklaring'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar    forklaring forklaring'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar    forklaring forklaring'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar    forklaring forklaring'
+        'hylleOgKlær hylleOgKlær hylleOgKlær     romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp     hylleOgHar hylleOgHar    forklaring forklaring'
+        'tom2 tom2 tom2      oppdrag oppdrag oppdrag oppdrag oppdrag      poeng poeng      tom tom';
 }
 
 
@@ -35,74 +41,123 @@ body{
 }
 
 
-#romOgKropp{
+/* #romOgKropp{
     grid-column: 4 / -1 ;
     position: absolute;
+} */
+#rom{
+    position: absolute;/* da ligger dokken oppå */
+    right: 20rem;
 }
-
-#hylle1{
-    position: absolute;
+#hylle1{ /* venstre (L) hylle */
+    position: absolute; /* absulut fordi orginal posisjon er fint, og da klan jeg ligge ting i forhold til den. */
 
 }
-#hylle2{
-    position: relative;
-    bottom: 10rem ;
-    left: 3rem;
+#hylle2{/* høyre (R) hylle */
+    position: absolute; /* hår (i hyller) blir posisjoner i fohopld til den */
+    float: right;
+    right: 15.5rem;
 }
 
 #kropp{
     position: relative;
-    right: 25rem;
-    bottom: 2rem;
+    top: 8.9rem;
+    transform: rotate(90deg);
 }
+
 
 #dokkeHar1, #dokkeHar2, #dokkeHar3{
     position: absolute;
     z-index: 1;
+    transform: rotate(90deg);
+    top: 8.9rem;
     }
 
 #rosaKjole{
     position: absolute;
-    bottom: 15rem;
+    z-index: 1;
 }
 
 #antrekk{
     position: absolute;
-    bottom: 15rem;
+    z-index: 1;
 }
+
+#festKler{
+    position: absolute;
+    z-index: 1;
+    transform: rotate(90deg);
+}
+
 
 /* ting i hyllen */
 #litenRosaKjole{
     position: relative;
+    transform: rotate(90deg);
+    top: 7rem;
 }
 
 #litenAntrekk{
     position: relative;
+    transform: rotate(90deg);
+    top: 8rem;
 }
 
-#knappHar1{
+#knappAntrekk3{
+    position: relative;
+    top: 10rem;
+    transform: rotate(90deg);
+}
+
+#knappHar1,#knappHar2,#knappHar3{
     position: relative;
     z-index: 1;
+    transform: rotate(90deg);
+    right: 2.5rem;
+    top: 4rem;
 }
 
-#knappHar2{
-    position: relative;
+#knappHar1{ /* trengte ekstra justeringer */
+    top: 10rem;
+}
+#knappHar2{ /* trengte ekstra justeringer */
+    top: 8rem;
+}
+
+#leverInnSvar{
+    float: left;
+}
+
+
+
+#tekst{
+    border: solid 0.5rem #DAA2c8;
+    border-radius: 0.5rem;
+    background-color: #DAA2c8;
+}
+
+
+#poeng{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+#brukerSerPoeng{
+padding-left: 1.5rem;
+}
+#leverInnSvar{
     z-index: 1;
-
-}
-#knappHar3{
-    position: relative;
-    z-index: 1;
-
+    position: absolute;
 }
 
-#leverInnSvar,#brukerSerPoeng{
-    position: relative;
-    top: 40rem;
+#forklaring{
+    background-color: aliceblue;
 }
 
-#skoleHendelse, #jobbHendelse, #festHendelse,#brukerErFerdig{
-    top: 40rem;
+#poengSkrift{
+    background-color: #DAA2c8;
+    padding-left:2.5rem;
+    border-radius: 1rem;
 }
 
 

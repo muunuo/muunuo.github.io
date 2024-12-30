@@ -12,14 +12,6 @@
 <body>
     <div class="grid-container">
 
-        <div id="hylleOgKlær">
-            <img id="hylle1" width="310px" src="/bilder/DressUpGame/DressUpGameHylle.png" alt="en rosa hylle, med tre sted for klær, det er noe i to av hyllene">
-            <img id="litenRosaKjole" width="65px" src="/bilder/DressUpGame/DressUpDinSkjole.png" alt="en rosa kjole ligger i hyllen">
-            <img id="litenAntrekk" width="65px" src="/bilder/DressUpGame/DressUpToDelsAntrekk.png" alt="et lilla to dels antrekk ligger i hyllen">
-            <button id="leverInnSvar">Se Poengsum</button>
-            <p id="brukerSerPoeng"></p>
-        </div>
-
         <div> <!-- sett opp en lyd som kan spilles av -->
             <audio id="godReaksjon" src="/bilder/DressUpGame/elemental-magic-spell-impact-outgoing-228342.mp3"></audio>
             <!-- <audio id="middelsReaksjon" src="/bilder/DressUpGame/elemental-magic-spell-impact-outgoing-228342.mp3"></audio>
@@ -27,27 +19,52 @@
         </div>
 
         <div id="romOgKropp">
-            <img id="dokkeHar1" width="150px" src="/bilder/DressUpGame/hair1.png" alt="hår, pannelugg og en stram dott">
-            <img id="dokkeHar2" width="150px" src="/bilder/DressUpGame/hair2.png" alt="hår, stritt med et par hårstrå som bøyer seg inn mot fjeset">
-            <img id="dokkeHar3" width="150px" src="/bilder/DressUpGame/har3.png" alt="hår, krøllete hår">
-            <img id="rom" width="600px" src="/bilder/DressUpGame/DressUpGameRom.png" alt="et rom, det er malt lilla, i midten står en persone">
-            <img id="kropp" width="180px" class="oppåHverandre" src="/bilder/DressUpGame/dressupDokke.png" alt="en person, lys hud, medium høyde og kropp">
-            <img id="rosaKjole" width="150px" src="/bilder/DressUpGame/DressUpDinSkjole.png" alt="en rosa kjole">
-            <img id="antrekk" width="150px" src="/bilder/DressUpGame/DressUpToDelsAntrekk.png" alt="et to dels antrekk, bunnen en mørk lilla-blå, toppen en lys lilla.">
+            <img id="rom" width="1100px" src="/bilder/DressUpGame/romDUG.PNG" alt="et rom, det er malt lilla, i midten står en persone">
+            <img id="dokkeHar1" width="650px" src="/bilder/DressUpGame/skoleHarDUG.png" alt="hår, pannelugg og en stram dott">
+            <img id="dokkeHar2" width="650px" src="/bilder/DressUpGame/jobbHarDUG.png" alt="hår, stritt med et par hårstrå som bøyer seg inn mot fjeset">
+            <img id="dokkeHar3" width="650px" src="/bilder/DressUpGame/festHarDUG.png" alt="hår, krøllete hår">
+            
+            <img id="kropp" width="650px" class="oppåHverandre" src="/bilder/DressUpGame/dukkeDUG.png" alt="en person, lys hud, medium høyde og kropp">
+            <img id="rosaKjole" width="150px" src="/bilder/DressUpGame/skoleKlerDug.png" alt="en rosa kjole">
+            <img id="antrekk" width="150px" src="/bilder/DressUpGame/jobbKlerDUG.png" alt="et to dels antrekk, bunnen en mørk lilla-blå, toppen en lys lilla.">
+            <img id="festKler" src="/bilder/DressUpGame/festKlerDUG.png" alt="En rosa kjole med av skuldrene stropper. Under kjolen er det en fiskenett strømpebukse. Det er også en kjede med perler rundt halsen.">
 
             <!-- når x hendelsen skjer blir bruker fortalt dette -->
-            <p id="skoleHendelse">Jeg må gjøre meg klar for skolen, lurt å holde det enkelt</p> 
-            <p id="jobbHendelse">Jeg skal på jobb, da må jeg ha håret oppe</p>
-            <p id="festHendelse">I dag skal jeg på fest, da må jeg kle meg fint</p>
-            <p id="brukerErFerdig">Takk for all hjelpen!</p>
+
+        </div>
+        <div id="hylleOgKlær">
+            <img id="hylle1" width="1100px" src="/bilder/DressUpGame/venstreHylleDUG.PNG" alt="En rosa hylle, med tre sted for klær, det er noe i to av hyllene">
+            <img id="litenRosaKjole" width="200px" src="/bilder/DressUpGame/skoleKlerDug.png" alt="en skoleunniform lignende til de man ville finne i england">
+            <img id="litenAntrekk" width="200px" src="/bilder/DressUpGame/jobbKlerDUG.png" alt="En jobbuniform, lignende til en man ville funnet på et bakeri">
+            <img id="knappAntrekk3" width="200px" src="/bilder/DressUpGame/festKlerDUG.png" alt="En rosa kjole med av skuldrene stropper. Under kjolen er det en fiskenett strømpebukse. Det er også en kjede med perler rundt halsen.">
+
         </div>
 
         <div id="hylleOgHar">
-            <img id="knappHar1" width="100px" src="/bilder/DressUpGame/hair1.png" alt="hår, det er pannelugg og en stram dott">
-            <img id="knappHar2" width="100px" src="/bilder/DressUpGame/hair2.png" alt=" langt stritt hår med noen krøll inn mot fjeset">
-            <img id="knappHar3" width="100px" src="/bilder/DressUpGame/har3.png" alt=" krøllete hår">
-            <img id="hylle2" width="310px" src="/bilder/DressUpGame/DressUpGameHylle.png" alt=" en rosa hylle med 3 valg for hår inne seg">
+            <img id="hylle2" width="1100px" src="/bilder/DressUpGame/hoyreHylleDUG.PNG" alt=" en rosa hylle med 3 valg for hår inne seg">
+            <img id="knappHar1" width="300px" src="/bilder/DressUpGame/skoleHarDUG.png" alt="hår, det er pannelugg og en stram dott">
+            <img id="knappHar2" width="300px" src="/bilder/DressUpGame/jobbHarDUG.png" alt=" langt stritt hår med noen krøll inn mot fjeset">
+            <img id="knappHar3" width="300px" src="/bilder/DressUpGame/festHarDUG.png" alt=" krøllete hår">
         </div>
+
+        <div id="oppdrag">
+            <div id="tekst">
+                <p id="skoleHendelse">Jeg må gjøre meg klar for skolen, lurt å holde det enkelt</p> 
+                <p id="jobbHendelse">Jeg skal på jobb, da må jeg ha håret oppe</p>
+                <p id="festHendelse">I dag skal jeg på fest, da må jeg kle meg fint</p>
+                <p id="brukerErFerdig">Takk for all hjelpen!</p>
+            </div>
+            <button id="leverInnSvar">Ferdig</button>
+        </div>
+        
+        
+        <div id="poeng">
+            <div id="poengSkrift">
+                <p id="skrift">Poeng</p>
+                <h2 id="brukerSerPoeng"></h2>
+            </div>
+        </div>
+        <div id="forklaring"></div>
     </div>
 </body>
 </html>
