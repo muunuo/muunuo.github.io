@@ -23,9 +23,6 @@ normal.addEventListener("click", velgNormal);
 
 function farge() {
     if (kontrast==false) {
-        // document.body.style.backgroundColor = "#FFFFFF"
-        // document.body.style.color = "#000000"
-        // document.body.style.fontWeight = "normal"
         defult()
     } else {
     console.log("høy kontrast er valgt")
@@ -34,9 +31,6 @@ function farge() {
     document.body.style.fontWeight = "bold"
     }
     if (vanelig==false) {
-        // document.body.style.backgroundColor = "#FFFFFF"
-        // document.body.style.color = "#000000"
-        // document.body.style.fontWeight = "normal"
         defult()
     } else {
         console.log("normal er valgt")
