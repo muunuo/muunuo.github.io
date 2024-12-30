@@ -62,6 +62,20 @@ body{
     pointer-events: none; 
 }
 
+#arcane{
+    position: absolute;
+    z-index: 1;
+    bottom: 5rem;
+    right: 42rem;
+}
+
+#bilde{
+    position: absolute;
+    z-index: 1;
+
+    right: 14rem;
+}
+
 #kropp{
     position: relative;
     top: 8.9rem;
@@ -79,17 +93,22 @@ body{
 #rosaKjole{
     position: absolute;
     z-index: 1;
+    transform: rotate(90deg);
+    bottom: 13.4rem;
 }
 
 #antrekk{
     position: absolute;
     z-index: 1;
+    transform: rotate(90deg);
+    bottom: 13.4rem;
 }
 
 #festKler{
     position: absolute;
     z-index: 1;
     transform: rotate(90deg);
+    bottom: 13.4rem;
 }
 
 
