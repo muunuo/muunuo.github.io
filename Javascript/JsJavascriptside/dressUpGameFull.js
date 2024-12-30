@@ -1,3 +1,6 @@
+//NB! <3 betyr at det er et notat om en gammel kode lagt 
+//seinere/forklarer hva koden skulle gjøre/hvorfor jeg ble kvitt den
+
 //sette opp variabler
 //variabler antrekk -->
 let KnappVelgAntrekk1 = document.getElementById("litenRosaKjole"); 
@@ -10,7 +13,7 @@ let antrekk2 = document.getElementById("antrekk");
 let antrekk3 = document.getElementById("festKler");
 //variabler antrekk <--
 
-//variabler hår -->
+//variabler har -->
 let KnappVelgHar1 = document.getElementById("knappHar1");
 let KnappVelgHar2 = document.getElementById("knappHar2");
 let KnappVelgHar3 = document.getElementById("knappHar3"); 
@@ -19,10 +22,10 @@ let har1 = document.getElementById("dokkeHar1");
 let har2 = document.getElementById("dokkeHar2");
 let har3 = document.getElementById("dokkeHar3");
 
-let godR = document.getElementById("godReaksjon"); //1,1. sett opp lyder (liker hun eller liker hun ikke håret)
+let godR = document.getElementById("godReaksjon"); //1,1. sett opp lyder (liker hun eller liker hun ikke haret)
 let middelsR = document.getElementById("middelsReaksjon");
 let dårligR = document.getElementById("dårligReaksjon");
-//variabler hår <--
+//variabler har <--
 
 //variabler poeng -->
 let skole = document.getElementById("skoleHendelse");//variabler for hendelsene
@@ -73,7 +76,7 @@ const poengTabell = {
     skole: { // Poeng for skolehendelsen
         har1: 2,
         har2: 1,
-        har3: 0,
+        har3: 1,
         antrekk1: 2,
         antrekk2: 0,
         antrekk3: 1,
@@ -100,19 +103,20 @@ const poengTabell = {
 };
 
 function beregnPoeng(hendelse) {
-    // Finn hvilket hår som er valgt
-    const valgtHår = har1TogF ? "har1" : har2TogF ? "har2" : har3TogF ? "har3" : null;
+    // Finn hvilket har som er valgt
+    const valgthar = har1TogF ? "har1" : har2TogF ? "har2" : har3TogF ? "har3" : null;
 
     // Finn hvilket antrekk som er valgt
     const valgtAntrekk = antrekk1TogF ? "antrekk1" : antrekk2TogF ? "antrekk2" : antrekk3TogF ? "antrekk3" : null;
 
-    if (!valgtHår || !valgtAntrekk) {
-        console.log("Ingen hår eller antrekk er valgt.");
-        return; // Hvis ingen valg er gjort, avbryt beregning
-    }
+    // <3 denne koden gjorde ikke noe serlig så kvittet meg med den.
+    // if (!valgthar || !valgtAntrekk) {
+    //     console.log("Ingen har eller antrekk er valgt.");
+    //     return; // Hvis ingen valg er gjort, avbryt beregning
+    // }
 
-    // Legg til poeng for valgt hår og antrekk
-    poeng += poengTabell[hendelse][valgtHår] || 0;
+    // Legg til poeng for valgt har og antrekk
+    poeng += poengTabell[hendelse][valgthar] || 0;
     poeng += poengTabell[hendelse][valgtAntrekk] || 0;
 
     console.log(`Poeng for ${hendelse}: ${poeng}`);
@@ -153,13 +157,14 @@ function hendelse() { //hva hendelse man kler dukken til
 function leverSvarKnapp() { //må ikke runnes, runner når trykket
 console.log("hei")
     if (skolehendelse==true) { //hvis bruker er på skolehendelse byttes det til jobb hendelse
-        beregnPoeng("skole");
+        beregnPoeng("skole"); //akkurat denne ene linjen er fra chatGPT
         skolehendelse=false
         jobbhendelse=true
-        // if (har1TogF==true) { //hvis hendelse skole skjer, og du velger hår en får du x mengde poeng
+        //<3 her er min orginale kode for poengsystemet
+        // if (har1TogF==true) { //hvis hendelse skole skjer, og du velger har en får du x mengde poeng
         //     poeng=poeng+2
         // } else if (har2TogF==true) {
-        //     poeng=poeng+1 //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        //     poeng=poeng+1 //med poengene gitt her, så får man kun poeng fra haret som er på, ikke fra å klikke på haret.
         // } else if (har3TogF==true){
         //     poeng=poeng+0
         // }
@@ -178,7 +183,7 @@ console.log("hei")
         // if (har1TogF==true) {
         //     poeng=poeng+1;
         // } else if (har2TogF==true) {
-        //     poeng=poeng+2; //med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        //     poeng=poeng+2; //med poengene gitt her, så får man kun poeng fra haret som er på, ikke fra å klikke på haret.
         // } else if (har3TogF==true){
         //     poeng=poeng+0;
         // }
@@ -197,7 +202,7 @@ console.log("hei")
         // if (har1TogF==true) {
         //     poeng=poeng+1;
         // } else if (har2TogF==true) {
-        //     poeng=poeng+0;//med poengene gitt her, så får man kun poeng fra håret som er på, ikke fra å klikke på håret.
+        //     poeng=poeng+0;//med poengene gitt her, så får man kun poeng fra haret som er på, ikke fra å klikke på haret.
         // } else if (har3TogF==true){
         //     poeng=poeng+2;
         // }
@@ -216,6 +221,7 @@ console.log("hei")
     document.getElementById("brukerSerPoeng").innerHTML =poeng; //no øker poeng hver gang bruker leverer svar
     HTogF();
     hendelse();
+    beregnPoeng(); //husk denne!
 }
 
 function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usant.
@@ -248,7 +254,7 @@ function HTogF() { //hva skjer når det er sant/usant
         godR.pause(); //lyd skal ikke spilles
         } else { //men hvis det ikke er på-
             har1.style.display = "block"; //-skal bilde vises og-
-            godR.play(); //1,2. lyd spilles av når hår velges 
+            godR.play(); //1,2. lyd spilles av når har velges 
         }
 
         if (har2TogF==false) { //fungerer likt som den over
@@ -356,12 +362,12 @@ function velgAntrekk3() {
 
 //notater/planer-->
 
-//x 1,3. Hvert hår gir poeng (basert på lyd)
+//x 1,3. Hvert har gir poeng (basert på lyd)
 //1,4. Mengden poeng du har vises 
 //1,4. Klær gir poeng
 //x 1,4,1. Poeng blir kun gitt når antrekk "leverses"
 //x 1,4,2. Du kan ikke få flere poeng med å tryke flere ganger på samme ting
-//x 1,4,3. få hvert hår til å være en viss poengs
+//x 1,4,3. få hvert har til å være en viss poengs
 //1,6. poeng per kategori og sammensatt visesum i en viss situasjon
 //x 1,7. Bruker blir gitt en anleding person skal kle seg til
 //1,8. sett opp så anledning tifleigvis bestemmes fr 2-3 mulige
@@ -383,7 +389,7 @@ function velgAntrekk3() {
 
 //<3 makerer notater på hva som var planen med koden i gravplassen
 
-// <3 orginal plan for å bytte fra velg antrekk til velg hår.
+// <3 orginal plan for å bytte fra velg antrekk til velg har.
 // let neste= document.getElementById("nesteKnapp"); 
 // let forige = document.getElementById("forigeKnapp"); 
 
@@ -411,7 +417,7 @@ function velgAntrekk3() {
 // jobb = 2
 // fest = 3
 
-//if hendelse 1 skjer er hår en=1poeng, hår2=2 poeng osv.?
+//if hendelse 1 skjer er har en=1poeng, har2=2 poeng osv.?
 
 //vis kun en heldelse når runden starter 
 
@@ -426,7 +432,7 @@ function velgAntrekk3() {
         // restartSpill.style.display="block"
 
 
-//<3 når poengsystemet lå samme sted som håret ble valgt 
+//<3 når poengsystemet lå samme sted som haret ble valgt 
             // if (skoleKler==true) {
             //     poeng=poeng+1 //fungerer, men må no fikse se hendelse endres osv.
             // } else if (jobbKler==true) {
