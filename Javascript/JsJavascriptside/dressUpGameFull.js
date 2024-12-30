@@ -216,6 +216,7 @@ console.log("hei")
     } else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
         begynnNy=false //skal brukes for å vise poeng på slutten.
         skolehendelse=true
+        poeng = 0;
     }
 
     document.getElementById("brukerSerPoeng").innerHTML =poeng; //no øker poeng hver gang bruker leverer svar
@@ -246,6 +247,7 @@ function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usa
         }
 
 }
+
 
 
 function HTogF() { //hva skjer når det er sant/usant
