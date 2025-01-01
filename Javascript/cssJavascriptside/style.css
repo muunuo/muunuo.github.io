@@ -3,15 +3,14 @@ html, body {
     padding: 0;
 }
 
-#top { grid-area: top; }
-#klokke { grid-area: klokke;}
+#top { grid-area: top; } /* overskriften */
+#klokke { grid-area: klokke;} /* klokken og brukernavn */
+#profilbilde { grid-area: profilbilde; } /* profilbildet */
+#meny { grid-area: meny; } /* menyen */
+#endreFarge { grid-area: endreFarge; } /* farger å velge mellom */
+#quiz { grid-area: quiz;} /* quizen */
+#tom { grid-area: tom; } /* sentrerer quizen */
 
-#meny { grid-area: meny; }
-#quiz { grid-area: quiz;}
-#gi { grid-area: gi; }
-#tom { grid-area: tom; }
-#profilbilde { grid-area: profilbilde; }
-#endreFarge { grid-area: endreFarge; }
 
 
 
@@ -19,20 +18,20 @@ html, body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'profilbilde profilbilde     top top top top top top    klokke klokke'
-        'meny meny   endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge tom tom'
-        'meny meny   quiz quiz quiz quiz quiz quiz quiz quiz'
-        'meny meny   gi gi gi gi gi gi gi gi'; 
+        'profilbilde profilbilde     top top top top top top top top top    klokke klokke'
+        'meny meny   endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge tom tom'
+        'meny meny   quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz'; 
 }
 
 
-.grid-container > div { /* Alle barna til div-containeren av typen div */
+.grid-container > div { 
     font-size: 1.5rem;
 }
 
+/* grunnleggende komandoer. Vet hvor de er hvis jeg glømmer hvordan å skrive de */
 .flytL {
     float: left;
 }

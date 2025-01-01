@@ -1,62 +1,31 @@
 #top{
     display: flex;
     justify-content: center;
-    flex-direction: row;
-}
-
-#profil{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-#profilbilde1{
-position: absolute;
-
-padding-top: 1rem;
-padding-left: 1rem;
-}
-#profilbilde2{
-position: absolute;
-
-padding-top: 1rem;
-padding-left: 1rem;
-}
-/* plaser bilde 1 og 2 over hverandre og sørg for det er samme størelse */
-
-
-#top{
     border-bottom: solid 0.2rem gray;
 }
 
+#profilbilde1,#profilbilde2{  /* profilbildene bruker kan velge mellom */
+position: absolute;
+top: 1rem;
+left: 3rem;
+}
+/* plaser bilde 1 og 2 over hverandre og sørg for det er samme størelse */
 
 #endreFarge{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly;/* samme mengde mellomrom mellom de */
     align-items: center;
 }
 
-body{
+#meny{
     list-style: none;
 }
 
-.knapper{
-
-    width: 138px;
-    background-color: #50496E;
+.knapper{/* knappen for å sende inn svar */
+    width: 138px;/* stopper fargen fra å gå langs hele siden */
+    background-color: #50496E; /* (liker ikke hvordan knappen ser ut med button function) */
 }
 
-.alternativer{
-    display: flex;
-    justify-content: unset;
-    align-items: first baseline;
-}
-
-
-
-/* #brukerSittSvarSpørsmål2,#brukerSittSvarSpørsmål1{
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-} */
+.alternativer{/* knappene for svaralternativene */
+    display: flex;/* fungerer for å ha bakgrunnsfargen (sutte i js) bli der den skal bli */
+} 

@@ -1,5 +1,5 @@
 
-/* For mobil, eller portrerttmodus, med låg oppløysing */
+/* ikke sutte opp enno. */
 @media screen and (max-width: 800px) {
     /* Når skjermstørrelsen blir  */
     .grid-container {
@@ -7,12 +7,20 @@
         grid-template-columns: 2fr;
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
+            'klokke'
             'top'
-            'meny';
+            'meny'
+            'profilbilde'
+            'endreFarge'
+            'tom'
+            'quiz'
+            '';
     }
 
     .meny{
-        
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
     }
     h2{
         display: flex;

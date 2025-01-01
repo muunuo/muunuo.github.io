@@ -1,6 +1,6 @@
 
-//NB!!! denne er ikke i bruk, begold kun for å se hva du gjorde feil 
-//(du brukte true false på bilder i stede for variablene sutte opp som true og false)
+//NB!!! denne er ikke i bruk, beholder kun for å se hva jeg gjorde feil 
+//(jeg brukte true false på bilder i stede for variablene satt opp som true og false)
 
 
 

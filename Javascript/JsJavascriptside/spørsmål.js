@@ -5,7 +5,16 @@ let svarSpørsmål2 = document.getElementById("brukerSittSvarSpørsmål2");
 let rett1 = document.getElementById("SierRettSvar1"); //hvis bruker svarer feil blir rett svar gitt
 let rett2 =document.getElementById("SierRettSvar2"); //hvis bruker svarer feil blir rett svar gitt
 
+let sa1 = document.getElementById("svarAlternativ1")
+let sa2 = document.getElementById("svarAlternativ2")
+
 let poengsum = 0 
+
+
+sendInn.addEventListener("click", sendInnSvar); //sender svar til bruker inn ("click" er innebyggd)
+sa1.addEventListener("click", alternativ1); // lag to knapper
+sa2.addEventListener("click", alternativ2); 
+
 //vise hva rette svaret er
 SierRettSvar1.style.display="none"; //gjømmer rett svar frem til de trengs
 SierRettSvar2.style.display="none"; //gjømmer rett svar frem til de trengs
@@ -14,24 +23,16 @@ SierRettSvar2.style.display="none"; //gjømmer rett svar frem til de trengs
 svar1 = "CSS";
 svar2 ="px";
 
-//lage svar knapp
-sendInn.addEventListener("click", sendInnSvar); //"click" er innebyggd,
-
-
 
 document.getElementById("poengsum").innerHTML =poengsum; //sier til bruker hva poeng de har.
 
-    
-
-let sa1 = document.getElementById("svarAlternativ1")
-let sa2 = document.getElementById("svarAlternativ2")
-
-sa1.addEventListener("click", Svar1); // lag to knapper
-sa2.addEventListener("click", Svar2); 
 
 valg1=false //når et valg er velgt blir det true
 valg2=false
+laBrukerSvare=true //når true kan bruker endre svaret
+
 trykk()
+
 function trykk() {
     if (valg1==false) {
         svarAlternativ1.style.backgroundColor = "#b469b3"
@@ -46,28 +47,30 @@ function trykk() {
     }
 }
 
-function Svar1() {
-
-    if (valg1==false) {
-        valg1=true
-        valg2=false
-    } else {
-        valg1=false
+function alternativ1() {
+    if (laBrukerSvare==true) { //bruker kan endre svar
+        if (valg1==false) {
+            valg1=true
+            valg2=false
+        } else {
+            valg1=false
+        }
+        
+        trykk()
     }
-    
-    trykk()
-
 }
 
-function Svar2() {
-    if (valg2==false) {
-        valg2=true
-        valg1=false //hvis knapp 2 trykkes når knapp 1 er trykket resettes knapp1 og knapp 2 blir værende trykket
-    } else {
-        valg2=false
+function alternativ2() {
+    if (laBrukerSvare==true) {
+        if (valg2==false) {
+            valg2=true
+            valg1=false //hvis knapp 2 trykkes når knapp 1 er trykket resettes knapp1 og knapp 2 blir værende trykket
+        } else {
+            valg2=false
+        }
+        
+        trykk()
     }
-    
-    trykk()
 }
 
 
@@ -78,13 +81,14 @@ function sendInnSvar (){ //når send in brukernavn blir aktivert skal dette skje
     console.log(svarSpørsmål1); //sier brukernavn i konsollen
     console.log(svarSpørsmål2);
 
+    laBrukerSvare=false; //bruker kan ikke lengre endre svaret
+
 //få svarknappen til å forsvinne etter man trykker svar
     sendInn.style.display="none";
 
     //svaret kan ikke redigeres 
     document.getElementById("brukerSittSvarSpørsmål1").disabled= true;
     document.getElementById("brukerSittSvarSpørsmål2").disabled= true;
-
 
 
 //la bruker vite hva rett svar er 

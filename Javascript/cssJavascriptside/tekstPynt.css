@@ -1,36 +1,34 @@
+/* boksene som viser frem de forskjellige fargemodusene å velge mellom */
 
 #svartHvit{  /* svart hvit farge */
-    border: solid 0.1rem #000000;
+    border: solid 0.1rem #000000; /* mister ingen bakgrunner når du er på x side */
     background-color: #ffffff;
-    color: #000000; /* bestemmer farge her, så js endrer det ikke */
+    color: #000000; /* bestemmer farge her, så js ikke endrer på det */
     padding: 0.3rem;
-    float: left;
-    /* display: flex;
-    justify-content: baseline;
-    align-items: baseline; */
+    float: left; 
 }
 
-#LillaOgSvart{
+#LillaOgSvart{/* lyd bakgrunn med mørk tekst. ikke helt hvit å svart */
     border: solid 0.1rem #B6A6CA;
     background-color: #E1DEE9;
-    color: #1f1a29;
+    color: #1f1a29; 
+    padding: 0.3rem;/* mellomrom mellom border og tekst */
     float: left;
-    padding: 0.3rem;
 }
 
-#klassiskMorkeModus{
+#klassiskMorkeModus{/* klassisk svart bakgrunn med hvit tekst */
     border: solid 0.1rem #ffffff;
     background-color: #000000;
-    color: #ffffff;
-    float: left;
+    color: #ffffff; /* tekst farge */
     padding: 0.3rem;
+    float: left;
 }
 
-#morkeModus{
+#morkeModus{/* mørk bakgrunn med lys tekst (ikke hvit og svart */
     border: solid 0.1rem #c1d9c4;
     background-color: #033F63;
     color: #c1d9c4;
-    float: left;
     padding: 0.3rem;
+    float: left; /* de ligger ved sidnav hverandre, og det stopper fargene fra å gå forbi ordet */
 }
 
