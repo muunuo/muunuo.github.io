@@ -12,61 +12,105 @@
 //Når du hovrer vises det, npår du trykkes aktiveres det
 
 
-let normal = document.getElementById("farge1") //hva siden til vanelig ser ut som
-let høyKontrast = document.getElementById("farge2") //side som er optimal for de med dårlig syn
+let SH = document.getElementById("svartHvit"); //hva siden til vanelig ser ut som
+let LogS = document.getElementById("LillaOgSvart"); //side som er optimal for de med dårlig syn
+let MM = document.getElementById("morkeModus");
+let KMM = document.getElementById("klassiskMorkeModus"); 
 
-let kontrast = false
-let vanelig = false
+let SHtOgF = false; //navn: hva farge det er true eller false
+let LogStOgF = false;
+let MMtOgF = false;
+let KMMtOgF = false;
+defult()
 
-høyKontrast.addEventListener("click", velgHøyKontrast);//gjør fargene til en knapp
-normal.addEventListener("click", velgNormal);
+SH.addEventListener("click", velgSH);
+LogS.addEventListener("click", velgLogS);//gjør fargene til en knapp
+MM.addEventListener("click", velgMM);
+KMM.addEventListener("click", velgKMM);
 
-function farge() {
-    if (kontrast==false) {
-        defult()
-    } else {
-    console.log("høy kontrast er valgt")
-    document.body.style.backgroundColor = "#F7EDE2"
-    document.body.style.color = "#f5cac3"
-    document.body.style.fontWeight = "bold"
-    }
-    if (vanelig==false) {
-        defult()
-    } else {
-        console.log("normal er valgt")
-        document.body.style.backgroundColor = "#f5cac3"
-        document.body.style.color = "#F7EDE2"
-    }
-}
-
-function defult() {
-    if (vanelig==false,kontrast==false) {
-        document.body.style.backgroundColor = "#FFFFFF"
-        document.body.style.color = "#000000"
+function defult() { //if farge 1 og 2 er av skal defult være på.
+    if (SHtOgF==false && LogStOgF==false && MMtOgF==false && KMMtOgF==false) {
+        document.body.style.backgroundColor = "#FDE8E9"
+        document.body.style.color = "#BC9EC1"
         document.body.style.fontWeight = "normal"
     }
 }
-//if farge 1 og 2 er av skal defult være på. 
 
-function velgNormal() {
-    if (vanelig==false) {
-        vanelig=true
-        kontrast=false
+function farge() {
+    if (SHtOgF==false) {
+        defult()
     } else {
-        vanelig=false
+    document.body.style.backgroundColor = "#FFFFFF"
+    document.body.style.color = "#000000"
+    document.body.style.fontWeight = "normal"
+    }
+    if (LogStOgF==false) {
+        defult()
+    } else {
+        document.body.style.backgroundColor = "#e1dee9"
+        document.body.style.color = "#1f1a29"
+    }
+    if (MMtOgF==false) {
+        defult()
+    } else {
+        document.body.style.backgroundColor = "#033F63"
+        document.body.style.color = "#c1d9c4"
+    }
+    if (KMMtOgF==false) {
+        defult()
+    } else {
+        document.body.style.backgroundColor = "#000000"
+        document.body.style.color = "#FFFFFF"
+    }
+}
+
+
+function velgSH() {
+
+    if (SHtOgF==false) {
+        SHtOgF=true
+        LogStOgF=false
+        MMtOgF=false
+        KMMtOgF=false
+    } else {
+        SHtOgF=false
     }
     farge()
 }
 
-function velgHøyKontrast() {
-    if (kontrast==false) {
-        kontrast=true
-        vanelig=false
+function velgLogS() {
+    if (LogStOgF==false) {
+        LogStOgF=true
+        SHtOgF=false
+        MMtOgF=false
+        KMMtOgF=false
     } else {
-        kontrast=false
+        LogStOgF=false
     }
     farge()
 }
 
+function velgMM() {
+    if (MMtOgF==false) {
+        MMtOgF=true
+        SHtOgF=false
+        LogStOgF=false
+        KMMtOgF=false
+    } else {
+        MMtOgF=false
+    }
+    farge()
+}
+function velgKMM() {
+    if (KMMtOgF==false) {
+        KMMtOgF=true
+        SHtOgF=false
+        LogStOgF=false
+        MMtOgF=false
+    } else {
+        KMMtOgF=false
+    }
+    farge()
+}
 //svaralternativ på quiz
 

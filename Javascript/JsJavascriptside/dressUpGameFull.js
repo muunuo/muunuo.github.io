@@ -253,10 +253,10 @@ function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usa
 function HTogF() { //hva skjer når det er sant/usant
     if (har1TogF==false) { //når antrekket er av-
         har1.style.display = "none"; //-skal det ikke vises og
-        godR.pause(); //lyd skal ikke spilles
+        // godR.pause(); //lyd skal ikke spilles
         } else { //men hvis det ikke er på-
             har1.style.display = "block"; //-skal bilde vises og-
-            godR.play(); //1,2. lyd spilles av når har velges 
+            // godR.play(); //1,2. lyd spilles av når har velges 
         }
 
         if (har2TogF==false) { //fungerer likt som den over

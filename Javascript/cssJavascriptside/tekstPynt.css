@@ -1,23 +1,36 @@
 
-#farge1{
-    border: solid 1rem paleturquoise;
-    background-color: paleturquoise;
-    display: flex;
+#svartHvit{  /* svart hvit farge */
+    border: solid 0.1rem #000000;
+    background-color: #ffffff;
+    color: #000000; /* bestemmer farge her, så js endrer det ikke */
+    padding: 0.3rem;
+    float: left;
+    /* display: flex;
     justify-content: baseline;
-    align-items: baseline;
+    align-items: baseline; */
 }
 
-#farge2{
-    border: solid 1rem palegreen;
-    background-color: palegreen;
+#LillaOgSvart{
+    border: solid 0.1rem #B6A6CA;
+    background-color: #E1DEE9;
+    color: #1f1a29;
+    float: left;
+    padding: 0.3rem;
 }
 
-#farge3{
-    border: solid 1rem palegoldenrod;
-    background-color: palegoldenrod;
+#klassiskMorkeModus{
+    border: solid 0.1rem #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    float: left;
+    padding: 0.3rem;
 }
 
-#farge4{
-    border: solid 1rem palevioletred;
-    background-color: palevioletred;
+#morkeModus{
+    border: solid 0.1rem #c1d9c4;
+    background-color: #033F63;
+    color: #c1d9c4;
+    float: left;
+    padding: 0.3rem;
 }
+

@@ -13,7 +13,6 @@
     <script src="JsJavascriptside/inputfelt.js" defer></script>
     <script src="JsJavascriptside/profil.js" defer></script>
     <script src="JsJavascriptside/spørsmål.js" defer></script>
-    <script src="JsJavascriptside/poeng.js" defer></script>
     <script src="JsJavascriptside/endreFarge.js" defer></script>
 </head>
 <body>
@@ -48,8 +47,8 @@
 
         <div id="meny">
             <nav> <!-- linke til andre sidene -->
-                    <li id="K"><a href= "../koding.html">Home</a></li>
-                    <li id="dressup"><a href="/Javascript/dressUpGame.html">dressup Game</a></li>
+                    <li id="K"><a target="_blank" href= "../koding.html">Home</a></li>
+                    <li id="dressup"><a target="_blank" href="/Javascript/dressUpGame.html">dressup Game</a></li>
             </nav>
         </div>
 
@@ -67,8 +66,18 @@
             <input id="brukerSittSvarSpørsmål2" type="svarSpørsmål2">
             <p id="SierRettSvar2">Riktig svar: px</p>
 
-            <button id="sendInnAlleSvar">Send Inn Svar Her</button>
+            <p>spørsmål 3</p>
+            <div class="alternativer">
+                <p id="svarAlternativ1">alternativ1</p>
+                <p id="svarAlternativ2">Alternativ2</p>
+            </div>
 
+            <!-- <p>Hva er det beste showet?</p>
+            <p id="svarAlternativ1">arcane</p>
+            <p id="svarAlternativ2">bleh</p> -->
+            <div class="knapper">
+                <p id="sendInnAlleSvar">Send Inn Svar</p>
+            </div>
             <p class="flytL" id="poengsum"></p> 
             <p class="flytL">/2</p>
         </div>
@@ -80,10 +89,10 @@
 
         <div id="endreFarge">
             <!-- sett opp fire farge valg (se CSS) -->
-            <p id="farge1"></p>
-            <p id="farge2"></p>
-            <p id="farge3"></p>
-            <p id="farge4"></p>
+            <p id="svartHvit">farge 1</p>
+            <p id="LillaOgSvart">farge 2</p>
+            <p id="klassiskMorkeModus">farge 3</p>
+            <p id="morkeModus">farge 4</p>
         </div>
 
 

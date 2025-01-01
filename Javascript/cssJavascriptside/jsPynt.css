@@ -28,3 +28,33 @@ padding-left: 1rem;
 #top{
     border-bottom: solid 0.2rem gray;
 }
+
+
+#endreFarge{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+body{
+    list-style: none;
+}
+
+.knapper{
+
+    width: 138px;
+    background-color: #50496E;
+}
+
+.alternativer{
+    display: flex;
+    justify-content: unset;
+    align-items: first baseline;
+}
+
+/* #brukerSittSvarSpørsmål2,#brukerSittSvarSpørsmål1{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+} */

@@ -9,8 +9,10 @@ html, body {
 #meny { grid-area: meny; }
 #quiz { grid-area: quiz;}
 #gi { grid-area: gi; }
-#mellom { grid-area: mellom; }
+#tom { grid-area: tom; }
 #profilbilde { grid-area: profilbilde; }
+#endreFarge { grid-area: endreFarge; }
+
 
 
 
@@ -20,9 +22,10 @@ html, body {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'profilbilde   profilbilde top top top top top top    klokke klokke'
-        'meny   meny quiz quiz quiz quiz quiz quiz quiz quiz'
-        'meny   meny gi gi gi gi gi gi gi gi'; 
+        'profilbilde profilbilde     top top top top top top    klokke klokke'
+        'meny meny   endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge tom tom'
+        'meny meny   quiz quiz quiz quiz quiz quiz quiz quiz'
+        'meny meny   gi gi gi gi gi gi gi gi'; 
 }
 
 
