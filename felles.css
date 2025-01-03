@@ -123,9 +123,9 @@ border: solid 7rem #eecae3;
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
             'header'
-            'meny'
+            'menu'
             'main'
-            'footer';
+            'foter';
     }
 
     /* 
