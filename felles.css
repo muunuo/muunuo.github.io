@@ -134,11 +134,11 @@ border: solid 7rem #eecae3;
         (frå column til row). I tillegg så midtstiller
         eg elementa i menyen.
     */
-    /* nav ul{
+    nav ul{
         display: flex;
-        flex-direction: row;
+        /* flex-direction: row; */
         justify-content: center;
-    } */
+    }
 
     /* Når skjermen er liten, så vil biletet i main ta heile bredda. */
     .flyt {
@@ -160,8 +160,8 @@ border: solid 7rem #eecae3;
     /* Skriftstørrelsen i header blir mindre på mobil. */
     #tittel {
         font-size: 1rem;
-        display: flex;
+        /* display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
     }
 }
