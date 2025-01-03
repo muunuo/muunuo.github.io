@@ -119,7 +119,7 @@ border: solid 7rem #eecae3;
     /* Når skjermstørrelsen blir  */
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 3fr;
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
             'header'
@@ -160,5 +160,8 @@ border: solid 7rem #eecae3;
     /* Skriftstørrelsen i header blir mindre på mobil. */
     #tittel {
         font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
