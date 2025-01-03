@@ -1,20 +1,17 @@
 
-/* ikke sutte opp enno. */
 @media screen and (max-width: 800px) {
     /* Når skjermstørrelsen blir  */
     .grid-container {
         display: grid;
-        grid-template-columns: 2fr;
+        grid-template-columns: 2fr; /* med to kan jeg ha klokke og profilbilde ved sidnav hverandre */
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
-            'klokke'
-            'top'
-            'meny'
-            'profilbilde'
-            'endreFarge'
-            'tom'
-            'quiz'
-            '';
+            'profilbilde klokke'
+            'top top'
+            'meny meny'
+            'endreFarge endreFarge'
+            'tom tom'
+            'quiz quiz';
     }
 
     .meny{

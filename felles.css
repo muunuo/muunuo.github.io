@@ -136,7 +136,7 @@ border: solid 7rem #eecae3;
     */
     nav ul{
         display: flex;
-        /* flex-direction: row; */
+        flex-direction: row;
         justify-content: center;
     }
 
