@@ -103,11 +103,6 @@ function beregnPoeng(hendelse) {
     // Finn hvilket antrekk som er valgt
     const valgtAntrekk = antrekk1TogF ? "antrekk1" : antrekk2TogF ? "antrekk2" : antrekk3TogF ? "antrekk3" : null;
 
-    // <3 denne koden gjorde ikke noe serlig så kvittet meg med den.
-    // if (!valgthar || !valgtAntrekk) {
-    //     console.log("Ingen har eller antrekk er valgt.");
-    //     return; // Hvis ingen valg er gjort, avbryt beregning
-    // }
 
     // Legg til poeng for valgt har og antrekk
     poeng += poengTabell[hendelse][valgthar] || 0;
@@ -154,59 +149,17 @@ console.log("hei")
         beregnPoeng("skole"); //akkurat denne ene linjen er fra chatGPT
         skolehendelse=false
         jobbhendelse=true
-        //<3 her er min orginale kode for poengsystemet
-        // if (har1TogF==true) { //hvis hendelse skole skjer, og du velger har en får du x mengde poeng
-        //     poeng=poeng+2
-        // } else if (har2TogF==true) {
-        //     poeng=poeng+1 //med poengene gitt her, så får man kun poeng fra haret som er på, ikke fra å klikke på haret.
-        // } else if (har3TogF==true){
-        //     poeng=poeng+0
-        // }
-
-        // if (antrekk1TogF==true) { 
-        //     poeng=poeng+1
-        // } else if (antrekk2TogF==true) {
-        //     poeng=poeng+2 
-        // }
-        // console.log(poeng)//hver gang man spiller en runde kan man se poeng i console log.
 
     } else if(jobbhendelse==true) {
         beregnPoeng("jobb");
         jobbhendelse=false;
         festhendelse=true;
-        // if (har1TogF==true) {
-        //     poeng=poeng+1;
-        // } else if (har2TogF==true) {
-        //     poeng=poeng+2; //med poengene gitt her, så får man kun poeng fra haret som er på, ikke fra å klikke på haret.
-        // } else if (har3TogF==true){
-        //     poeng=poeng+0;
-        // }
-
-        // if (antrekk1TogF==true) { 
-        //     poeng=poeng+2
-        // } else if (antrekk2TogF==true) {
-        //     poeng=poeng+1
-        // }
-        // console.log(poeng);
 
     } else if(festhendelse==true){
         beregnPoeng("fest");
         festhendelse=false;
         begynnNy = true;
-        // if (har1TogF==true) {
-        //     poeng=poeng+1;
-        // } else if (har2TogF==true) {
-        //     poeng=poeng+0;//med poengene gitt her, så får man kun poeng fra haret som er på, ikke fra å klikke på haret.
-        // } else if (har3TogF==true){
-        //     poeng=poeng+2;
-        // }
 
-        // if (antrekk1TogF==true) { 
-        //     poeng=poeng+1
-        // } else if (antrekk2TogF==true) {
-        //     poeng=poeng+2 
-        // }
-        // console.log(poeng);
     } else if(begynnNy==true){ //tom skjerm skjer fordi denne. Hvis du vil endre det sett det så eu går til skole hendelse
         begynnNy=false //skal brukes for å vise poeng på slutten.
         skolehendelse=true
@@ -373,73 +326,3 @@ function velgAntrekk3() {
 //x 2,3. kan no bruke hendelsenavn i stede for tall.
 
 //problem: poeng må kun bli gitt når svar leveres. Kode som gir poeng må være inni kode som sier om klær er sann eller ikke. 
-
-//ting som ikke fungerte-->
-
-//<3 fikk ikke tid til å sette opp et bra lydsystem. Trengte å fokusere på finpussing i stede
-// let godR = document.getElementById("godReaksjon"); //1,1. sett opp lyder (liker hun eller liker hun ikke haret)
-// let middelsR = document.getElementById("middelsReaksjon");
-// let dårligR = document.getElementById("dårligReaksjon");
-
-
-//<3 redundent kode: true false gjør samme ting.
-// //skole er eneste so begynner som syneligt
-// jobbHendelse.style.display="none"; //må bruke id navnet for å velge display
-// festHendelse.style.display="none";
-// restartSpill.style.display="none";
-
-
-//<3 makerer notater på hva som var planen med koden i gravplassen
-
-// <3 orginal plan for å bytte fra velg antrekk til velg har.
-// let neste= document.getElementById("nesteKnapp"); 
-// let forige = document.getElementById("forigeKnapp"); 
-
-//<3 før jeg byttet fra tilfeldig til faste hendelser. (hadde problemet med poeng hver gang det tykkes her om)
-// //for å unngå å få poeng hver gang noe trykkes, og kun når det ferdige antrekket er valgt 
-// function leverSvarKnapp() { 
-// //denne inni function over eller for seg selv?
-// if (hendelseValgt==1) {
-//     //hvis bilde 1 vises får du x poeng
-//     //hvordan vite hva bilde som vises?
-//     //use true/false!
-// }
-// }
-
-// let hendelseValgt = Math.floor(Math.random() *3+1);
-
-// function hendelse() {
-//     let hendelseValgt = Math.floor(Math.random() *3+1);
-//     console.log(hendelseValgt);
-    
-// }
-
-//sette opp variabler
-// skole = 1
-// jobb = 2
-// fest = 3
-
-//if hendelse 1 skjer er har en=1poeng, har2=2 poeng osv.?
-
-//vis kun en heldelse når runden starter 
-
-//<3 før jeg fant ut jeg ikke måtte ha egen knapp for å restarte spillet. 
-// restart.addEventListener("click", begynnNy); 
-
-// function begynnNy() {
-//     //når trykket starter spillet på nytt
-// }
-
-        // leverInnSvar.style.display="none"
-        // restartSpill.style.display="block"
-
-
-//<3 når poengsystemet lå samme sted som haret ble valgt 
-            // if (skoleKler==true) {
-            //     poeng=poeng+1 //fungerer, men må no fikse se hendelse endres osv.
-            // } else if (jobbKler==true) {
-            //     poeng=poeng+2
-            // } else if (festKler==true) {
-            //     poeng=poeng+0
-            // }
-            //enkel løsning: legg til hva lyd som spilkles her

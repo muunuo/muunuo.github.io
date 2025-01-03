@@ -1,0 +1,211 @@
+// koden her beholdes grunnet at det er både en læremulighet, og fordi mye av det er ideer jeg vil implimentere ettervært, men jeg er usikker helt hvordan
+// så koden beholdes for å eventuelt se tilbake på hva ideer jeg hadde osv. 
+
+
+
+//ting som ikke fungerte-->
+
+    // <3 denne koden gjorde ikke noe serlig så kvittet meg med den. ligger inni githiub sin orginalt
+    // if (!valgthar || !valgtAntrekk) {
+    //     console.log("Ingen har eller antrekk er valgt.");
+    //     return; // Hvis ingen valg er gjort, avbryt beregning
+    // }
+
+
+
+
+//<3 fikk ikke tid til å sette opp et bra lydsystem. Trengte å fokusere på finpussing i stede
+// let godR = document.getElementById("godReaksjon"); //1,1. sett opp lyder (liker hun eller liker hun ikke haret)
+// let middelsR = document.getElementById("middelsReaksjon");
+// let dårligR = document.getElementById("dårligReaksjon");
+
+
+//<3 redundent kode: true false gjør samme ting.
+// //skole er eneste so begynner som syneligt
+// jobbHendelse.style.display="none"; //må bruke id navnet for å velge display
+// festHendelse.style.display="none";
+// restartSpill.style.display="none";
+
+
+//<3 makerer notater på hva som var planen med koden i gravplassen
+
+// <3 orginal plan for å bytte fra velg antrekk til velg har.
+// let neste= document.getElementById("nesteKnapp"); 
+// let forige = document.getElementById("forigeKnapp"); 
+
+//<3 før jeg byttet fra tilfeldig til faste hendelser. (hadde problemet med poeng hver gang det tykkes her om)
+// //for å unngå å få poeng hver gang noe trykkes, og kun når det ferdige antrekket er valgt 
+// function leverSvarKnapp() { 
+// //denne inni function over eller for seg selv?
+// if (hendelseValgt==1) {
+//     //hvis bilde 1 vises får du x poeng
+//     //hvordan vite hva bilde som vises?
+//     //use true/false!
+// }
+// }
+
+// let hendelseValgt = Math.floor(Math.random() *3+1);
+
+// function hendelse() {
+//     let hendelseValgt = Math.floor(Math.random() *3+1);
+//     console.log(hendelseValgt);
+    
+// }
+
+//sette opp variabler
+// skole = 1
+// jobb = 2
+// fest = 3
+
+//if hendelse 1 skjer er har en=1poeng, har2=2 poeng osv.?
+
+//vis kun en heldelse når runden starter 
+
+//<3 før jeg fant ut jeg ikke måtte ha egen knapp for å restarte spillet. 
+// restart.addEventListener("click", begynnNy); 
+
+// function begynnNy() {
+//     //når trykket starter spillet på nytt
+// }
+
+        // leverInnSvar.style.display="none"
+        // restartSpill.style.display="block"
+
+
+//<3 når poengsystemet lå samme sted som haret ble valgt 
+            // if (skoleKler==true) {
+            //     poeng=poeng+1 //fungerer, men må no fikse se hendelse endres osv.
+            // } else if (jobbKler==true) {
+            //     poeng=poeng+2
+            // } else if (festKler==true) {
+            //     poeng=poeng+0
+            // }
+            //enkel løsning: legg til hva lyd som spilkles her
+
+
+
+// // <3 NB!! ikke i bruk. kode her ble bruk i fullførte dokumente med visse endringer gjordt. 
+
+// let KnappVelgAntrekk1 = document.getElementById("litenRosaKjole");
+// let KnappVelgAntrekk2 = document.getElementById("litenAntrekk");
+
+// let antrekk0 = document.getElementById("nakenKler");
+// let antrekk1 = document.getElementById("rosaKjole");
+// let antrekk2 = document.getElementById("antrekk");
+
+// let neste= document.getElementById("nesteKnapp");
+// let forige = document.getElementById("forigeKnapp");
+
+// //2. Det begynner som av
+// let antrekk1TogF=false;
+// let antrekk2TogF=false;
+
+// //1. Lag en knapp
+// KnappVelgAntrekk1.addEventListener("click", velgAntrekk1);
+// KnappVelgAntrekk2.addEventListener("click", velgAntrekk2);
+
+
+// // function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usant.
+    
+// //     if (antrekk0TogF==false) { 
+// //         antrekk0.style.display="none"
+// //         } else {
+// //             antrekk0.style.display="block" 
+// //         }
+
+
+// //     if (antrekk1TogF==false) { //om antrekket er av
+// //         antrekk1.style.display="none"; //skal det ikke vises
+// //         antrekk0TogF=true
+        
+// //         } else { //men hvis det ikke er av (altså på)
+// //             antrekk1.style.display="block"; //skal det vises
+// //             antrekk0TogF=false
+            
+// //         }
+
+// //         if (antrekk2TogF==false) { 
+// //             antrekk2.style.display="none"
+// //             antrekk0TogF=true
+            
+// //             } else {
+// //                 antrekk2.style.display="block" 
+// //                 antrekk0TogF=false
+                
+// //             }
+
+// // }
+
+
+// function TogF() { //her inne skal vi si hva som skjer når noe er sant eller usant.
+
+//     if (antrekk1TogF==false) { //om antrekket er av
+//         antrekk1.style.display="none"; //skal det ikke vises
+//         } else { //men hvis det ikke er av (altså på)
+//             antrekk1.style.display="block"; //skal det vises
+            
+//         }
+
+//         if (antrekk2TogF==false) { 
+//             antrekk2.style.display="none"
+//             } else {
+//                 antrekk2.style.display="block" 
+//             }
+
+// }
+
+// TogF()//function TogF blir kjørt her 
+
+
+// function velgAntrekk1() {
+//     //løp funksjonen så ting faktisk skjer.
+//     if (antrekk1TogF==false) {//3. Når trykket blir den til på
+//         antrekk1TogF=true
+//         antrekk2TogF=false
+        
+//     } else {//4.når trykket igjen blir den til av
+//         antrekk1TogF=false
+//     }
+// TogF()
+// }
+
+// function velgAntrekk2() {
+
+//     if (antrekk2TogF==false) {
+//         antrekk2TogF=true
+//         antrekk1TogF=false
+//     } else {
+//         antrekk2TogF=false
+        
+//     }
+//     TogF()//husk denne!!!!, ellers skjer det ingenting
+// }
+
+
+// function leverSvarKnapp() { //må ikke runnes, runner når trykket
+//     console.log("hei")
+//         if (skolehendelse==true) { //hvis bruker er på skolehendelse byttes det til jobb hendelse
+//             beregnPoeng("skole"); //akkurat denne ene linjen er fra chatGPT
+//             skolehendelse=false
+//             jobbhendelse=true
+//             //<3 her er min orginale kode for poengsystemet, var en inni hver men beholdt ikke alle
+//             // if (har1TogF==true) { //hvis hendelse skole skjer, og du velger har en får du x mengde poeng
+//             //     poeng=poeng+2
+//             // } else if (har2TogF==true) {
+//             //     poeng=poeng+1 //med poengene gitt her, så får man kun poeng fra haret som er på, ikke fra å klikke på haret.
+//             // } else if (har3TogF==true){
+//             //     poeng=poeng+0
+//             // }
+    
+//             // if (antrekk1TogF==true) { 
+//             //     poeng=poeng+1
+//             // } else if (antrekk2TogF==true) {
+//             //     poeng=poeng+2 
+//             // }
+//             // console.log(poeng)//hver gang man spiller en runde kan man se poeng i console log.
+    
+//         } else if(jobbhendelse==true) {
+
+// //1,2. gjør samme som over for nr2
+// //1,3. hvis nr 1 er på, og nr2 trykkes, slås 1 av og 2 på.
+
