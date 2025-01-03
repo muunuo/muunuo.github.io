@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Javascript</title>
     <link rel="stylesheet" href="/Javascript/cssJavascriptside/style.css">
-    <link rel="stylesheet" href="/Javascript/cssJavascriptside/farge.css">
     <link rel="stylesheet" href="/Javascript/cssJavascriptside/mobil.css">
-    <link rel="stylesheet" href="cssJavascriptside/jsPynt.css">
-    <link rel="stylesheet" href="/Javascript/cssJavascriptside/tekstPynt.css">
+    <link rel="stylesheet" href="/Javascript/cssJavascriptside/jsPynt.css">
     <script src="JsJavascriptside/klokke.js" defer></script>
     <script src="JsJavascriptside/inputfelt.js" defer></script>
     <script src="JsJavascriptside/profil.js" defer></script>
@@ -21,42 +19,38 @@
     
     <div class="grid-container">
 
-
-        <div>
-            <p id="hei">hei</p> <!-- si hei "bruker sitt navn" -->
-            <p id="sierBrukerNavn"></p>
-        </div>
-
-
         <div id="top">
             <h2>Javascript</h2>
         </div>
 
         <div id="profilbilde">
-            <img id="profilbilde1" src="/bilder/JSGrafiskeElementer/grønnProfil.png" alt="" width="75px">
-            <img id="profilbilde2" src="/bilder/JSGrafiskeElementer/rødProfil.png" alt="" width="75px">
+            <img id="profilbilde1" src="/bilder/JSGrafiskeElementer/grønnProfil.png" alt="en grønn running" width="75px">
+            <img id="profilbilde2" src="/bilder/JSGrafiskeElementer/rødProfil.png" alt="en rød-rosa running" width="75px">
         </div>
 
 
-        <div id="klokke">
-            <p id="klokken"></p>
+        <div id="klokke"> 
+            <p id="klokken">Klokken er</p> <!-- klokke tar tid å vises, tekst fyller inn plass frem til den vises -->
             <input id="brukerenSittNavn" type="brukernavn"> <!-- bruker skriver inn brukernavn her -->
             <button id="knapp"> Svar</button> <!-- knappen for å sende inn svare om brukernavn -->
+            <div class="liggVedSidenAvHverandre">
+                <p id="hei">hei</p> <!-- si hei "bruker sitt navn" -->
+                <p id="mellomrom">&nbsp;</p><!-- beste måten å seperer det på for no -->
+                <p id="sierBrukerNavn"></p>
+            </div>
         </div>
 
 
         <div id="meny">
-            <nav> <!-- linke til andre sidene -->
-                    <li id="K"><a target="_blank" href= "../koding.html">Home</a></li>
-                    <li id="dressup"><a target="_blank" href="/Javascript/dressUpGame.html">dressup Game</a></li>
-            </nav>
+                <nav> <!-- linke til andre sidene -->
+                        <li id="K"><a target="_blank" href= "../koding.html">Home</a></li>
+                        <li id="dressup"><a target="_blank" href="/Javascript/dressUpGame.html">Dressup Game</a></li>
+                </nav>
         </div>
 
 
-
-
         <div id="quiz">
-            <h3>Quiz</h3>
+            <h3>Kode Quiz</h3>
             <!-- sett opp noen spørsmål og en måte å svare/sende inn svar -->
             <p>Er CSS eller HTML oftast brukt til å pynte en nettside?</p>
             <input id="brukerSittSvarSpørsmål1" type="svarSpørsmål1">
@@ -66,19 +60,14 @@
             <input id="brukerSittSvarSpørsmål2" type="svarSpørsmål2">
             <p id="SierRettSvar2">Riktig svar: px</p>
 
-            <p>Float left ville gjordt at et bilde er på:</p>
+            <p>Float left ville gjordt at et bilde er på?</p>
             <div class="alternativer">
                 <p id="svarAlternativ1">venstre side</p>
                 <p>&nbsp; &nbsp; &nbsp; &nbsp; </p>
                 <p id="svarAlternativ2">høyre side</p>
             </div>
 
-            <!-- <p>Hva er det beste showet?</p>
-            <p id="svarAlternativ1">arcane</p>
-            <p id="svarAlternativ2">bleh</p> -->
-            <div class="knapper">
-                <p id="sendInnAlleSvar">Send Inn Svar</p>
-            </div>
+            <p class="knapper" id="sendInnAlleSvar">Send Inn Svar</p> <!-- quiz svar knapp -->
             <p class="flytL" id="poengsum"></p> 
             <p class="flytL">/3</p>
         </div>

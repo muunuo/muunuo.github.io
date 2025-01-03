@@ -1,11 +1,12 @@
 //sette opp alle viriabler
-let svarSpørsmål1 = document.getElementById("brukerSittSvarSpørsmål1"); // gjør brukernavnet om til variabel
-let sendInn = document.getElementById("sendInnAlleSvar"); // husk forskjellige navn på id og variabel
+// husk forskjellige navn på id og variabel
+let svarSpørsmål1 = document.getElementById("brukerSittSvarSpørsmål1"); //hva bruker svarer
 let svarSpørsmål2 = document.getElementById("brukerSittSvarSpørsmål2");
-let rett1 = document.getElementById("SierRettSvar1"); //hvis bruker svarer feil blir rett svar gitt
-let rett2 =document.getElementById("SierRettSvar2"); //hvis bruker svarer feil blir rett svar gitt
+let sendInn = document.getElementById("sendInnAlleSvar"); //knapp som sender inn bruker sitt svar
+let rett1 = document.getElementById("SierRettSvar1"); //rett svar, blir gitt om bruker svarer feil
+let rett2 =document.getElementById("SierRettSvar2"); 
 
-let sa1 = document.getElementById("svarAlternativ1")
+let sa1 = document.getElementById("svarAlternativ1") //spørsmål 3
 let sa2 = document.getElementById("svarAlternativ2")
 
 let poengsum = 0 

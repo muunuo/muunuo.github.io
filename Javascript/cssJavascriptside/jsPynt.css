@@ -1,31 +1,75 @@
-#top{
+#top {/* overskriften */
     display: flex;
     justify-content: center;
     border-bottom: solid 0.2rem gray;
 }
+
+nav li{
+    list-style: none;
+    /* text-decoration: none;
+    color: inherit; */
+}
+
+
 
 #profilbilde1,#profilbilde2{  /* profilbildene bruker kan velge mellom */
 position: absolute;
 top: 1rem;
 left: 3rem;
 }
-/* plaser bilde 1 og 2 over hverandre og sørg for det er samme størelse */
 
-#endreFarge{
+#endreFarge{ /* bruker kan velge farge */
     display: flex;
-    justify-content: space-evenly;/* samme mengde mellomrom mellom de */
+    justify-content: space-evenly;
     align-items: center;
 }
 
-#meny{
-    list-style: none;
+.liggVedSidenAvHverandre{ /* for elemter som bare må ligge ved sidnav hverandre */
+    display: flex;
+    align-items: center;
+
 }
 
-.knapper{/* knappen for å sende inn svar */
-    width: 138px;/* stopper fargen fra å gå langs hele siden */
-    background-color: #50496E; /* (liker ikke hvordan knappen ser ut med button function) */
+.knapper{ /* sende inn svar */
+    width: 138px; /* holder fargen i en boks*/
 }
 
-.alternativer{/* knappene for svaralternativene */
-    display: flex;/* fungerer for å ha bakgrunnsfargen (sutte i js) bli der den skal bli */
+.alternativer{/* svaralternativ knapp */
+    display: flex;/* holder fargen i en boks (farge i js) */
+    /* background-color: #787878;  */
 } 
+
+
+
+/* knapp for å velge fargene på nettsiden */
+#svartHvit{  /* svart hvit farge */
+    border: solid 0.1rem #000000;
+    background-color: #ffffff;/* bestemmer farge her, så js ikke endrer på det */
+    color: #000000; /* tekst farge */
+    padding: 0.3rem;
+    float: left; 
+}
+
+#LillaOgSvart{/* lys bakgrunn med mørk tekst */
+    border: solid 0.1rem #B6A6CA;
+    background-color: #E1DEE9;
+    color: #1f1a29; 
+    padding: 0.3rem;
+    float: left;
+}
+
+#klassiskMorkeModus{/* klassisk svart bakgrunn med hvit tekst */
+    border: solid 0.1rem #ffffff;
+    background-color: #000000;
+    color: #ffffff; 
+    padding: 0.3rem;
+    float: left;
+}
+
+#morkeModus{/* mørk bakgrunn med lys tekst (ikke hvit og svart */
+    border: solid 0.1rem #c1d9c4;
+    background-color: #033F63;
+    color: #c1d9c4;
+    padding: 0.3rem;
+    float: left;
+}

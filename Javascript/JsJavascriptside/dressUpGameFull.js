@@ -7,7 +7,6 @@ let KnappVelgAntrekk1 = document.getElementById("litenRosaKjole");
 let KnappVelgAntrekk2 = document.getElementById("litenAntrekk");
 let KnappVelgAntrekk3 = document.getElementById("knappFestKler");
 
-
 let antrekk1 = document.getElementById("rosaKjole");
 let antrekk2 = document.getElementById("antrekk");
 let antrekk3 = document.getElementById("festKler");
@@ -21,10 +20,6 @@ let KnappVelgHar3 = document.getElementById("knappHar3");
 let har1 = document.getElementById("dokkeHar1");
 let har2 = document.getElementById("dokkeHar2");
 let har3 = document.getElementById("dokkeHar3");
-
-let godR = document.getElementById("godReaksjon"); //1,1. sett opp lyder (liker hun eller liker hun ikke haret)
-let middelsR = document.getElementById("middelsReaksjon");
-let dårligR = document.getElementById("dårligReaksjon");
 //variabler har <--
 
 //variabler poeng -->
@@ -33,9 +28,9 @@ let jobb = document.getElementById("jobbHendelse");
 let fest = document.getElementById("festHendelse");
 let ferdig = document.getElementById("brukerErFerdig");
 
-let leverSvar = document.getElementById("leverInnSvar");
+let leverSvar = document.getElementById("leverInnSvar");//bruker leverer svar
 
-let brukerPoeng = document.getElementById("brukerSerPoeng");
+let brukerPoeng = document.getElementById("brukerSerPoeng");//hvor mye poeng bruker får
 
 let poeng = 0; //poeng starter på 0
 //variabler poeng <--
@@ -45,20 +40,19 @@ let antrekk1TogF=false; //2. Det begynner som av
 let antrekk2TogF=false;
 let antrekk3TogF=false;
 
-let har1TogF = false;//Alle begynner som av (false)
+let har1TogF = false;//Alle begynner som av (false) av 
 let har2TogF = false;
 let har3TogF = false; 
 
-let skolehendelse = true;//Alle begynner som av (false), denner er koblet til skole
-let jobbhendelse = false;//koblett til jobb
-let festhendelse = false; //koblet til fest
-let begynnNy = false;//koblett til ferdig
-
+let skolehendelse = true; //enete hendelsen som begynner som på
+let jobbhendelse = false; //begynnerf som av
+let festhendelse = false; //--||--
+let begynnNy = false;//koblett til ferdig(reset)
 //true/false <--
 
 document.getElementById("brukerSerPoeng").innerHTML =poeng; //sier til bruker hva poeng de har.
 
-hendelse()//refererer til hva hendelse man kler seg for
+hendelse()//må se hva å gjøre med tru false veriene over
 
 //knapper-->
 KnappVelgAntrekk1.addEventListener("click", velgAntrekk1);;//1. Lag en knapp
@@ -381,6 +375,12 @@ function velgAntrekk3() {
 //problem: poeng må kun bli gitt når svar leveres. Kode som gir poeng må være inni kode som sier om klær er sann eller ikke. 
 
 //ting som ikke fungerte-->
+
+//<3 fikk ikke tid til å sette opp et bra lydsystem. Trengte å fokusere på finpussing i stede
+// let godR = document.getElementById("godReaksjon"); //1,1. sett opp lyder (liker hun eller liker hun ikke haret)
+// let middelsR = document.getElementById("middelsReaksjon");
+// let dårligR = document.getElementById("dårligReaksjon");
+
 
 //<3 redundent kode: true false gjør samme ting.
 // //skole er eneste so begynner som syneligt

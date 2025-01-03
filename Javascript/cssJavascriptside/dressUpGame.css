@@ -35,76 +35,44 @@ html, body {
     font-size: 1.5rem;
 }
 
-/* påminnelse til selv: container kan ikke ha position absolut, da blir container veldig liten */
+/* påminnelse til selv: container kan ikke ha position absolut, da blir container veldig, veldig liten */
 body{
     background-color: #937281;
 }
 
 
-/* #romOgKropp{
-    grid-column: 4 / -1 ;
-    position: absolute;
-} */
 #rom{
     position: absolute;/* da ligger dokken oppå */
     right: 20rem;
-    pointer-events: none; 
+    pointer-events: none; /* så de ikke ligger oppå, og dermed stopper bruker fra å trykke på knapper */
 }
+
 #hylle1{ /* venstre (L) hylle */
-    position: absolute; /* absulut fordi orginal posisjon er fint, og da klan jeg ligge ting i forhold til den. */
-    pointer-events: none; 
-
+    position: absolute; /* ting ligger i forhold til den (klær)*/
+    pointer-events: none; /* ikke en knapp */
 }
+
 #hylle2{/* høyre (R) hylle */
-    position: absolute; /* hår (i hyller) blir posisjoner i fohopld til den */
-    float: right;
-    right: 15.5rem;
-    pointer-events: none; 
-}
-
-#arcane{
-    position: absolute;
-    z-index: 1;
-    bottom: 5rem;
-    right: 42rem;
-}
-
-#bilde{
-    position: absolute;
-    z-index: 1;
-
-    right: 14rem;
+    position: absolute; /* ting ligger i forhold til den (hår)*/
+    right: 15.5rem; /* uten er den veldig lagt mot høyre */
+    pointer-events: none; /* ikke en knapp */
 }
 
 #kropp{
-    position: relative;
+    position: relative;/* ligger i forhold til rommet */
     top: 8.9rem;
-    transform: rotate(90deg);
+    transform: rotate(90deg);/* den var sidelengs */
 }
 
 
 #dokkeHar1, #dokkeHar2, #dokkeHar3{
-    position: absolute;
-    z-index: 1;
+    position: absolute;/* hvis reletiv tvinges dokken til å flytte seg */
+    z-index: 1;/* forand rom og dokke */
     transform: rotate(90deg);
     top: 8.9rem;
     }
 
-#rosaKjole{
-    position: absolute;
-    z-index: 1;
-    transform: rotate(90deg);
-    bottom: 13.4rem;
-}
-
-#antrekk{
-    position: absolute;
-    z-index: 1;
-    transform: rotate(90deg);
-    bottom: 13.4rem;
-}
-
-#festKler{
+#rosaKjole,#antrekk,#festKler{
     position: absolute;
     z-index: 1;
     transform: rotate(90deg);
@@ -179,91 +147,3 @@ padding-left: 1.5rem;
     border-radius: 1rem;
 }
 
-
-/* #nakenKler{
-    position: relative;
-    left: 220px;
-    bottom: 400px;
-}  */
-
-/* 
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-#hylleOgKlær { grid-area: hylleOgKlær; }
-#romOgKropp { grid-area: romOgKropp;}
-
-
-
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp '
-        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp'
-        'hylleOgKlær hylleOgKlær      romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp romOgKropp';
-}
-
-
-.grid-container > div { 
-    font-size: 1.5rem;
-}
-
-
-#hylle{
-    position: absolute;
-    z-index: 0;
-}
-
-#litenRosaKjole{
-    position: absolute;
-    z-index: 1;
-    top: 70px;
-    left: 130px;
-}
-
-#litenAntrekk{
-    position: absolute;
-    left: 130px;
-    top: 310px;
-}
-
-#rom{
-    position: absolute;
-    float: left;
-}
-
-#kropp{
-    position: relative;
-    top: 50px;
-    left: 200px;
-}
-
-#rosaKjole{
-    position: relative;
-
-}
-
-#antrekk{
-    position: relative;
-    right: 125px;
-    bottom: 100px;
-}
-
-#nakenKler{
-    position: relative;
-    left: 220px;
-    bottom: 400px;
-    z-index: 0; z-index er for at hyllen skal være bakerst, lavt tall bak, høyt tall fremme 
-} */
