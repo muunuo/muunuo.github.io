@@ -119,11 +119,12 @@ border: solid 7rem #eecae3;
     /* Når skjermstørrelsen blir  */
     .grid-container {
         display: grid;
-        grid-template-columns: 3fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-areas:
             'header'
-            'menu'
+            'meny'
+            'meny'
             'main'
             'foter';
     }
