@@ -171,6 +171,7 @@ function Co2Utslipp() {
     if (TogFsp3sa1 == false) {
         sp3sa1.style.backgroundColor = "yellow"
     } else {
+        x = 143
         sp3sa1.style.backgroundColor = "blue"
         TogFsp3sa2 = false
         TogFsp3sa3 = false
@@ -179,6 +180,7 @@ function Co2Utslipp() {
     if (TogFsp3sa2 == false) {
         sp3sa2.style.backgroundColor = "yellow"
     } else {
+        x = 164
         sp3sa2.style.backgroundColor = "blue"
         TogFsp3sa1 = false
         TogFsp3sa3 = false
@@ -187,6 +189,7 @@ function Co2Utslipp() {
     if (TogFsp3sa3 == false) {
         sp3sa3.style.backgroundColor = "yellow"
     } else {
+        x = 126.2
         sp3sa3.style.backgroundColor = "blue"
         TogFsp3sa1 = false
         TogFsp3sa2 = false
@@ -195,6 +198,7 @@ function Co2Utslipp() {
     if (TogFsp3sa4 == false) {
         sp3sa4.style.backgroundColor = "yellow"
     } else {
+        x = 50
         sp3sa4.style.backgroundColor = "blue"
         TogFsp3sa1 = false
         TogFsp3sa2 = false
@@ -317,7 +321,6 @@ Co2Utslipp()
 // }
 
 function knappLever() {
-
     
     // leverSvaret = true
     // Co2Utslipp()
