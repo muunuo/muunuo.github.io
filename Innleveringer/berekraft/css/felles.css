@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.tittel { grid-area: tittel; }
+.meny { grid-area: meny; }
+.hoved { grid-area: hoved; }
+.bunn { grid-area: bunn;}
+.side { grid-area: side;}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'tittel tittel tittel tittel tittel'
+        'meny meny meny meny meny'
+        'hoved hoved hoved hoved hoved'
+        'bunn bunn bunn bunn bunn';
+        
+}
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    font-size: 1.5rem;
+}
+
+
+.flyt{
+    float: left;
+}
+
+.flyte{
+    float: right;
+}

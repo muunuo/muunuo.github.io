@@ -81,7 +81,7 @@ nav li a{
 /* Endrar bakgrunnsfargen på menyen når ein tek muspeikar over. */
 nav li a:hover{
     background-color:#491542;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 }
 
 li{
