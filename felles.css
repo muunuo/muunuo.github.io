@@ -8,6 +8,7 @@ html, body {
 .main { grid-area: main; }
 .foter { grid-area: foter;}
 .side { grid-area: side;}
+#endreFarge { grid-area: endreFarge;}
 
 .grid-container {
     display: grid;
@@ -16,6 +17,7 @@ html, body {
     grid-template-areas:
         'header header header header header'
         'meny meny meny meny meny'
+        'endreFarge endreFarge endreFarge endreFarge endreFarge'
         'main main main main main'
         'foter foter foter foter foter';
         
@@ -56,6 +58,7 @@ background-color: #eecae3;
 #A, #M, #O, #K{ 
     background-color: #c192bd;
     border-radius: 1rem;
+    height: 4rem;
     
     /* height: 2rem; */
 }
@@ -82,6 +85,7 @@ nav li a{
 nav li a:hover{
     background-color:#491542;
     border-radius: 1rem;
+    height: 1rem;
 }
 
 li{
@@ -105,6 +109,12 @@ border: solid 7rem #eecae3;
 
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+#endreFarge{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 

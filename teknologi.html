@@ -6,9 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="felles.css">
     <link rel="stylesheet" href="teknologi.css">
+    <script src="portfolioJS/Teknologi.js" defer>
+    </script>
 </head>
 <body>
     <div class="grid-container">
+        <div class="header">
+            <h1 id="title">Teknologiforståelse</h1>
+    </div>
+
         <div class="menu">
             <nav>
                     <li id="O"><a href="index.html">Om Meg</a></li>
@@ -17,36 +23,45 @@
                     <li id="A"><a href="teknologi.html">Teknologi</a></li>
             </nav>
         </div>
-        <div class="main">
-            <p>Dette er min forståelse av disse konseptene, ikke bruk dette som en fasit, bruk det som et grunnlag til å videre utvikle din egen forståelse, og som et grunnlag til å vite hva
-                dere kan fortsette å øve på. Dere kan fint rette på det jeg har skrevet om det er noen åpenbare feil, men være høffelig om dette. 
-            </p>
-            <img class="flyt" src="bilder/Teknologi/Backbone.jpeg" alt="ryggbeinet men en forklaring av ISP på siden. Forklaringen: ISP, Internett Service Provider..." width="200px">
-            <p class="tjukkskrift">ISP: Internett Service Provider</p>
+        <div id="main2" class="main">
             <p>
-                En ISP, som navnet delevis forklarer, er en internettlevrandør, altså noen som gir privatpersoner eller organsiasjoner tilgang til internettet. 
-                Grunnen for at ISP er refferert til som "backbonet" eller ryggbeinet til internettet er fordi ISP, og Organisasjoner (som Google, NRK, Universitet) og Skytjenester/ "Utleigarer" 
-                (som Google Cloud, Microsoft Azura) sine servere brukes til å overføre "pakker" fra en data til en annen (forklart mer under) og hjelper dataen din å finne frem til 
-                alle de forskjellige nettsidene som finnes på nettet (også forklart mer under). 
+                Når jeg øvde på en prøve så tenget jeg litt forskjellig for å bedre forstå alt, dette er bare min forståelse så kan godt være feil, men håper dette kan hjelpe andre å forstå 
+                internette, rutere og andre sånne konsept bedre :D
             </p>
-            <img id="pakkeDirekte" width="200px" src="/bilder/Teknologi/pakkeDirekte.jpeg" alt="bilde er ikke syneligt">
-            <p class="tjukkskrift">pakkesvitsjing</p>
-            <p>
-                Som nevnt over bruker vi servere som ISP, Organisagjoner og Skytjenester til å overføre "pakker", men hva er en "pakke"? Vel, når du skal sende en fil fra et sted til et
-                annet, så deles filen opp til mindre deler som kalles for pakker, disse sendes fra din data via ISP og andre servere til dataen du ønsket å sende de til. Hvor mange pakker
-                det deles opp i kan variere basert på filstørelsen, og de transporteres ofte via forskjellige ruter/servere. Vi gjør dette fordi det hjelper å øke farten filen kan overføres.
-                Som du ser på tegningen kan flere pakker overføres på en gang med denne metoden, i motsettning til linjevisitjing som var brukt før i tiden. Dette er når det går linjer fra sted til sted
-                slik eldre telefoner ofte hadde. Problemet med dette var at når en linje var i bruk så var det ikke noe/noen andre som kunne bruke denne, og dette ville ofte føre til trafikk, med pakkevisitj
-                ungår vi denne trafikken med å både sende mindre pakker som tar mindre tid på hvert stopp, og med å ha mange linjer de kan gå via, og mange veier på hver linje, som sett på tegningen. 
-            </p>
-            <img class="flyte" src="/bilder/Teknologi/Comprimering.jpeg" alt="en fil som er åpen med tre dokumenter under, en er for musikk, en for tekst og en for vidio." width="200px">
-            <p class="tjukkskrift">Comprimering</p>
-            <p>
-                Comprimering er som en mappe, den holder filer, men navnet på mappen sier ingenting på hva type filer den holder. Da må du inn å se på selve filene.
-            </p>
-            <p>
-                <3
-            </p>
+            <h4>Her er et par av temaene jeg har tegnet noe for</h4>
+            <p>Det er knapper, så klikk de for å lese om det</p>
+            <p id="knapp1">Internett Ser</p>
+            <p id="knapp2">Pakke</p>
+            <p id="knapp3">Komprimering</p>
+            <div id="ISPperagraf">
+                <img class="flyt" src="bilder/Teknologi/Backbone.jpeg" alt="ryggbeinet men en forklaring av ISP på siden. Forklaringen: ISP, Internett Service Provider..." width="200px">
+                <p class="tjukkskrift">ISP: Internett Service Provider</p>
+                <p>
+                    En ISP, som navnet delevis forklarer, er en internettlevrandør, altså noen som gir privatpersoner eller organsiasjoner tilgang til internettet. 
+                    Grunnen for at ISP er refferert til som "backbonet" eller ryggbeinet til internettet er fordi ISP, og Organisasjoner (som Google, NRK, Universitet) og Skytjenester/ "Utleigarer" 
+                    (som Google Cloud, Microsoft Azura) sine servere brukes til å overføre "pakker" fra en data til en annen (forklart mer under) og hjelper dataen din å finne frem til 
+                    alle de forskjellige nettsidene som finnes på nettet (også forklart mer under). 
+                </p>
+            </div>
+            <div id="pakkePeragraf">
+                <img id="pakkeDirekte" width="200px" src="/bilder/Teknologi/pakkeDirekte.jpeg" alt="bilde er ikke syneligt">
+                <p class="tjukkskrift">pakkesvitsjing</p>
+                <p>
+                    Som nevnt over bruker vi servere som ISP, Organisagjoner og Skytjenester til å overføre "pakker", men hva er en "pakke"? Vel, når du skal sende en fil fra et sted til et
+                    annet, så deles filen opp til mindre deler som kalles for pakker, disse sendes fra din data via ISP og andre servere til dataen du ønsket å sende de til. Hvor mange pakker
+                    det deles opp i kan variere basert på filstørelsen, og de transporteres ofte via forskjellige ruter/servere. Vi gjør dette fordi det hjelper å øke farten filen kan overføres.
+                    Som du ser på tegningen kan flere pakker overføres på en gang med denne metoden, i motsettning til linjevisitjing som var brukt før i tiden. Dette er når det går linjer fra sted til sted
+                    slik eldre telefoner ofte hadde. Problemet med dette var at når en linje var i bruk så var det ikke noe/noen andre som kunne bruke denne, og dette ville ofte føre til trafikk, med pakkevisitj
+                    ungår vi denne trafikken med å både sende mindre pakker som tar mindre tid på hvert stopp, og med å ha mange linjer de kan gå via, og mange veier på hver linje, som sett på tegningen. 
+                </p>
+            </div>
+            <div id="komprimeringPeragraf">
+                <img class="flyte" src="/bilder/Teknologi/Comprimering.jpeg" alt="en fil som er åpen med tre dokumenter under, en er for musikk, en for tekst og en for vidio." width="200px">
+                <p class="tjukkskrift">Comprimering</p>
+                <p>
+                    Comprimering er som en mappe, den holder filer, men navnet på mappen sier ingenting på hva type filer den holder. Da må du inn å se på selve filene.
+                </p>
+            </div>
 
             <img id="hentSide" width="200px" src="/bilder/Teknologi/henteSiden.jpeg" alt="en pc som har pil opp til en sky med skriften internett. skyen har så piler videre til 5 bokser. eksterne tjenester (server), ekstern reklame, intern filmbase, intern bildebase og webtjeneste (server) som igjen har en pil til database server.">
             <p class="tjukkskrift">Hente Nettsider</p>

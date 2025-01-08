@@ -1,5 +1,4 @@
 // her er koden for quizen
-
 let sp1 = document.getElementById("sporsmol1")
 let sp1sa1 = document.getElementById("sp1alternativ1")
 let sp1sa2 = document.getElementById("sp1alternativ2")
@@ -20,9 +19,6 @@ let sp3sa4 = document.getElementById("sp3alternativ4")
 
 let sp4 = document.getElementById("sporsmol4")
 let sp4sa1 = document.getElementById("sp4alternativ")
-// let sp4sa2 = document.getElementById("sp4alternativ2")
-// let sp4sa3 = document.getElementById("sp4alternativ3")
-// let sp4sa4 = document.getElementById("sp4alternativ4")
 
 let sp5 = document.getElementById("sporsmol5")
 let sp5sa1 = document.getElementById("sp5alternativ1")
@@ -30,7 +26,11 @@ let sp5sa2 = document.getElementById("sp5alternativ2")
 let sp5sa3 = document.getElementById("sp5alternativ3")
 let sp5sa4 = document.getElementById("sp5alternativ4")
 
+let info = document.getElementById("merInfo")
+
 let lever = document.getElementById("leverSvar")
+
+let FF1 = document.getElementById("funFact1")
 
 sp1sa1.addEventListener("click", knappSp1sa1);
 sp1sa2.addEventListener("click", knappSp1sa2);
@@ -54,7 +54,11 @@ sp5sa2.addEventListener("click", knappSp5sa2);
 sp5sa3.addEventListener("click", knappSp5sa3);
 sp5sa4.addEventListener("click", knappSp5sa4);
 
+info.addEventListener("click", knappInfo);
+
 lever.addEventListener("click", knappLever);
+
+
 
 TogFsp1sa1 = false
 TogFsp1sa2 = false
@@ -72,9 +76,6 @@ TogFsp3sa3 = false
 TogFsp3sa4 = false
 
 TogFsp4sa1 = false
-// TogFsp4sa2 = false
-// TogFsp4sa3 = false
-// TogFsp4sa4 = false
 
 TogFsp5sa1 = false
 TogFsp5sa2 = false
@@ -83,12 +84,32 @@ TogFsp5sa4 = false
 
 leverSvaret = false
 
+TogFff1 = false
+
 Co2 = 0
 Co22 = 0
+perAr = 0
 
 document.getElementById("Co2Utslipp").innerHTML =Co2;
+document.getElementById("Co22Utslipp").innerHTML =Co22;
+document.getElementById("Co2PerAr").innerHTML =perAr;
+
+function knappInfo() {
+    if (TogFff1==false) {
+        TogFff1 = true;
+    } else {
+        TogFff1 = false;
+    }
+    Co2Utslipp()
+}
 
 function Co2Utslipp() {
+    if (TogFff1==false) {
+        FF1.style.display="none"
+    } else {
+        FF1.style.display="block"
+    }
+
     if (TogFsp1sa1 == false) {
         sp1sa1.style.backgroundColor = "red"
     } else {
@@ -96,10 +117,6 @@ function Co2Utslipp() {
         TogFsp1sa2 = false
         TogFsp1sa3 = false
         TogFsp1sa4 = false
-        // if (leverSvaret == true) {
-        //     Co2 = Co2+1
-        //     // knappLever()
-        // }
     }
 
     if (TogFsp1sa2 == false) {
@@ -250,6 +267,30 @@ function Co2Utslipp() {
 Co2Utslipp()
 
 function knappLever() {
+
+    document.getElementById("leverSvar").disabled= true;
+    sp1sa1.removeEventListener("click", knappSp1sa1);
+    sp1sa2.removeEventListener("click", knappSp1sa2);
+    sp1sa3.removeEventListener("click", knappSp1sa3);
+    sp1sa4.removeEventListener("click", knappSp1sa4);
+
+    sp2sa1.removeEventListener("click", knappSp2sa1);
+    sp2sa2.removeEventListener("click", knappSp2sa2);
+    sp2sa3.removeEventListener("click", knappSp2sa3);
+    sp2sa4.removeEventListener("click", knappSp2sa4);
+
+    sp3sa1.removeEventListener("click", knappSp3sa1);
+    sp3sa2.removeEventListener("click", knappSp3sa2);
+    sp3sa3.removeEventListener("click", knappSp3sa3);
+    sp3sa4.removeEventListener("click", knappSp3sa4);
+
+    document.getElementById("sp4alternativ").disabled= true;
+
+    sp5sa1.removeEventListener("click", knappSp5sa1);
+    sp5sa2.removeEventListener("click", knappSp5sa2);
+    sp5sa3.removeEventListener("click", knappSp5sa3);
+    sp5sa4.removeEventListener("click", knappSp5sa4);
+
     
     if (TogFsp1sa1==true) {
         Co2 = Co2+1.347
@@ -288,8 +329,6 @@ function knappLever() {
         Co2 = Co2+Co22
         console.log(Co22)
         console.log(Co2)
-        // console.log (bilUtslipp)
-        // console.log (kmKjort)
     }
 
     if (TogFsp5sa1==true) {
@@ -301,10 +340,14 @@ function knappLever() {
     }else if (TogFsp5sa4==true) {
         Co2 = Co2+0
     }
-    // leverSvaret = true
-    // Co2Utslipp()
-    console.log(Co2)
+    perAr = Co2*52,177
+
+    Co2Utslipp()
     document.getElementById("Co2Utslipp").innerHTML =Co2;
+    document.getElementById("Co22Utslipp").innerHTML =Co22;
+document.getElementById("Co2PerAr").innerHTML =perAr;
+
+    
 }
 
 function knappSp1sa1() {

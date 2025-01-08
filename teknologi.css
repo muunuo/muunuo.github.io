@@ -38,3 +38,8 @@
     padding-left: 10rem;
     transform: rotate(270deg);
 }
+
+#knapp1{
+    background-color: palevioletred;
+    width: 200px;
+}
