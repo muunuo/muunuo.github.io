@@ -19,10 +19,10 @@ let sp3sa3 = document.getElementById("sp3alternativ3")
 let sp3sa4 = document.getElementById("sp3alternativ4")
 
 let sp4 = document.getElementById("sporsmol4")
-let sp4sa1 = document.getElementById("sp4alternativ1")
-let sp4sa2 = document.getElementById("sp4alternativ2")
-let sp4sa3 = document.getElementById("sp4alternativ3")
-let sp4sa4 = document.getElementById("sp4alternativ4")
+let sp4sa1 = document.getElementById("sp4alternativ")
+// let sp4sa2 = document.getElementById("sp4alternativ2")
+// let sp4sa3 = document.getElementById("sp4alternativ3")
+// let sp4sa4 = document.getElementById("sp4alternativ4")
 
 let sp5 = document.getElementById("sporsmol5")
 let sp5sa1 = document.getElementById("sp5alternativ1")
@@ -48,9 +48,6 @@ sp3sa3.addEventListener("click", knappSp3sa3);
 sp3sa4.addEventListener("click", knappSp3sa4);
 
 sp4sa1.addEventListener("click", knappSp4sa1);
-sp4sa2.addEventListener("click", knappSp4sa2);
-sp4sa3.addEventListener("click", knappSp4sa3);
-sp4sa4.addEventListener("click", knappSp4sa4);
 
 sp5sa1.addEventListener("click", knappSp5sa1);
 sp5sa2.addEventListener("click", knappSp5sa2);
@@ -75,9 +72,9 @@ TogFsp3sa3 = false
 TogFsp3sa4 = false
 
 TogFsp4sa1 = false
-TogFsp4sa2 = false
-TogFsp4sa3 = false
-TogFsp4sa4 = false
+// TogFsp4sa2 = false
+// TogFsp4sa3 = false
+// TogFsp4sa4 = false
 
 TogFsp5sa1 = false
 TogFsp5sa2 = false
@@ -87,6 +84,9 @@ TogFsp5sa4 = false
 leverSvaret = false
 
 Co2 = 0
+Co22 = 0
+
+document.getElementById("Co2Utslipp").innerHTML =Co2;
 
 function Co2Utslipp() {
     if (TogFsp1sa1 == false) {
@@ -100,7 +100,6 @@ function Co2Utslipp() {
         //     Co2 = Co2+1
         //     // knappLever()
         // }
-
     }
 
     if (TogFsp1sa2 == false) {
@@ -171,7 +170,6 @@ function Co2Utslipp() {
     if (TogFsp3sa1 == false) {
         sp3sa1.style.backgroundColor = "yellow"
     } else {
-        x = 143
         sp3sa1.style.backgroundColor = "blue"
         TogFsp3sa2 = false
         TogFsp3sa3 = false
@@ -180,7 +178,6 @@ function Co2Utslipp() {
     if (TogFsp3sa2 == false) {
         sp3sa2.style.backgroundColor = "yellow"
     } else {
-        x = 164
         sp3sa2.style.backgroundColor = "blue"
         TogFsp3sa1 = false
         TogFsp3sa3 = false
@@ -189,7 +186,6 @@ function Co2Utslipp() {
     if (TogFsp3sa3 == false) {
         sp3sa3.style.backgroundColor = "yellow"
     } else {
-        x = 126.2
         sp3sa3.style.backgroundColor = "blue"
         TogFsp3sa1 = false
         TogFsp3sa2 = false
@@ -198,7 +194,6 @@ function Co2Utslipp() {
     if (TogFsp3sa4 == false) {
         sp3sa4.style.backgroundColor = "yellow"
     } else {
-        x = 50
         sp3sa4.style.backgroundColor = "blue"
         TogFsp3sa1 = false
         TogFsp3sa2 = false
@@ -214,30 +209,6 @@ function Co2Utslipp() {
         TogFsp4sa2 = false
         TogFsp4sa3 = false
         TogFsp4sa4 = false
-    }
-    if (TogFsp4sa2 == false) {
-        sp4sa2.style.backgroundColor = "lightBlue"
-    } else {
-        sp4sa2.style.backgroundColor = "blue"
-        TogFsp4sa1 = false
-        TogFsp4sa3 = false
-        TogFsp4sa4 = false
-    }
-    if (TogFsp4sa3 == false) {
-        sp4sa3.style.backgroundColor = "lightBlue"
-    } else {
-        sp4sa3.style.backgroundColor = "blue"
-        TogFsp4sa1 = false
-        TogFsp4sa2 = false
-        TogFsp4sa4 = false
-    }
-    if (TogFsp4sa4 == false) {
-        sp4sa4.style.backgroundColor = "lightBlue"
-    } else {
-        sp4sa4.style.backgroundColor = "blue"
-        TogFsp4sa1 = false
-        TogFsp4sa2 = false
-        TogFsp4sa3 = false
     }
 
 
@@ -278,53 +249,62 @@ function Co2Utslipp() {
 
 Co2Utslipp()
 
-
-
-// const poengTabell = {
-//     sp1: { // Poeng for skolehendelsen
-//         sp1sa1: 1,
-//         sp1sa2: 2,
-//         sp1sa3: 3,
-//         sp1sa4: 4,
-
-//     },
-//     // jobb: { // Poeng for jobbhendelsen
-//     //     har1: 0,
-//     //     har2: 2,
-//     //     har3: 0,
-//     //     antrekk1: 1,
-//     //     antrekk2: 2,
-//     //     antrekk3: 0,
-
-//     // },
-//     // fest: { // Poeng for festhendelsen
-//     //     har1: 1,
-//     //     har2: 1,
-//     //     har3: 2,
-//     //     antrekk1: 0,
-//     //     antrekk2: 0,
-//     //     antrekk3: 2,
-
-//     // }
-// };
-
-// function beregnCo2(Co2Utslipp) {
-//     // Finn hvilket har som er valgt
-//     const svarBruker = TogFsp1sa1 ? "sp1sa1" : TogFsp1sa2 ? "sp1sa2" : TogFsp1sa3 ? "sp1sa3" : TogFsp1sa4 ? "sp1sa4" : null;
-
-
-//     // Legg til poeng for valgt har og antrekk
-//     Co2 += poengTabell[Co2Utslipp][svarBruker] || 0;
-
-//     console.log(`Co2 for ${hendelse}: ${Co2}`);
-//     // document.getElementById("brukerSerPoeng").innerHTML = poeng; // Oppdater visningen
-// }
-
 function knappLever() {
     
+    if (TogFsp1sa1==true) {
+        Co2 = Co2+1.347
+    } else if (TogFsp1sa2==true) {
+        Co2 = Co2+3.9925
+    }else if (TogFsp1sa3==true) {
+        Co2 = Co2+8.35
+    }else if (TogFsp1sa4==true) {
+        Co2 = Co2+16.17
+    }
+
+    if (TogFsp2sa1==true) {
+        Co2 = Co2+ 2.95
+    } else if (TogFsp2sa2==true) {
+        Co2 = Co2+ 5.90
+    }else if (TogFsp2sa3==true) {
+        Co2 = Co2+ 11.80
+    }else if (TogFsp2sa4==true) {
+        Co2 = Co2+ 23.60
+    }
+
+    if (TogFsp3sa1==true) {
+        bilUtslipp = 1.43
+    } else if (TogFsp3sa2==true) {
+        bilUtslipp = 1.64
+    }else if (TogFsp3sa3==true) {
+        bilUtslipp = 1.262
+    }else if (TogFsp3sa4==true) {
+        bilUtslipp = 0.50
+    }
+
+    if (TogFsp4sa1) {
+        let kmKjort = sp4sa1.value
+        
+        Co22 = bilUtslipp * kmKjort
+        Co2 = Co2+Co22
+        console.log(Co22)
+        console.log(Co2)
+        // console.log (bilUtslipp)
+        // console.log (kmKjort)
+    }
+
+    if (TogFsp5sa1==true) {
+        Co2 = Co2+56
+    } else if (TogFsp5sa2==true) {
+        Co2 = Co2+32
+    }else if (TogFsp5sa3==true) {
+        Co2 = Co2+16
+    }else if (TogFsp5sa4==true) {
+        Co2 = Co2+0
+    }
     // leverSvaret = true
     // Co2Utslipp()
     console.log(Co2)
+    document.getElementById("Co2Utslipp").innerHTML =Co2;
 }
 
 function knappSp1sa1() {
@@ -448,9 +428,7 @@ function knappSp3sa4() {
 function knappSp4sa1() {
     if (TogFsp4sa1 == false) {
         TogFsp4sa1 = true
-    } else {
-        TogFsp4sa1 = false
-    }
+    } 
 
     Co2Utslipp()
 }
@@ -519,4 +497,6 @@ function knappSp5sa4() {
     }
     Co2Utslipp()
 }
+
+
 

@@ -16,7 +16,7 @@ html, body {
     grid-template-areas:
         'tittel tittel tittel tittel tittel'
         'meny meny meny meny meny'
-        'hoved hoved hoved hoved hoved'
+        'hoved hoved hoved side side'
         'bunn bunn bunn bunn bunn';
         
 }
