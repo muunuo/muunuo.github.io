@@ -32,6 +32,30 @@ let lever = document.getElementById("leverSvar")
 
 let FF1 = document.getElementById("funFact1")
 
+// bilder
+let panda = document.getElementById("bildePanda")
+let bjorn = document.getElementById("bildeBjorn")
+let elg = document.getElementById("bildeElg")
+let hval = document.getElementById("bildeHval")
+let elefant = document.getElementById("bildeElefant")
+let dinosaur = document.getElementById("bildeDinosaur")
+let krokodille = document.getElementById("bildeKrokodille")
+let flodhest = document.getElementById("bildeFlodhest")
+
+
+
+    bildePanda.style.display="none"
+    bildeBjorn.style.display="none"
+    bildeElg.style.display="none"
+    bildeHval.style.display="none"
+    bildeElefant.style.display="none"
+    bildeDinosaur.style.display="none"
+    bildeKrokodille.style.display="none"
+    bildeFlodhest.style.display="none"
+
+
+
+
 sp1sa1.addEventListener("click", knappSp1sa1);
 sp1sa2.addEventListener("click", knappSp1sa2);
 sp1sa3.addEventListener("click", knappSp1sa3);
@@ -111,36 +135,36 @@ function Co2Utslipp() {
     }
 
     if (TogFsp1sa1 == false) {
-        sp1sa1.style.backgroundColor = "red"
+        sp1sa1.style.backgroundColor = "#6c8f79"
     } else {
-        sp1sa1.style.backgroundColor = "blue"
+        sp1sa1.style.backgroundColor = "#42574a"
         TogFsp1sa2 = false
         TogFsp1sa3 = false
         TogFsp1sa4 = false
     }
 
     if (TogFsp1sa2 == false) {
-        sp1sa2.style.backgroundColor = "red"
+        sp1sa2.style.backgroundColor = "#6c8f79"
     } else {
-        sp1sa2.style.backgroundColor = "blue"
+        sp1sa2.style.backgroundColor = "#42574a"
         TogFsp1sa1 = false
         TogFsp1sa3 = false
         TogFsp1sa4 = false
     }
 
     if (TogFsp1sa3 == false) {
-        sp1sa3.style.backgroundColor = "red"
+        sp1sa3.style.backgroundColor = "#6c8f79"
     } else {
-        sp1sa3.style.backgroundColor = "blue"
+        sp1sa3.style.backgroundColor = "#42574a"
         TogFsp1sa1 = false
         TogFsp1sa2 = false
         TogFsp1sa4 = false
     }
 
     if (TogFsp1sa4 == false) {
-        sp1sa4.style.backgroundColor = "red"
+        sp1sa4.style.backgroundColor = "#6c8f79"
     } else {
-        sp1sa4.style.backgroundColor = "blue"
+        sp1sa4.style.backgroundColor = "#42574a"
         TogFsp1sa1 = false
         TogFsp1sa2 = false
         TogFsp1sa3 = false
@@ -149,33 +173,33 @@ function Co2Utslipp() {
 
 
     if (TogFsp2sa1 == false) {
-        sp2sa1.style.backgroundColor = "pink"
+        sp2sa1.style.backgroundColor = "#6c8f79"
     } else {
-        sp2sa1.style.backgroundColor = "blue"
+        sp2sa1.style.backgroundColor = "#42574a"
         TogFsp2sa2 = false
         TogFsp2sa3 = false
         TogFsp2sa4 = false
     }
     if (TogFsp2sa2 == false) {
-        sp2sa2.style.backgroundColor = "pink"
+        sp2sa2.style.backgroundColor = "#6c8f79"
     } else {
-        sp2sa2.style.backgroundColor = "blue"
+        sp2sa2.style.backgroundColor = "#42574a"
         TogFsp2sa1 = false
         TogFsp2sa3 = false
         TogFsp2sa4 = false
     }
     if (TogFsp2sa3 == false) {
-        sp2sa3.style.backgroundColor = "pink"
+        sp2sa3.style.backgroundColor = "#6c8f79"
     } else {
-        sp2sa3.style.backgroundColor = "blue"
+        sp2sa3.style.backgroundColor = "#42574a"
         TogFsp2sa1 = false
         TogFsp2sa2 = false
         TogFsp2sa4 = false
     }
     if (TogFsp2sa4 == false) {
-        sp2sa4.style.backgroundColor = "pink"
+        sp2sa4.style.backgroundColor = "#6c8f79"
     } else {
-        sp2sa4.style.backgroundColor = "blue"
+        sp2sa4.style.backgroundColor = "#42574a"
         TogFsp2sa1 = false
         TogFsp2sa2 = false
         TogFsp2sa3 = false
@@ -185,33 +209,33 @@ function Co2Utslipp() {
 
 
     if (TogFsp3sa1 == false) {
-        sp3sa1.style.backgroundColor = "yellow"
+        sp3sa1.style.backgroundColor = "#6c8f79"
     } else {
-        sp3sa1.style.backgroundColor = "blue"
+        sp3sa1.style.backgroundColor = "#42574a"
         TogFsp3sa2 = false
         TogFsp3sa3 = false
         TogFsp3sa4 = false
     }
     if (TogFsp3sa2 == false) {
-        sp3sa2.style.backgroundColor = "yellow"
+        sp3sa2.style.backgroundColor = "#6c8f79"
     } else {
-        sp3sa2.style.backgroundColor = "blue"
+        sp3sa2.style.backgroundColor = "#42574a"
         TogFsp3sa1 = false
         TogFsp3sa3 = false
         TogFsp3sa4 = false
     }
     if (TogFsp3sa3 == false) {
-        sp3sa3.style.backgroundColor = "yellow"
+        sp3sa3.style.backgroundColor = "#6c8f79"
     } else {
-        sp3sa3.style.backgroundColor = "blue"
+        sp3sa3.style.backgroundColor = "#42574a"
         TogFsp3sa1 = false
         TogFsp3sa2 = false
         TogFsp3sa4 = false
     }
     if (TogFsp3sa4 == false) {
-        sp3sa4.style.backgroundColor = "yellow"
+        sp3sa4.style.backgroundColor = "#6c8f79"
     } else {
-        sp3sa4.style.backgroundColor = "blue"
+        sp3sa4.style.backgroundColor = "#42574a"
         TogFsp3sa1 = false
         TogFsp3sa2 = false
         TogFsp3sa3 = false
@@ -220,9 +244,9 @@ function Co2Utslipp() {
 
 
     if (TogFsp4sa1 == false) {
-        sp4sa1.style.backgroundColor = "lightBlue"
+        sp4sa1.style.backgroundColor = "#6c8f79"
     } else {
-        sp4sa1.style.backgroundColor = "blue"
+        sp4sa1.style.backgroundColor = "#42574a"
         TogFsp4sa2 = false
         TogFsp4sa3 = false
         TogFsp4sa4 = false
@@ -231,33 +255,33 @@ function Co2Utslipp() {
 
 
     if (TogFsp5sa1 == false) {
-        sp5sa1.style.backgroundColor = "green"
+        sp5sa1.style.backgroundColor = "#6c8f79"
     } else {
-        sp5sa1.style.backgroundColor = "blue"
+        sp5sa1.style.backgroundColor = "#42574a"
         TogFsp5sa2 = false
         TogFsp5sa3 = false
         TogFsp5sa4 = false
     }
     if (TogFsp5sa2 == false) {
-        sp5sa2.style.backgroundColor = "green"
+        sp5sa2.style.backgroundColor = "#6c8f79"
     } else {
-        sp5sa2.style.backgroundColor = "blue"
+        sp5sa2.style.backgroundColor = "#42574a"
         TogFsp5sa1 = false
         TogFsp5sa3 = false
         TogFsp5sa4 = false
     }
     if (TogFsp5sa3 == false) {
-        sp5sa3.style.backgroundColor = "green"
+        sp5sa3.style.backgroundColor = "#6c8f79"
     } else {
-        sp5sa3.style.backgroundColor = "blue"
+        sp5sa3.style.backgroundColor = "#42574a"
         TogFsp5sa1 = false
         TogFsp5sa2 = false
         TogFsp5sa4 = false
     }
     if (TogFsp5sa4 == false) {
-        sp5sa4.style.backgroundColor = "green"
+        sp5sa4.style.backgroundColor = "#6c8f79"
     } else {
-        sp5sa4.style.backgroundColor = "blue"
+        sp5sa4.style.backgroundColor = "#42574a"
         TogFsp5sa1 = false
         TogFsp5sa2 = false
         TogFsp5sa3 = false
@@ -265,6 +289,31 @@ function Co2Utslipp() {
 }
 
 Co2Utslipp()
+
+function bilde() {
+    if (perAr<70) {//hvis perAr er mindre enn 70
+        bildePanda.style.display="block"
+    } else if (perAr<120) {
+        bildePanda.style.display="block"
+    } else if (perAr<400) {
+        bildeBjorn.style.display="block"
+    } else if (perAr<700) {
+        bildeElg.style.display="block"
+    } else if (perAr<1100) {
+    bildeKrokodille.style.display="block"
+    } else if (perAr<1600) {
+        bildeHval.style.display="block"
+    } else if (perAr<2300) {
+        bildeFlodhest.style.display="block"
+    } else if (perAr<6300) {// elefant veier mindre enn 6300
+        bildeElefant.style.display="block"
+    } else if (perAr<8000) {
+        bildeDinosaur.style.display="block"
+    } else {
+        
+        document.getElementById("Co2PerAr").innerHTML =perAr;
+    } 
+}
 
 function knappLever() {
 
@@ -342,12 +391,12 @@ function knappLever() {
     }
     perAr = Co2*52,177
 
+    bilde()
+
     Co2Utslipp()
     document.getElementById("Co2Utslipp").innerHTML =Co2;
     document.getElementById("Co22Utslipp").innerHTML =Co22;
 document.getElementById("Co2PerAr").innerHTML =perAr;
-
-    
 }
 
 function knappSp1sa1() {
