@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/Innleveringer/berekraft/css/knapper.css">
     <script src="/Innleveringer/berekraft/javascript/leveSomDeg.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/Innleveringer/berekraft/javascript/kilder.js" defer></script>
 </head>
 <body>
         <div class="grid-container">
@@ -77,6 +78,16 @@
                 <p>375kg boss per nordman i 2023, 170kg gikk til gjennvinning, 205kg boss. En svartbjørn værdt med boss, en liten elg verdt per person. Kilde Statestistisk sentralberå</p>
                 <div>
                     <canvas id="myChart"></canvas>
+                    <p id="statistikk1Kilder">Kilder...</p>
+                    <div id="sk1Felt">
+                        <p>Avfall frå hushald by&nbsp;<a href="https://www.ssb.no/natur-og-miljo/avfall/statistikk/avfall-fra-hushalda">Statistisk sentralbyrå&nbsp;</a>06.01.25</p>
+                        <p>Trash in America by&nbsp;<a href="https://environmentamerica.org/center/resources/trash-in-america-2/">Environment America</a>&nbsp;10.01.24</p>
+                        <p>Recycling Statisics in Canada by&nbsp;<a href="https://madeinca.ca/recycling-canada-statistics/">Nicole Blair</a>&nbsp; 10.01.25</p>
+                        <p>What a Waste 2.0 by&nbsp;<a href="https://datatopics.worldbank.org/what-a-waste/trends_in_solid_waste_management.html">The World Bank</a>&nbsp;10.01.25</p>
+                        <p>Garbage in China by&nbsp;<a href="https://factsanddetails.com/china/cat10/sub66/entry-8338.html">Facts and Details</a>&nbsp;10.01.25</p>
+                        <p>&nbsp;<a href=""></a>&nbsp;</p>
+                        <p>&nbsp;<a href=""></a>&nbsp;</p>
+                    </div>
                 </div>
                 <p>Viste du at for hver 5 min i dysjen betaler du rundt 4kr? Hvis du bruker en halvtime i dysjen, 4dager i uken, så vil du måtte betale rundt 80kr. kilde Fjordkraft</p>
                 <p>For at en elbil skal være mer milijøvenelig enn fosilbilen må du kjøre med den ca 18 000-20 000km, dette vil ta deg rundt 2 år å gjøre. Husk at bare fordi det nye alternativet 
@@ -90,7 +101,7 @@
 
                 <p id="Co22Utslipp"></p>
                 <p>&nbsp; Kg Co2 utslipp fra bilen din</p>
-                <p id="Co2Utslipp"></p>
+                <p id="Co2UtslippUke"></p>
                 <p>&nbsp; Kg Co2 utslipp per uke</p>
                 <p id="Co2PerAr"></p>
                 <p>&nbsp; Kg Co2 utslipp per år</p>
