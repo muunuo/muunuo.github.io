@@ -6,9 +6,9 @@ info.addEventListener("click", knappInfo);
 
 TogFff1 = false;
 
-Co2Utslipp()
+funksjon()
 
-function Co2Utslipp() {
+function funksjon() {
 
     if (TogFff1==false) {// ff=fun fact
         FF1.style.display="none";
@@ -23,7 +23,7 @@ function knappInfo() {
     } else {
         TogFff1 = false;
     }
-    Co2Utslipp();
+    funksjon();
 }
 
 
