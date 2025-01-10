@@ -7,19 +7,20 @@ html, body {
 .menu { grid-area: meny; }
 .main { grid-area: main; }
 .foter { grid-area: foter;}
-.side { grid-area: side;}
+.side1 { grid-area: side1;}
+.side2 { grid-area: side2;}
 #endreFarge { grid-area: endreFarge;}
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'header header header header header'
-        'meny meny meny meny meny'
-        'endreFarge endreFarge endreFarge endreFarge endreFarge'
-        'main main main main main'
-        'foter foter foter foter foter';
+        'side1 header header header header header header side2'
+        'side1 meny meny meny meny meny meny side2'
+        'side1 endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge side2'
+        'side1 main main main main main main side2'
+        'side1 foter foter foter foter foter foter side2';
         
 }
 
@@ -37,12 +38,12 @@ html, body {
 }
 
 body{
-background-color: #eecae3;
+/* background-color: #eecae3; */
 }
 /* tittel */
 .header { 
 
-    color: rgb(255, 255, 255);
+    /* color: rgb(147, 52, 117); */
     margin: 0;
     padding: 0;
     height: 5rem;
@@ -98,9 +99,9 @@ li{
 }
 
 .main{
-background-color: rgb(255, 240, 251);
+/* background-color: #fff0fb; */
 padding: 1rem;
-border: solid 7rem #eecae3;
+
     padding-left: 1rem;
 }
 

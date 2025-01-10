@@ -21,10 +21,10 @@ KMM.addEventListener("click", velgKMM);
 
 function defult() { //if farge 1 og 2 er av skal defult være på.
     if (SHtOgF==false && LogStOgF==false && MMtOgF==false && KMMtOgF==false) {
-        document.body.style.backgroundColor = "#fff0fb"
+        document.body.style.backgroundColor = "#eecae3"
         document.body.style.color = "#98729d"
-        sendSvar.style.backgroundColor = "#BC9EC1"
-        main22.style.backgroundColor = "#c1d9c4"
+        // sendSvar.style.backgroundColor = "#BC9EC1"
+        main22.style.backgroundColor = "#fff0fb"
     }
 }
 
@@ -34,7 +34,7 @@ function farge() {
     } else {
     document.body.style.backgroundColor = "#FFFFFF"
     document.body.style.color = "#000000"
-    sendSvar.style.backgroundColor = "#787878"
+    // sendSvar.style.backgroundColor = "#787878"
     
     }
     if (LogStOgF==false) {
@@ -42,14 +42,14 @@ function farge() {
     } else {
         document.body.style.backgroundColor = "#e1dee9"
         document.body.style.color = "#1f1a29"
-        sendSvar.style.backgroundColor = "#B6A6CA"
+        // sendSvar.style.backgroundColor = "#B6A6CA"
     }
     if (MMtOgF==false) {
         defult()
     } else {
         document.body.style.backgroundColor = "#033F63"
         document.body.style.color = "#c1d9c4"
-        sendSvar.style.backgroundColor = "#787878"
+        // sendSvar.style.backgroundColor = "#787878"
     }
     if (KMMtOgF==false) {
         defult()
