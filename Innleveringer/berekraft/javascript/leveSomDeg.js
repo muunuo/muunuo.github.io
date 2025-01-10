@@ -11,16 +11,17 @@ let sp2sa2 = document.getElementById("sp2alternativ2")
 let sp2sa3 = document.getElementById("sp2alternativ3")
 let sp2sa4 = document.getElementById("sp2alternativ4")
 
-let sp3 = document.getElementById("sporsmol3")
+let sp3 = document.getElementById("sporsmol3")// =3
 let sp3sa1 = document.getElementById("sp3alternativ1")
 let sp3sa2 = document.getElementById("sp3alternativ2")
 let sp3sa3 = document.getElementById("sp3alternativ3")
 let sp3sa4 = document.getElementById("sp3alternativ4")
+let sp3sa5 = document.getElementById("sp3alternativ5")
 
-let sp4 = document.getElementById("sporsmol4")
+let sp4 = document.getElementById("sporsmol4")// =3.5
 let sp4sa1 = document.getElementById("sp4alternativ")
 
-let sp5 = document.getElementById("sporsmol5")
+let sp5 = document.getElementById("sporsmol5") //=4
 let sp5sa1 = document.getElementById("sp5alternativ1")
 let sp5sa2 = document.getElementById("sp5alternativ2")
 let sp5sa3 = document.getElementById("sp5alternativ3")
@@ -70,6 +71,7 @@ sp3sa1.addEventListener("click", knappSp3sa1);
 sp3sa2.addEventListener("click", knappSp3sa2);
 sp3sa3.addEventListener("click", knappSp3sa3);
 sp3sa4.addEventListener("click", knappSp3sa4);
+sp3sa5.addEventListener("click", knappSp3sa5);
 
 sp4sa1.addEventListener("click", knappSp4sa1);
 
@@ -98,6 +100,7 @@ TogFsp3sa1 = false
 TogFsp3sa2 = false
 TogFsp3sa3 = false
 TogFsp3sa4 = false
+TogFsp3sa5 = false
 
 TogFsp4sa1 = false
 
@@ -127,165 +130,200 @@ function knappInfo() {
     Co2Utslipp()
 }
 
-function Co2Utslipp() {
-    if (TogFff1==false) {
-        FF1.style.display="none"
-    } else {
-        FF1.style.display="block"
-    }
-
+function TogFsporsmol1() {
     if (TogFsp1sa1 == false) {
-        sp1sa1.style.backgroundColor = "#6c8f79"
+        sp1sa1.style.backgroundColor = "#3f5d3f"
     } else {
-        sp1sa1.style.backgroundColor = "#42574a"
+        sp1sa1.style.backgroundColor = "#1e383e"
         TogFsp1sa2 = false
         TogFsp1sa3 = false
         TogFsp1sa4 = false
     }
 
     if (TogFsp1sa2 == false) {
-        sp1sa2.style.backgroundColor = "#6c8f79"
+        sp1sa2.style.backgroundColor = "#3f5d3f"
     } else {
-        sp1sa2.style.backgroundColor = "#42574a"
+        sp1sa2.style.backgroundColor = "#1e383e"
         TogFsp1sa1 = false
         TogFsp1sa3 = false
         TogFsp1sa4 = false
     }
 
     if (TogFsp1sa3 == false) {
-        sp1sa3.style.backgroundColor = "#6c8f79"
+        sp1sa3.style.backgroundColor = "#3f5d3f"
     } else {
-        sp1sa3.style.backgroundColor = "#42574a"
+        sp1sa3.style.backgroundColor = "#1e383e"
         TogFsp1sa1 = false
         TogFsp1sa2 = false
         TogFsp1sa4 = false
     }
 
     if (TogFsp1sa4 == false) {
-        sp1sa4.style.backgroundColor = "#6c8f79"
+        sp1sa4.style.backgroundColor = "#3f5d3f"
     } else {
-        sp1sa4.style.backgroundColor = "#42574a"
+        sp1sa4.style.backgroundColor = "#1e383e"
         TogFsp1sa1 = false
         TogFsp1sa2 = false
         TogFsp1sa3 = false
     }
+}
+
+
+function TogFsporsmol2() {
+if (TogFsp2sa1 == false) {
+    sp2sa1.style.backgroundColor = "#3f5d3f"
+} else {
+    sp2sa1.style.backgroundColor = "#1e383e"
+    TogFsp2sa2 = false
+    TogFsp2sa3 = false
+    TogFsp2sa4 = false
+}
+if (TogFsp2sa2 == false) {
+    sp2sa2.style.backgroundColor = "#3f5d3f"
+} else {
+    sp2sa2.style.backgroundColor = "#1e383e"
+    TogFsp2sa1 = false
+    TogFsp2sa3 = false
+    TogFsp2sa4 = false
+}
+if (TogFsp2sa3 == false) {
+    sp2sa3.style.backgroundColor = "#3f5d3f"
+} else {
+    sp2sa3.style.backgroundColor = "#1e383e"
+    TogFsp2sa1 = false
+    TogFsp2sa2 = false
+    TogFsp2sa4 = false
+}
+if (TogFsp2sa4 == false) {
+    sp2sa4.style.backgroundColor = "#3f5d3f"
+} else {
+    sp2sa4.style.backgroundColor = "#1e383e"
+    TogFsp2sa1 = false
+    TogFsp2sa2 = false
+    TogFsp2sa3 = false
+}
+}
 
 
 
-    if (TogFsp2sa1 == false) {
-        sp2sa1.style.backgroundColor = "#6c8f79"
-    } else {
-        sp2sa1.style.backgroundColor = "#42574a"
-        TogFsp2sa2 = false
-        TogFsp2sa3 = false
-        TogFsp2sa4 = false
-    }
-    if (TogFsp2sa2 == false) {
-        sp2sa2.style.backgroundColor = "#6c8f79"
-    } else {
-        sp2sa2.style.backgroundColor = "#42574a"
-        TogFsp2sa1 = false
-        TogFsp2sa3 = false
-        TogFsp2sa4 = false
-    }
-    if (TogFsp2sa3 == false) {
-        sp2sa3.style.backgroundColor = "#6c8f79"
-    } else {
-        sp2sa3.style.backgroundColor = "#42574a"
-        TogFsp2sa1 = false
-        TogFsp2sa2 = false
-        TogFsp2sa4 = false
-    }
-    if (TogFsp2sa4 == false) {
-        sp2sa4.style.backgroundColor = "#6c8f79"
-    } else {
-        sp2sa4.style.backgroundColor = "#42574a"
-        TogFsp2sa1 = false
-        TogFsp2sa2 = false
-        TogFsp2sa3 = false
-    }
+function TogFsporsmol3() {
+
+if (TogFsp3sa1 == false) {
+    sp3sa1.style.backgroundColor = "#3f5d3f"
+} else {
+    sp3sa1.style.backgroundColor = "#1e383e"
+    TogFsp3sa2 = false
+    TogFsp3sa3 = false
+    TogFsp3sa4 = false
+    TogFsp3sa5 = false
+}
+if (TogFsp3sa2 == false) {
+    sp3sa2.style.backgroundColor = "#3f5d3f"
+} else {
+    sp3sa2.style.backgroundColor = "#1e383e"
+    TogFsp3sa1 = false
+    TogFsp3sa3 = false
+    TogFsp3sa4 = false
+    TogFsp3sa5 = false
+}
+if (TogFsp3sa3 == false) {
+    sp3sa3.style.backgroundColor = "#3f5d3f"
+} else {
+    sp3sa3.style.backgroundColor = "#1e383e"
+    TogFsp3sa1 = false
+    TogFsp3sa2 = false
+    TogFsp3sa4 = false
+    TogFsp3sa5 = false
+}
+if (TogFsp3sa4 == false) {
+    sp3sa4.style.backgroundColor = "#3f5d3f"
+} else {
+    sp3sa4.style.backgroundColor = "#1e383e"
+    TogFsp3sa1 = false
+    TogFsp3sa2 = false
+    TogFsp3sa3 = false
+    TogFsp3sa5 = false
+}
+
+if (TogFsp3sa5 == false) {
+    sp3sa5.style.backgroundColor = "#3f5d3f"
+    sporsmol4.style.display="block"
+    sp4alternativ.style.display="block"
+} else {
+    sp3sa5.style.backgroundColor = "#1e383e"
+    TogFsp3sa1 = false
+    TogFsp3sa2 = false
+    TogFsp3sa3 = false
+    TogFsp3sa4 = false
+    sporsmol4.style.display="none"
+    sp4alternativ.style.display="none"
+}
+
+}
+
+
+function TogFsporsmol4() {
+if (TogFsp4sa1 == false) {
+    sp4sa1.style.backgroundColor = "#3f5d3f"
+} else {
+    sp4sa1.style.backgroundColor = "#1e383e"
+    TogFsp4sa2 = false
+    TogFsp4sa3 = false
+    TogFsp4sa4 = false
+}
+}
 
 
 
+function TogFsporsmol5() {
 
-    if (TogFsp3sa1 == false) {
-        sp3sa1.style.backgroundColor = "#6c8f79"
+if (TogFsp5sa1 == false) {
+    sp5sa1.style.backgroundColor = "#3f5d3f"
+} else {
+    sp5sa1.style.backgroundColor = "#1e383e"
+    TogFsp5sa2 = false
+    TogFsp5sa3 = false
+    TogFsp5sa4 = false
+}
+if (TogFsp5sa2 == false) {
+    sp5sa2.style.backgroundColor = "#3f5d3f"
+} else {
+    sp5sa2.style.backgroundColor = "#1e383e"
+    TogFsp5sa1 = false
+    TogFsp5sa3 = false
+    TogFsp5sa4 = false
+}
+if (TogFsp5sa3 == false) {
+    sp5sa3.style.backgroundColor = "#3f5d3f"
+} else {
+    sp5sa3.style.backgroundColor = "#1e383e"
+    TogFsp5sa1 = false
+    TogFsp5sa2 = false
+    TogFsp5sa4 = false
+}
+if (TogFsp5sa4 == false) {
+    sp5sa4.style.backgroundColor = "#3f5d3f"
+} else {
+    sp5sa4.style.backgroundColor = "#1e383e"
+    TogFsp5sa1 = false
+    TogFsp5sa2 = false
+    TogFsp5sa3 = false
+}
+}
+
+function Co2Utslipp() {
+    if (TogFff1==false) {// ff=fun fact
+        FF1.style.display="none"
     } else {
-        sp3sa1.style.backgroundColor = "#42574a"
-        TogFsp3sa2 = false
-        TogFsp3sa3 = false
-        TogFsp3sa4 = false
+        FF1.style.display="block"
     }
-    if (TogFsp3sa2 == false) {
-        sp3sa2.style.backgroundColor = "#6c8f79"
-    } else {
-        sp3sa2.style.backgroundColor = "#42574a"
-        TogFsp3sa1 = false
-        TogFsp3sa3 = false
-        TogFsp3sa4 = false
-    }
-    if (TogFsp3sa3 == false) {
-        sp3sa3.style.backgroundColor = "#6c8f79"
-    } else {
-        sp3sa3.style.backgroundColor = "#42574a"
-        TogFsp3sa1 = false
-        TogFsp3sa2 = false
-        TogFsp3sa4 = false
-    }
-    if (TogFsp3sa4 == false) {
-        sp3sa4.style.backgroundColor = "#6c8f79"
-    } else {
-        sp3sa4.style.backgroundColor = "#42574a"
-        TogFsp3sa1 = false
-        TogFsp3sa2 = false
-        TogFsp3sa3 = false
-    }
+    TogFsporsmol1()
+    TogFsporsmol2()
+    TogFsporsmol3()
+    TogFsporsmol4()
+    TogFsporsmol5()
 
 
-
-    if (TogFsp4sa1 == false) {
-        sp4sa1.style.backgroundColor = "#6c8f79"
-    } else {
-        sp4sa1.style.backgroundColor = "#42574a"
-        TogFsp4sa2 = false
-        TogFsp4sa3 = false
-        TogFsp4sa4 = false
-    }
-
-
-
-    if (TogFsp5sa1 == false) {
-        sp5sa1.style.backgroundColor = "#6c8f79"
-    } else {
-        sp5sa1.style.backgroundColor = "#42574a"
-        TogFsp5sa2 = false
-        TogFsp5sa3 = false
-        TogFsp5sa4 = false
-    }
-    if (TogFsp5sa2 == false) {
-        sp5sa2.style.backgroundColor = "#6c8f79"
-    } else {
-        sp5sa2.style.backgroundColor = "#42574a"
-        TogFsp5sa1 = false
-        TogFsp5sa3 = false
-        TogFsp5sa4 = false
-    }
-    if (TogFsp5sa3 == false) {
-        sp5sa3.style.backgroundColor = "#6c8f79"
-    } else {
-        sp5sa3.style.backgroundColor = "#42574a"
-        TogFsp5sa1 = false
-        TogFsp5sa2 = false
-        TogFsp5sa4 = false
-    }
-    if (TogFsp5sa4 == false) {
-        sp5sa4.style.backgroundColor = "#6c8f79"
-    } else {
-        sp5sa4.style.backgroundColor = "#42574a"
-        TogFsp5sa1 = false
-        TogFsp5sa2 = false
-        TogFsp5sa3 = false
-    }
 }
 
 Co2Utslipp()
@@ -310,37 +348,17 @@ function bilde() {
     } else if (perAr<8000) {
         bildeDinosaur.style.display="block"
     } else {
-        
+
         document.getElementById("Co2PerAr").innerHTML =perAr;
     } 
 }
 
-function knappLever() {
-
-    document.getElementById("leverSvar").disabled= true;
+function lever1() {
     sp1sa1.removeEventListener("click", knappSp1sa1);
     sp1sa2.removeEventListener("click", knappSp1sa2);
     sp1sa3.removeEventListener("click", knappSp1sa3);
     sp1sa4.removeEventListener("click", knappSp1sa4);
 
-    sp2sa1.removeEventListener("click", knappSp2sa1);
-    sp2sa2.removeEventListener("click", knappSp2sa2);
-    sp2sa3.removeEventListener("click", knappSp2sa3);
-    sp2sa4.removeEventListener("click", knappSp2sa4);
-
-    sp3sa1.removeEventListener("click", knappSp3sa1);
-    sp3sa2.removeEventListener("click", knappSp3sa2);
-    sp3sa3.removeEventListener("click", knappSp3sa3);
-    sp3sa4.removeEventListener("click", knappSp3sa4);
-
-    document.getElementById("sp4alternativ").disabled= true;
-
-    sp5sa1.removeEventListener("click", knappSp5sa1);
-    sp5sa2.removeEventListener("click", knappSp5sa2);
-    sp5sa3.removeEventListener("click", knappSp5sa3);
-    sp5sa4.removeEventListener("click", knappSp5sa4);
-
-    
     if (TogFsp1sa1==true) {
         Co2 = Co2+1.347
     } else if (TogFsp1sa2==true) {
@@ -350,6 +368,14 @@ function knappLever() {
     }else if (TogFsp1sa4==true) {
         Co2 = Co2+16.17
     }
+    Co2Utslipp()
+}
+
+function lever2() {
+    sp2sa1.removeEventListener("click", knappSp2sa1);
+    sp2sa2.removeEventListener("click", knappSp2sa2);
+    sp2sa3.removeEventListener("click", knappSp2sa3);
+    sp2sa4.removeEventListener("click", knappSp2sa4);
 
     if (TogFsp2sa1==true) {
         Co2 = Co2+ 2.95
@@ -360,6 +386,15 @@ function knappLever() {
     }else if (TogFsp2sa4==true) {
         Co2 = Co2+ 23.60
     }
+    Co2Utslipp()
+}
+
+function lever3() {
+    sp3sa1.removeEventListener("click", knappSp3sa1);
+    sp3sa2.removeEventListener("click", knappSp3sa2);
+    sp3sa3.removeEventListener("click", knappSp3sa3);
+    sp3sa4.removeEventListener("click", knappSp3sa4);
+    sp3sa5.removeEventListener("click", knappSp3sa5);
 
     if (TogFsp3sa1==true) {
         bilUtslipp = 1.43
@@ -369,16 +404,31 @@ function knappLever() {
         bilUtslipp = 1.262
     }else if (TogFsp3sa4==true) {
         bilUtslipp = 0.50
+    }else if (TogFsp3sa5==true) {
+        bilUtslipp = 0
     }
+    Co2Utslipp()
+}
+
+function lever4() {
+    document.getElementById("sp4alternativ").disabled= true;
 
     if (TogFsp4sa1) {
         let kmKjort = sp4sa1.value
         
-        Co22 = bilUtslipp * kmKjort
+        Co22 = bilUtslipp * (kmKjort*52)// 52km per time* timer kjørt* utslipp per time= co2 fra bil
         Co2 = Co2+Co22
         console.log(Co22)
         console.log(Co2)
     }
+    Co2Utslipp()
+}
+
+function lever5() {
+    sp5sa1.removeEventListener("click", knappSp5sa1);
+    sp5sa2.removeEventListener("click", knappSp5sa2);
+    sp5sa3.removeEventListener("click", knappSp5sa3);
+    sp5sa4.removeEventListener("click", knappSp5sa4);
 
     if (TogFsp5sa1==true) {
         Co2 = Co2+56
@@ -389,15 +439,30 @@ function knappLever() {
     }else if (TogFsp5sa4==true) {
         Co2 = Co2+0
     }
+    Co2Utslipp()
+}
+
+
+function knappLever() {
+
+    document.getElementById("leverSvar").disabled= true;
+
     perAr = Co2*52,177
 
     bilde()
+    lever1()
+    lever2()
+    lever3()
+    lever4()
+    lever5()
 
     Co2Utslipp()
+
     document.getElementById("Co2Utslipp").innerHTML =Co2;
     document.getElementById("Co22Utslipp").innerHTML =Co22;
 document.getElementById("Co2PerAr").innerHTML =perAr;
 }
+
 
 function knappSp1sa1() {
     if (TogFsp1sa1 == false) {
@@ -510,6 +575,15 @@ function knappSp3sa4() {
         TogFsp3sa4 = true
     } else {
         TogFsp3sa4 = false
+    }
+    Co2Utslipp()
+}
+
+function knappSp3sa5() {
+    if (TogFsp3sa5 == false) {
+        TogFsp3sa5 = true
+    } else {
+        TogFsp3sa5 = false
     }
     Co2Utslipp()
 }

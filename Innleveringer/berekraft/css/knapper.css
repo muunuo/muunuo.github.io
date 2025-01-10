@@ -1,25 +1,37 @@
 
 #sp1alternativ1,#sp1alternativ2,#sp1alternativ3,#sp1alternativ4{
     width: 140px;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 #sp2alternativ1,#sp2alternativ2,#sp2alternativ3,#sp2alternativ4{
     width: 140px;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
 }
 
-#sp3alternativ1,#sp3alternativ2,#sp3alternativ3,#sp3alternativ4{
+#sp3alternativ1,#sp3alternativ2,#sp3alternativ3,#sp3alternativ4,#sp3alternativ5{
     width: 140px;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 #sp5alternativ1,#sp5alternativ2,#sp5alternativ3,#sp5alternativ4{
     width: 140px;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 #merInfo{
     background-color: #407551;
     width: 140px;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 #funFact1{
     background-color: #407551;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
