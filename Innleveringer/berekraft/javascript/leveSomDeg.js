@@ -54,6 +54,7 @@ let flodhest = document.getElementById("bildeFlodhest");
     bildeKrokodille.style.display="none";
     bildeFlodhest.style.display="none";
 
+    // for og while løkker
 
 
 
@@ -330,7 +331,7 @@ Co2Utslipp();
 
 function bilde() {
     if (perAr<70) {//hvis perAr er mindre enn 70
-        bildePanda.style.display="block";
+        console.log("feil")
     } else if (perAr<120) {
         bildePanda.style.display="block";
     } else if (perAr<400) {
@@ -348,9 +349,9 @@ function bilde() {
     } else if (perAr<8000) {
         bildeDinosaur.style.display="block";
     } else {
-
-        document.getElementById("Co2PerAr").innerHTML =perAr;
+        console.log("høyt")
     } 
+    
 }
 
 function lever1() {
@@ -360,13 +361,13 @@ function lever1() {
     sp1sa4.removeEventListener("click", knappSp1sa4);
 
     if (TogFsp1sa1==true) {
-        Co2 = Co2+1.347;
+        Co2 = Co2+0.9
     } else if (TogFsp1sa2==true) {
-        Co2 = Co2+3.9925;
+        Co2 = Co2+2.6
     }else if (TogFsp1sa3==true) {
-        Co2 = Co2+8.35;
+        Co2 = Co2+5.3
     }else if (TogFsp1sa4==true) {
-        Co2 = Co2+16.17;
+        Co2 = Co2+12.3
     }
     Co2Utslipp();
 }
@@ -378,13 +379,13 @@ function lever2() {
     sp2sa4.removeEventListener("click", knappSp2sa4);
 
     if (TogFsp2sa1==true) {
-        Co2 = Co2+ 2.95;
+        Co2 = Co2+ 3;
     } else if (TogFsp2sa2==true) {
-        Co2 = Co2+ 5.90;
+        Co2 = Co2+ 5.9;
     }else if (TogFsp2sa3==true) {
-        Co2 = Co2+ 11.80;
+        Co2 = Co2+ 11.8;
     }else if (TogFsp2sa4==true) {
-        Co2 = Co2+ 23.60;
+        Co2 = Co2+ 23.6;
     }
     Co2Utslipp();
 }
@@ -397,13 +398,13 @@ function lever3() {
     sp3sa5.removeEventListener("click", knappSp3sa5);
 
     if (TogFsp3sa1==true) {
-        bilUtslipp = 1.43;
+        bilUtslipp = 0.14;
     } else if (TogFsp3sa2==true) {
-        bilUtslipp = 1.64;
+        bilUtslipp = 0.16;
     }else if (TogFsp3sa3==true) {
-        bilUtslipp = 1.262;
+        bilUtslipp = 0.13;
     }else if (TogFsp3sa4==true) {
-        bilUtslipp = 0.50;
+        bilUtslipp = 0.05;
     }else if (TogFsp3sa5==true) {
         bilUtslipp = 0;
     }
@@ -447,9 +448,7 @@ function knappLever() {
 
     document.getElementById("leverSvar").disabled= true;
 
-    perAr = Co2*52,177;
-
-    bilde();
+    
     lever1();
     lever2();
     lever3();
@@ -458,9 +457,15 @@ function knappLever() {
 
     Co2Utslipp();
 
-    document.getElementById("Co2Utslipp").innerHTML =Co2;
-    document.getElementById("Co22Utslipp").innerHTML =Co22;
-document.getElementById("Co2PerAr").innerHTML =perAr;
+    perAr = Co2*52.2;
+    console.log(Co2, perAr)
+
+    bilde();
+
+
+    document.getElementById("Co2Utslipp").innerHTML =Co2.toFixed(2);// kun to desimaler
+    document.getElementById("Co22Utslipp").innerHTML =Co22.toFixed(2);
+    document.getElementById("Co2PerAr").innerHTML =perAr.toFixed(2);
 }
 
 
@@ -661,7 +666,7 @@ function knappSp5sa4() {
         TogFsp5sa4 = false;
     }
     Co2Utslipp();
-}
+}                         
 
 
 

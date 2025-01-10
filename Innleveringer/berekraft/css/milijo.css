@@ -41,6 +41,11 @@ nav li a:hover{
     color: #d6f0df
 }
 
+.underBildeTekst{
+    font-style: italic;
+    font-size:medium;
+}
+
 
 .hoved{
     background-color: #819e81;
