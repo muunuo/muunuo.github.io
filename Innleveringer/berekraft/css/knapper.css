@@ -35,3 +35,17 @@
     padding: 1rem;
     border-radius: 0.5rem;
 }
+
+#statistikk1Kilder{
+    background-color: #407551;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    width: 130px;
+}
+
+#sk1Felt{
+    font-size: medium;
+    background-color: #407551;
+    border: solid 0.5rem #407551;
+    border-radius: 0.5rem;
+}
