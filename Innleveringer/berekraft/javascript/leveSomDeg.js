@@ -120,10 +120,13 @@ TogFsp5sa4 = false;
 leverSvaret = false;
 
 
-
+// diagram()
 diagram2()
 diagram3()
 diagram5()
+diagram()
+
+myChart1.style.display="none"
 
 
 Co2 = 0;
@@ -456,6 +459,8 @@ function lever5() {
 
 
 function knappLever() {
+    myChart1.style.display="block"
+    myChart.style.display="none"
 
     document.getElementById("leverSvar").disabled= true;
 
@@ -692,9 +697,36 @@ function knappSp5sa4() {
 
 // boss.toFixed(1)
 
+function diagram() {
+    
+    const ctx = document.getElementById('myChart');
+    var barColors = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)", "rgb(51, 102, 153)"]
+    
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Norge', 'Amerika', 'Kina', 'Canada', 'Verden', 'Du'],
+            datasets: [{
+                label: 'Kg boss i gjennomsnitt per år',
+                data: [205, 810, 405, 510, 270],
+                borderWidth: 1,
+                backgroundColor: barColors,
+                
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    }
+
 function diagram1() {
     
-const ctx = document.getElementById('myChart');
+const ctx = document.getElementById('myChart1');
 var barColors = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)", "rgb(51, 102, 153)"]
 
 new Chart(ctx, {
