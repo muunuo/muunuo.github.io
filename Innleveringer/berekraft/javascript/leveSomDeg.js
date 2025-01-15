@@ -41,18 +41,28 @@ let dinosaur = document.getElementById("bildeDinosaur");
 let krokodille = document.getElementById("bildeKrokodille");
 let flodhest = document.getElementById("bildeFlodhest");
 
+let boss = document.getElementById("tipsForBoss");
+let dusj = document.getElementById("tipsForDusj");
+let bil = document.getElementById("tipsForBil");
+let kjott = document.getElementById("tipsForKjott");
 
 
-    bildePanda.style.display="none"; // bilder av
-    bildeBjorn.style.display="none";
-    bildeElg.style.display="none";
-    bildeHval.style.display="none";
-    bildeElefant.style.display="none";
-    bildeDinosaur.style.display="none";
-    bildeKrokodille.style.display="none";
-    bildeFlodhest.style.display="none";
 
-    // for og while løkker
+bildePanda.style.display="none"; // bilder av
+bildeBjorn.style.display="none";
+bildeElg.style.display="none";
+bildeHval.style.display="none";
+bildeElefant.style.display="none";
+bildeDinosaur.style.display="none";
+bildeKrokodille.style.display="none";
+bildeFlodhest.style.display="none";
+
+boss.style.display="none"
+dusj.style.display="none"
+bil.style.display="none"
+kjott.style.display="none"
+
+// for og while løkker er en ting du burde bruke mer
 
 
 
@@ -108,6 +118,7 @@ TogFsp5sa3 = false;
 TogFsp5sa4 = false;
 
 leverSvaret = false;
+
 
 
 
@@ -355,16 +366,16 @@ function lever1() {
 
     if (TogFsp1sa1==true) {
         Co2 = Co2+0.61
-        poser = poser+0.25
+        poser = poser+1.75
     } else if (TogFsp1sa2==true) {
         Co2 = Co2+1.84
-        poser = poser+0.25
+        poser = poser+2.63
     }else if (TogFsp1sa3==true) {
         Co2 = Co2+3.68
-        poser = poser+0.25
+        poser = poser+5.25
     }else if (TogFsp1sa4==true) {
         Co2 = Co2+8.58
-        poser = poser+4
+        poser = poser+12.25
         
     }
     Co2Utslipp();
@@ -468,6 +479,8 @@ poser = poser*52.2
 poser.value;
 
 diagram1()
+diagram2()
+
 
 
     document.getElementById("Co2UtslippUke").innerHTML = Co2.toFixed(2);// kun to desimaler
@@ -685,9 +698,9 @@ const ctx = document.getElementById('myChart');
 new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Nordman', 'Amrikaner', 'Kineserx', 'Kanada', 'Verden', 'Du'],
+        labels: ['Norge', 'Amerika', 'Kina', 'Canada', 'Verden', 'Du'],
         datasets: [{
-            label: '# of Votes',
+            label: 'Kg boss i gjennomsnitt per år',
             data: [205, 810, 405, 510, 270, poser],
             borderWidth: 1
         }]
@@ -701,3 +714,33 @@ new Chart(ctx, {
     }
 });
 }
+
+
+function diagram2() {
+    
+    const ctx = document.getElementById('myChart2');
+    
+    new Chart(ctx, {
+        type: 'line',// takk felix for hjelpen
+        data: {
+            labels: ['Norge', 'Amerika', 'Kina', 'Canada', 'Verden', 'Du'],
+            datasets: [{
+                label: 'Kg boss i gjennomsnitt per år',
+                data: [205, 810, 405, 510, 270, poser],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    }
+
+
+
+
+
