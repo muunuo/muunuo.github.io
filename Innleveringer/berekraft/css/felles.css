@@ -8,6 +8,7 @@ html, body {
 .hoved { grid-area: hoved; }
 .bunn { grid-area: bunn; }
 .side { grid-area: side; }
+.bunn2 { grid-area: bunn2; }
 
 
 .grid-container {
@@ -18,7 +19,8 @@ html, body {
         'tittel tittel tittel tittel tittel tittel'
         'meny meny meny meny meny meny'
         'hoved hoved hoved side side side'
-        'bunn bunn bunn bunn bunn bunn';
+        'bunn bunn bunn bunn bunn bunn'
+        'bunn2 bunn2 bunn2 bunn2 bunn2 bunn2';
 }
 
 .grid-container > div { /* Alle barna til div-containeren av typen div */

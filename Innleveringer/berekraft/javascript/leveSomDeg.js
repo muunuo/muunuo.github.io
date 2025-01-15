@@ -111,11 +111,14 @@ leverSvaret = false;
 
 
 
+
+
 Co2 = 0;
 Co22 = 0;
 perAr = 0;
-pose = 0;
+poser = 0;
 bilUtslipp = 0;
+
 
 document.getElementById("Co2UtslippUke").innerHTML =Co2;
 document.getElementById("Co22Utslipp").innerHTML =Co22;
@@ -355,10 +358,14 @@ function lever1() {
         poser = poser+0.25
     } else if (TogFsp1sa2==true) {
         Co2 = Co2+1.84
+        poser = poser+0.25
     }else if (TogFsp1sa3==true) {
         Co2 = Co2+3.68
+        poser = poser+0.25
     }else if (TogFsp1sa4==true) {
         Co2 = Co2+8.58
+        poser = poser+4
+        
     }
     Co2Utslipp();
 }
@@ -454,9 +461,18 @@ function knappLever() {
     bilde();
 
 
-    document.getElementById("Co2UtslippUke").innerHTML =Co2.toFixed(2);// kun to desimaler
-    document.getElementById("Co22Utslipp").innerHTML =Co22.toFixed(2);
-    document.getElementById("Co2PerAr").innerHTML =perAr.toFixed(2);
+bossAr = 0
+
+poser = poser*52.2
+
+poser.value;
+
+diagram1()
+
+
+    document.getElementById("Co2UtslippUke").innerHTML = Co2.toFixed(2);// kun to desimaler
+    document.getElementById("Co22Utslipp").innerHTML = Co22.toFixed(2);
+    document.getElementById("Co2PerAr").innerHTML = perAr.toFixed(2);
 }
 
 
@@ -659,13 +675,11 @@ function knappSp5sa4() {
     Co2Utslipp();
 }                         
 
-bossAr = 0
 
-bossAr = pose*52.2
+// boss.toFixed(1)
 
-let kmKjort = bossAr.value;
-
-
+function diagram1() {
+    
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
@@ -674,7 +688,7 @@ new Chart(ctx, {
         labels: ['Nordman', 'Amrikaner', 'Kineserx', 'Kanada', 'Verden', 'Du'],
         datasets: [{
             label: '# of Votes',
-            data: [205, 810, 405, 510, 270, bossAr],
+            data: [205, 810, 405, 510, 270, poser],
             borderWidth: 1
         }]
     },
@@ -686,3 +700,4 @@ new Chart(ctx, {
         }
     }
 });
+}

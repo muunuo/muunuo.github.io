@@ -13,153 +13,165 @@
     <script src="/Innleveringer/berekraft/javascript/kilder.js" defer></script>
 </head>
 <body>
-        <div class="grid-container">
+    <div class="grid-container">
 
-            <div class="tittel">
-                    <h1 id="title">Milijø og Bærekraft</h1>
-            </div>
-
-            <div class="meny">
-                <nav>
-                    <li id="kode"><a href="/koding.html">Portfolio</a></li>
-                    <li id="java"><a href="/Javascript/index2.html">Java</a></li>
-                </nav>
-            </div>
-
-            <div class="hoved">
-                <ul>
-                    <p id="sporsmol1">1. Hvor mange handleposer med ikke resirkulerbart boss kaster du på en uke?</p>
-                    <p id="sp1alternativ1">a. >0.5poser </p>
-                    <p id="sp1alternativ2">b. 0.5-1poser </p>
-                    <p id="sp1alternativ3">c. 1-2poser </p>
-                    <p id="sp1alternativ4">d. 2-5poser </p>
-                    <p id="merInfo">Hviste du at...</p>
-                    <figure>
-                    <p id="funFact1">de fleste nordmenn kaster rundt 375kg boss hvert år. Det er over 100kg mer en en hjort veier. 
-                        Det betyr at et hushold på to kaster rundt vekten av en elg på et år.</p>
-                        <!-- <figcaption id="kilde1">Statistisk Sentralbyrå og Miljolare</figcaption>  -->
-                    </figure>
-                </ul>
-
-                <ul>
-                    <p id="sporsmol2">2. Hvor mange minutter bruker du i dysjen?</p>
-                    <p id="sp2alternativ1">a. >5min </p>
-                    <p id="sp2alternativ2">b. 5-15min </p>
-                    <p id="sp2alternativ3">c. 15-30min </p>
-                    <p id="sp2alternativ4">d. &lt;30min </p><!--&lt; = < -->
-                </ul> 
-
-                <ul>
-                    <p id="sporsmol3">3. Hva type bil kjører du/ blir du kjørt i?</p>
-                    <p id="sp3alternativ1">a. Petrolium bil </p>
-                    <p id="sp3alternativ2">b. Disel bil </p>
-                    <p id="sp3alternativ3">c. Hybrid bil </p>
-                    <p id="sp3alternativ4">d. Eletrisk bil </p>
-                    <p id="sp3alternativ5">d. Ingen </p>
-                </ul>
-
-                <ul>
-                    <p id="sporsmol4">3.5. Hvor mange timer kjører du i løpet av en uke?</p>
-                    <input id="sp4alternativ" type="number">
-                </ul>
-            
-                <ul>
-                    <p id="sporsmol5">4. Hvor mange dager i løpet av en uke spiser du kjøtt?</p>
-                    <p id="sp5alternativ1">a. alle (7) </p>
-                    <p id="sp5alternativ2">b. nesten alle (4-6) </p>
-                    <p id="sp5alternativ3">c. få (1-3) </p>
-                    <p id="sp5alternativ4">d. ingen (0) </p>
-                </ul>
-                
-                <button id="leverSvar">lever</button>
-            </div>  
-
-            <div class="side">
-                <p>375kg boss per nordman i 2023, 170kg gikk til gjennvinning, 205kg boss. En svartbjørn værdt med boss, en liten elg verdt per person. Kilde Statestistisk sentralberå</p>
-                <div>
-                    <canvas id="myChart"></canvas>
-                    <p id="statistikk1Kilder">Kilder...</p>
-                    <div id="sk1Felt">
-                        <p>Avfall frå hushald by&nbsp;<a href="https://www.ssb.no/natur-og-miljo/avfall/statistikk/avfall-fra-hushalda">Statistisk sentralbyrå&nbsp;</a>06.01.25</p>
-                        <p>Trash in America by&nbsp;<a href="https://environmentamerica.org/center/resources/trash-in-america-2/">Environment America</a>&nbsp;10.01.24</p>
-                        <p>Recycling Statisics in Canada by&nbsp;<a href="https://madeinca.ca/recycling-canada-statistics/">Nicole Blair</a>&nbsp; 10.01.25</p>
-                        <p>What a Waste 2.0 by&nbsp;<a href="https://datatopics.worldbank.org/what-a-waste/trends_in_solid_waste_management.html">The World Bank</a>&nbsp;10.01.25</p>
-                        <p>Garbage in China by&nbsp;<a href="https://factsanddetails.com/china/cat10/sub66/entry-8338.html">Facts and Details</a>&nbsp;10.01.25</p>
-                        <p>&nbsp;<a href=""></a>&nbsp;</p>
-                        <p>&nbsp;<a href=""></a>&nbsp;</p>
-                    </div>
-                </div>
-                <p>Viste du at for hver 5 min i dysjen betaler du rundt 4kr? Hvis du bruker en halvtime i dysjen, 4dager i uken, så vil du måtte betale rundt 80kr. kilde Fjordkraft</p>
-                <p>For at en elbil skal være mer milijøvenelig enn fosilbilen må du kjøre med den ca 18 000-20 000km, dette vil ta deg rundt 2 år å gjøre. Husk at bare fordi det nye alternativet 
-                    er mer milijøveneligt så betyr det ikke at du ikke skal bruke det du allerede har, ofte er det det beste valget. 
-                </p>
-                <p>Hvis du ikke skal for langt, vuder å ta deg en gåtur! bra for deg og for naturen :D</p>
-                <p>En kg med kylling skaper rundt 10kg Co2 utslipp. En kg med storfe vil derimot skape 99kg Co2 utslipp. Tenk på hva du spiser.</p>
-            </div>
-
-            <div class="bunn">
-
-                <p id="Co22Utslipp"></p>
-                <p>&nbsp; Kg Co2 utslipp fra bilen din</p>
-                <p id="Co2UtslippUke"></p>
-                <p>&nbsp; Kg Co2 utslipp per uke</p>
-                <p id="Co2PerAr"></p>
-                <p>&nbsp; Kg Co2 utslipp per år</p>
-
-                <div>
-                    <div id="bildePanda">
-                        <img width="200px" src="/bilder/dyrSomVeierForskjellig/70-120.jpg" alt="panda">
-                        <p class="underBildeTekst">Bilde og vekt fra Store Norske Leksikon</p>
-                    </div>
-
-                    <figure id="bildeBjorn">
-                    <img width="200px" src="/bilder/dyrSomVeierForskjellig/120-500.jpg" alt="Svartbjørn">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-                    </figure>
-
-                    <figure id="bildeElg">
-                    <img src="/bilder/dyrSomVeierForskjellig/200-700.jpeg" alt="elg">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-                    </figure>
-
-                    <figure id="bildeKrokodille">
-                    <img src="/bilder/dyrSomVeierForskjellig/200-1100.jpg" alt="saltvann krokodille">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-                    </figure>
-
-                    <figure id="bildeHval">
-                    <img src="/bilder/dyrSomVeierForskjellig/1100-1600.jpeg" alt="hvithval">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-                    </figure>
-
-                    <figure id="bildeFlodhest">
-                    <img src="/bilder/dyrSomVeierForskjellig/1300-4500.jpeg" alt="flodhest">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-                    </figure>
-
-                    <figure id="bildeElefant">
-                    <img src="/bilder/dyrSomVeierForskjellig/2300-6300.jpeg" alt="elefant">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-                    </figure>
-
-                    <figure id="bildeDinosaur">
-                    <img src="/bilder/dyrSomVeierForskjellig/-8000.jpeg" alt="dinosaur">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-                    </figure>
-                    
-                    <p id="over8000"></p>
-                </div>
-
-            </div>
-
-            <p>For å redusere mengden boss kan du:</p>
-            <p>1. Ta med egene poser når du skal å handle, ikke bare bæreposer, men også fruktposer til løsvekt frukt. </p>
-            <p>2. Kjøp mindre ved å lage en handleliste før du handler. Spis før du gjør ukeshandelen -du kjøper mer når du er sulten- og se hva du allerede har, og bruk det først</p>
-            <p>3. Prøv å tenke om du det er noe du ville hatt lyst på om en uke, kansje litt tenketid hadde gjordt deg godt.</p>
-
-            <!-- <div class="bunn"> -->
-                <!-- <p>Copyright 2024</p> -->
-            </div>
+        <div class="tittel">
+            <h1 id="title">Milijø og Bærekraft</h1>
         </div>
+
+        <div class="meny">
+            <nav>
+                <li id="kode"><a href="/koding.html">Portfolio</a></li>
+                <li id="java"><a href="/Javascript/index2.html">Java</a></li>
+            </nav>
+        </div>
+
+        <div class="hoved">
+            <ul>
+                <p id="sporsmol1">1. Hvor mange handleposer med ikke resirkulerbart boss kaster du på en uke?</p>
+                <p id="sp1alternativ1">a. >0.5poser </p>
+                <p id="sp1alternativ2">b. 0.5-1poser </p>
+                <p id="sp1alternativ3">c. 1-2poser </p>
+                <p id="sp1alternativ4">d. 2-5poser </p>
+                <p id="merInfo">Hviste du at...</p>
+                <figure>
+                <p id="funFact1">
+                    de fleste nordmenn kaster rundt 375kg boss hvert år. Det er over 100kg mer en en hjort veier.                        
+                    Det betyr at et hushold på to kaster rundt vekten av en elg på et år.
+                </p>
+            </ul>
+
+            <ul>
+                <p id="sporsmol2">2. Hvor mange minutter bruker du i dysjen?</p>
+                <p id="sp2alternativ1">a. >5min </p>
+                <p id="sp2alternativ2">b. 5-15min </p>
+                <p id="sp2alternativ3">c. 15-30min </p>
+                <p id="sp2alternativ4">d. &lt;30min </p><!--&lt; = < -->
+            </ul> 
+
+            <ul>
+                <p id="sporsmol3">3. Hva type bil kjører du/ blir du kjørt i?</p>
+                <p id="sp3alternativ1">a. Petrolium bil </p>
+                <p id="sp3alternativ2">b. Disel bil </p>
+                <p id="sp3alternativ3">c. Hybrid bil </p>
+                <p id="sp3alternativ4">d. Eletrisk bil </p>
+                <p id="sp3alternativ5">d. Ingen </p>
+            </ul>
+
+            <ul>
+                <p id="sporsmol4">3.5. Hvor mange timer kjører du i løpet av en uke?</p>
+                <input id="sp4alternativ" type="number">
+            </ul>            
+            <ul>
+                <p id="sporsmol5">4. Hvor mange dager i løpet av en uke spiser du kjøtt?</p>
+                <p id="sp5alternativ1">a. alle (7) </p>
+                <p id="sp5alternativ2">b. nesten alle (4-6) </p>                    
+                <p id="sp5alternativ3">c. få (1-3) </p>
+                <p id="sp5alternativ4">d. ingen (0) </p>
+            </ul>
+            
+            <button id="leverSvar">lever</button>
+        </div>  
+
+        <div class="side">
+            <p>375kg boss per nordman i 2023, 170kg gikk til gjennvinning, 205kg boss. En svartbjørn værdt med boss, en liten elg verdt per person. Kilde Statestistisk sentralberå</p>
+            <div>
+                <canvas id="myChart"></canvas>
+                <p id="statistikk1Kilder">Kilder...</p>
+                <div id="sk1Felt">
+                    <p>Avfall frå hushald av&nbsp;<a href="https://www.ssb.no/natur-og-miljo/avfall/statistikk/avfall-fra-hushalda">Statistisk sentralbyrå&nbsp;</a>06.01.25</p>
+                    <p>Trash in America av&nbsp;<a href="https://environmentamerica.org/center/resources/trash-in-america-2/">Environment America</a>&nbsp;10.01.24</p>
+                    <p>Recycling Statisics in Canada av&nbsp;<a href="https://madeinca.ca/recycling-canada-statistics/">Nicole Blair</a>&nbsp; 10.01.25</p>
+                    <p>What a Waste 2.0 av&nbsp;<a href="https://datatopics.worldbank.org/what-a-waste/trends_in_solid_waste_management.html">The World Bank</a>&nbsp;10.01.25</p>
+                    <p>Garbage in China av&nbsp;<a href="https://factsanddetails.com/china/cat10/sub66/entry-8338.html">Facts and Details</a>&nbsp;10.01.25</p>
+                    Spørsmål 1 kilder:
+                    <p>Find out how your carbon footprint is generated av&nbsp;<a href="https://www.bbva.es/en/general/sostenibilidad/soluciones-para-personas/huella-de-carbono-personas/repositorio/no-reciclar-la-basura.html">BBVA</a>&nbsp;13.01.25</p>
+                    <p>&nbsp;<a href=""></a>&nbsp;</p>
+                    <!-- <p>&nbsp;<a href=""></a>&nbsp;</p> -->
+                </div>
+                <canvas id="myChart2"></canvas>
+
+                <div id="sk2Felt">
+                    <p>Dysj</p>
+                    <p>&nbsp;<a href=""></a>&nbsp;</p>
+                </div>
+
+                <div id="sk3Felt">
+                    <p>bil</p>
+                    <p>Car number and mileage up av&nbsp;<a href="https://www.ssb.no/en/transport-og-reiseliv/artikler-og-publikasjoner/car-numbers-and-mileage-up">Statistisk sentralbyrå</a>&nbsp;13.01.25</p>
+                    <p>Hvor mye drivhusgass slippes ut når vi kjører av&nbsp;<a href="https://www.om-verden.com/hvor-mye-drivhusgass-slippes-ut-na-vi-kjorer-bil/" Brita Helleborg</a>&nbsp;13.01.25</p>
+                    <p>Greenhouse gass emissions from a typical passanger vehicle av&nbsp;<a href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle">EPA</a>&nbsp;</p>
+                </div>
+
+                <div id="sk4Felt">
+                    <p>kjøtt</p>
+                    <p>&nbsp;<a href=""></a>&nbsp;</p>
+                </div>
+            </div>
+            <p>Viste du at for hver 5 min i dysjen betaler du rundt 4kr? Hvis du bruker en halvtime i dysjen, 4dager i uken, så vil du måtte betale rundt 80kr. kilde Fjordkraft</p>
+            <p>
+                For at en elbil skal være mer milijøvenelig enn fosilbilen må du kjøre med den ca 18 000-20 000km, dette vil ta deg rundt 2 år å gjøre. Husk at bare fordi det nye alternativet 
+                er mer milijøveneligt så betyr det ikke at du ikke skal bruke det du allerede har, ofte er det det beste valget. 
+            </p>
+            <p>Hvis du ikke skal for langt, vuder å ta deg en gåtur! bra for deg og for naturen :D</p>
+            <p>En kg med kylling skaper rundt 10kg Co2 utslipp. En kg med storfe vil derimot skape 99kg Co2 utslipp. Tenk på hva du spiser.</p>
+        </div>
+
+        <div class="bunn">
+
+            <p id="Co22Utslipp"></p>
+            <p>&nbsp; Kg Co2 utslipp fra bilen din</p>
+            <p id="Co2UtslippUke"></p>
+            <p>&nbsp; Kg Co2 utslipp per uke</p>
+            <p id="Co2PerAr"></p>
+            <p>&nbsp; Kg Co2 utslipp per år</p>
+
+            <div id="bildePanda">
+                <img width="200px" src="/bilder/dyrSomVeierForskjellig/70-120.jpg" alt="panda">
+                <p class="underBildeTekst">Bilde og vekt fra Store Norske Leksikon</p>
+            </div>
+
+            <figure id="bildeBjorn">
+                <img width="200px" src="/bilder/dyrSomVeierForskjellig/120-500.jpg" alt="Svartbjørn">
+                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+            </figure>
+
+            <figure id="bildeElg">
+                <img src="/bilder/dyrSomVeierForskjellig/200-700.jpeg" alt="elg">
+                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+            </figure>
+
+            <figure id="bildeKrokodille">
+                <img src="/bilder/dyrSomVeierForskjellig/200-1100.jpg" alt="saltvann krokodille">
+                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+            </figure>
+
+            <figure id="bildeHval">
+                <img src="/bilder/dyrSomVeierForskjellig/1100-1600.jpeg" alt="hvithval">
+                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+            </figure>
+
+            <figure id="bildeFlodhest">
+                <img src="/bilder/dyrSomVeierForskjellig/1300-4500.jpeg" alt="flodhest">
+                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+            </figure>
+
+            <figure id="bildeElefant">
+                <img src="/bilder/dyrSomVeierForskjellig/2300-6300.jpeg" alt="elefant">
+                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+            </figure>
+
+            <figure id="bildeDinosaur">
+                <img src="/bilder/dyrSomVeierForskjellig/-8000.jpeg" alt="dinosaur">
+                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+            </figure>
+                
+            <p id="over8000"></p>
+        </div>
+        <div class="bunn2">
+            <p>hei</p>
+        </div>
+    </div>
 </body>
 </html>
+
