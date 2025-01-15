@@ -121,7 +121,9 @@ leverSvaret = false;
 
 
 
-
+diagram2()
+diagram3()
+diagram5()
 
 
 Co2 = 0;
@@ -141,7 +143,7 @@ function TogFsporsmol1() {
     if (TogFsp1sa1 == false) {
         sp1sa1.style.backgroundColor = "#3f5d3f";
     } else {
-        sp1sa1.style.backgroundColor = "#1e383e";
+        sp1sa1.style.backgroundColor = "#336699";
         TogFsp1sa2 = false;
         TogFsp1sa3 = false;
         TogFsp1sa4 = false;
@@ -150,7 +152,7 @@ function TogFsporsmol1() {
     if (TogFsp1sa2 == false) {
         sp1sa2.style.backgroundColor = "#3f5d3f";
     } else {
-        sp1sa2.style.backgroundColor = "#1e383e";
+        sp1sa2.style.backgroundColor = "#336699";
         TogFsp1sa1 = false;
         TogFsp1sa3 = false;
         TogFsp1sa4 = false;
@@ -159,7 +161,7 @@ function TogFsporsmol1() {
     if (TogFsp1sa3 == false) {
         sp1sa3.style.backgroundColor = "#3f5d3f";
     } else {
-        sp1sa3.style.backgroundColor = "#1e383e";
+        sp1sa3.style.backgroundColor = "#336699";
         TogFsp1sa1 = false;
         TogFsp1sa2 = false;
         TogFsp1sa4 = false;
@@ -168,7 +170,7 @@ function TogFsporsmol1() {
     if (TogFsp1sa4 == false) {
         sp1sa4.style.backgroundColor = "#3f5d3f";
     } else {
-        sp1sa4.style.backgroundColor = "#1e383e";
+        sp1sa4.style.backgroundColor = "#336699";
         TogFsp1sa1 = false;
         TogFsp1sa2 = false;
         TogFsp1sa3 = false;
@@ -180,7 +182,7 @@ function TogFsporsmol2() {
 if (TogFsp2sa1 == false) {
     sp2sa1.style.backgroundColor = "#3f5d3f";
 } else {
-    sp2sa1.style.backgroundColor = "#1e383e";
+    sp2sa1.style.backgroundColor = "#336699";
     TogFsp2sa2 = false;
     TogFsp2sa3 = false;
     TogFsp2sa4 = false;
@@ -188,7 +190,7 @@ if (TogFsp2sa1 == false) {
 if (TogFsp2sa2 == false) {
     sp2sa2.style.backgroundColor = "#3f5d3f";
 } else {
-    sp2sa2.style.backgroundColor = "#1e383e";
+    sp2sa2.style.backgroundColor = "#336699";
     TogFsp2sa1 = false;
     TogFsp2sa3 = false;
     TogFsp2sa4 = false;
@@ -196,7 +198,7 @@ if (TogFsp2sa2 == false) {
 if (TogFsp2sa3 == false) {
     sp2sa3.style.backgroundColor = "#3f5d3f";
 } else {
-    sp2sa3.style.backgroundColor = "#1e383e";
+    sp2sa3.style.backgroundColor = "#336699";
     TogFsp2sa1 = false;
     TogFsp2sa2 = false;
     TogFsp2sa4 = false;
@@ -204,7 +206,7 @@ if (TogFsp2sa3 == false) {
 if (TogFsp2sa4 == false) {
     sp2sa4.style.backgroundColor = "#3f5d3f";
 } else {
-    sp2sa4.style.backgroundColor = "#1e383e";
+    sp2sa4.style.backgroundColor = "#336699";
     TogFsp2sa1 = false;
     TogFsp2sa2 = false;
     TogFsp2sa3 = false;
@@ -218,7 +220,7 @@ function TogFsporsmol3() {
 if (TogFsp3sa1 == false) {
     sp3sa1.style.backgroundColor = "#3f5d3f";
 } else {
-    sp3sa1.style.backgroundColor = "#1e383e";
+    sp3sa1.style.backgroundColor = "#336699";
     TogFsp3sa2 = false;
     TogFsp3sa3 = false;
     TogFsp3sa4 = false;
@@ -227,7 +229,7 @@ if (TogFsp3sa1 == false) {
 if (TogFsp3sa2 == false) {
     sp3sa2.style.backgroundColor = "#3f5d3f";
 } else {
-    sp3sa2.style.backgroundColor = "#1e383e";
+    sp3sa2.style.backgroundColor = "#336699";
     TogFsp3sa1 = false;
     TogFsp3sa3 = false;
     TogFsp3sa4 = false;
@@ -236,7 +238,7 @@ if (TogFsp3sa2 == false) {
 if (TogFsp3sa3 == false) {
     sp3sa3.style.backgroundColor = "#3f5d3f";
 } else {
-    sp3sa3.style.backgroundColor = "#1e383e";
+    sp3sa3.style.backgroundColor = "#336699";
     TogFsp3sa1 = false;
     TogFsp3sa2 = false;
     TogFsp3sa4 = false;
@@ -245,7 +247,7 @@ if (TogFsp3sa3 == false) {
 if (TogFsp3sa4 == false) {
     sp3sa4.style.backgroundColor = "#3f5d3f";
 } else {
-    sp3sa4.style.backgroundColor = "#1e383e";
+    sp3sa4.style.backgroundColor = "#336699";
     TogFsp3sa1 = false;
     TogFsp3sa2 = false;
     TogFsp3sa3 = false;
@@ -257,7 +259,7 @@ if (TogFsp3sa5 == false) {
     sporsmol4.style.display="block";
     sp4alternativ.style.display="block";
 } else {
-    sp3sa5.style.backgroundColor = "#1e383e";
+    sp3sa5.style.backgroundColor = "#336699";
     TogFsp3sa1 = false;
     TogFsp3sa2 = false;
     TogFsp3sa3 = false;
@@ -273,7 +275,7 @@ function TogFsporsmol4() {
 if (TogFsp4sa1 == false) {
     sp4sa1.style.backgroundColor = "#3f5d3f";
 } else {
-    sp4sa1.style.backgroundColor = "#1e383e";
+    sp4sa1.style.backgroundColor = "#336699";
     TogFsp4sa2 = false;
     TogFsp4sa3 = false;
     TogFsp4sa4 = false;
@@ -287,7 +289,7 @@ function TogFsporsmol5() {
 if (TogFsp5sa1 == false) {
     sp5sa1.style.backgroundColor = "#3f5d3f";
 } else {
-    sp5sa1.style.backgroundColor = "#1e383e";
+    sp5sa1.style.backgroundColor = "#336699";
     TogFsp5sa2 = false;
     TogFsp5sa3 = false;
     TogFsp5sa4 = false;
@@ -295,7 +297,7 @@ if (TogFsp5sa1 == false) {
 if (TogFsp5sa2 == false) {
     sp5sa2.style.backgroundColor = "#3f5d3f";
 } else {
-    sp5sa2.style.backgroundColor = "#1e383e";
+    sp5sa2.style.backgroundColor = "#336699";
     TogFsp5sa1 = false;
     TogFsp5sa3 = false;
     TogFsp5sa4 = false;
@@ -303,7 +305,7 @@ if (TogFsp5sa2 == false) {
 if (TogFsp5sa3 == false) {
     sp5sa3.style.backgroundColor = "#3f5d3f";
 } else {
-    sp5sa3.style.backgroundColor = "#1e383e";
+    sp5sa3.style.backgroundColor = "#336699";
     TogFsp5sa1 = false;
     TogFsp5sa2 = false;
     TogFsp5sa4 = false;
@@ -311,7 +313,7 @@ if (TogFsp5sa3 == false) {
 if (TogFsp5sa4 == false) {
     sp5sa4.style.backgroundColor = "#3f5d3f";
 } else {
-    sp5sa4.style.backgroundColor = "#1e383e";
+    sp5sa4.style.backgroundColor = "#336699";
     TogFsp5sa1 = false;
     TogFsp5sa2 = false;
     TogFsp5sa3 = false;
@@ -407,7 +409,7 @@ function lever3() {
     sp3sa5.removeEventListener("click", knappSp3sa5);
 
     if (TogFsp3sa1==true) {
-        bilUtslipp = 0.14;
+        bilUtslipp = 0.14;// kg Co2 utslipp per km
     } else if (TogFsp3sa2==true) {
         bilUtslipp = 0.16;
     }else if (TogFsp3sa3==true) {
@@ -479,7 +481,6 @@ poser = poser*52.2
 poser.value;
 
 diagram1()
-diagram2()
 
 
 
@@ -694,6 +695,7 @@ function knappSp5sa4() {
 function diagram1() {
     
 const ctx = document.getElementById('myChart');
+var barColors = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)", "rgb(51, 102, 153)"]
 
 new Chart(ctx, {
     type: 'bar',
@@ -702,7 +704,9 @@ new Chart(ctx, {
         datasets: [{
             label: 'Kg boss i gjennomsnitt per år',
             data: [205, 810, 405, 510, 270, poser],
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: barColors,
+            
         }]
     },
     options: {
@@ -719,14 +723,16 @@ new Chart(ctx, {
 function diagram2() {
     
     const ctx = document.getElementById('myChart2');
+
     
     new Chart(ctx, {
         type: 'line',// takk felix for hjelpen
         data: {
-            labels: ['Norge', 'Amerika', 'Kina', 'Canada', 'Verden', 'Du'],
+            labels: ['Januar', 'Februar', 'Mars', 'April', 'Mai', 'Juni', 'July', 'Agust', 'September', 'Oktober', 'November', 'Desember'],
             datasets: [{
-                label: 'Kg boss i gjennomsnitt per år',
-                data: [205, 810, 405, 510, 270, poser],
+                label: '10 min i dysjen koster kr',
+                data: [5.93, 4.45, 4.40, 4.06, 2.73, 2.77, 2.23, 1.64, 1.87, 2.85, 3.76, 4.14],
+                
                 borderWidth: 1
             }]
         },
@@ -743,4 +749,55 @@ function diagram2() {
 
 
 
+    function diagram3() {
+    
+        const ctx = document.getElementById('myChart3');
+        // var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)"]
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Bensin', 'Disel', 'Hybrid', 'Eletrisk'],
+                datasets: [{
+                    label: 'Kg Co2 per Km',
+                    data: [0.14, 0.16, 0.13, 0.05, 0],
+                    borderWidth: 1
+                    // backgroundColor: barColors2,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        }
+
+        function diagram5() {
+    
+            const ctx = document.getElementById('myChart5');
+            // var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)"]
+    
+            new Chart(ctx, {
+                type: 'polarArea',
+                data: {
+                    labels: ['Ku', 'Sau', 'Gris', 'Kylling'],
+                    datasets: [{
+                        label: 'Kg Co2 per 1kg kjøtt',
+                        data: [66.39, 39.72, 12.31, 4.67 ],
+                        borderWidth: 1
+                        // backgroundColor: barColors2,
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            }
 

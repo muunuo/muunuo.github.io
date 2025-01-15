@@ -51,7 +51,7 @@
 
             <ul>
                 <p id="sporsmol3">3. Hva type bil kjører du/ blir du kjørt i?</p>
-                <p id="sp3alternativ1">a. Petrolium bil </p>
+                <p id="sp3alternativ1">a. Bensin bil </p>
                 <p id="sp3alternativ2">b. Disel bil </p>
                 <p id="sp3alternativ3">c. Hybrid bil </p>
                 <p id="sp3alternativ4">d. Eletrisk bil </p>
@@ -71,13 +71,66 @@
             </ul>
             
             <button id="leverSvar">lever</button>
+
+            <div class="dyrOgUtslipp">
+
+                <p id="Co22Utslipp"></p>
+                <p>&nbsp; Kg Co2 utslipp fra bilen din</p>
+                <p id="Co2UtslippUke"></p>
+                <p>&nbsp; Kg Co2 utslipp per uke</p>
+                <p id="Co2PerAr"></p>
+                <p>&nbsp; Kg Co2 utslipp per år</p>
+    
+                <div id="bildePanda">
+                    <img width="200px" src="/bilder/dyrSomVeierForskjellig/70-120.jpg" alt="panda">
+                    <p class="underBildeTekst">Bilde og vekt fra Store Norske Leksikon</p>
+                </div>
+    
+                <figure id="bildeBjorn">
+                    <img width="200px" src="/bilder/dyrSomVeierForskjellig/120-500.jpg" alt="Svartbjørn">
+                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                </figure>
+    
+                <figure id="bildeElg">
+                    <img src="/bilder/dyrSomVeierForskjellig/200-700.jpeg" alt="elg">
+                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                </figure>
+    
+                <figure id="bildeKrokodille">
+                    <img src="/bilder/dyrSomVeierForskjellig/200-1100.jpg" alt="saltvann krokodille">
+                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                </figure>
+    
+                <figure id="bildeHval">
+                    <img src="/bilder/dyrSomVeierForskjellig/1100-1600.jpeg" alt="hvithval">
+                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                </figure>
+    
+                <figure id="bildeFlodhest">
+                    <img src="/bilder/dyrSomVeierForskjellig/1300-4500.jpeg" alt="flodhest">
+                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                </figure>
+    
+                <figure id="bildeElefant">
+                    <img src="/bilder/dyrSomVeierForskjellig/2300-6300.jpeg" alt="elefant">
+                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                </figure>
+    
+                <figure id="bildeDinosaur">
+                    <img src="/bilder/dyrSomVeierForskjellig/-8000.jpeg" alt="dinosaur">
+                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                </figure>
+                    
+                <p id="over8000"></p>
+            </div>
         </div>  
 
         <div class="side">
+
+            <p id="statistikk1Kilder">Se Kilder...</p>
             <p>Kg ikke resirkulerbart boss per innbygger per år i:</p>
             <div>
                 <canvas id="myChart"></canvas>
-                <p id="statistikk1Kilder">Kilder...</p>
                 <div id="sk1Felt">
                     <p>Avfall frå hushald av&nbsp;<a href="https://www.ssb.no/natur-og-miljo/avfall/statistikk/avfall-fra-hushalda">Statistisk sentralbyrå&nbsp;</a>06.01.25</p>
                     <p>Trash in America av&nbsp;<a href="https://environmentamerica.org/center/resources/trash-in-america-2/">Environment America</a>&nbsp;10.01.24</p>
@@ -89,86 +142,44 @@
                     <p>&nbsp;<a href=""></a>&nbsp;</p>
                     <!-- <p>&nbsp;<a href=""></a>&nbsp;</p> -->
                 </div>
+                <p>Hvor mye koster 10min i dusjen på forskjellige tider i året?</p>
                 <canvas id="myChart2"></canvas>
 
                 <div id="sk2Felt">
-                    <p>Dysj</p>
-                    <p>&nbsp;<a href="https://www.strompriser.no/artikler/hva-koster-det-a-dusje"></a>&nbsp;</p>
+                    <p>Dusj</p>
                     <p>Showering everyday generates 109kg of carbon dioxide a year av &nbsp;<a href="https://www.bbva.es/en/general/sostenibilidad/soluciones-para-personas/huella-de-carbono-personas/repositorio/ducharse-a-diario.html">BBVA</a>&nbsp;15.01.25</p>
+                    <p>Hvor mye koster en dysj av&nbsp;<a href="https://www.fjordkraft.no/strom/stromprat/stromforbruk/hvor-mye-koster-en-dusj/">Fjordkraft</a>&nbsp;15.01.25</p>
+                    <p>Hvor mye strøm bruker en dysj av&nbsp;<a href="https://xn--bestestrm-s8a.no/hvor-mye-str%C3%B8m-bruker-en-dusj/">bestestrøm.no</a>&nbsp;15.01.25</p>
+                    <p>Hva koster en dusj?&nbsp;<a href="https://www.strompriser.no/artikler/hva-koster-det-a-dusje">Strompriser.no</a>&nbsp;15.01.25</p>
+                    <p>Historiske Strømpriser av&nbsp;<a href="https://www.fortum.com/no/strom/strompriser/historiske-strompriser">Fortum</a>&nbsp;15.01.25</p>
                 </div>
-
+                <p>Hvor mye utslipp har bilden din for hver km den kjører?</p>
+                <canvas id="myChart3"></canvas>
                 <div id="sk3Felt">
                     <p>bil</p>
                     <p>Car number and mileage up av&nbsp;<a href="https://www.ssb.no/en/transport-og-reiseliv/artikler-og-publikasjoner/car-numbers-and-mileage-up">Statistisk sentralbyrå</a>&nbsp;13.01.25</p>
-                    <p>Hvor mye drivhusgass slippes ut når vi kjører av&nbsp;<a href="https://www.om-verden.com/hvor-mye-drivhusgass-slippes-ut-na-vi-kjorer-bil/" Brita Helleborg</a>&nbsp;13.01.25</p>
-                    <p>Greenhouse gass emissions from a typical passanger vehicle av&nbsp;<a href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle">EPA</a>&nbsp;</p>
+                    <p>Hvor mye drivhusgass slippes ut når vi kjører av&nbsp;<a href="https://www.om-verden.com/hvor-mye-drivhusgass-slippes-ut-na-vi-kjorer-bil/"> Brita Helleborg</a>&nbsp;13.01.25</p>
+                    <p>Greenhouse gass emissions from a typical passanger vehicle av&nbsp;<a href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle">EPA</a>&nbsp;13.01.25</p>
                 </div>
 
+                <p>Hvor mye Co2 utslipp produseres for hver kg av forskjellige type kjøtt?</p>
+                <canvas id="myChart5"></canvas>
                 <div id="sk4Felt">
                     <p>kjøtt</p>
-                    <p>&nbsp;<a href=""></a>&nbsp;</p>
+                    <p>Average greenhouse gas emissions of major food products worldwide av&nbsp;<a href="https://www.statista.com/statistics/1201677/greenhouse-gas-emissions-of-major-food-products/">statista</a>&nbsp;15.01.25</p>
+                    <p>Meat: What kind and how mutch to use av&nbsp;<a href="https://www.healthyforlifemeals.com/blog/how-much-meat-should-i-eat">HealthyForLife</a>&nbsp;15.01.25</p>
                 </div>
             </div>
-            <p>Viste du at for hver 5 min i dysjen betaler du rundt 4kr? Hvis du bruker en halvtime i dysjen, 4dager i uken, så vil du måtte betale rundt 80kr. kilde Fjordkraft</p>
+            <!-- <p>Viste du at for hver 5 min i dysjen betaler du rundt 4kr? Hvis du bruker en halvtime i dysjen, 4dager i uken, så vil du måtte betale rundt 80kr. kilde Fjordkraft</p>
             <p>
                 For at en elbil skal være mer milijøvenelig enn fosilbilen må du kjøre med den ca 18 000-20 000km, dette vil ta deg rundt 2 år å gjøre. Husk at bare fordi det nye alternativet 
                 er mer milijøveneligt så betyr det ikke at du ikke skal bruke det du allerede har, ofte er det det beste valget. 
             </p>
             <p>Hvis du ikke skal for langt, vuder å ta deg en gåtur! bra for deg og for naturen :D</p>
-            <p>En kg med kylling skaper rundt 10kg Co2 utslipp. En kg med storfe vil derimot skape 99kg Co2 utslipp. Tenk på hva du spiser.</p>
+            <p>En kg med kylling skaper rundt 10kg Co2 utslipp. En kg med storfe vil derimot skape 99kg Co2 utslipp. Tenk på hva du spiser.</p> -->
         </div>
 
-        <div class="bunn">
 
-            <p id="Co22Utslipp"></p>
-            <p>&nbsp; Kg Co2 utslipp fra bilen din</p>
-            <p id="Co2UtslippUke"></p>
-            <p>&nbsp; Kg Co2 utslipp per uke</p>
-            <p id="Co2PerAr"></p>
-            <p>&nbsp; Kg Co2 utslipp per år</p>
-
-            <div id="bildePanda">
-                <img width="200px" src="/bilder/dyrSomVeierForskjellig/70-120.jpg" alt="panda">
-                <p class="underBildeTekst">Bilde og vekt fra Store Norske Leksikon</p>
-            </div>
-
-            <figure id="bildeBjorn">
-                <img width="200px" src="/bilder/dyrSomVeierForskjellig/120-500.jpg" alt="Svartbjørn">
-                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-            </figure>
-
-            <figure id="bildeElg">
-                <img src="/bilder/dyrSomVeierForskjellig/200-700.jpeg" alt="elg">
-                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-            </figure>
-
-            <figure id="bildeKrokodille">
-                <img src="/bilder/dyrSomVeierForskjellig/200-1100.jpg" alt="saltvann krokodille">
-                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-            </figure>
-
-            <figure id="bildeHval">
-                <img src="/bilder/dyrSomVeierForskjellig/1100-1600.jpeg" alt="hvithval">
-                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-            </figure>
-
-            <figure id="bildeFlodhest">
-                <img src="/bilder/dyrSomVeierForskjellig/1300-4500.jpeg" alt="flodhest">
-                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-            </figure>
-
-            <figure id="bildeElefant">
-                <img src="/bilder/dyrSomVeierForskjellig/2300-6300.jpeg" alt="elefant">
-                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-            </figure>
-
-            <figure id="bildeDinosaur">
-                <img src="/bilder/dyrSomVeierForskjellig/-8000.jpeg" alt="dinosaur">
-                <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
-            </figure>
-                
-            <p id="over8000"></p>
-        </div>
         <div class="bunn2">
             <p id="tipsForBoss">boss</p>
             <p id="tipsForDusj">dusj</p>
