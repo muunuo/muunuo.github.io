@@ -755,7 +755,7 @@ new Chart(ctx, {
 function diagram2() {
     
     const ctx = document.getElementById('myChart2');
-
+    var linjeColors = ["rgb(63, 93, 64)"]
     
     new Chart(ctx, {
         type: 'line',// takk felix for hjelpen
@@ -765,7 +765,8 @@ function diagram2() {
                 label: '10 min i dysjen koster kr',
                 data: [5.93, 4.45, 4.40, 4.06, 2.73, 2.77, 2.23, 1.64, 1.87, 2.85, 3.76, 4.14],
                 
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: linjeColors,
             }]
         },
         options: {
@@ -784,7 +785,7 @@ function diagram2() {
     function diagram3() {
     
         const ctx = document.getElementById('myChart3');
-        // var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)"]
+        var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)"]
 
         new Chart(ctx, {
             type: 'bar',
@@ -793,8 +794,8 @@ function diagram2() {
                 datasets: [{
                     label: 'Kg Co2 per Km',
                     data: [0.14, 0.16, 0.13, 0.05, 0],
-                    borderWidth: 1
-                    // backgroundColor: barColors2,
+                    borderWidth: 1,
+                    backgroundColor: barColors2,
                 }]
             },
             options: {
@@ -810,7 +811,7 @@ function diagram2() {
         function diagram5() {
     
             const ctx = document.getElementById('myChart5');
-            // var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)"]
+            var polarColors = ["rgb(228, 152, 158)","rgb(142, 184, 229)","rgb(144, 227, 154)","rgb(147, 116, 191)"]
     
             new Chart(ctx, {
                 type: 'polarArea',
@@ -819,8 +820,8 @@ function diagram2() {
                     datasets: [{
                         label: 'Kg Co2 per 1kg kjøtt',
                         data: [66.39, 39.72, 12.31, 4.67 ],
-                        borderWidth: 1
-                        // backgroundColor: barColors2,
+                        borderWidth: 1,
+                        backgroundColor: polarColors,
                     }]
                 },
                 options: {
