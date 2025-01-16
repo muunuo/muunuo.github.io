@@ -124,11 +124,12 @@ leverSvaret = false;
 
 // diagram()
 diagram2()
-diagram3()
+diagram35()
 diagram5()
 diagram()
 
 myChart1.style.display="none"
+myChart3.style.display="none"
 
 
 Co2 = 0;
@@ -464,6 +465,9 @@ function knappLever() {
     lever4(); // da ser de hva sp4sa1 er
     kmKjort = sp4sa1.value;// instrukser må gis på ny
 
+    kjortPerAr = (kmKjort*52)*52.2
+    console.log(kjortPerAr)
+
     if (svarteDu > 0 && kmKjort > 0 ) { // bruker må ha gitt et svar høyere enn 0 for å levere
         familie.style.backgroundColor="white";
         sp4alternativ.style.backgroundColor="white";
@@ -471,6 +475,8 @@ function knappLever() {
 
         myChart1.style.display="block";
         myChart.style.display="none";
+        myChart3.style.display="block";
+        myChart35.style.display="none";
     
         document.getElementById("familie").disabled= true;
         document.getElementById("sp4alternativ").disabled= true;
@@ -496,6 +502,7 @@ function knappLever() {
         dittBossIAret.value;
     
         diagram1();
+        diagram3();
     
         document.getElementById("Co2UtslippUke").innerHTML = Co2.toFixed(2);// kun to desimaler
         document.getElementById("Co22Utslipp").innerHTML = Co22.toFixed(2);
@@ -504,12 +511,14 @@ function knappLever() {
     
     }else{
 
-        if (svarteDu < 1) {
+        if (svarteDu < 1 && kmKjort <1) {// hvis begge mangler svar blir begge rød
             familie.style.backgroundColor="red"
-            // kun rødt hvis den ikke ble svart
+            sp4alternativ.style.backgroundColor="red"
         } else if  (kmKjort <1) {
             sp4alternativ.style.backgroundColor="red"
-        }
+        } else if (svarteDu < 1) {
+            familie.style.backgroundColor="red"}
+            // kun rødt hvis den ikke ble svart
         leverSvar.style.backgroundColor="red"
         // rød uansett hva som ikke er svart
     }
@@ -807,15 +816,15 @@ function diagram2() {
     function diagram3() {
     
         const ctx = document.getElementById('myChart3');
-        var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)"]
+        var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(51, 102, 153)"]
 
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Bensin', 'Disel', 'Hybrid', 'Eletrisk'],
+                labels: ['Norge', 'Canada', 'Amerika', 'Deg'],
                 datasets: [{
                     label: 'Kg Co2 per Km',
-                    data: [0.14, 0.16, 0.13, 0.05, 0],
+                    data: [11274, 15200, 21721.5, kjortPerAr],
                     borderWidth: 1,
                     backgroundColor: barColors2,
                 }]
@@ -830,10 +839,36 @@ function diagram2() {
         });
         }
 
+        function diagram35() {
+    
+            const ctx = document.getElementById('myChart35');
+            var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(51, 102, 153)"]
+    
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Norge', 'Canada', 'Amerika', 'Deg'],
+                    datasets: [{
+                        label: 'Kg Co2 per Km',
+                        data: [11274, 15200, 21721.5, 0],
+                        borderWidth: 1,
+                        backgroundColor: barColors2,
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            }
+
         function diagram5() {
     
             const ctx = document.getElementById('myChart5');
-            var polarColors = ["rgb(228, 152, 158)","rgb(142, 184, 229)","rgb(144, 227, 154)","rgb(147, 116, 191)"]
+            var polarColors = ["rgb(228, 152, 158)","rgb(142, 184, 229)","rgb(144, 227, 154)","rgb(177, 116, 191)"]
     
             new Chart(ctx, {
                 type: 'polarArea',

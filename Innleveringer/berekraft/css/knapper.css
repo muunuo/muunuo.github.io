@@ -9,7 +9,12 @@
     align-items: center;
     justify-content: space-evenly;
     display: flex;
-    
+}
+
+.tekstOgTall{
+    display: flex;
+    justify-content: baseline;
+    align-items: first baseline;
 }
 
 #sp2alternativ1,#sp2alternativ2,#sp2alternativ3,#sp2alternativ4{
@@ -37,7 +42,7 @@
     border-radius: 0.5rem;
 }
 
-#funFact1{
+.funFact{
     background-color: #407551;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -59,4 +64,12 @@
 
 .bunn2{
     background-color: #88c171;
+}
+
+.dusjeFakta{
+    background-color: #407551;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+
 }

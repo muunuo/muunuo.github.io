@@ -27,10 +27,10 @@
         </div>
 
         <div class="hoved">
-            <ul>
+
                 <p>Hvor mange personer bor du sammen med?</p>
                 <input id="familie" type="number">
-            </ul>
+
             
             <p id="sporsmol1">1. Hvor mange handleposer med ikke resirkulerbart boss kaster du på en uke?</p>
             <div class="alternativ">
@@ -40,10 +40,8 @@
                 <p id="sp1alternativ4">d. 2-5poser </p>
             </div>
                 <!-- <p id="merInfo">Hviste du at...</p> -->
-                <!-- <p id="funFact1"> -->
-                <p>
-                    de fleste nordmenn kaster rundt 375kg boss hvert år. Det er over 100kg mer en en hjort veier.                        
-                    Det betyr at et hushold på to kaster rundt vekten av en elg på et år.
+                <p class="funFact">
+                    En liten elg kan veie 375 Kg, det er like mange kg som mengden boss vi i norge kaster som gjennomsnitt per person. 170 av dette kan resirkuleres, eller en stor panda verdt. Men det betyr fortsatt at 205 kg, altså en svart bjørn ender opp i landfyller. 
                 </p>
             
 
@@ -53,6 +51,11 @@
                 <p id="sp2alternativ2">b. 5-15min </p>
                 <p id="sp2alternativ3">c. 15-30min </p>
                 <p id="sp2alternativ4">d. &lt;30min </p><!--&lt; = < -->
+            </div>
+            <div class="dusjeFakta">
+                <p>Hvis familien din hadde dysjet like lenge som du gjør ville dere måtte betalt</p>
+                <p id="dusjPenger">x</p>
+                <p>kr på å dysje hvert år.</p>
             </div>
 
             
@@ -70,6 +73,7 @@
             
                 <p id="sporsmol4">3.5. Hvor mange timer kjører du i løpet av en uke?</p>
                 <input id="sp4alternativ" type="number">
+                <p class="funFact">trenger ikke lange tingen for å fylle plassen her, </p>
                     
                 <p id="sporsmol5">4. Hvor mange dager i løpet av en uke spiser du kjøtt?</p>
                 <div class="alternativ">
@@ -78,17 +82,24 @@
                 <p id="sp5alternativ3">c. få (1-3) </p>
                 <p id="sp5alternativ4">d. ingen (0) </p>
             </div>
+            <p class="funFact">her må jeg egentlig skrive en del, men finner nok en måte å juke det så jeg slipper å skrive alt for mye. </p>
             
             <button id="leverSvar">lever</button>
 
             <div class="dyrOgUtslipp">
 
-                <p id="Co22Utslipp"></p>
-                <p>&nbsp; Kg Co2 utslipp fra bilen din</p>
-                <p id="Co2UtslippUke"></p>
-                <p>&nbsp; Kg Co2 utslipp per uke</p>
-                <p id="Co2PerAr"></p>
-                <p>&nbsp; Kg Co2 utslipp per år</p>
+                <div class="tekstOgTall">
+                    <p id="Co22Utslipp"></p>
+                    <p> &nbsp; Kg Co2 utslipp fra bilen din</p>
+                </div>
+                    <div class="tekstOgTall">
+                    <p id="Co2UtslippUke"></p>
+                    <p>&nbsp; Kg Co2 utslipp per uke</p>
+                </div>
+                <div class="tekstOgTall">
+                    <p id="Co2PerAr"></p>
+                    <p>&nbsp; Kg Co2 utslipp per år</p>
+                </div>
     
                 <div id="bildePanda">
                     <img width="200px" src="/bilder/dyrSomVeierForskjellig/70-120.jpg" alt="panda">
@@ -165,11 +176,15 @@
                 </div>
                 <p>Hvor mye utslipp har bilden din for hver km den kjører?</p>
                 <canvas id="myChart3"></canvas>
+                <canvas id="myChart35"></canvas>
                 <div id="sk3Felt">
                     <p>bil</p>
                     <p>Car number and mileage up av&nbsp;<a href="https://www.ssb.no/en/transport-og-reiseliv/artikler-og-publikasjoner/car-numbers-and-mileage-up">Statistisk sentralbyrå</a>&nbsp;13.01.25</p>
                     <p>Hvor mye drivhusgass slippes ut når vi kjører av&nbsp;<a href="https://www.om-verden.com/hvor-mye-drivhusgass-slippes-ut-na-vi-kjorer-bil/"> Brita Helleborg</a>&nbsp;13.01.25</p>
                     <p>Greenhouse gass emissions from a typical passanger vehicle av&nbsp;<a href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle">EPA</a>&nbsp;13.01.25</p>
+                    <p>Hvor mye bil kjører nordmenn av&nbsp;<a href="https://www.ssb.no/transport-og-reiseliv/landtransport/statistikk/kjorelengder/artikler/hvor-mye-bil-kj%C3%B8rer-nordmenn">Statistisk sentralbyrå</a>&nbsp; 16.01.25</p>
+                    <p>Average Miles Driven Per Year by State: Why You Should Care av&nbsp;<a href="https://www.trustedchoice.com/insurance-articles/wheels-wings-motors/average-miles-driven-per-year/">Trusted Choice</a>&nbsp; 16.01.25</p>
+                    
                 </div>
 
                 <p>Hvor mye Co2 utslipp produseres for hver kg av forskjellige type kjøtt?</p>
@@ -180,13 +195,6 @@
                     <p>Meat: What kind and how mutch to use av&nbsp;<a href="https://www.healthyforlifemeals.com/blog/how-much-meat-should-i-eat">HealthyForLife</a>&nbsp;15.01.25</p>
                 </div>
             </div>
-            <!-- <p>Viste du at for hver 5 min i dysjen betaler du rundt 4kr? Hvis du bruker en halvtime i dysjen, 4dager i uken, så vil du måtte betale rundt 80kr. kilde Fjordkraft</p>
-            <p>
-                For at en elbil skal være mer milijøvenelig enn fosilbilen må du kjøre med den ca 18 000-20 000km, dette vil ta deg rundt 2 år å gjøre. Husk at bare fordi det nye alternativet 
-                er mer milijøveneligt så betyr det ikke at du ikke skal bruke det du allerede har, ofte er det det beste valget. 
-            </p>
-            <p>Hvis du ikke skal for langt, vuder å ta deg en gåtur! bra for deg og for naturen :D</p>
-            <p>En kg med kylling skaper rundt 10kg Co2 utslipp. En kg med storfe vil derimot skape 99kg Co2 utslipp. Tenk på hva du spiser.</p> -->
         </div>
 
 
