@@ -1,4 +1,6 @@
 // her er koden for quizen
+let fam = document.getElementById("familie");
+
 let sp1 = document.getElementById("sporsmol1"); // spørsmål
 let sp1sa1 = document.getElementById("sp1alternativ1"); // svaralternativ
 let sp1sa2 = document.getElementById("sp1alternativ2");
@@ -46,7 +48,7 @@ let dusj = document.getElementById("tipsForDusj");
 let bil = document.getElementById("tipsForBil");
 let kjott = document.getElementById("tipsForKjott");
 
-
+// <1
 
 bildePanda.style.display="none"; // bilder av
 bildeBjorn.style.display="none";
@@ -134,6 +136,8 @@ Co22 = 0;
 perAr = 0;
 poser = 0;
 bilUtslipp = 0;
+famMedlemer = 0;
+svarteDu = 0;
 
 
 document.getElementById("Co2UtslippUke").innerHTML =Co2;
@@ -275,14 +279,11 @@ if (TogFsp3sa5 == false) {
 
 
 function TogFsporsmol4() {
-if (TogFsp4sa1 == false) {
-    sp4sa1.style.backgroundColor = "#3f5d3f";
-} else {
-    sp4sa1.style.backgroundColor = "#336699";
+if (TogFsp4sa1 == true) {
     TogFsp4sa2 = false;
     TogFsp4sa3 = false;
     TogFsp4sa4 = false;
-}
+} 
 }
 
 
@@ -340,7 +341,7 @@ function Co2Utslipp() {
 
 function bilde() {
     if (perAr<70) {//hvis perAr er mindre enn 70
-        console.log("feil")
+        console.log("under 70")
     } else if (perAr<120) {
         bildePanda.style.display="block";
     } else if (perAr<400) {
@@ -358,7 +359,7 @@ function bilde() {
     } else if (perAr<8000) {
         bildeDinosaur.style.display="block";
     } else {
-        console.log("høyt")
+        console.log("over 8000")
     } 
     
 }
@@ -426,16 +427,15 @@ function lever3() {
 }
 
 function lever4() {
-    document.getElementById("sp4alternativ").disabled= true;
+    
 
-    if (TogFsp4sa1) {
-        let kmKjort = sp4sa1.value;
-        
-        Co22 = bilUtslipp * (kmKjort*52);// 52km per time* timer kjørt* utslipp per time= co2 fra bil
-        Co2 = Co2+Co22;
-        console.log(Co22);
-        console.log(Co2);
-    }
+    let kmKjort = sp4sa1.value;
+
+    Co22 = bilUtslipp * (kmKjort*52);// 52km per time* timer kjørt* utslipp per time= co2 fra bil
+    Co2 = Co2+Co22;
+    console.log("Co22",Co22);
+    console.log("Co2",Co2);
+    
     Co2Utslipp();
 }
 
@@ -458,40 +458,62 @@ function lever5() {
 }
 
 
-function knappLever() {
-    myChart1.style.display="block"
-    myChart.style.display="none"
 
-    document.getElementById("leverSvar").disabled= true;
+function knappLever() {
+    svarteDu = svarteDu+fam.value;
+    lever4(); // da ser de hva sp4sa1 er
+    kmKjort = sp4sa1.value;// instrukser må gis på ny
+
+    if (svarteDu > 0 && kmKjort > 0 ) { // bruker må ha gitt et svar høyere enn 0 for å levere
+        familie.style.backgroundColor="white";
+        sp4alternativ.style.backgroundColor="white";
+        leverSvar.style.backgroundColor="white";
+
+        myChart1.style.display="block";
+        myChart.style.display="none";
+    
+        document.getElementById("familie").disabled= true;
+        document.getElementById("sp4alternativ").disabled= true;
+        document.getElementById("leverSvar").disabled= true;
+    
+        lever1();
+        lever2();
+        lever3();
+        lever4();
+        lever5();
+    
+        Co2Utslipp();
+    
+        perAr = Co2*52.2;
+    
+        bilde();
+    
+        famMedlemer = fam.value; // no vet jeg hvor mange det er i familien deres
+        bossEnPerson = poser/famMedlemer;
+    
+        dittBossIAret = bossEnPerson*52.2;
+    
+        dittBossIAret.value;
+    
+        diagram1();
+    
+        document.getElementById("Co2UtslippUke").innerHTML = Co2.toFixed(2);// kun to desimaler
+        document.getElementById("Co22Utslipp").innerHTML = Co22.toFixed(2);
+        document.getElementById("Co2PerAr").innerHTML = perAr.toFixed(2);
 
     
-    lever1();
-    lever2();
-    lever3();
-    lever4();
-    lever5();
+    }else{
 
-    Co2Utslipp();
+        if (svarteDu < 1) {
+            familie.style.backgroundColor="red"
+            // kun rødt hvis den ikke ble svart
+        } else if  (kmKjort <1) {
+            sp4alternativ.style.backgroundColor="red"
+        }
+        leverSvar.style.backgroundColor="red"
+        // rød uansett hva som ikke er svart
+    }
 
-    perAr = Co2*52.2;
-    console.log(Co2, perAr)
-
-    bilde();
-
-
-bossAr = 0
-
-poser = poser*52.2
-
-poser.value;
-
-diagram1()
-
-
-
-    document.getElementById("Co2UtslippUke").innerHTML = Co2.toFixed(2);// kun to desimaler
-    document.getElementById("Co22Utslipp").innerHTML = Co22.toFixed(2);
-    document.getElementById("Co2PerAr").innerHTML = perAr.toFixed(2);
 }
 
 
@@ -735,7 +757,7 @@ new Chart(ctx, {
         labels: ['Norge', 'Amerika', 'Kina', 'Canada', 'Verden', 'Du'],
         datasets: [{
             label: 'Kg boss i gjennomsnitt per år',
-            data: [205, 810, 405, 510, 270, poser],
+            data: [205, 810, 405, 510, 270, dittBossIAret],
             borderWidth: 1,
             backgroundColor: barColors,
             

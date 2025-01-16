@@ -1,30 +1,30 @@
-let FF1 = document.getElementById("funFact1");
-let info = document.getElementById("merInfo");
+// let FF1 = document.getElementById("funFact1");
+// let info = document.getElementById("merInfo");
 
 
-info.addEventListener("click", knappInfo);
+// info.addEventListener("click", knappInfo);
 
-TogFff1 = false;
+// TogFff1 = false;
 
-funksjon()
+// funksjon()
 
-function funksjon() {
+// function funksjon() {
 
-    if (TogFff1==false) {// ff=fun fact
-        FF1.style.display="none";
-    } else {
-        FF1.style.display="block";
-    }
-}
+//     if (TogFff1==false) {// ff=fun fact
+//         FF1.style.display="none";
+//     } else {
+//         FF1.style.display="block";
+//     }
+// }
 
-function knappInfo() {
-    if (TogFff1==false) {
-        TogFff1 = true;
-    } else {
-        TogFff1 = false;
-    }
-    funksjon();
-}
+// function knappInfo() {
+//     if (TogFff1==false) {
+//         TogFff1 = true;
+//     } else {
+//         TogFff1 = false;
+//     }
+//     funksjon();
+// }
 
 
 
