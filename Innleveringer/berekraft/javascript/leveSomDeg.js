@@ -48,6 +48,8 @@ let dusj = document.getElementById("tipsForDusj");
 let bil = document.getElementById("tipsForBil");
 let kjott = document.getElementById("tipsForKjott");
 
+let DP = document.getElementById("dusjPenger");
+
 // <1
 
 bildePanda.style.display="none"; // bilder av
@@ -59,10 +61,10 @@ bildeDinosaur.style.display="none";
 bildeKrokodille.style.display="none";
 bildeFlodhest.style.display="none";
 
-boss.style.display="none"
-dusj.style.display="none"
-bil.style.display="none"
-kjott.style.display="none"
+boss.style.display="none";
+dusj.style.display="none";
+bil.style.display="none";
+kjott.style.display="none";
 
 // for og while løkker er en ting du burde bruke mer
 
@@ -122,14 +124,14 @@ TogFsp5sa4 = false;
 leverSvaret = false;
 
 
-// diagram()
-diagram2()
-diagram35()
-diagram5()
-diagram()
 
-myChart1.style.display="none"
-myChart3.style.display="none"
+
+diagram35();
+
+diagram();
+
+myChart1.style.display="none";
+myChart3.style.display="none";
 
 
 Co2 = 0;
@@ -139,11 +141,17 @@ poser = 0;
 bilUtslipp = 0;
 famMedlemer = 0;
 svarteDu = 0;
+tid = 0;
+penger = 0;
+pengerFamilieDusj = 0;
+dusjPengerAr = 0;
 
 
 document.getElementById("Co2UtslippUke").innerHTML =Co2;
 document.getElementById("Co22Utslipp").innerHTML =Co22;
 document.getElementById("Co2PerAr").innerHTML =perAr;
+document.getElementById("dusjPenger").innerHTML = "I løpet av et år bruker du &nbsp;" + dusjPengerAr + " &nbsp; kr på å dysje og";
+document.getElementById("dusjPengerFam").innerHTML = "familien din bruker &nbsp;" + pengerFamilieDusj + " &nbsp; kr hvis de alle dusjer som deg.";
 
 
 
@@ -360,7 +368,7 @@ function bilde() {
     } else if (perAr<8000) {
         bildeDinosaur.style.display="block";
     } else {
-        console.log("over 8000")
+        console.log("over 8000");
     } 
     
 }
@@ -372,18 +380,17 @@ function lever1() {
     sp1sa4.removeEventListener("click", knappSp1sa4);
 
     if (TogFsp1sa1==true) {
-        Co2 = Co2+0.61
-        poser = poser+1.75
+        Co2 = Co2+0.61;
+        poser = poser+1.75;
     } else if (TogFsp1sa2==true) {
-        Co2 = Co2+1.84
-        poser = poser+2.63
+        Co2 = Co2+1.84;
+        poser = poser+2.63;
     }else if (TogFsp1sa3==true) {
-        Co2 = Co2+3.68
-        poser = poser+5.25
+        Co2 = Co2+3.68;
+        poser = poser+5.25;
     }else if (TogFsp1sa4==true) {
-        Co2 = Co2+8.58
-        poser = poser+12.25
-        
+        Co2 = Co2+8.58;
+        poser = poser+12.25;
     }
     Co2Utslipp();
 }
@@ -395,13 +402,17 @@ function lever2() {
     sp2sa4.removeEventListener("click", knappSp2sa4);
 
     if (TogFsp2sa1==true) {
-        Co2 = Co2+ 3;
+        Co2 = Co2+ 3;// kg Co2 utslipp fra den tiden i dysjen
+        penger = 0.8;
     } else if (TogFsp2sa2==true) {
         Co2 = Co2+ 5.9;
+        penger = 3.2;
     }else if (TogFsp2sa3==true) {
         Co2 = Co2+ 11.8;
+        penger = 7.2;
     }else if (TogFsp2sa4==true) {
         Co2 = Co2+ 23.6;
+        penger = 14.4;
     }
     Co2Utslipp();
 }
@@ -463,10 +474,9 @@ function lever5() {
 function knappLever() {
     svarteDu = svarteDu+fam.value;
     lever4(); // da ser de hva sp4sa1 er
+    lever2()
     kmKjort = sp4sa1.value;// instrukser må gis på ny
-
-    kjortPerAr = (kmKjort*52)*52.2
-    console.log(kjortPerAr)
+    console.log("dusj",pengerFamilieDusj)
 
     if (svarteDu > 0 && kmKjort > 0 ) { // bruker må ha gitt et svar høyere enn 0 for å levere
         familie.style.backgroundColor="white";
@@ -500,6 +510,13 @@ function knappLever() {
         dittBossIAret = bossEnPerson*52.2;
     
         dittBossIAret.value;
+
+            kjortPerAr = (kmKjort*52)*52.2;
+        ukePenger = penger*5
+        dusjPengerAr = ukePenger*52.2
+        console.log("dusj",dusjPengerAr)
+
+        pengerFamilieDusj = dusjPengerAr*famMedlemer
     
         diagram1();
         diagram3();
@@ -507,20 +524,21 @@ function knappLever() {
         document.getElementById("Co2UtslippUke").innerHTML = Co2.toFixed(2);// kun to desimaler
         document.getElementById("Co22Utslipp").innerHTML = Co22.toFixed(2);
         document.getElementById("Co2PerAr").innerHTML = perAr.toFixed(2);
-
+        document.getElementById("dusjPenger").innerHTML =dusjPengerAr;
+        document.getElementById("dusjPengerFam").innerHTML =pengerFamilieDusj;
+    
     
     }else{
 
         if (svarteDu < 1 && kmKjort <1) {// hvis begge mangler svar blir begge rød
-            familie.style.backgroundColor="red"
-            sp4alternativ.style.backgroundColor="red"
+            familie.style.backgroundColor="red";
+            sp4alternativ.style.backgroundColor="red";
         } else if  (kmKjort <1) {
-            sp4alternativ.style.backgroundColor="red"
+            sp4alternativ.style.backgroundColor="red";// kun den som mangler blir rødt
         } else if (svarteDu < 1) {
-            familie.style.backgroundColor="red"}
-            // kun rødt hvis den ikke ble svart
-        leverSvar.style.backgroundColor="red"
-        // rød uansett hva som ikke er svart
+            familie.style.backgroundColor="red"};
+
+        leverSvar.style.backgroundColor="red"; //knapp er rød uansett
     }
 
 }
@@ -571,7 +589,6 @@ function knappSp2sa1() {
     } else {
         TogFsp2sa1 = false;
     }
-
     Co2Utslipp();
 }
 function knappSp2sa2() {
@@ -610,7 +627,6 @@ function knappSp3sa1() {
     } else {
         TogFsp3sa1 = false;
     }
-
     Co2Utslipp();
 }
 function knappSp3sa2() {
@@ -656,7 +672,6 @@ function knappSp4sa1() {
     if (TogFsp4sa1 == false) {
         TogFsp4sa1 = true;
     } 
-
     Co2Utslipp();
 }
 function knappSp4sa2() {
@@ -695,7 +710,6 @@ function knappSp5sa1() {
     } else {
         TogFsp5sa1 = false;
     }
-
     Co2Utslipp();
 }
 function knappSp5sa2() {
@@ -723,15 +737,13 @@ function knappSp5sa4() {
         TogFsp5sa4 = false;
     }
     Co2Utslipp();
-}                         
-
-
-// boss.toFixed(1)
+}                        
 
 function diagram() {
-    
     const ctx = document.getElementById('myChart');
-    var barColors = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)", "rgb(51, 102, 153)"]
+
+    var barColors = ["#b5e2fa","#eddea4","#f7a072","#ffa5ab","#51d493", "rgb(203, 42, 42)"]
+
     
     new Chart(ctx, {
         type: 'bar',
@@ -742,7 +754,6 @@ function diagram() {
                 data: [205, 810, 405, 510, 270],
                 borderWidth: 1,
                 backgroundColor: barColors,
-                
             }]
         },
         options: {
@@ -758,7 +769,7 @@ function diagram() {
 function diagram1() {
     
 const ctx = document.getElementById('myChart1');
-var barColors = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)", "rgb(51, 102, 153)"]
+var barColors = ["#b5e2fa","#eddea4","#f7a072","#ffa5ab","#51d493", "#a25ed5"]
 
 new Chart(ctx, {
     type: 'bar',
@@ -783,32 +794,7 @@ new Chart(ctx, {
 }
 
 
-function diagram2() {
-    
-    const ctx = document.getElementById('myChart2');
-    var linjeColors = ["rgb(63, 93, 64)"]
-    
-    new Chart(ctx, {
-        type: 'line',// takk felix for hjelpen
-        data: {
-            labels: ['Januar', 'Februar', 'Mars', 'April', 'Mai', 'Juni', 'July', 'Agust', 'September', 'Oktober', 'November', 'Desember'],
-            datasets: [{
-                label: '10 min i dysjen koster kr',
-                data: [5.93, 4.45, 4.40, 4.06, 2.73, 2.77, 2.23, 1.64, 1.87, 2.85, 3.76, 4.14],
-                
-                borderWidth: 1,
-                backgroundColor: linjeColors,
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-    }
+
 
 
 
@@ -816,7 +802,7 @@ function diagram2() {
     function diagram3() {
     
         const ctx = document.getElementById('myChart3');
-        var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(51, 102, 153)"]
+        var barColors2 = ["#b5e2fa","#eddea4","#ffa5ab", "#a25ed5"]
 
         new Chart(ctx, {
             type: 'bar',
@@ -824,7 +810,7 @@ function diagram2() {
                 labels: ['Norge', 'Canada', 'Amerika', 'Deg'],
                 datasets: [{
                     label: 'Kg Co2 per Km',
-                    data: [11274, 15200, 21721.5, kjortPerAr],
+                    data: [11274, 21721.5, 15200, kjortPerAr],
                     borderWidth: 1,
                     backgroundColor: barColors2,
                 }]
@@ -842,15 +828,15 @@ function diagram2() {
         function diagram35() {
     
             const ctx = document.getElementById('myChart35');
-            var barColors2 = ["rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(63, 93, 64)","rgb(51, 102, 153)"]
+            var barColors2 = ["#b5e2fa","#eddea4","#ffa5ab", "#a25ed5"]
     
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Norge', 'Canada', 'Amerika', 'Deg'],
+                    labels: ['Norge', 'Amerika', 'Canada', 'Deg'],
                     datasets: [{
                         label: 'Kg Co2 per Km',
-                        data: [11274, 15200, 21721.5, 0],
+                        data: [11274, 21721.5, 15200, 0],
                         borderWidth: 1,
                         backgroundColor: barColors2,
                     }]
@@ -864,30 +850,3 @@ function diagram2() {
                 }
             });
             }
-
-        function diagram5() {
-    
-            const ctx = document.getElementById('myChart5');
-            var polarColors = ["rgb(228, 152, 158)","rgb(142, 184, 229)","rgb(144, 227, 154)","rgb(177, 116, 191)"]
-    
-            new Chart(ctx, {
-                type: 'polarArea',
-                data: {
-                    labels: ['Ku', 'Sau', 'Gris', 'Kylling'],
-                    datasets: [{
-                        label: 'Kg Co2 per 1kg kjøtt',
-                        data: [66.39, 39.72, 12.31, 4.67 ],
-                        borderWidth: 1,
-                        backgroundColor: polarColors,
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-            }
-

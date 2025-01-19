@@ -1,11 +1,13 @@
 
 body{
-    color: #d6f0df;/* farge all tekst */
+    /* color: #d6f0df */
+    /* farge all tekst */
+    background-color: #406975;
     
 }
 
 .tittel { 
-    color: #d6f0df;
+    /* color: #d6f0df; */
     height: 5rem;
 
     display: flex;
@@ -14,7 +16,7 @@ body{
 }
     
 #java, #kode{ 
-    background-color: #6c8f79;
+    /* background-color: #E6B89C; */
     border-radius: 1rem;
 }
 nav{
@@ -49,18 +51,18 @@ nav li a:hover{
 
 
 .hoved{
-    background-color: #819e81;
+    /* background-color: #d5ecd9; */
     color: #1b2b2e;
     padding: 1rem;
-    border: solid 2rem #304530;
+    /* border: solid 2rem #699b7a; */
     padding-left: 1rem;
 }
 
 .side{
-    background-color: #819e81;
+    /* background-color: #d5ecd9; */
     color: #1b2b2e;
     padding: 1rem;
-    border: solid 2rem #304530;
+    /* border: solid 2rem #699b7a; */
     padding-left: 1rem;
 }
 
@@ -69,10 +71,33 @@ nav li a:hover{
 
     justify-content: center;
     align-items: center;
-
 }
 
-body{
-    background-color: #304530;
+#svartHvit{
+    background-color: #ffffff;
+    border: 0.2rem solid #000000;
+    color: #000000;
+    width: 140px;
+    padding-left: 1rem;
 }
 
+#vaneligFarge{
+    background-color: #407551;
+    border: 0.2rem solid #7B9E87;
+    width: 140px;
+    padding-left: 1rem;
+}
+
+#morkeModus{
+    background-color: #303030;
+    border: 0.2rem solid #181818;
+    color: #ffffff;
+    width: 140px;
+    padding-left: 1rem;
+}
+
+#velgFarge{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

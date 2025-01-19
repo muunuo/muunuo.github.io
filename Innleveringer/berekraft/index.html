@@ -11,6 +11,8 @@
     <script src="/Innleveringer/berekraft/javascript/leveSomDeg.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/Innleveringer/berekraft/javascript/kilder.js" defer></script>
+    <script src="/Innleveringer/berekraft/javascript/diagram.js" defer></script>
+    <script src="/Innleveringer/berekraft/javascript/endreFarge.js" defer></script>
 </head>
 <body>
     <div class="grid-container">
@@ -20,13 +22,18 @@
         </div>
 
         <div class="meny">
-            <nav>
+            <nav id="menyId">
                 <li id="kode"><a href="/koding.html">Portfolio</a></li>
                 <li id="java"><a href="/Javascript/index2.html">Java</a></li>
             </nav>
+            <div id="velgFarge">
+                <p id="svartHvit">svartHvit</p>
+                <p id="vaneligFarge">Vanlig</p>
+                <p id="morkeModus">MørkeModus</p>
+            </div>
         </div>
 
-        <div class="hoved">
+        <div id="hovedId" class="hoved">
 
                 <p>Hvor mange personer bor du sammen med?</p>
                 <input id="familie" type="number">
@@ -53,9 +60,8 @@
                 <p id="sp2alternativ4">d. &lt;30min </p><!--&lt; = < -->
             </div>
             <div class="dusjeFakta">
-                <p>Hvis familien din hadde dysjet like lenge som du gjør ville dere måtte betalt</p>
-                <p id="dusjPenger">x</p>
-                <p>kr på å dysje hvert år.</p>
+                <p id="dusjPenger"></p>
+                <p id="dusjPengerFam"></p>
             </div>
 
             
@@ -73,7 +79,7 @@
             
                 <p id="sporsmol4">3.5. Hvor mange timer kjører du i løpet av en uke?</p>
                 <input id="sp4alternativ" type="number">
-                <p class="funFact">trenger ikke lange tingen for å fylle plassen her, </p>
+                <p class="funFact">Det tar mellom 1-2 år med kjøring før en eletrisk bil er mer milijøvenlig en andre biler.</p>
                     
                 <p id="sporsmol5">4. Hvor mange dager i løpet av en uke spiser du kjøtt?</p>
                 <div class="alternativ">
@@ -82,7 +88,10 @@
                 <p id="sp5alternativ3">c. få (1-3) </p>
                 <p id="sp5alternativ4">d. ingen (0) </p>
             </div>
-            <p class="funFact">her må jeg egentlig skrive en del, men finner nok en måte å juke det så jeg slipper å skrive alt for mye. </p>
+            <p class="funFact">
+                For å sette Co2 utslippet til de forskjellige kjøtt typene inn i perspektiv, så produserer forskjellig kjøtt alternativer slik som tofu 3,16 kg co2 per kg tofu. 
+                Det er tre ganger mindre en kylling, som produserer minst Co2 av de froskjellige dyrene. 
+            </p>
             
             <button id="leverSvar">lever</button>
 
@@ -101,51 +110,51 @@
                     <p>&nbsp; Kg Co2 utslipp per år</p>
                 </div>
     
-                <div id="bildePanda">
+                <figure id="bildePanda">
                     <img width="200px" src="/bilder/dyrSomVeierForskjellig/70-120.jpg" alt="panda">
-                    <p class="underBildeTekst">Bilde og vekt fra Store Norske Leksikon</p>
-                </div>
+                    <figcaption class="underBildeTekst">Bilde og vekt fra <a href="https://snl.no/panda">Store Norske Leksikon</a>&nbsp; 08.01.25 </figcaption>
+                </figure>
     
                 <figure id="bildeBjorn">
                     <img width="200px" src="/bilder/dyrSomVeierForskjellig/120-500.jpg" alt="Svartbjørn">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                    <figcaption class="underBildeTekst">Bilde og vekt fra <a href="https://snl.no/svartbj%C3%B8rn">Store Norske Leksikon</a>&nbsp; 08.01.25 </figcaption>
                 </figure>
     
                 <figure id="bildeElg">
                     <img src="/bilder/dyrSomVeierForskjellig/200-700.jpeg" alt="elg">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                    <figcaption class="underBildeTekst">Bilde og vekt fra <a href="https://snl.no/moose">Store Norske Leksikon</a>&nbsp; 08.01.25</figcaption>
                 </figure>
     
                 <figure id="bildeKrokodille">
-                    <img src="/bilder/dyrSomVeierForskjellig/200-1100.jpg" alt="saltvann krokodille">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                    <img width="200px" src="/bilder/dyrSomVeierForskjellig/200-1100.jpg" alt="saltvann krokodille">
+                    <figcaption class="underBildeTekst">Bilde fra <a href="https://commons.wikimedia.org/wiki/File:Saltwater_crocodile.jpg">fvanrenterghem</a>&nbsp; 08.01.25</figcaption>
                 </figure>
     
                 <figure id="bildeHval">
                     <img src="/bilder/dyrSomVeierForskjellig/1100-1600.jpeg" alt="hvithval">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                    <figcaption class="underBildeTekst">Bilde og vekt fra <a href="https://snl.no/beluga">Store Norske Leksikon</a>&nbsp; 08.01.25</figcaption>
                 </figure>
     
                 <figure id="bildeFlodhest">
-                    <img src="/bilder/dyrSomVeierForskjellig/1300-4500.jpeg" alt="flodhest">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                    <img width="200px" src="/bilder/dyrSomVeierForskjellig/flodhest.webp" alt="flodhest">
+                    <figcaption class="underBildeTekst">Bilde fra<a href="https://commons.wikimedia.org/wiki/File:Hippo_Botswana_(6158818084).jpg">Malcolm Macgregor</a>&nbsp;19.01.25</figcaption>
                 </figure>
     
                 <figure id="bildeElefant">
                     <img src="/bilder/dyrSomVeierForskjellig/2300-6300.jpeg" alt="elefant">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                    <figcaption class="underBildeTekst">Bilde og vekt fra <a href="https://nn.wikipedia.org/wiki/Elefantfamilien">Wikipedia</a>&nbsp; 08.01.25</figcaption>
                 </figure>
     
                 <figure id="bildeDinosaur">
                     <img src="/bilder/dyrSomVeierForskjellig/-8000.jpeg" alt="dinosaur">
-                    <figcaption class="underBildeTekst">Bilde og vekt fra</figcaption>
+                    <figcaption class="underBildeTekst">Bilde og vekt fra <a href="https://snl.no/Tyrannosaurus">Store Norske Leksikon</a>&nbsp; 08.01.25</figcaption>
                 </figure>
                     
                 <p id="over8000"></p>
             </div>
         </div>  
 
-        <div class="side">
+        <div id="sideId" class="side">
 
             <p id="statistikk1Kilder">Se Kilder...</p>
             <p>Kg ikke resirkulerbart boss per innbygger per år i:</p>
@@ -153,6 +162,8 @@
                 <canvas id="myChart1"></canvas>
                 <canvas id="myChart"></canvas>
                 <div id="sk1Felt">
+                    <p>Alle diagrammer var mulig takket være<a href="https://www.chartjs.org/docs/latest/samples/other-charts/polar-area.html">Chart.js</a>og Jo Bjørner/Halvar</p>
+
                     <p>Avfall frå hushald av&nbsp;<a href="https://www.ssb.no/natur-og-miljo/avfall/statistikk/avfall-fra-hushalda">Statistisk sentralbyrå&nbsp;</a>06.01.25</p>
                     <p>Trash in America av&nbsp;<a href="https://environmentamerica.org/center/resources/trash-in-america-2/">Environment America</a>&nbsp;10.01.24</p>
                     <p>Recycling Statisics in Canada av&nbsp;<a href="https://madeinca.ca/recycling-canada-statistics/">Nicole Blair</a>&nbsp; 10.01.25</p>
