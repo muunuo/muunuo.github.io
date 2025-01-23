@@ -15,7 +15,7 @@
             'annet annet';
     }
 
-    #meny ul a{
+    #sosials{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -43,11 +43,12 @@
         justify-content: center;
     }
 
-    #body{
+    /* #body{
         scrollbar-width: none;
-    }
+    } */
     /* Skriftstørrelsen i header blir mindre på mobil. */
     #tittel {
         font-size: 1rem;
+        background-color: blue;
     }
 }
