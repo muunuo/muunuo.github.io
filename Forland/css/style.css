@@ -3,13 +3,13 @@ html, body {
     padding: 0;
 }
 
-#top { grid-area: top; }
-#meny { grid-area: meny; }
-#sosials { grid-area: sosials;}
-#main { grid-area: main; }
-#bygg { grid-area: bygg; }
-#hage { grid-area: hage; }
-#annet { grid-area: annet; }
+.tittel { grid-area: tittel; }
+.meny { grid-area: meny; }
+.kontakt { grid-area: kontakt;}
+.hoved { grid-area: hoved; }
+.bygg { grid-area: bygg; }
+.hage { grid-area: hage; }
+.annet { grid-area: annet; }
 
 
 
@@ -18,11 +18,11 @@ html, body {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        'top top top top top top top top top top'
-        'meny   main main main main main main main main   sosials'
-        'meny   bygg bygg bygg bygg bygg bygg bygg bygg   sosials'
-        'meny   hage hage hage hage hage hage hage hage   sosials'
-        'meny   annet annet annet annet annet annet annet annet   sosials';
+        'tittel tittel tittel tittel tittel tittel tittel tittel tittel tittel'
+        'meny   hoved hoved hoved hoved hoved hoved hoved hoved   kontakt'
+        'meny   bygg bygg bygg bygg bygg bygg bygg bygg   kontakt'
+        'meny   hage hage hage hage hage hage hage hage   kontakt'
+        'meny   annet annet annet annet annet annet annet annet   kontakt';
 }
 
 

@@ -1,26 +1,34 @@
 
-/* For mobil, eller portrerttmodus, med låg oppløysing */
 @media screen and (max-width: 800px) {
     /* Når skjermstørrelsen blir  */
     .grid-container {
         display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns: 2fr; /* med to kan jeg ha klokke og profilbilde ved sidnav hverandre */
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
-            'top top'
-            'meny sosials'
-            'main main'
+            'tittel tittel'
+            'meny meny'
+            'kontakt kontakt'
+            'hoved hoved'
+            'quiz quiz'
             'bygg bygg'
             'hage hage'
             'annet annet';
+/*             
+            .tittel { grid-area: tittel; }
+.meny { grid-area: meny; }
+.kontakt { grid-area: kontakt;}
+.hoved { grid-area: hoved; }
+.bygg { grid-area: bygg; }
+.hage { grid-area: hage; }
+.annet { grid-area: annet; } */
     }
 
-    #sosials{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    .meny nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
     }
-
     h2{
         display: flex;
         flex-direction: row;
@@ -43,12 +51,58 @@
         justify-content: center;
     }
 
-    /* #body{
+    .body{
         scrollbar-width: none;
-    } */
+    }
     /* Skriftstørrelsen i header blir mindre på mobil. */
+    #tittel {
+        font-size: 1rem;
+    }
+}
+
+/* 
+@media screen and (max-width: 800px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            'tittel tittel'
+            'meny sosials'
+            'main main'
+            'bygg bygg'
+            'hage hage'
+            'annet annet';
+    }
+
+    #sosials{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    h2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .flyt {
+        float: none;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .flyte {
+        float: none;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
     #tittel {
         font-size: 1rem;
         background-color: blue;
     }
-}
+} */
