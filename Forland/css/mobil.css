@@ -5,20 +5,22 @@
     .grid-container {
         display: grid;
         grid-template-columns: 2fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
         grid-template-areas:
-            'top'
-            'meny'
-            'main'
-            'sosials'
-            'bygg'
-            'hage'
-            'annet';
+            'top top'
+            'meny sosials'
+            'main main'
+            'bygg bygg'
+            'hage hage'
+            'annet annet';
     }
 
-    .meny{
-        
+    #meny ul a{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
+
     h2{
         display: flex;
         flex-direction: row;
@@ -41,7 +43,7 @@
         justify-content: center;
     }
 
-    .body{
+    #body{
         scrollbar-width: none;
     }
     /* Skriftstørrelsen i header blir mindre på mobil. */
