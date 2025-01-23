@@ -14,14 +14,6 @@
             'bygg bygg'
             'hage hage'
             'annet annet';
-/*             
-            .tittel { grid-area: tittel; }
-.meny { grid-area: meny; }
-.kontakt { grid-area: kontakt;}
-.hoved { grid-area: hoved; }
-.bygg { grid-area: bygg; }
-.hage { grid-area: hage; }
-.annet { grid-area: annet; } */
     }
 
     .meny nav{
