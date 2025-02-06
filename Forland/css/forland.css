@@ -8,3 +8,9 @@
     background-color: brown;
 }
 
+#tittel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
