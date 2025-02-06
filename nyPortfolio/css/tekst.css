@@ -1,0 +1,28 @@
+/* .cookie-regular {
+    font-family: "Cookie", serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+
+.overskrift{
+    /* font-size: 1000px ;
+    color: blueviolet; */
+}
+
+#top{
+  background-color: aqua;
+}
+
+#meny{
+  padding: 1rem;
+  list-style: none;
+  
+  background-color: lightblue;
+}
+
+#meny nav{/* fungerer bare når den er her */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}

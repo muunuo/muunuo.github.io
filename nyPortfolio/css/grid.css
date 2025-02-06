@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#top { grid-area: top; } /* overskriften */
+#klokke { grid-area: klokke;} /* klokken og brukernavn */
+#profilbilde { grid-area: profilbilde; } /* profilbildet */
+#meny { grid-area: meny; } /* menyen */
+#endreFarge { grid-area: endreFarge; } /* farger å velge mellom */
+#quiz { grid-area: quiz;} /* quizen */
+#tom { grid-area: tom; } /* sentrerer quizen */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'top top top top top top top top top top top top top'
+        'meny meny meny meny meny meny meny meny meny meny meny meny meny'
+        'endreFarge endreFarge   endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge tom tom'
+        'quiz quiz   quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz'; 
+}
+
+
+.grid-container > div { 
+    font-size: 1.5rem;
+}
+
+/* grunnleggende komandoer. Vet hvor de er hvis jeg glømmer hvordan å skrive de */
+.flytL {
+    float: left;
+}
+
+.flytR {
+    float: right;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
