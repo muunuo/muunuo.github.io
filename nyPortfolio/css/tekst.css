@@ -4,9 +4,11 @@
     font-style: normal;
   } */
 
-.overskrift{
-    /* font-size: 1000px ;
-    color: blueviolet; */
+#overskrift{
+    font-size: 15rem ;
+    padding-top: 5rem;
+    padding-bottom: 10.2rem;
+    /* color: blueviolet; */
 }
 
 #top{
@@ -14,6 +16,8 @@
 }
 
 #meny{
+  top: 0;
+  position: sticky;
   padding: 1rem;
   list-style: none;
   
@@ -25,4 +29,8 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+}
+
+#quiz{
+  padding-top: 50rem;
 }
