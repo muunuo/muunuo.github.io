@@ -10,6 +10,7 @@ html, body {
 #endreFarge { grid-area: endreFarge; } /* farger å velge mellom */
 #quiz { grid-area: quiz;} /* quizen */
 #tom { grid-area: tom; } /* sentrerer quizen */
+#media { grid-area: media; } /* sentrerer quizen */
 
 .grid-container {
     display: grid;
@@ -18,8 +19,10 @@ html, body {
     grid-template-areas:
         'top top top top top top top top top top top top top'
         'meny meny meny meny meny meny meny meny meny meny meny meny meny'
-        'endreFarge endreFarge   endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge tom tom'
-        'quiz quiz   quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz'; 
+        'endreFarge endreFarge   endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge'
+        'quiz quiz   quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz'
+        'tom tom   tom tom tom tom tom tom tom tom tom tom tom'
+        'media media   media media media media media media media media media media media'; 
 }
 
 
@@ -30,10 +33,14 @@ html, body {
 /* grunnleggende komandoer. Vet hvor de er hvis jeg glømmer hvordan å skrive de */
 .flytL {
     float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .flytR {
     float: right;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
 }
 
 .flex{
