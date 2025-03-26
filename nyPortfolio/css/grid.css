@@ -4,13 +4,13 @@ html, body {
 }
 
 #top { grid-area: top; } /* overskriften */
-#klokke { grid-area: klokke;} /* klokken og brukernavn */
-#profilbilde { grid-area: profilbilde; } /* profilbildet */
 #meny { grid-area: meny; } /* menyen */
 #endreFarge { grid-area: endreFarge; } /* farger å velge mellom */
 #quiz { grid-area: quiz;} /* quizen */
 #tom { grid-area: tom; } /* sentrerer quizen */
 #media { grid-area: media; } /* sentrerer quizen */
+#animasjon { grid-area: animasjon; } /* sentrerer quizen */
+#skole { grid-area: skole; }
 
 .grid-container {
     display: grid;
@@ -20,9 +20,11 @@ html, body {
         'top top top top top top top top top top top top top'
         'meny meny meny meny meny meny meny meny meny meny meny meny meny'
         'endreFarge endreFarge   endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge'
-        'quiz quiz   quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz'
-        'tom tom   tom tom tom tom tom tom tom tom tom tom tom'
-        'media media   media media media media media media media media media media media'; 
+        'quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz'
+        'tom tom tom tom tom tom tom tom tom tom tom tom tom'
+        'media media media media media media media media media media media media media'
+        'animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon'
+        'skole skole skole skole skole skole skole skole skole skole skole skole skole'; 
 }
 
 
