@@ -9,6 +9,16 @@ body{
     /* border: solid #ededed 1rem; */
 }
 
+hr{
+    height: 0.3rem;
+    background-color: #73956F;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
 
 #tittel{
     margin-top: 5rem;
@@ -17,7 +27,6 @@ body{
     align-items: center;
     
 }
-
 
 .kontakt nav{
     padding-top:0.5rem ;
@@ -35,17 +44,6 @@ body{
     position: sticky;
     top: 0;
     width: 100%;
-}
-
-hr{
-    height: 0.3rem;
-    background-color: #73956F;
-    border: none;
-}
-
-a{
-    text-decoration: none;
-    color: black;
 }
 
 #logo{

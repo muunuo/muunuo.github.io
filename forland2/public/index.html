@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="css/mobil.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bildekarusell.css">
-    <!-- <script src="/forland2/public/js/forland.js" defer></script> -->
-    <!-- <script src="../public/js/app_skjema.js" defer></script>
-    <script src="../app_serverside.js" defer></script> -->
+    <script src="/forland2/public/js/app_skjema.js" defer></script>
     <title>Forland</title>
 </head>
 <body>
@@ -78,20 +76,13 @@ ctetur adipisicing elit. Quis ad commodi earum possimus nisi laborum ipsa obcaec
         </div>
         <div class="annet" id="annet" >
             <h3 class="UnderTittel">Annet</h3>
-            <!-- <form id="myForm" action="/submit" method="POST">
-                <label for="name">Navn:</label>
-                <input type="text" id="name" name="name"><br><br>
-                
-                <label for="email">E-post:</label>
-                <input type="email" id="email" name="email"><br><br>
-                
-                <label for="message">Melding:</label>
-                <textarea id="message" name="message"></textarea><br><br>
-                
-                <button type="submit">Send</button>
-            </form> -->
-            <!-- 3. knappen ser finere ut -->
-            <!-- 4. sentrer go finfiksing -->
+                <form action="/submit" method="post">
+                    <input id="navn" type="text" name="navn" required>
+                    <br>
+                    <input id="email" type="text" name="email" required>
+                    <br>
+                    <button id="svarPaSkjema">Svar</button>
+                </form>
         </div>
     </div>
 </body>
