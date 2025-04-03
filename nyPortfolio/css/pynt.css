@@ -27,4 +27,6 @@ a{
     border: 1rem solid #c48ab1;
 }
 
-
+#lesMerKode:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.tittel { grid-area: tittel; }
+.kontakt { grid-area: kontakt; }
+.hoved { grid-area: hoved; }
+#bygg { grid-area: bygg; }
+#hage { grid-area: hage; }
+.annet { grid-area: annet; }
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'tittel tittel tittel tittel tittel tittel tittel tittel tittel'
+        'kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt'
+        'hoved hoved hoved hoved hoved hoved hoved hoved hoved'
+        'bygg   bygg bygg bygg bygg bygg bygg bygg bygg'
+        'hage   hage hage hage hage hage hage hage hage'
+        'annet   annet annet annet annet annet annet annet annet';
+}
+
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    font-size: 1.5rem;
+}
+
+.flytL {
+    float: left;
+}
+
+.flytR {
+    float: right;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* body ul{
+    list-style: none;
+} */
+
+
+
+/* #meny ul a.boks,
+#sosials ul a.boks {
+    top: 0;
+    position: sticky;
+    padding-top: 5rem;
+    background-color: aquamarine;
+    z-index: 1;
+} */
