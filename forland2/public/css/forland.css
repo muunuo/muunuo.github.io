@@ -5,8 +5,6 @@
 body{
     background-color: #ededed;
     color: #1a2319;
-    
-    /* border: solid #ededed 1rem; */
 }
 
 hr{
@@ -20,12 +18,8 @@ a{
     color: black;
 }
 
-#tittel{
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.tittel{
+    background-color: #73956F;
 }
 
 .kontakt nav{
@@ -46,11 +40,11 @@ a{
     width: 100%;
 }
 
-#logo{
+/* #logo{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .UnderTittel{
     display: flex;
@@ -74,3 +68,6 @@ a{
 }
 
 
+/* #lesMerKode:hover{
+    cursor: pointer;
+} */
