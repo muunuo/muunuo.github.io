@@ -1,3 +1,5 @@
+console.log("Hei, Skjema fungerer")
+
 document.getElementById('svarPaSkjema').addEventListener('click', async () => {
     const navn = document.getElementById('navn').value;
     const email = document.getElementById('email').value;
