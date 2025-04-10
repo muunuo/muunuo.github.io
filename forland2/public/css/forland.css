@@ -40,16 +40,15 @@ a{
     width: 100%;
 }
 
-/* #logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .UnderTittel{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .sentrert{
@@ -58,16 +57,26 @@ a{
     align-items: center;
 }
 
-.senterBilde{
-    text-align: center;
-}
-
-.senterBilde{
-    max-width: 100%;
-    height: auto;
-}
 
 
 /* #lesMerKode:hover{
     cursor: pointer;
 } */
+
+/* .old-standard-tt-regular {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .old-standard-tt-bold {
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .old-standard-tt-regular-italic {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: italic;
+  } */
