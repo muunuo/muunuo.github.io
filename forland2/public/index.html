@@ -81,9 +81,20 @@ ctetur adipisicing elit. Quis ad commodi earum possimus nisi laborum ipsa obcaec
 
                 <h4>Kontaktskjema</h4>
                 <form action="/submit" method="post">
+                    <label for="navn">navn:</label>
                     <input id="navn" type="text" name="navn" required>
                     <br>
-                    <input id="email" type="text" name="email" required>
+                    <label for="epost">epost:</label>
+                    <input id="epost" type="email" name="epost" required>
+                    <br>
+                    <label for="telefon">telefon:</label>
+                    <input id="telefon" type="tel" name="telefon" required>
+                    <br>
+                    <label for="beskjed">beskjed:</label>
+                    <input id="beskjed" name="beskjed" required>
+                    <br>
+                    <label for="bedriftNavn">bedriftNavn:</label>
+                    <input id="bedriftNavn" type="text" name="bedriftNavn">
                     <br>
                     <button id="svarPaSkjema">Svar</button>
                 </form>
