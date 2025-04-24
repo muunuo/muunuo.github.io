@@ -1,9 +1,8 @@
 // kode under var lagt med hjelp av Ai, endringer gjordt for å bedre fungere for det jeg trengte det for. 
-// en grunnlegende database 
 const express = require('express');
 const bodyParser = require('body-parser');
 const Database = require('better-sqlite3');
-const path = require('path'); //x
+const path = require('path'); 
 
 const db = new Database("Forland_db_3.db");
 
@@ -16,20 +15,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware for å parse JSON data
 app.use(bodyParser.urlencoded({ extended:true }));
+app.use(bodyParser.json())
 
-// db.prepare(`
-//     CREATE TABLE IF NOT EXISTS kunde_1 (
-//         id_kunde INTEGER PRIMARY KEY AUTOINCREMENT,
-//         navn TEXT NOT NULL,
-//         epost TEXT NOT NULL
-//         telefon INTEGER NULL
-//         beskjed TEXT NOT NULL
-//     )
-// `).run();
+db.prepare(`
+    CREATE TABLE IF NOT EXISTS kunde (
+        id_kunde INTEGER PRIMARY KEY AUTOINCREMENT,
+        navn TEXT NOT NULL,
+        bedriftNavn TEXT NULL,
+        epost TEXT NOT NULL,
+        telefon TEXT NULL,
+        beskjed TEXT NOT NULL
+    )
+`).run();
 
 // Serve HTML-skjemaet fra en egen HTML-fil
 app.get('/', (req, res) => {
-    res.sendFile(__dirname, 'public', 'index.html', 'appSkjema.js');
+    res.sendFile(__dirname, 'public', 'index.html');
 });
 
 // hånterer skjema innsending
@@ -39,35 +40,46 @@ app.post('/submit', (req, res) => {
     //lagre data i databasen
     const insert = db.prepare('INSERT INTO kunde (navn, bedriftNavn, epost, telefon, beskjed) VALUES (?, ?, ?, ?, ?)');
     insert.run(navn, bedriftNavn, epost, telefon, beskjed);
+    console.log(insert);
+    console.log(res.ok);
+    
+    try {
+        // Lagre data i databasen
+        const insert = db.prepare('INSERT INTO kunde (navn, bedriftNavn, epost, telefon, beskjed) VALUES (?, ?, ?, ?, ?)');
+        insert.run(navn, bedriftNavn, epost, telefon, beskjed);
+
+        console.log('Svar sendt inn!');
+        // Send en respons til klienten
+        res.status(200).send({ message: 'Data ble lagret vellykket!' });
+    } catch (error) {
+        console.error('Feil ved innsending:', error.message);
+        // Send en feilmelding til klienten
+        res.status(500).send({ message: 'En feil oppstod ved lagring av data.' });
+    }
 
 });
+
+// app.post('/submit', (req, res) => {
+//     const { navn, bedriftNavn, epost, telefon, beskjed } = req.body;
+
+//     if (navn && epost && telefon && beskjed) {
+//         // hvis alle er fylt, får vi suksess
+//         return res.status(200).json({ message: 'Data sendt inn!'});
+//     } else {
+//         //Lar bruker vite hva de glømte å fylle inn:
+//         let missingFields = [];
+//         if (!navn) missingFields.push('navn');
+//         if (!epost) missingFields.push('epost');
+//         if (!telefon) missingFields.push('telefon');
+//         if (!beskjed) missingFields.push('beskjed');
+
+//         return res.status(400).json({ message: `Oppsto en feil. Følgende felter mangler: ${missingFields.join(', ')}` });
+//     }
+// });
+
+
 
 // Start serveren
 app.listen(port, () => {
     console.log(`Serveren kjører på http://localhost:${port}`);
 });
-
-// app.use((req, res, next) => {
-//     console.log(`${req.method} ${req.url}`);
-//     next();
-//   });
-
-// app.use((err, req, res, next) => {
-//   console.error(err.stack);
-//   res.status(500).send('Something broke!');
-// });
-// const express = require('express');
-// const path = require('path');
-// const app = express();
-
-// // Serve static files from the 'public' directory
-// app.use(express.static(path.join(__dirname, 'public')));
-
-// // Example route
-// app.get('/', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
-
-// app.listen(3000, () => {
-//   console.log('Server is running on http://localhost:3000');
-// });

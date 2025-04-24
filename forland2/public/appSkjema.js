@@ -1,3 +1,5 @@
+// denne er i public
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('svarPaSkjema').addEventListener('click', async () => {
         const navn = document.getElementById('navn').value;
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         try{
-            const responses = await fetch('http://localhost:3000/submit-survey', {
+            const responses = await fetch('/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

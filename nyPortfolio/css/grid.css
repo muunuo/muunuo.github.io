@@ -13,6 +13,7 @@ html, body {
 #media { grid-area: media; } /* sentrerer quizen */
 #animasjon { grid-area: animasjon; } /* sentrerer quizen */
 #skole { grid-area: skole; }
+#bilde { grid-area: bilde; }
 
 .grid-container {
     display: grid;
