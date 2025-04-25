@@ -6,13 +6,15 @@
         grid-template-columns: 2fr; /* med to kan jeg ha klokke og profilbilde ved sidnav hverandre */
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
-            'profilbilde klokke'
+            'endreFarge endreFarge'
             'top top'
             'meny meny'
-            'endreFarge endreFarge'
-            'tom tom'
+            'omMeg omMeg'
+            'koding koding'
             'media media'
-            'quiz quiz';
+            'animasjon animasjon'
+            'skole skole'
+            ;
     }
 
     .meny nav{

@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json())
 
+//hvis det ikke allerede eksisterer opprettes tabellen
 db.prepare(`
     CREATE TABLE IF NOT EXISTS kunde (
         id_kunde INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -29,7 +30,7 @@ db.prepare(`
 `).run();
 
 // Serve HTML-skjemaet fra en egen HTML-fil
-app.get('/', (req, res) => {
+app.get('/', (req, res) => { // hent filene under
     res.sendFile(__dirname, 'public', 'index.html');
 });
 
@@ -37,11 +38,13 @@ app.get('/', (req, res) => {
 app.post('/submit', (req, res) => {
     const { navn, bedriftNavn, epost, telefon, beskjed } = req.body;
 
-    //lagre data i databasen
-    const insert = db.prepare('INSERT INTO kunde (navn, bedriftNavn, epost, telefon, beskjed) VALUES (?, ?, ?, ?, ?)');
-    insert.run(navn, bedriftNavn, epost, telefon, beskjed);
-    console.log(insert);
-    console.log(res.ok);
+    // if (!navn || !epost || !beskjed || !telefon) { // Denne kjekker om alle feltene er fuylt ut 
+
+    //     return res(400).send({ message: 'Venligst fyll ut alle obligatoriske felt.'});
+    // }
+
+    // console.log(insert);
+    // console.log(res.ok);
     
     try {
         // Lagre data i databasen
@@ -58,6 +61,12 @@ app.post('/submit', (req, res) => {
     }
 
 });
+
+// Start serveren
+app.listen(port, () => {
+    console.log(`Serveren kjører på http://localhost:${port}`);
+});
+
 
 // app.post('/submit', (req, res) => {
 //     const { navn, bedriftNavn, epost, telefon, beskjed } = req.body;
@@ -76,10 +85,3 @@ app.post('/submit', (req, res) => {
 //         return res.status(400).json({ message: `Oppsto en feil. Følgende felter mangler: ${missingFields.join(', ')}` });
 //     }
 // });
-
-
-
-// Start serveren
-app.listen(port, () => {
-    console.log(`Serveren kjører på http://localhost:${port}`);
-});

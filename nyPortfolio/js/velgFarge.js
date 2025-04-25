@@ -25,7 +25,7 @@ function defult() { //if farge 1 og 2 er av skal defult være på.
     if (SHtOgF==false && LogStOgF==false && MMtOgF==false && KMMtOgF==false) {
         document.body.style.backgroundColor = "#fff4fb"
         document.body.style.color = "#98729d"
-        m.style.color = "red"
+        endreFarge.style.backgroundColor = "#c48ab1"
     }
 }
 

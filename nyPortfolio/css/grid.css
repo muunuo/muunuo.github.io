@@ -5,13 +5,13 @@ html, body {
     scroll-padding-top: 4rem;
 }
 
-#top { grid-area: top; } /* overskriften */
-#meny { grid-area: meny; } /* menyen */
-#endreFarge { grid-area: endreFarge; } /* farger å velge mellom */
-#quiz { grid-area: quiz;} /* quizen */
-#tom { grid-area: tom; } /* sentrerer quizen */
-#media { grid-area: media; } /* sentrerer quizen */
-#animasjon { grid-area: animasjon; } /* sentrerer quizen */
+#top { grid-area: top; } 
+#meny { grid-area: meny; } 
+#endreFarge { grid-area: endreFarge; } 
+#omMeg { grid-area: omMeg;} 
+#koding { grid-area: koding; } 
+#media { grid-area: media; } 
+#animasjon { grid-area: animasjon; } 
 #skole { grid-area: skole; }
 #bilde { grid-area: bilde; }
 
@@ -20,11 +20,11 @@ html, body {
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
+        'endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge'
         'top top top top top top top top top top top top top'
         'meny meny meny meny meny meny meny meny meny meny meny meny meny'
-        'endreFarge endreFarge   endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge endreFarge'
-        'quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz quiz'
-        'tom tom tom tom tom tom tom tom tom tom tom tom tom'
+        'omMeg omMeg omMeg omMeg omMeg omMeg omMeg omMeg omMeg omMeg omMeg omMeg omMeg'
+        'koding koding koding koding koding koding koding koding koding koding koding koding koding'
         'media media media media media media media media media media media media media'
         'animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon animasjon'
         'skole skole skole skole skole skole skole skole skole skole skole skole skole'; 
