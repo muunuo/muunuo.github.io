@@ -10,6 +10,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="appSkjema.js" defer></script>
+
+    <script>
+        async function leggTilPerson(event) {
+            event.preventDefault();
+
+            const brukernavn = document.getElementById("brukernavn").value;
+            const epostKonto = document.getElementById("epostKonto").value;
+            const passord = document.getElementById("passord").value;
+
+            const response = await fetch("/leggtilperson", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    brukernavn,
+                    epostKonto,
+                    passord
+                })
+            });
+            const result = await response.json();
+            alert(result.message);
+        }
+    </script>
+
     <title>Forland</title>
 </head>
 <body>
@@ -79,26 +104,65 @@ ctetur adipisicing elit. Quis ad commodi earum possimus nisi laborum ipsa obcaec
                 5363 ÅGOTNES</p>
                 <hr>
 
-                <h4>Kontaktskjema</h4>
-                <form action="/submit" method="post">
-                    <label for="navn">navn:</label>
-                    <input id="navn" type="text" name="navn" required>
-                    <br>
-                    <label for="epost">epost:</label>
-                    <input id="epost" type="email" name="epost" required>
-                    <br>
-                    <label for="telefon">telefon:</label>
-                    <input id="telefon" type="tel" name="telefon" required>
-                    <br>
-                    <label for="beskjed">beskjed:</label>
-                    <input id="beskjed" name="beskjed" required>
-                    <br>
-                    <label for="bedriftNavn">bedriftNavn:</label>
-                    <input id="bedriftNavn" type="text" name="bedriftNavn">
-                    <br>
-                    <button id="svarPaSkjema">Svar</button>
-                </form>
+                <h4 class="UnderTittel">Kontaktskjema</h4>
+                <div>
+                    <form action="/submit" method="post">
+                        <label class="skjemaOverskift" for="navn">Navn:</label>
+                        <br>
+                        <input class="input" id="navn" type="text" name="navn" required>
+                        <br>
+                        <label class="skjemaOverskift" for="epost">E-post:</label>
+                        <br>
+                        <input class="input" id="epost" type="email" name="epost" required>
+                        <br>
+                        <label class="skjemaOverskift" for="telefon">Telefon:</label>
+                        <br>
+                        <input class="input" id="telefon" type="tel" name="telefon" required>
+                        <br>
+                        <label class="skjemaOverskift" for="bedriftNavn">Bedrift Navn:</label>
+                        <br>
+                        <input class="input" id="bedriftNavn" type="text" name="bedriftNavn">
+                        <br>
+                        <label class="skjemaOverskift" for="beskjed">Beskjed:</label>
+                        <br>
+                        <input class="input" id="beskjed" name="beskjed" required>
+                        <br>
+                        <button id="svarPaSkjema">Svar</button>
+                    </form>
+                </div>
         </div>
     </div>
+
+    <div id="loggInnPopup">
+        <p>
+            Ved å opprette en konto vil du kunne redigere skjemaet ditt!
+        </p>
+        <button id="neiTilInnlogging">Nei takk.</button>
+        <br>
+        <p>Opprett konto</p>
+
+        <form onsubmit="leggTilPerson(event)" method="post">
+            <!-- action="/submitPassord" -->
+            <p>brukernavn</p>
+            <input id="brukernavn" name="brukernavn" required>
+                <br>
+                <labe for="epostKonto">epostKonto:</label>
+                <br>
+            <input id="epostKonto" name="epostKonto" required>
+            <br>
+            <labe for="passord">Passord:</label>
+            <br>
+            <input id="passord" name="passord" required>
+            <br>
+            <!-- <labe for="id_kunde">kunde-id:</label>
+            <br>
+            <input id="epostForInnlogging" name="epost" required>
+            <br> -->
+        </form>
+        <button id="opprettKonto">OpprettKonto</button>
+        <!-- <button id="loggInnISkjema">Logg inn</button>
+        <button id="svarInnlogging">Åpne Inlogging</button> -->
+    </div>
+
 </body>
 </html>

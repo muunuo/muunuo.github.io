@@ -30,3 +30,9 @@ a{
 #lesMerKode:hover{
     cursor: pointer;
 }
+
+.underUnderOverskift{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

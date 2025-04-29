@@ -4,16 +4,20 @@ const bodyParser = require('body-parser');
 const Database = require('better-sqlite3');
 const path = require('path'); 
 
+const bcrypt = require("bcrypt");  
+
 const db = new Database("Forland_db_3.db");
 
 const app = express();
 const port = 3000;
 
-// app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Middleware for å parse JSON data
+// app.use(express.json)
+
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json())
 
@@ -24,10 +28,19 @@ db.prepare(`
         navn TEXT NOT NULL,
         bedriftNavn TEXT NULL,
         epost TEXT NOT NULL,
-        telefon TEXT NULL,
+        telefon TEXT NOT NULL,
         beskjed TEXT NOT NULL
-    )
+    );
 `).run();
+
+// db.prepare(`
+//     CREATE TABLE IF NOT EXISTS bruker (
+//         brukernavn TEXT PRIMARY KEY,
+//         id_kunde INTEGER NOT NULL,
+//         passord TEXT NOT NULL,
+//         FOREIGN KEY (id_kunde) REFERENCES kunde(id_kunde)
+//     );
+// `).run();
 
 // Serve HTML-skjemaet fra en egen HTML-fil
 app.get('/', (req, res) => { // hent filene under
@@ -37,14 +50,6 @@ app.get('/', (req, res) => { // hent filene under
 // hånterer skjema innsending
 app.post('/submit', (req, res) => {
     const { navn, bedriftNavn, epost, telefon, beskjed } = req.body;
-
-    // if (!navn || !epost || !beskjed || !telefon) { // Denne kjekker om alle feltene er fuylt ut 
-
-    //     return res(400).send({ message: 'Venligst fyll ut alle obligatoriske felt.'});
-    // }
-
-    // console.log(insert);
-    // console.log(res.ok);
     
     try {
         // Lagre data i databasen
@@ -53,14 +58,50 @@ app.post('/submit', (req, res) => {
 
         console.log('Svar sendt inn!');
         // Send en respons til klienten
-        res.status(200).send({ message: 'Data ble lagret vellykket!' });
+        // res.status(200).send({ message: 'Data ble lagret vellykket!' });
     } catch (error) {
         console.error('Feil ved innsending:', error.message);
         // Send en feilmelding til klienten
-        res.status(500).send({ message: 'En feil oppstod ved lagring av data.' });
+        // res.status(500).send({ message: 'En feil oppstod ved lagring av data.' });
     }
 
 });
+
+
+app.post("/leggtilperson", async (req, res) => {
+    const {brukernavn, epostKonto, passord} = req.body;
+
+    //hash passord med bcript
+    const saltRounds = 10; // stander antall runder med hashing
+    const hashPassord = await bcrypt.hash(passord, saltRounds);
+
+    const stmt = db.prepare("INSERT INTO bruker (brukernavn, epostKonto, passord) VALUES (?,?,?)");
+    const info = stmt.run(brukernavn, epostKonto, hashPassord);
+
+    res.json({ message: "Ny person lagt til", info})
+    
+})
+
+
+// app.post('/submitPassord', (req, res) => {
+//     const {brukernavn, id_kunde, passord} = req.body;
+
+//     try {
+//         // Lagre data i databasen
+//         const insert = db.prepare('INSERT INTO bruker (brukernavn, id_kunde, passord) VALUES (?, ?, ?)');
+//         insert.run(brukernavn, id_kunde, passord);
+
+//         console.log('Svar sendt inn passord!');
+//         // Send en respons til klienten
+//         // res.status(200).send({ message: 'Data ble lagret vellykket!' });
+//     } catch (error) {
+//         console.error('Feil ved innsending:', error.message);
+//         // Send en feilmelding til klienten
+//         // res.status(500).send({ message: 'En feil oppstod ved lagring av data.' });
+//     }
+
+// });
+
 
 // Start serveren
 app.listen(port, () => {
@@ -85,3 +126,14 @@ app.listen(port, () => {
 //         return res.status(400).json({ message: `Oppsto en feil. Følgende felter mangler: ${missingFields.join(', ')}` });
 //     }
 // });
+
+
+
+
+    // if (!navn || !epost || !beskjed || !telefon) { // Denne kjekker om alle feltene er fuylt ut 
+
+    //     return res(400).send({ message: 'Venligst fyll ut alle obligatoriske felt.'});
+    // }
+
+    // console.log(insert);
+    // console.log(res.ok);
