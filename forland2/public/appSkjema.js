@@ -9,10 +9,7 @@ neiLoggInn.addEventListener("click", nei);
 
 popup.style.display ="none"
 
-let svarSkjema = document.getElementById("svarPaSkjema");// svar knapp under skjemaet
-
-
-svarSkjema.addEventListener("click", svar);
+let spurtOmLogo=false;
 
 function duLoggerInn() {
     popup.style.display="block"
@@ -20,10 +17,8 @@ function duLoggerInn() {
 
 function nei() {
         popup.style.display="none"
-        spurtOmLogo=true;
+        spurtOmLogo = true;
 }
-
-let spurtOmLogo=true;
 
 document.addEventListener('DOMContentLoaded', () => {// svare på skjema
     document.getElementById('svarPaSkjema').addEventListener('click', async (event) => {
@@ -36,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {// svare på skjema
         const beskjed = document.getElementById('beskjed').value;
 
         if (spurtOmLogo == true) {
+            // skjema sendes kun inn om "spurtOmLogo" er "true"
             const data = {
                 navn,
                 bedriftNavn,
@@ -46,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {// svare på skjema
 
             try{
 
-                const response = await fetch('/submit-servey',{
+                const response = await fetch('/submit',{
                     method: 'POST',
                     headers: {
                         'Content-type': 'application/json'
@@ -65,10 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {// svare på skjema
             }
 
         } else {
-            alert('Survey data not stored due to false condition.');
+            popup.style.display = "block"
+            // alert('Survey data not stored due to false condition.');
         }
-
-        // popup.style.display="block" // når bruker svarer får de popupen for å kunne logge inn
     });
 });
 
@@ -89,6 +84,11 @@ document.addEventListener('DOMContentLoaded', () => { // oprette en konto
         // }
     });
 });
+
+
+
+
+
 
 
 
