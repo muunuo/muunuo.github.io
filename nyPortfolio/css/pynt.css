@@ -36,3 +36,9 @@ a{
     justify-content: center;
     align-items: center;
 }
+
+#logo{
+    float: right;
+    margin-top: 15rem ;
+    margin-right: 10rem;
+}

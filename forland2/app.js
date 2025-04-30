@@ -83,6 +83,8 @@ app.post("/leggtilperson", async (req, res) => {
 })
 
 
+
+
 // app.post('/submitPassord', (req, res) => {
 //     const {brukernavn, id_kunde, passord} = req.body;
 
@@ -130,10 +132,7 @@ app.listen(port, () => {
 
 
 
-    // if (!navn || !epost || !beskjed || !telefon) { // Denne kjekker om alle feltene er fuylt ut 
 
-    //     return res(400).send({ message: 'Venligst fyll ut alle obligatoriske felt.'});
-    // }
 
     // console.log(insert);
     // console.log(res.ok);

@@ -1,0 +1,31 @@
+// public js dokument:
+
+// document.addEventListener('DOMContentLoaded', () => {// svare på skjema
+//     document.getElementById('svarPaSkjema').addEventListener('click', async () => {
+//         const navn = document.getElementById('navn').value;
+//         const bedriftNavn = document.getElementById('bedriftNavn').value;
+//         const epost = document.getElementById('epost').value;
+//         const telefon = document.getElementById('telefon').value;
+//         const beskjed = document.getElementById('beskjed').value;
+
+//         // popup.style.display="block" // når bruker svarer får de popupen for å kunne logge inn
+//     });
+// });
+
+
+// document.addEventListener('DOMContentLoaded', () => { // oprette en konto
+//     document.getElementById('opprettKonto').addEventListener('click', async () => {
+//         const brukernavn = document.getElementById('brukernavn').value;
+//         const epostKonto = document.getElementById('epostKonto').value;
+//         // const kunde_id = document.getElementById('kunde_id').value; //usikker på om dette er noe jeg kommer til å trenge eller ikke
+//         const passord = document.getElementById('passord').value;
+
+//         // koden under gjør at inloggingsfelte forsvinner når du har oprettet en konto
+//         if (!brukernavn || !epostKonto || !passord) { // Denne kjekker om alle feltene er fuylt ut 
+            
+//         } else{
+//             spurtOmLogo=true;
+//             popup.style.display="none";
+//         }
+//     });
+// });
