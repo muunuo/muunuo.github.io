@@ -1,4 +1,4 @@
-#loggInnPopup{
+#loggInnPopup{ /* fått av en vidio på nett. Setter opp en popup boks */
     width: 400px;
     height: 400px;
     background: #fff;
@@ -46,11 +46,11 @@ a{
 }
 
 .kontakt{
-    overflow: hidden;
+    overflow: hidden; /* hvis de ikke passer, så vises det ikke */
     background-color: #73956F;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    position: sticky;
+    position: sticky; /* henger på toppen av siden */
     top: 0;
     width: 100%;
 }
@@ -61,8 +61,8 @@ a{
     justify-content: center;
     align-items: center;
 
-    font-family: "Old Standard TT", serif;
-    font-weight: 700;
+    font-family: "Old Standard TT", serif; /* skrifttype */
+    font-weight: 700; /* størelse på teksten */
     font-style: normal;
 }
 

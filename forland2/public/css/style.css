@@ -30,6 +30,8 @@ html, body {
     font-size: 1.5rem;
 }
 
+/* brukes mer som referanser enn noen annet */
+
 .flytL {
     float: left;
 }

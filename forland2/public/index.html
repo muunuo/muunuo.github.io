@@ -11,14 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="appSkjema.js" defer></script>
 
-    <script>
+    <script> // legger til en bruker i databasen
         async function leggTilPerson(event) {
             event.preventDefault();
 
+            // hva trengs for å logge inn
             const brukernavn = document.getElementById("brukernavn").value;
             const epostKonto = document.getElementById("epostKonto").value;
             const passord = document.getElementById("passord").value;
 
+            // må hente leggtilperson fra app.js
             const response = await fetch("/leggtilperson", {
                 method: "POST",
                 headers: {
@@ -30,6 +32,7 @@
                     passord
                 })
             });
+            // venter på at json sier at det ble sendt før koden fortsetter
             const result = await response.json();
             alert(result.message);
         }
@@ -43,20 +46,20 @@
         <div class="tittel">
             <!-- <h1 class="sentrert">Forland</h1> -->
             <div class="sentrert">
-                <button id="loggInnKnapp" >Logg Inn</button>
+<button id="loggInnKnapp" >Logg Inn</button> <!-- en måte å logge inn uten å fylle ut et skjema -->
                 <img  width="200px" src="/bilder/forlandLogoHvit.png" alt="En hvit oval med ordene Forland. Tre, hage & handyman.">
             </div>
         </div>
 
         <!-- sosials -->
-        <div class="kontakt">
+        <div class="kontakt"> <!-- orginalt brukt for kontakt info, ble endret til en meny -->
             <nav>
                 <a class="boks" href="#bygg">Bygg</a>
                 <a class="boks" href="#hage">Hage</a>
                 <a class="boks" href="#annet">Kontakt Oss</a>
             </nav>
         </div>
-        <!-- main -->
+
         <div class="hoved">
             <h3 class="UnderTittel">Om oss</h3>
             <p class="tekst">
@@ -65,7 +68,7 @@
                 Hos Inge Forland setter vi alltid kundens behov først, og vi jobber for å være din langsiktige partner innen vedlikehold av eiendom og uteområder.
                 Kontakt oss i dag for en uforpliktende samtale, så finner vi den beste løsningen for deg!
             </p>
-                <hr>
+                <hr> <!-- linje som går over skjermen for å seperer de forskjellige seksjonene -->
         </div>
         <div id="bygg">
             <h3 class="UnderTittel">Bygg</h3>
@@ -84,7 +87,7 @@
             <p class="tekst">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, eaque quaerat. Qui enim, hic accusamus rem, nostrum quasi maxime veniam corporis dolores velit doloremque possimus nesciunt accusantium vero consequuntur ut!
             Ipsam in officia tenetur laboriosam impedit unde, illum est sunt blanditiis maiores, commodi nisi? Aperiam, quae. Facere saepe incidunt laboriosam? Numquam natus labore expedita, asperiores atque doloremque fugiat molestiae esse?
             Quia dolor, mollitia iste quos inventore praesentium, eligendi quaerat animi repellat sed porro, beatae dolores commodi rerum quis. Itaque et aspernatur laborum recusandae voluptate, ratione atque at incidunt tempore sed.
-ctetur adipisicing elit. Quis ad commodi earum possimus nisi laborum ipsa obcaecati assumenda ipsum perferendis aperiam minus repellendus dignissimos consectetur hic fugit modi, molestias veritatis.
+            ctetur adipisicing elit. Quis ad commodi earum possimus nisi laborum ipsa obcaecati assumenda ipsum perferendis aperiam minus repellendus dignissimos consectetur hic fugit modi, molestias veritatis.
             Voluptates iusto quos obcaecati dolor quaerat qui tempora consequuntur inventore dolores, est dolorem quis quas rerum sapiente possimus officiis. Tenetur itaque mollitia nam in id facere, harum velit aperiam! Qui!
             Nesciunt odio molestiae alias iste molestias deserunt pariatur eum aspernatur consequatur! Pariatur, laborum voluptates! Obcaecati, laboriosam doloribus voluptas aut perspiciatis eaque? Voluptate eius sed doloremque, animi voluptatem accusantium corporis aliquam?
             Cumque expedita rerum non provident sapiente quia sunt, quis veniam deleniti cum nulla sed ducimus. Iste ullam nisi similique id autem nulla deleniti nemo voluptatem culpa perferendis, quidem nobis? Ullam?
@@ -95,74 +98,59 @@ ctetur adipisicing elit. Quis ad commodi earum possimus nisi laborum ipsa obcaec
             <h3 class="UnderTittel">Kontakt oss:</h3>
             <hr>
             <p class="sentrert">Epost</p>
-            <a class="sentrert" href="">ingeforland@icloud.com</a>
+            <a class="sentrert" href="">ingeforland@icloud.com</a> <!-- planen erå ha denne linke til mailen, men mailen har endret seg, så har ikke fått lugget det inn -->
             <hr>
             <p class="sentrert">Telefon</p>
             <p class="sentrert">966 32 187</p>
             <hr>
             <p class="sentrert">Adresse</p>
-            <p class="sentrert" >Søre Maggevarden 54 <br>
+            <p class="sentrert" >Søre Maggevarden 54 <br> <!-- br betyr break (altså går det en linje ned) -->
                 5363 ÅGOTNES</p>
                 <hr>
 
-                <h4 class="UnderTittel">Kontaktskjema</h4>
+                <h4 class="UnderTittel">Kontaktskjema</h4> <!-- dette er delen som kobles til app.js -->
                 <div>
-                    <form action="/submit" method="post">
-                        <label class="skjemaOverskift" for="navn">Navn:</label>
-                        <br>
-                        <input class="input" id="navn" type="text" name="navn" required>
-                        <br>
-                        <label class="skjemaOverskift" for="epost">E-post:</label>
-                        <br>
-                        <input class="input" id="epost" type="email" name="epost" required>
-                        <br>
-                        <label class="skjemaOverskift" for="telefon">Telefon:</label>
-                        <br>
-                        <input class="input" id="telefon" type="tel" name="telefon" required>
-                        <br>
-                        <label class="skjemaOverskift" for="bedriftNavn">Bedrift Navn:</label>
-                        <br>
-                        <input class="input" id="bedriftNavn" type="text" name="bedriftNavn">
-                        <br>
-                        <label class="skjemaOverskift" for="beskjed">Beskjed:</label>
-                        <br>
-                        <input class="input" id="beskjed" name="beskjed" required>
-                        <br>
-                        <button id="svarPaSkjema">Svar</button>
+                    <form action="/submit" method="post"> <!-- setter opp hva det skal hete, og hvordan det deles med app.js -->
+                        <label class="skjemaOverskift" for="navn">Navn:</label><br><!-- sier hva som skal i de forskjellige feltene (brukes over p grunnet at label liggere nærmere input enn p) -->
+                        <input class="input" id="navn" type="text" name="navn" required><br>
+
+                        <label class="skjemaOverskift" for="epost">E-post:</label><br>
+                        <input class="input" id="epost" type="email" name="epost" required><br>
+
+                        <label class="skjemaOverskift" for="telefon">Telefon:</label><br>
+                        <input class="input" id="telefon" type="tel" name="telefon" required><br>
+
+                        <label class="skjemaOverskift" for="bedriftNavn">Bedrift Navn:</label><br>
+                        <input class="input" id="bedriftNavn" type="text" name="bedriftNavn"><br>
+
+                        <label class="skjemaOverskift" for="beskjed">Beskjed:</label><br>
+                        <input class="input" id="beskjed" name="beskjed" required><br>
+
+                        <button id="svarPaSkjema">Svar</button> <!-- knappen for å sende inn svarene -->
                     </form>
                 </div>
         </div>
     </div>
 
-    <div id="loggInnPopup">
+    <div id="loggInnPopup"> <!-- ville prøve noe nytt med å lage en popup for innloggingen i stede for en ny side -->
         <p>
-            Ved å opprette en konto vil du kunne redigere skjemaet ditt!
+            Ved å opprette en konto vil du kunne redigere skjemaet ditt! <!-- du kan ikke gjøre det grunnet tidspress -->
         </p>
-        <button id="neiTilInnlogging">Nei takk.</button>
+        <button id="neiTilInnlogging">Nei takk.</button><!-- hvis du ikke ønsker en konto, må trykkes før du kan levere bestillings skjema -->
         <br>
         <p>Opprett konto</p>
 
-        <form onsubmit="leggTilPerson(event)" method="post">
-            <!-- action="/submitPassord" -->
-            <p>brukernavn</p>
-            <input id="brukernavn" name="brukernavn" required>
-                <br>
-                <labe for="epostKonto">epostKonto:</label>
-                <br>
-            <input id="epostKonto" name="epostKonto" required>
-            <br>
-            <labe for="passord">Passord:</label>
-            <br>
-            <input id="passord" name="passord" required>
-            <br>
-            <!-- <labe for="id_kunde">kunde-id:</label>
-            <br>
-            <input id="epostForInnlogging" name="epost" required>
-            <br> -->
+        <form onsubmit="leggTilPerson(event)" method="post"><!-- selve tingen som opretter en bruker -->
+            <labe for="brukernavn">brukernavn:</label><br>
+            <input id="brukernavn" name="brukernavn" required><br>
+
+            <labe for="epostKonto">epostKonto:</label><br>
+            <input id="epostKonto" name="epostKonto" required><br>
+
+            <labe for="passord">Passord:</label><br>
+            <input id="passord" name="passord" required><br> <!-- required betyr at du må ha det for å logge inn -->
         </form>
         <button id="opprettKonto">OpprettKonto</button>
-        <!-- <button id="loggInnISkjema">Logg inn</button>
-        <button id="svarInnlogging">Åpne Inlogging</button> -->
     </div>
 
 </body>

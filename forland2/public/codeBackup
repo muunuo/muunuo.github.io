@@ -1,4 +1,5 @@
 // public js dokument:
+// en backup av koden, for hvis/når jeg gjør en feil/må endre til tilbake (hvis klienten ikke ønsker innloggingsystemet)
 
 // document.addEventListener('DOMContentLoaded', () => {// svare på skjema
 //     document.getElementById('svarPaSkjema').addEventListener('click', async () => {

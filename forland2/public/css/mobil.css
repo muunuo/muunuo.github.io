@@ -1,4 +1,4 @@
-
+/* denne nettsiden er designet bestemt for bruk på mobil, over bruk på data ettersom klienten ønsket dette. */
 @media screen and (max-width: 800px) {
     /* Når skjermstørrelsen blir  */
     .grid-container {

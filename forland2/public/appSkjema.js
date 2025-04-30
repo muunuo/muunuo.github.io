@@ -1,38 +1,43 @@
+// deler av kode under var lagt med hjelp av Ai, endringer gjordt for å bedre fungere for det jeg trengte det for. 
+
 let popup = document.getElementById("loggInnPopup"); // ruten som du bruker til å logge inn
 
 let loggInn = document.getElementById("loggInnKnapp");// logg inn knapp
 let neiLoggInn = document.getElementById("neiTilInnlogging");// takke nei til logg inn knapp
 
 
-loggInn.addEventListener("click", duLoggerInn);
-neiLoggInn.addEventListener("click", nei);
+loggInn.addEventListener("click", duLoggerInn);// logg inn knappen på toppen av siden
+neiLoggInn.addEventListener("click", nei); // nei knappen på popupen
 
-popup.style.display ="none"
+popup.style.display ="none" // popup er ikke synelig når du åpener siden
 
-let spurtOmLogo=false;
+let spurtOmLogo=false; // med denne så stopper vi dataen fra skjema fra å bli lagret før etter du har/har hatt muligheten til å sitte opp en konto
+// Planen var å knytte konto og skjema sammen, så konto måtte skje først, men grunnet at det var valgfritt så gjorde jeg så 
+// dumåtte ha sjangsen til å si ja, om dugjorde det var opp til bruker.
 
 function duLoggerInn() {
-    popup.style.display="block"
+    popup.style.display="block"// popup blir synelig
 }
 
 function nei() {
-        popup.style.display="none"
-        spurtOmLogo = true;
+        popup.style.display="none" // popup usynelig
+        spurtOmLogo = true; // du har no fått sjangsen til å logge inn, og kan dermed levere skjema
 }
 
 document.addEventListener('DOMContentLoaded', () => {// svare på skjema
-    document.getElementById('svarPaSkjema').addEventListener('click', async (event) => {
-        event.preventDefault();
+    document.getElementById('svarPaSkjema').addEventListener('click', async (event) => { // no skal vi sette opp så dataen fra skjema kan sendes til databasen
+        event.preventDefault(); // det sendes ikke automatisk inn
 
+        // hva som sendes inn
         const navn = document.getElementById('navn').value;
         const bedriftNavn = document.getElementById('bedriftNavn').value;
         const epost = document.getElementById('epost').value;
         const telefon = document.getElementById('telefon').value;
         const beskjed = document.getElementById('beskjed').value;
 
-        if (spurtOmLogo == true) {
+        if (spurtOmLogo == true) {// logo er egentlig inlogging/konto, men ble skrevet litt fort så
             // skjema sendes kun inn om "spurtOmLogo" er "true"
-            const data = {
+            const data = { // hva som klargjøres for innsendeing
                 navn,
                 bedriftNavn,
                 epost,
@@ -40,29 +45,28 @@ document.addEventListener('DOMContentLoaded', () => {// svare på skjema
                 beskjed
             };
 
-            try{
+            try{// den skal prøve å
 
-                const response = await fetch('/submit',{
-                    method: 'POST',
+                const response = await fetch('/submit',{ // se om de kan hente/sende /submit (skjemaet)
+                    method: 'POST', // hvordan de hentes
                     headers: {
                         'Content-type': 'application/json'
                     },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify(data) // hvordan de overføres
                 });
 
-                const result = await response.json();
-                if (response.ok) {
+                const result = await response.json();// de skal vente til de får svar
+                if (response.ok) { // hvis de får svar gjør x
                     alert(result.message);
-                } else {
+                } else {// hvis ikke gjør y
                     alert(result.message);
                 }
-            } catch (error) {
+            } catch (error) { // hvis det er en feil
                 alert('Failed to submit survey.');
             }
 
         } else {
-            popup.style.display = "block"
-            // alert('Survey data not stored due to false condition.');
+            popup.style.display = "block" // de over skjer hvis bruker har hatt sjangsen til å logge inn allerede. Hvis ikke blir de gitt sjangsen her
         }
     });
 });
@@ -72,16 +76,8 @@ document.addEventListener('DOMContentLoaded', () => { // oprette en konto
     document.getElementById('opprettKonto').addEventListener('click', async () => {
         const brukernavn = document.getElementById('brukernavn').value;
         const epostKonto = document.getElementById('epostKonto').value;
-        // const kunde_id = document.getElementById('kunde_id').value; //usikker på om dette er noe jeg kommer til å trenge eller ikke
         const passord = document.getElementById('passord').value;
-
-        // koden under gjør at inloggingsfelte forsvinner når du har oprettet en konto
-        // if (!brukernavn || !epostKonto || !passord) { // Denne kjekker om alle feltene er fuylt ut 
-            
-        // } else{
-        //     spurtOmLogo=true;
-        //     popup.style.display="none";
-        // }
+        spurtOmLogo = true // så du kan levere skjema etter du logger inn (har ikke testet dette)
     });
 });
 
@@ -93,6 +89,26 @@ document.addEventListener('DOMContentLoaded', () => { // oprette en konto
 
 
 
+
+
+
+
+
+
+
+
+
+
+// under her er kode jeg ikke endte opp å bruke. 
+
+
+        // koden under gjør at inloggingsfelte forsvinner når du har oprettet en konto
+        // if (!brukernavn || !epostKonto || !passord) { // Denne kjekker om alle feltene er fuylt ut 
+            
+        // } else{
+        //     spurtOmLogo=true;
+        //     popup.style.display="none";
+        // }
 
 
 // document.addEventListener('DOMContentLoaded', () => {
