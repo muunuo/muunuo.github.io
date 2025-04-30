@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const Database = require('better-sqlite3');
 const path = require('path'); 
 
+const session = require("express-session")
 const bcrypt = require("bcrypt");  
 
 const db = new Database("Forland_db_3.db");
@@ -14,12 +15,67 @@ const port = 3000;
 app.use(express.static('public'));
 // app.use(express.static(path.join(__dirname, 'public')));
 
-
 // Middleware for å parse JSON data
 // app.use(express.json)
 
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json())
+
+app.use(// brukes for en beskyttet rute
+    session({
+        secret: "hemmeligNøkkel", // Bytt til en sikker nøkkel i produksjon
+        resave: false,
+        saveUninitialized: false,
+        cookie: { secure: false } // Sett til true hvis du bruker HTTPS
+    })
+);
+
+function kreverInnlogging(req, res, next) {
+    if (!req.session.bruker) {
+        return res.redirect("/loggInn.html");
+    }
+    next();
+}
+
+app.post("/login", async (req, res) => {
+    const { brukernavn, passord } = req.body;
+
+    const bruker = db.prepare("SELECT * FROM person WHERE brukernavn = ?").get(brukernavn);
+    if (!bruker) {
+        return res.status(401).json({ message: "Feil fornavn eller passord" });
+    }
+
+    const passordErGyldig = await bcrypt.compare(passord, bruker.passord);
+    if (!passordErGyldig) {
+        return res.status(401).json({ message: "Feil brukernavn eller passord" });
+    }
+
+    // Lagre brukerdata i session
+    req.session.bruker = { id: bruker.id, brukernavn: bruker.brukernavn };
+    res.json({ message: "Innlogging vellykket" });
+});
+
+// Rute for å logge ut
+app.post("/logout", (req, res) => {
+    req.session.destroy();
+    res.json({ message: "Du er logget ut" });
+});
+
+// Eksempel på en beskyttet rute
+app.get("/beskyttet", kreverInnlogging, (req, res) => {
+    res.send(`Velkommen, ${req.session.bruker.fornavn}! Dette er en beskyttet side.`);
+});
+
+// // Rute for å vise leggtilbil.html (kun for innloggede brukere)
+// app.get("/registrerbil", kreverInnlogging, (req, res) => {
+//     res.sendFile(__dirname + "/beskytta/leggtilbil.html");
+// });
+
+
+
+
+
+
 
 //hvis det ikke allerede eksisterer opprettes tabellen
 db.prepare(`
@@ -44,7 +100,7 @@ db.prepare(`
 
 // Serve HTML-skjemaet fra en egen HTML-fil
 app.get('/', (req, res) => { // hent filene under
-    res.sendFile(__dirname, 'public', 'index.html');
+    res.sendFile(__dirname, 'public', 'index.html', 'loggInn.html');
 });
 
 // hånterer skjema innsending

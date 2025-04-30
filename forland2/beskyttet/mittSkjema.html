@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-         
+
         </tbody>
     </table>
     
@@ -27,15 +27,15 @@
 
             try {
                 // Hent bilane frå server
-                const response = await fetch("/minebiler");
+                const response = await fetch("/kunde");
                 if (!response.ok) {
-                    throw new Error("Kunne ikke hente bilene. Er du logget inn?");
+                    throw new Error("Kunne ikke hente skjema. Er du logget inn?");
                 }
 
-                const biler = await response.json();
+                const skjema = await response.json();
 
                 // Legg til bilene i tabellen
-                biler.forEach(bil => {
+                skjema.forEach(bil => {
                     const rad = document.createElement("tr");
 
                     const regNrCell = document.createElement("td");
@@ -59,4 +59,4 @@
         });
     </script>
 </body>
-</html> -->
+</html>

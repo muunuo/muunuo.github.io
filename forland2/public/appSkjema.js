@@ -92,6 +92,9 @@ document.addEventListener('DOMContentLoaded', () => { // oprette en konto
 
 
 
+
+
+
 // document.addEventListener('DOMContentLoaded', () => {
 //     const form = document.getElementById('surveyForm');
     
