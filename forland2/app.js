@@ -19,11 +19,58 @@ const port = 3000;
 app.use(express.static('public'));
 // app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware for å parse JSON data
-// app.use(express.json)
+// app.use(bodyParser.urlencoded({ extended:true })); // jeg vet ikke hvorfor. Men jeg må bruke denne middlewareen, ellers kræsjer alt.
+// app.use(bodyParser.json())
 
-app.use(bodyParser.urlencoded({ extended:true })); // jeg vet ikke hvorfor. Men jeg må bruke denne middlewareen, ellers kræsjer alt.
-app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+
+app.use( // for inlogging
+    session({
+        secret: "hemmeligNøkkel", // Bytt til en sikker nøkkel i produksjon
+        resave: false,
+        saveUninitialized: false,
+        cookie: { secure: false } // Sett til true hvis du bruker HTTPS
+    })
+);
+
+function kreverInnlogging(req, res, next) { // logginn
+    if (!req.session.bruker) {
+        return res.redirect("/login.html");
+    }
+    next();
+}
+
+app.post("/login", async (req, res) => {
+    const { brukernavn, passord } = req.body;
+
+    const bruker = db.prepare("SELECT * FROM bruker WHERE brukernavn = ?").get(brukernavn);
+    if (!bruker) {
+        return res.status(401).json({ message: "Feil brukernavn eller passord" });
+    }
+
+    const passordErGyldig = await bcrypt.compare(passord, bruker.passord);
+    if (!passordErGyldig) {
+        return res.status(401).json({ message: "Feil brukernavn eller passord" });
+    }
+
+    // Lagre brukerdata i session
+    req.session.bruker = { id: bruker.id_konto, brukernavn: bruker.brukernavn };
+    res.json({ message: "Innlogging vellykket" });
+});
+
+app.post("/logout", (req, res) => {
+    req.session.destroy();
+    res.json({ message: "Du er logget ut" });
+});
+
+// Eksempel på en beskyttet rute
+app.get("/beskyttet", kreverInnlogging, (req, res) => {
+    res.send(`Velkommen, ${req.session.bruker.brukernavn}! Dette er en beskyttet side.`);
+});
+// res.sendFile(`Velkommen, ${req.session.bruker.brukernavn}! Dette er en beskyttet side.`);
+
 
 //hvis det ikke allerede eksisterer opprettes tabellen
 db.prepare(`
@@ -38,7 +85,7 @@ db.prepare(`
 `).run();
 // text er hva som skrives inn, not null betyr at det ikke kan være tomt
 
-
+// !! er ikke i jo bjøenar sin kode
 app.get('/', (req, res) => { // koble til filene under (login er en av de filene som ikke endte opp å føre til suksess)
     res.sendFile(__dirname, 'public', 'index.html', 'loggInn.html');
 });
@@ -62,6 +109,7 @@ app.post('/submit', (req, res) => {
 
 });
 
+
 app.post("/leggtilperson", async (req, res) => {
     const {brukernavn, epostKonto, passord} = req.body;
 
@@ -77,64 +125,21 @@ app.post("/leggtilperson", async (req, res) => {
 })
 
 
-
-
-
-// koden under fungerer midlertidig ikke. Jeg beholder det fordi 
-// 1) det er muligheter til å forsette arbeide på det
-// 2) jeg gidd ikke å risikere at alt skal kresje
-
-app.use(// brukes for en beskyttet rute
-    session({
-        secret: "hemmeligNøkkel", // Bytt til en sikker nøkkel i produksjon
-        resave: false,
-        saveUninitialized: false,
-        cookie: { secure: false } // Sett til true hvis du bruker HTTPS
-    })
-);
-
-function kreverInnlogging(req, res, next) {
-    if (!req.session.bruker) {
-        return res.redirect("/loggInn.html");
-    }
-    next();
-}
-
-app.post("/login", async (req, res) => {
-    const { brukernavn, passord } = req.body;
-
-    const bruker = db.prepare("SELECT * FROM person WHERE brukernavn = ?").get(brukernavn);
-    if (!bruker) {
-        return res.status(401).json({ message: "Feil fornavn eller passord" });
-    }
-
-    const passordErGyldig = await bcrypt.compare(passord, bruker.passord);
-    if (!passordErGyldig) {
-        return res.status(401).json({ message: "Feil brukernavn eller passord" });
-    }
-
-    // Lagre brukerdata i session
-    req.session.bruker = { id: bruker.id, brukernavn: bruker.brukernavn };
-    res.json({ message: "Innlogging vellykket" });
+app.listen(port, () => {
+    console.log(`Serveren kjører på http://localhost:${port}`);
 });
 
-// Rute for å logge ut
-app.post("/logout", (req, res) => {
-    req.session.destroy();
-    res.json({ message: "Du er logget ut" });
-});
 
-// Eksempel på en beskyttet rute
-app.get("/beskyttet", kreverInnlogging, (req, res) => {
-    res.send(`Velkommen, ${req.session.bruker.fornavn}! Dette er en beskyttet side.`);
-});
+//         app.use(express.static('public')) //
 
-// // Rute for å vise leggtilbil.html (kun for innloggede brukere)
-// app.get("/registrerbil", kreverInnlogging, (req, res) => {
-//     res.sendFile(__dirname + "/beskytta/leggtilbil.html");
-// });
+//         const cors = require("cors"); //
+//         app.use(cors()); //tilater alle forespørsler
 
-
+//     // Eksempel på rute som hentar brukarar frå databasen (besøk http://localhost:3000/personer)
+//         app.get("/kunde", (req, res) => { 
+//         const users = db.prepare("SELECT * FROM kunde").all();
+//         res.json(users);
+//         });
 
 
 // app.post('/submitPassord', (req, res) => {
