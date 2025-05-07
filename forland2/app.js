@@ -36,7 +36,7 @@ app.use( // for inlogging
 );
 
 function kreverInnlogging(req, res, next) { // logginn
-    if (!req.session.bruker) {
+    if (!req.session.bruker) { // ! forand noe betyr at hvis tingen sagt ikke er sann
         return res.redirect("/login.html");
     }
     next();
@@ -55,9 +55,16 @@ app.post("/login", async (req, res) => {
         return res.status(401).json({ message: "Feil brukernavn eller passord" });
     }
 
+    // if (bruker){
+    //     res.json({ success: true, redirect: '/mittskjema.html' });
+    //     console.log("inlogging resolveTxt, redirekt bra")
+    // } else {
+    //     console.log("rederekt misslykket")
+    // }
+
     // Lagre brukerdata i session
     req.session.bruker = { id: bruker.id_konto, brukernavn: bruker.brukernavn };
-    res.json({ message: "Innlogging vellykket" });
+    res.json({ message: "Innlogging vellykket", redirect: "/dashboard" });
 });
 
 app.post("/logout", (req, res) => {
@@ -123,6 +130,10 @@ app.post("/leggtilperson", async (req, res) => {
     res.json({ message: "Ny person lagt til", info})
     
 })
+
+app.get("/dashboard", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/beskyttet/dashboard.html");
+});""
 
 
 app.listen(port, () => {
