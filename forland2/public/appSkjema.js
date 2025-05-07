@@ -1,4 +1,3 @@
-// deler av kode under var lagt med hjelp av Ai, endringer gjordt for å bedre fungere for det jeg trengte det for. 
 
 let popup = document.getElementById("loggInnPopup"); // ruten som du bruker til å logge inn
 
