@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", async () => {
+</head>
+<body>
+    <h1>Velkommen, <span id="brukernavn"></span>!</h1>
+        <li><button id="logoutButton">Logg ut</button></li>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", async () => {
             try {
                 // Hent brukernavn fra session (hvis tilgjengelig)
                 const response = await fetch("/beskyttet");
                 if (!response.ok) {
-                    throw new Error("Kunne ikke hente brukernavn");
+                    throw new Error("Kunne ikke hente kundenavn");
                 }
                 const data = await response.json();
-                document.getElementById("brukernavn").textContent = data.brukernavn;
+                document.getElementById("kundenavn").textContent = data.brukernavn;
             } catch (error) {
                 console.error("Feil:", error);
             }
@@ -24,7 +29,7 @@
                     const response = await fetch("/logout", { method: "POST" });
                     if (response.ok) {
                         alert("Du er logget ut.");
-                        window.location.href = "/loggInn.html";
+                        window.location.href = "/login.html";
                     } else {
                         alert("Kunne ikke logge ut.");
                     }
@@ -33,9 +38,58 @@
                 }
             });
         });
-    </script> -->
-</head>
-<body>
-    <p>Hei, dette er beskyttet</p>
-</body>
+    </script>
+
+
+    <table id="kundeTabell" border="1">
+        <thead>
+            <tr>
+                <th>navn</th>
+                <th>telefon</th>
+                <th>beskjed</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script>
+                document.addEventListener("DOMContentLoaded", async () => {
+            const tabellBody = document.querySelector("#kundeTabell tbody");
+
+            try {
+                // Hent bilane frå server
+                const response = await fetch("/mittskjema");
+                if (!response.ok) {
+                    throw new Error("Kunne ikke hente skjemaet. Er du logget inn?");
+                }
+
+                const biler = await response.json();
+
+                // Legg til bilene i tabellen
+                skjema.forEach(kunde => {
+                    const rad = document.createElement("tr");
+
+                    const navnCell = document.createElement("td");
+                    navnCell.textContent = kunde.navn;
+                    rad.appendChild(navnCell);
+
+                    const telefonCell = document.createElement("td");
+                    telefonCell.textContent = kunde.telefon;
+                    rad.appendChild(telefonCell);
+
+                    const beskjedCell = document.createElement("td");
+                    beskjedCell.textContent = kunde.beskjed;
+                    rad.appendChild(beskjedCell);
+
+                    tabellBody.appendChild(rad);
+                });
+            } catch (error) {
+                console.error("Feil:", error);
+                tabellBody.innerHTML = `<tr><td colspan="3">Kunne ikke laste skjema: ${error.message}</td></tr>`;
+            }
+        });
+
+    </script>
 </html>

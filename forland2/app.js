@@ -64,7 +64,7 @@ app.post("/login", async (req, res) => {
 
     // Lagre brukerdata i session
     req.session.bruker = { id: bruker.id_konto, brukernavn: bruker.brukernavn };
-    res.json({ message: "Innlogging vellykket", redirect: "/dashboard" });
+    res.json({ message: "Innlogging vellykket", redirect: "/dashbord" });
 });
 
 app.post("/logout", (req, res) => {
@@ -77,6 +77,22 @@ app.get("/beskyttet", kreverInnlogging, (req, res) => {
     res.send(`Velkommen, ${req.session.bruker.brukernavn}! Dette er en beskyttet side.`);
 });
 // res.sendFile(`Velkommen, ${req.session.bruker.brukernavn}! Dette er en beskyttet side.`);
+
+
+// Rute for å vise leggtilbil.html (kun for innloggede brukere)
+app.get("/opprettSkjema", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/beskytta/skjema.html");
+});
+
+// Rute for å legge til ein ny bil i databasen (SQL)
+app.post("/skjema", (req, res) => {
+    const { navn, epost, telefon, bedriftNavn, beskjed } = req.body;
+
+    const stmt = db.prepare("INSERT INTO kunde (navn, epost, telefon, bedriftNavn, beskjed) VALUES (?, ?, ?, ?, ?)");
+    const info = stmt.run(navn, epost, telefon, bedriftNavn, beskjed);
+
+    res.json({ message: "Ny kunde lagt til", info });
+});
 
 
 //hvis det ikke allerede eksisterer opprettes tabellen
@@ -116,7 +132,6 @@ app.post('/submit', (req, res) => {
 
 });
 
-
 app.post("/leggtilperson", async (req, res) => {
     const {brukernavn, epostKonto, passord} = req.body;
 
@@ -128,11 +143,28 @@ app.post("/leggtilperson", async (req, res) => {
     const info = stmt.run(brukernavn, epostKonto, hashPassord);
 
     res.json({ message: "Ny person lagt til", info})
-    
-})
+});
 
-app.get("/dashboard", kreverInnlogging, (req, res) => {
-    res.sendFile(__dirname + "/beskyttet/dashboard.html");
+app.get("/mittskjema", kreverInnlogging, (req, res) => {{
+    const epost = req.session.bruker.epost; // Sørg for at 'epost' er korrekt definert i session
+
+    const kunde = db.prepare("SELECT * FROM kunde WHERE epost = ?").all(epost);
+
+    // Du kan sende kundedata med HTML-filen, eller håndtere det på klientsiden
+    // res.sendFile(__dirname + "/beskyttet/mittskjema.html");
+    res.json(kunde)
+}});
+
+app.get("/mittskjema/html", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/beskyttet/mittskjema.html");
+});
+
+// app.get("/opprettSkjema", kreverInnlogging, (req, res) => {
+//     res.sendFile(__dirname + "/beskyttet/skjema.html");
+// });
+
+app.get("/dashbord", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/beskyttet/dashbord.html");
 });""
 
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="/skjema" method="post"> <!-- setter opp hva det skal hete, og hvordan det deles med app.js -->
+            <label class="skjemaOverskift" for="navn">Navn:</label><br><!-- sier hva som skal i de forskjellige feltene (brukes over p grunnet at label liggere nærmere input enn p) -->
+            <input class="input" id="navn" type="text" name="navn" required><br>
+
+            <label class="skjemaOverskift" for="epost">E-post:</label><br>
+            <input class="input" id="epost" type="email" name="epost" required><br>
+
+            <label class="skjemaOverskift" for="telefon">Telefon:</label><br>
+            <input class="input" id="telefon" type="tel" name="telefon" required><br>
+
+            <label class="skjemaOverskift" for="bedriftNavn">Bedrift Navn:</label><br>
+            <input class="input" id="bedriftNavn" type="text" name="bedriftNavn"><br>
+
+            <label class="skjemaOverskift" for="beskjed">Beskjed:</label><br>
+            <input class="input" id="beskjed" name="beskjed" required><br>
+
+            <button id="svarPaSkjema">Svar</button> <!-- knappen for å sende inn svarene -->
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Velkommen, <span id="kundenavn"></span>!</h1>
+    <ul>
+        <!-- <li><a href="/registrerbil">Legg til bil</a></li> -->
+        <li><a href="/mittskjema/html">Se ditt skjema</a></li>
+        <li><a href="/opprettSkjema">Skjema</a></li>
+        <li><button id="logoutButton">Logg ut</button></li>
+    </ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                // Hent brukernavn fra session (hvis tilgjengelig)
+                const response = await fetch("/beskyttet");
+                if (!response.ok) {
+                    throw new Error("Kunne ikke hente kundenavn");
+                }
+                const data = await response.json();
+                document.getElementById("kundenavn").value = data.brukernavn;
+
+            } catch (error) {
+                // console.error("Feil:", error);
+            }
+    
+            // Logg ut-knapp
+            document.getElementById("logoutButton").addEventListener("click", async () => {
+                try {
+                    const response = await fetch("/logout", { method: "POST" });
+                    if (response.ok) {
+                        alert("Du er logget ut.");
+                        window.location.href = "/login.html";
+                    } else {
+                        alert("Kunne ikke logge ut.");
+                    }
+                } catch (error) {
+                    // console.error("Feil under utlogging:", error);
+                }
+            });
+        });
+
+        // console.log(beskyttet)
+    </script>
+</body>
+</html>
